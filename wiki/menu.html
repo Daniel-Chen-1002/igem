@@ -1,0 +1,102 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-footer fixed-top">
+  <style>
+    .btn-padding{
+      margin-left: 10px
+    }
+    .dropdown-content {
+      display: none;
+    }
+    .dropdown:hover {
+      color: #3070d8;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    :root {
+    --primary-font: "Georgia", serif;  /* Primary font for most content */
+    --secondary-font: "Georgia", serif;   /* Secondary font for headings and specific content */
+}
+  </style>
+  <div class="container">
+
+    <!---- TEAM NAME ---->
+    <a class="navbar-brand" href="{{ url_for('home') }}">KCIS-Xiugang-Taipei</a>
+
+    <!---- SMALL SCREEN MENU ICON ---->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto left-aligned">
+
+        <!---- HOME ---->
+        <li class="nav-item">
+          <a class="nav-link btn btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="{{ url_for('home') }}">Home</a>
+        </li>
+
+        <!---- TEAM ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Team
+          </a>
+          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" font-family: Georgia, serif>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='team') }}">Members</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
+          </ul>
+        </li>
+
+        <!---- PROJECT ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Project
+          </a>
+          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='description') }}">Description</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='experiments') }}">Experiments</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='results') }}">Results</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook-2022') }}">2022 Notebook</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook-2023') }}">2023 Notebook</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='safety') }}">Safety</a></li>
+          </ul>
+        </li>
+
+        <!---- PARTS ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Parts
+          </a>
+          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='basic-parts') }}">Basic Parts</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='composite-parts') }}">Composite Parts</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='parts-collection') }}">Part Collection</a></li>
+          </ul>
+        </li>
+
+        <!---- HUMAN PRACTICES ---->
+        <li class="nav-item">
+          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="{{ url_for('pages', page='human-practices') }}">
+            Human Practices
+          </a>
+        </li>
+
+        <!---- Ecucation ---->
+        <li class="nav-item">
+          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="{{ url_for('pages', page='education') }}">
+            Education
+          </a>
+        </li>
+
+        <!---- SDGs ---->
+        <li class="nav-item">
+          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="{{ url_for('pages', page='sustainable') }}">
+            SDGs
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

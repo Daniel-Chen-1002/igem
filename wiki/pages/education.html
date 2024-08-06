@@ -1,0 +1,735 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			<!-- Basic -->
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+			<title>2 Columns | Porto - Multipurpose Website Template</title>	
+	
+			<meta name="keywords" content="WebSite Template" />
+			<meta name="description" content="Porto - Multipurpose Website Template">
+			<meta name="author" content="okler.net">
+	
+			<!-- Favicon -->
+			<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+			<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+	
+			<!-- Mobile Metas -->
+			<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+	
+			<!-- Web Fonts  -->
+			<link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light&display=swap" rel="stylesheet" type="text/css">
+	
+			<!-- Vendor CSS -->
+			<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+			<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
+			<link rel="stylesheet" href="vendor/animate/animate.compat.css">
+			<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
+			<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
+			<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
+			<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+	
+			<!-- Theme CSS -->
+			<link rel="stylesheet" href="css/theme.css">
+			<link rel="stylesheet" href="css/theme-elements.css">
+			<link rel="stylesheet" href="css/theme-blog.css">
+			<link rel="stylesheet" href="css/theme-shop.css">
+	
+			<!-- Skin CSS -->
+			<link id="skinCSS" rel="stylesheet" href="css/skins/default.css">
+	
+			<!-- Theme Custom CSS -->
+			<link rel="stylesheet" href="css/custom.css">
+	
+			<!-- Head Libs -->
+			<script src="vendor/modernizr/modernizr.min.js"></script>
+		<style>
+
+        /* Define your navigation bar styles */
+		.sidebar {
+			background-color: rgba( 212, 184, 149);
+			padding-top: 20px;
+			border-radius: 15px;
+			position: sticky;
+			top: 0;
+			overflow-y: auto; /* Add scroll functionality for small screens */
+		}
+
+		.font-weight-semi-bold {
+			text-align: center;
+			line-height: 2;
+		}
+
+		.mid-image img {
+        		transform: scale(0.85);
+        		transform-origin: top left;
+				margin-bottom: -100px;
+    		}
+
+		.sidebar.sidebar-bg {
+			width: 300px;
+			margin: 0 auto;
+		}
+
+		.bigger-text {
+			font-size: 20px;  /* Adjust this value to your preference */
+			font-family: 'Georgia', serif;
+			line-height: 1.5;
+		}
+
+		.postcard-index {
+			font-size: 12px;
+			font-family: 'Georgia', serif;
+		}
+
+		.col-lg-9 {
+			max-width: 1300px;
+			margin: 10 auto;
+		}
+
+		.scaled-image img {
+transform: scale(0.6);
+transform-origin: top left;
+		}
+
+		:root {
+--primary-font: "Georgia", serif;  /* Primary font for most content */
+
+		}
+
+		.mid-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+		}
+
+		body {
+			font-family: var(--primary-font);
+			font-size: 16px;
+		}
+
+		.custom-heading {
+    font-size: 48px; /* adjust as necessary */
+    color: rgb(86, 57, 42);
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+font-family: var(--secondary-font);
+		}
+
+		.special-content {
+font-family: var(--secondary-font);
+		}
+		
+		.flip-container {
+  			margin: 0 auto;
+			padding-bottom: 400px;
+		}
+
+		.flipper {
+  			position: relative;
+  			transform-style: preserve-3d;
+  			transition: transform 1s;
+		}
+
+		.front,
+		.back {
+  			width: 100%;
+  			height: 100%;
+  			position: absolute;
+  			backface-visibility: hidden;
+		}
+
+		.back {
+  			transform: rotateY(180deg);
+		}
+
+		.flipped {
+  			transform: rotateY(180deg);
+		}
+
+
+
+		</style>
+	</head>
+
+
+
+	<body data-plugin-scroll-spy data-plugin-options="{'target': '#sidebar'}">
+		<div class="body">
+			<div role="main" class="main">
+				<section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg" 
+						style="background-image: url('https://static.igem.wiki/teams/4650/wiki/headings/education.png'); 
+							   background-size: cover; 
+							   background-position: center; 
+							   height: 700px; 
+							   display: flex; 
+							   align-items: center; 
+							   justify-content: center;
+							   width: 100%;">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 align-self-center p-static order-2 text-center">
+								<h1 class="font-weight-bold text-dark"></h1>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<div class="container-fluid- pt-3 pb-2">
+				<div class="row pt-2">
+					<div class="col-lg-3 position-relative">
+						<aside class="sidebar sidebar-bg" id="sidebar" data-plugin-sticky data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
+							<h5 class="font-weight-semi-bold">Education</h5>
+							<ul class="nav nav-list flex-column mb-5">
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="70" href="#first">Introduction</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="70" href="#second">Postcards</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="70" href="#third">Picture Book</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="70" href="#fourth">Educational Video</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="70" href="#fifth">Educational Workshop</a></li>
+							</ul>
+						</aside>
+					</div>
+
+					<div class="col-lg-7">
+						<div id="first">
+							
+							<br><br><br><br>
+
+							<h1 class="font-weight-extra-normal custom-heading">
+								<center><i><strong class="font-weight-extra-bold">Introduction of Education</strong></i></center>
+							</h1>
+							<h2 class="font-weight-extra-normal text-7 mb-2"> 
+								<u><strong class="font-weight-extra-bold">Education: </strong></u>
+							</h2>
+							<p class="bigger-text">
+								Through the exciting field of synthetic biology, our outreach programs within the iGEM community have a primary mission: to educate and inspire. 
+								We initiated a postcard event where we invited other iGEM teams to succinctly summarize their project goals on postcards that would be publicly displayed in our school's library. This endeavor aimed to promote a culture of learning and innovation, fostering a dynamic exchange of ideas and information on synthetic biology across borders. 
+								Our commitment to education extends further with the development of a ten-language multilingual picture book project. This project has a special focus on empowering young individuals, especially those between the ages of 7 to 20. Its core objective is to disseminate knowledge about how everyday actions can impact the environment and, more importantly, how we can harness the potential of SCOBY (Symbiotic Culture Of Bacteria and Yeast) in innovative ways through synthetic biology to combat pollution. This educational initiative encourages responsible consumption and environmental consciousness, aligning with the principles of sustainability. It also emphasizes the importance of preserving terrestrial ecosystems. These efforts contribute to fostering a greater understanding of the interplay between synthetic biology and the environment. 
+								In addition to these initiatives, our educational workshops play a pivotal role in our outreach strategy. These workshops are designed to provide hands-on learning experiences and engage in meaningful discussions about the fascinating world of synthetic biology. By doing so, we aim to expand the reach of this field, involve more individuals, and encourage active participation in shaping its future. 
+								In essence, our initiatives not only introduce the captivating realm of synthetic biology but also actively promote environmental awareness and innovation. We're dedicated to nurturing a more informed and responsible generation, fostering a deep appreciation for the science that can lead to a more sustainable and exciting future.
+							</p> <br>
+							<center>
+								<img style="height: 600px; width: 600px;" src="https://static.igem.wiki/teams/4650/wiki/education/overall-education-stats.png"
+							</center>
+						</div>
+
+						<div id="second">
+							<br><br><br><br>
+
+							<h1 class="font-weight-extra-normal custom-heading">
+								<center><i><strong class="font-weight-extra-bold">International iGEM Postcard Exchange by KCIS Xiugang</strong></i></center>
+							</h1>
+							<center>
+								<img style="height: 500px; width:550px" src="https://static.igem.wiki/teams/4650/wiki/education/global.png">
+							</center>
+							<p class="bigger-text">
+								<br>We extended invitations to different iGEM teams to join our postcard event, where teams have the opportunity to encapsulate their project objectives and aspirations on postcards. These postcards are then prominently displayed in our school's library, serving as windows for our students to explore how teams from various countries address critical issues using synthetic biology while promoting iGEM. Our motivation behind hosting this event lies in the potential of postcards to transcend borders, spreading the ideas and knowledge originating from them to the global community. This initiative aligns with our commitment to developing and implementing 
+						  		innovative educational tools and outreach activities that facilitate a two-way dialogue, fostering understanding and engagement with new communities while emphasizing the significance of synthetic biology in addressing shared values and scientific advancements.
+						  	</p><br><br>
+
+							<p class="bigger-text"><u><b>
+								Click to see the backside of the postcards!</b></u>
+							</p>
+	
+							<div class="flip-container" id="flip-container-1">
+								<div class="flipper">
+									<div class="front">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-1.png">
+									</center>
+									</div>
+									<div class="back">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-2.png">
+									</center>
+								 	 </div>
+								</div>
+							</div>
+
+							<center><p class="postcard-index">KCIS-Xiugang-Taipei</p></center><br><br>
+
+							<div id="Aix-Marseille">
+							<p>
+								We invited iGEM Aix-Marseille to join this postcard event. iGEM Aix-Marseille contains the information of eco-responsibly produced alginate, a water-absorbing substance found in seaweeds, using bacteria and recycled materials, leading to a calcium alginate-based hydrogel that enhances soil water retention.
+							</p>
+
+							<div class="flip-container" id="flip-container-2">
+								<div class="flipper">
+									<div class="front">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/marseille-1.png">
+									</center>
+									</div>
+									<div class="back">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/marseille-2-horizontal.png">
+									</center>
+								 	 </div>
+								</div>
+							</div>
+							<center><p class="postcard-index">Aix-Marseille</p></center><br><br>
+							</div>
+
+							<div id="Leiden">
+								<p>
+									We invited iGEM Leiden to join this postcard event. iGEM Leiden contains the information of PHA, a biocompatible and non-toxic material, that can be customized for diverse applications, as it naturally degrades in environments like soil, water, and compost, thanks to microbial activity.
+								</p>
+	
+								<div class="flip-container" id="flip-container-3">
+									<div class="flipper">
+										<div class="front">
+										<center>
+											<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/leiden-1.jpg">
+										</center>
+										</div>
+										<div class="back">
+										<center>
+											<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/leiden-2.jpg">
+										</center>
+										  </div>
+									</div>
+								</div>
+								<center><p class="postcard-index">iGEM Leiden</p></center><br><br>
+							</div>
+
+							<div id="Korea-HS">
+								<p>
+									We invited iGEM Korea HS to join this postcard event. iGEM Korea HS contains the information of the cost-effectiveness of lab-cultured meat production by utilizing a blend of Afamin and WNT-3A proteins, ultimately aiming for more affordable commercialization.
+								</p>
+	
+								<div class="flip-container" id="flip-container-4">
+									<div class="flipper">
+										<div class="front">
+										<center>
+											<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/korea-hs-1.jpg">
+										</center>
+										</div>
+										<div class="back">
+										<center>
+											<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/korea-hs-2.jpg">
+										</center>
+										  </div>
+									</div>
+								</div>
+								<center><p class="postcard-index">iGEM Korea HS</p></center><br><br>
+							</div>
+
+							<div id="wist">
+								<p>
+									We invited WIST iGEM to join this postcard event. WIST iGEM contains the information of Orchids, renowned for their adaptability and economic significance, face a threat from the destructive "Soft Rot" disease triggered by Dickeya Fangzhongdai. Our objective is to safeguard orchids by genetically altering the bacteria's communication mechanisms, which are vital for their survival.
+								</p>
+	
+								<div class="flip-container" id="flip-container-5">
+									<div class="flipper">
+										<div class="front">
+										<center>
+											<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/wist-1.png">
+										</center>
+										</div>
+										<div class="back">
+										<center>
+											<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/wist-2.png">
+										</center>
+										  </div>
+									</div>
+								</div>
+								<center><p class="postcard-index">WIST iGEM</p></center><br><br>
+							</div>
+
+							<div id="ccu">
+								<p>
+									We invited iGEM CCU Taiwan to join this postcard event. iGEM CCU Taiwan contains the iinformation of  lies in the detection of Circulating Tumor Cells (CTC) in the bloodstream to assess the risk of metastasis in patients post-treatment. When the number of CTCs in the blood exceeds a certain threshold, it signifies a high risk of metastasis, prompting the recommendation for immediate further examinations.
+								</p>
+	
+								<div class="flip-container" id="flip-container-6">
+									<div class="flipper">
+										<div class="front">
+										<center>
+											<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/ccu-taiwan-1.jpg">
+										</center>
+										</div>
+										<div class="back">
+										<center>
+											<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/ccu-taiwan-2.jpg">
+										</center>
+										  </div>
+									</div>
+								</div>
+								<center><p class="postcard-index">iGEM CCU Taiwan</p></center><br><br>
+							</div>
+
+							<div id="Indonesia">
+								<p>
+									We invited iGEM Universitas Indonesia to join this postcard event. iGEM Universitas Indonesia contains the information of Salmonella typhimurium AR-1, which possesses the ability to selectively target cancer cells without effectively eliminating them. To address this challenge, they plan to combine it with toxic peptide carrier plasmids, specifically buphorin ib.
+								</p>
+	
+								<div class="flip-container" id="flip-container-7">
+									<div class="flipper">
+										<div class="front">
+										<center>
+											<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/ui-indonesia-1.png">
+										</center>
+										</div>
+										<div class="back">
+										<center>
+											<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/ui-indonesia-2.png">
+										</center>
+										  </div>
+									</div>
+								</div>
+								<center>
+									<img style="width:600px; height: 400px; padding-top: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/ui-indonesia-3.png">
+								</center>
+								<center><p class="postcard-index">iGEM Universitas Indonesia</p></center><br><br>
+							</div>
+
+							<p class="bigger-text"><u><b>
+								Single Side Postcards!</b></u>
+							</p>
+							<div id="putai">
+								<p>
+									We invited iGEM PTSH Buteurace to join this postcard event. iGEM PTSH Buteurace aim is to solve sarcopenia but they never reveal what their real project is. 
+								</p>
+								<center>
+									<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/ptsh-buteurace.jpg">
+								</center>
+								<center><p class="postcard-index">iGEM PTSH Buteurace</p></center><br><br>
+							</div>
+
+							<div id="nycu">
+								<p>
+									We invited NYCU-Taipei iGEM to join this postcard event. NYCU-Taipei iGEM contains the information of  biomarkers associated with hesperetin-related illnesses from saliva, analyze the test outcomes upon biomarker identification, and subsequently transfer the electron transport system found in the bacteria into E. coli. This approach enables the release of electrons upon disease detection, allowing for the capture of electrical signals and enabling non-invasive and swift detection.
+								</p>
+								<center>
+									<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/nycu-taipei.jpg">
+								</center>
+								<center><p class="postcard-index">NYCU-Taipei iGEM</p></center><br><br>
+							</div>
+
+							<div id="bulgaria">
+								<p>
+									We invited iGEM Bulgaria to join this postcard event. iGEM Bulgaria contains the information of Carpabra project is centered around eliminating antibiotics from hospital wastewater. Their goal is to boost the effectiveness of metallo-beta-lactamases, a combination of enzymes, to efficiently degrade a range of beta-lactam compounds, including carbapenems such as meropenem.
+								<center>
+									<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/bulgaria.jpg">
+								</center>
+								<center><p class="postcard-index">iGEM Bulgaria</p></center><br><br>
+							</div>
+							<div id="nchu">
+								<p>
+									We invited NCHU Taichung  to join this postcard event. NCHU Taichung contains the information of promising supplement to enhance the flight endurance and cognitive ability of bees, aiming to alleviate the pollination crisis and create a sustainable future.
+								<center>
+									<img style="width: 400px; height: 600px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/nchu-taichung.jpg">
+								</center>
+								<center><p class="postcard-index">NCHU Taichung</p></center><br><br>
+							</div>
+							
+						</div>
+
+						<div id="third">
+							
+							<br><br><br><br>
+
+
+
+							<h1 class="font-weight-extra-normal custom-heading">
+								<center><i><strong class="font-weight-extra-bold">Picture Book</strong></i></center>
+							</h1>
+							<center>
+								<img style="height: 400px; width:500px" src="https://static.igem.wiki/teams/4650/wiki/education/picture-book.png">
+							</center>
+							<p class="bigger-text">
+								<br>We've initiated a global educational effort through the creation of a multilingual picture book introducing our project. 
+						  		This book, currently available in 10 languages (English, Chinese, French, Spanish, Russian, German, and Japanese), represents more than just translation; it's a collaborative endeavor with diverse groups worldwide. We invite these groups to translate the book into their native languages and actively engage their communities. 
+						  		Our picture book serves as a medium to empower individuals, particularly children, fostering an understanding of the environmental impact of daily activities and presenting a scientific perspective on our utilization of SCOBY to mitigate pollutant production. 
+						  		This initiative aligns with our core commitment to develop and implement educational materials related to synthetic biology, establishing a dynamic two-way dialogue on public values and the science underpinning synthetic biology. By connecting communities with scientific progress and promoting sustainable practices, we aim to contribute to a more environmentally conscious global community.
+						  	</br>
+						  	</p>
+							<center>
+							<p class="bigger-text"><u><b>
+								Click To Download These Picture Books!</b></u>
+							</p>
+						  	<br><br><br><br>
+						  	<h2 class="font-weight-extra-normal text-7 mb-2">
+								French
+							</h2>
+							<p class="bigger-text">
+								iGEM Ionis helped us to translate the book into French and actively promote it in their communities.
+							</p>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/education/french-picture-book-compressed.pdf" download>
+        						<img src="https://static.igem.wiki/teams/4650/wiki/education/french-green-cover.png" alt="Cover Page" width="400" height="600">
+    						</a>
+							<br><br><br><br>
+							<p class="bigger-text">
+								Julia Müller helped us to translate the book into German and Russian by promoting our picture book in Kang Chiao International School. 
+							</p>
+							<h2 class="font-weight-extra-normal text-7 mb-2">
+								Russian
+							</h2>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/education/russian-picture-book-compressed.pdf" download>
+        						<img src="https://static.igem.wiki/teams/4650/wiki/education/russian-green-cover.png" alt="Cover Page" width="400" height="600">
+    						</a>
+							<br><br><br><br>
+							
+							<p class="bigger-text">
+								iGEM Bochum helped us to translate the book into iGEM Bochum and actively promote it in their communities.
+							</p>
+						
+							<h2 class="font-weight-extra-normal text-7 mb-2">
+								German
+							</h2>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/education/german-teacher-picture-book-compressed.pdf" download>
+        						<img src="https://static.igem.wiki/teams/4650/wiki/education/german-green-cover.png" alt="Cover Page" width="400" height="600">
+    						</a>
+							<br><br><br><br>
+							<h2 class="font-weight-extra-normal text-7 mb-2">
+								Spanish
+							</h2>
+							<p class="bigger-text">
+								Matthew Werth helped us to translate the book into Spanish by promoting our picture book in Kang Chiao International School. 
+							</p>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/education/spanish-picture-book-compressed.pdf" download>
+        						<img src="https://static.igem.wiki/teams/4650/wiki/education/spanish-green-cover.png" alt="Cover Page" width="400" height="600">
+    						</a>
+							<br><br><br><br>
+							<h2 class="font-weight-extra-normal text-7 mb-2">
+								Japanese
+							</h2>
+							<p class="bigger-text">
+								陳崇文 Takashi Chen helped us to translate the book into Japanese by promoting our picture book in Kang Chiao International School. 
+							</p>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/education/japanese-picture-book-compressed.pdf" download>
+        						<img src="https://static.igem.wiki/teams/4650/wiki/education/japanese-green-cover.png" alt="Cover Page" width="400" height="600">
+    						</a>
+							<br><br><br><br>
+							<h2 class="font-weight-extra-normal text-7 mb-2">
+								Mandarin
+							</h2>
+							<p class="bigger-text">
+								賴以柔 Yi Jou Lai (Laura Lai) helped us to translate the book into Mandarin by promoting our picture book in Kang Chiao International School.
+							</p>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/education/chinese-picture-book-compressed.pdf" download>
+        						<img src="https://static.igem.wiki/teams/4650/wiki/education/chinese-green-cover.png" alt="Cover Page" width="400" height="600">
+    						</a>
+							</center>
+						</div>
+
+
+						<div id="fourth">
+							<br><br><br>
+
+							<h1 class="font-weight-extra-normal custom-heading">
+								<center><i><strong class="font-weight-extra-bold">Educational Video</strong></i></center>
+							</h1>
+							<center>
+								<img style="height: 400px; width:500px" src="https://static.igem.wiki/teams/4650/wiki/education/education-vid.png">
+							</center><br>
+							<h2 class="font-weight-extra-normal text-7 mb-2"> 
+								<u><strong class="font-weight-extra-bold">Introduction: </strong></u>
+							</h2>
+							<p class="bigger-text">
+								We've created two videos for educational purposes. One is focusing on synthetic biology and our HP team. The other one is focusing on our project and getting more details about Scoby. This video has been shared on platforms like Instagram and YouTube, serving educational purposes. Our goal is to raise awareness and engage a broader audience in understanding the key points highlighted in the video. 
+								This initiative reflects our commitment to developing and implementing educational, science communication, and outreach materials related to synthetic biology. By leveraging video content, we've opened up new opportunities to include more individuals in shaping the field of synthetic biology. We believe that innovative educational tools, like this video, serve as effective means to foster dialogue with diverse communities, promote discussions on public values, and facilitate a deeper understanding of the science behind synthetic biology.
+							</p><br><br>
+							<h2 class="font-weight-extra-normal text-7 mb-2"> 
+								<u><strong class="font-weight-extra-bold">Educational Video 1</strong></u>
+							</h2>
+							<p class="bigger-text">
+								The educational video titled "Bake And Learn-Episode 1" focuses on learning about Scoby and our project. They will be able to grasp how we plan to accomplish our project's goals in the experiment when they watch the video. In addition, we added the animation in the movie so that viewers could more easily understand how the experiment functions.
+							</p>
+							<iframe title="KCIS-Xiugang-Taipei: Human Practice Educational Video About SCOBY 1 (2023) [English]" width="560" height="315" src="https://video.igem.org/videos/embed/cab187f9-8668-4ebc-b95d-ba1553fd83c0?start=0s" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe><br><br>
+							<h2 class="font-weight-extra-normal text-7 mb-2"> 
+								<u><strong class="font-weight-extra-bold">Educational Video 2</strong></u>
+							</h2>
+							<p class="bigger-text">
+								The educational video titled "Bake And Learn-Episode 2" focuses on learning about Synthetic Biology and our HP. The audience will be able to grasp what synthetic biology is, our HP members, and how we contributed to the whole team when they watch the video. In addition, by answering the questions with baking biscuits, the viewers will not get bored while learning knowledge.
+							</p>	
+							<iframe title="KCIS-Xiugang-Taipei: Human Practice Educational Video About SCOBY 2 (2023) [English]" width="560" height="315" src="https://video.igem.org/videos/embed/0f60c621-7b34-470c-bc58-1f41dc047695?start=0s" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
+						</div>
+
+						
+						<div id="fifth">
+							<br><br><br><br>
+
+							<h1 class="font-weight-extra-normal custom-heading">
+								<center><i><strong class="font-weight-extra-bold">Educational Workshop</strong></i></center>
+							</h1>
+							<h2 class="font-weight-extra-normal text-7 mb-2"> 
+								<u><strong class="font-weight-extra-bold">Introduction: </strong></u>
+							</h2>
+							<p class="bigger-text">
+								We organize workshops for the students in our school. Prior to commencing the experiment, we provided a comprehensive explanation of synthetic biology and the experiences. This initiative is a testament to our commitment to developing and implementing educational, science communication, and outreach materials related to synthetic biology. 
+								By creating opportunities for hands-on learning and engaging discussions, we aim to include more individuals in shaping the field of synthetic biology. Our approach aligns with the belief that innovative educational tools and outreach activities serve as bridges, fostering meaningful dialogues with new communities, and facilitating discussions on public values and the science underlying synthetic biology.
+							</p>
+							<center>
+								<img style="height: 400px; width:500px" src="https://static.igem.wiki/teams/4650/wiki/education/education-workshop.png">
+							</center><br>
+							<h2 class="font-weight-extra-normal text-7 mb-2"> 
+								<u><strong class="font-weight-extra-bold">2023 KCIS Xiugang Taipei iGEM X Library Collaboration Workshop: </strong></u>
+							</h2>
+							<p class="bigger-text">
+								We held a KCIS Xiugang Taipei iGEM X Library Collaboration workshop on September 18. We provided an informative but entertaining activity to the junior high students. Through this opportunity, we introduced young students to iGEM, synthetic biology, and SDGs. 
+								We started off by introducing our team, iGEM, and ourselves. In the main presentation, we first educated the students on each of the 17 goals of SDGs, how to identify them from a situation, and ideas on how they can help achieve SDGs. Then, we educated them on synthetic biology and how it can be applied to projects to help SDGs. Finally, we educated them on iGEM, other groups’ contributions to SDGs, and our project. Before we ended our workshop, we had the students play Kahoot to ensure they’ve learned from our education. We hope to deliver this information to more students to raise awareness of SDGs, as well as the study of synthetic biology.
+							</p>
+							<img style="width: 400px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/library/library-1.jpg">
+							<img style="width: 400px; height: 400px; padding-left: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/library/library-2.jpg">
+							<br><br>
+							<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTSoLrD4Tnqeb2z2XTvdwFIiAAchvvknDxJIcZpkwsleBzDNEraXlKTRIiwWYsI5Jc6GLu4wmyXFlgQ/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+							<br><br><br>
+							<h2 class="font-weight-extra-normal text-7 mb-2"> 
+								<u><strong class="font-weight-extra-bold">Junior iGEM Team Workshop: </strong></u>
+							</h2>
+							<p class="bigger-text">
+								We held a Junior iGEM team workshop on September 21. We conducted an engaging experiment involving the KCIS iGEM Junior team, which is grade 11. Before initiating the experiment, we offered a detailed description of basic introduction to synthetic biology and equipped them with knowledge about pipetting techniques, PCR concepts, and electrophoresis, enabling students to grasp fundamental knowledge. We hope that this workshop can provide them with the foundation for preparing their project and learn more about the scientific rationale behind it. Then, we divided the junior team into three groups, as well as our human practice group. Each of us demonstrates the use of pipette and DNA samples. During the process, we teach them step-by-step and patiently show them the mechanisms. While we were waiting for the gel to run, we introduced what PCR is. We discovered that the junior team is skilled in using pipettes and they comprehend the knowledge quickly. We hope to continue to ignite their passion for synthetic biology and iGEM.
+							</p>
+							<img style="width: 400px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/junior-workshop/junior-workshop-ig.png">
+							<img style="width: 400px; height: 400px; padding-left: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/junior-workshop/junior-workshop-1.png">
+							<img style="width: 400px; height: 400px; padding-left: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/junior-workshop/junior-workshop-2.png">
+							<img style="width: 400px; height: 300px; padding-left: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/junior-workshop/junior-worksop-4.jpg">
+							<img style="width: 400px; height: 300px; padding-left: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/junior-workshop/junior-workshop-3.jpg">
+							<br><br>
+							<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQrfZKWN_NfmQ6eV37zqzjRX-6RlUww_XlOe2RGgIWZNsAQQH3YGUP2VydGJx-fgj2uuOjcx6KSySNi/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+							<br><br><br>
+							<h2 class="font-weight-extra-normal text-7 mb-2"> 
+								<u><strong class="font-weight-extra-bold">G7+G8 iGEM Synergy Workshop: </strong></u>
+							</h2>
+							<p class="bigger-text">
+								We held the G7 + G8 iGEM Synergy workshop on September 28. It was designed to introduce students in grades 7 and 8 to the fascinating world of biology and molecular biology. 
+								To ensure a comprehensive understanding, we provided fundamental definitions of "what is biology" and "what is molecular biology." Understanding that these students may not have prior experience with laboratory equipment, we started with a hands-on pipetting practice session using water, allowing them to become familiar with this essential tool. During the actual experiment, our senior iGEM team guided the students through each step, explaining the scientific rationale behind each action. We engaged them in discussions to foster critical thinking and a deeper understanding of the experiment's purpose and methodology. While waiting for the bacteria to spin down, we took the opportunity to introduce them to the concepts of DNA and RNA, highlighting the differences between these two fundamental molecules.
+							</p>
+							<img style="width: 400px; height: 410px" src="https://static.igem.wiki/teams/4650/wiki/education/g7-g8/g7-g8-ig.jpg">
+							<img style="width: 400px; height: 400px; padding-left: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/g7-g8/g7-g8-1.jpg">
+							<br>
+							<p class="bigger-text">
+								To reinforce the knowledge they gained during the workshop, our senior team created a Kahoot game, ensuring an interactive and fun learning experience. This game helped students recall and retain the information provided, making the learning process engaging and memorable. The feedback from participants was overwhelmingly positive, with students expressing their newfound interest in biology and molecular biology. Many indicated that the workshop inspired them to consider joining iGEM in the future, emphasizing the success of the program in sparking their curiosity and passion for scientific exploration. 
+							</p>
+							<img style="width: 400px; height: 400px; padding-bottom: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/g7-g8/g7-g8-2.jpg">
+							<img style="width: 400px; height: 400px; padding-left: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/g7-g8/g7-g8-3.jpg">
+							<img style="width: 300px; height: 400px; padding-left: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/synergy/synergy-1.jpg">
+							<br>
+							<p class="bigger-text">
+								From the survey we sent to the students who participated in our workshop, 81.3 percent of the participants felt that the workshop had a positive impact on their pathway into the science field. In addition, one of the participants, August Shen, felt that the advanced knowledge provided to the students encouraged them to potentially apply for iGEM in the future. It also helps students to develop a better understanding of genetic engineering. And he also mentioned, “I would like to attend similar workshops in the future. I would also like to see more similar workshops so that they are organized in a series of classes for younger students since they do not have the opportunity to participate in iGEM for a long time.” This means that the workshop will allow students to delve deeper into this great and complex subject. 
+								To facilitate similar workshops for other groups, we are eager to share our lesson plans and materials, including the fundamental definitions, pipetting practice guidelines, experiment protocols, DNA and RNA explanations, and the Kahoot game. These resources are available for educators and iGEM teams worldwide to use as a template for inspiring the next generation of young scientists and fostering a deeper appreciation for the Sustainable Development Goals.
+							</p>
+							<img style="width: 300px; height: 400px; padding-bottom: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/synergy/synergy-2.jpg">
+							<img style="width: 300px; height: 400px; padding-left: 10px; padding-bottom: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/synergy/synergy-3.jpg">
+							<img style="width: 400px; height: 400px; padding-left: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/synergy/synergy-4.png">
+							<br><br>
+							<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSrPNA7xBKtwLxHlTRuoudeBZrvoRs-wn9jOFEC3JrMVshTavCh7_sqAK9S-R2BfdTTYTuJKusr0zWW/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+						</div>
+					</div>
+					</div>
+					</div>
+
+					<center>
+						<div>
+							<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore-removebg-preview.png" alt="Scroll Animated Image 2">
+						  </div>
+						<div>
+							<ul class="m-2 p-2" style="list-style: none; padding: 0;">
+							  <li>
+								<a class="hoverg" href="{{ url_for('pages', page='parts-collection') }}">
+							
+								  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/parts-button.png" style="width: 200px; height: 256px" alt="eng-button">
+				  
+								</a>            
+								<a class="hoverg" href="{{ url_for('pages', page='experiments') }}">
+				  
+								  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/experiments-button.png" style="width: 200px; height: 257px" alt="imp-button">
+				  
+								</a>            
+								<a class="hoverg" href="{{ url_for('pages', page='sustainable') }}">
+					
+								  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/sus-button.png" style="width: 200px; height: 256px" alt="team-button">
+				  
+								</a>            
+								<a class="hoverg" href="{{ url_for('pages', page='human-practices') }}">
+					 
+								  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/hp-button.png" style="width: 200px; height: 256px" alt="safety-button">
+				  
+								</a>
+								<a class="hoverg" href="{{ url_for('pages', page='description') }}">
+								
+									<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/description-button.png" style="width: 200px; height: 256px" alt="des-button">
+							  
+								  </a>
+							  </li>
+							</ul>
+						  </div>
+						</center>	
+	
+
+
+
+
+
+
+								
+	<script>
+		/*for (let i = 1; i <= 20; i++) {
+  			const flipContainer = document.getElementById(`flip-container-${i}`);
+  			const flipper = flipContainer.querySelector('.flipper');
+  			const front = flipper.querySelector('.front');
+  			const middle = flipper.querySelector('.middle');
+  			const back = flipper.querySelector('.back');
+
+  			flipContainer.addEventListener('click', () => {
+    			if (middle) {
+      			// Indonesia
+      				front.classList.toggle('hidden');
+      				middle.classList.toggle('hidden');
+      				back.classList.toggle('hidden');
+    			} else {
+      			// Every other team
+      				flipper.classList.toggle('flipped');
+    			}
+  			});
+		}*/
+		// Loop through all the sets of flipping images
+		for (let i = 1; i <= 7; i++) {
+  			const flipContainer = document.getElementById(`flip-container-${i}`);
+  			const flipper = flipContainer.querySelector('.flipper');
+
+  			flipContainer.addEventListener('click', () => {
+    			flipper.classList.toggle('flipped');
+  			});
+		}
+	</script>
+
+	<!-- BACKUP FOR CLICK FLIPPING (NO ANIMATION)
+		<center><img id="image" style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-1.png"></center>
+		<script>
+		document.getElementById('image').onclick = function() {
+		if (this.src == 'https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-1.png') {
+			this.src = 'https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-2.png';
+		} else if (this.src == 'https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-2.png') {
+			this.src = 'https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-1.png';
+		} else {
+			alert('error');
+		}
+		}
+		/script>
+	-->
+									
+	<!-- Vendor -->
+	<script src="vendor/plugins/js/plugins.min.js"></script>
+					
+	<!-- Theme Base, Components and Settings -->
+	<script src="js/theme.js"></script>
+					
+	<!-- Theme Custom -->
+	<script src="js/custom.js"></script>
+					
+	<!-- Theme Initialization Files -->
+	<script src="js/theme.init.js"></script>
+					
+	</body>
+</html>
+					
+{% endblock %}

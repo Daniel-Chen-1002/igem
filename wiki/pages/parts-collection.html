@@ -1,0 +1,420 @@
+
+{% extends "layout.html" %}
+
+
+
+{% block page_content %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+
+        /* Define your navigation bar styles */
+		.sidebar {
+        background-color: rgba( 212, 184, 149);
+        padding-top: 20px;
+        border-radius: 15px;
+        position: sticky;
+        top: 0;
+        overflow-y: auto; /* Add scroll functionality for small screens */
+    }
+	.font-weight-semi-bold {
+        text-align: center;
+        line-height: 2;
+    }
+    .sidebar.sidebar-bg {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+	.bigger-text {
+        font-size: 20px;  /* Adjust this value to your preference */
+        font-family: 'Georgia', serif;
+    }
+
+    .col-lg-9 {
+        max-width: 1300px;
+        margin: 10 auto;
+    }
+
+	.mid-image img {
+        transform: scale(0.85);
+        transform-origin: top left;
+		margin-bottom: -100px;
+    }
+	:root {
+    --primary-font: "Georgia", serif;   /* Secondary font for headings and specific content */
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 16px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--secondary-font);
+}
+
+
+	.special-content {
+    font-family: var(--secondary-font);
+}
+
+
+.reduce-space {
+    margin-bottom:0;
+    padding:0;
+    font-size: 0;  /* To counteract whitespace inherent with inline-block */
+}
+
+.reduce-space img {
+    vertical-align: top;
+}
+
+.scaled-image img {
+    transform: scale(0.6);
+    transform-origin: top left;
+
+}
+								/* Add CSS styles to control the margin between div elements */
+								.scaled-image {
+								  margin-bottom: -400px; /* You can adjust this value to control the margin size */
+								}
+								.scaled1-image img {
+    transform: scale(0.6);
+    transform-origin: top left;
+
+}
+								.scaled1-image {
+								  margin-bottom: -100px; /* You can adjust this value to control the margin size */
+								}
+
+	
+		</style>
+	
+</head>
+	<body data-plugin-scroll-spy data-plugin-options="{'target': '#sidebar'}">
+
+		<div class="body">
+
+
+			<div role="main" class="main">
+				<section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg" 
+						style="background-image: url('https://static.igem.wiki/teams/4650/wiki/headings/partscollection.png'); 
+							   background-size: cover; 
+							   background-position: center; 
+							   height: 700px; 
+							   display: flex; 
+							   align-items: center; 
+							   justify-content: center;
+							    width: 100%;">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 align-self-center p-static order-2 text-center">
+								<h1 class="font-weight-bold text-dark"></h1>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			
+				
+			<div class="container-fluid- pt-3 pb-2">
+
+				<div class="row pt-2">
+					<div class="col-lg-3 position-relative">
+						<aside class="sidebar sidebar-bg" id="sidebar" data-plugin-sticky data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
+
+							<h5 class="font-weight-semi-bold">Parts Collection</h5>
+							<ul class="nav nav-list flex-column mb-5">
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#first">Introduction</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#second">Design and importance of each part</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#third">Obtaining materials and challenges creating the parts</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#fourth">Part Tests</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#fifth">Biosafety</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sixth">Works Cited</a></li>
+
+
+
+							</ul>
+						
+						</aside>
+						
+
+
+				      </div>
+                <div class="col-lg-7">
+                    <div id="first">
+                        <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+                          <center> <strong class="font-weight-extra-bold">Part Collection</strong></center> 
+						  <strong class="font-weight-extra-bold">Introduction</strong>
+                        </h2>
+                        <p class="bigger-text">
+							Creation of Biobricks through cloning is essential for synthetic biology research. It is also a fundamental skill for iGEM projects. At Kang Chiao International School (KCIS), in Taipei, Taiwan, the school realised the importance of synthetic biology skills during the COVID-19 pandemic. As a result, the school fully supported Ms. Parker and Ms. Kuo when they proposed setting up a Synthetic Biology lab, starting in September 2021. Ms. Kuo had previous experience training those in the medical field on how to complete cloning techniques. Students attended a class every Thursday from periods 5 to 8 to learn the basic protocols involved with cloning. They then applied what they had learnt in the class to the iGEM competition. 
+
+                        </p>
+                        <p class="bigger-text">
+							The current team of 2022-23 is the second iGEM team from KCIS. From September to December of 2022, all the students in our team learned processes and techniques for genetic modification, including PCR, designing restriction sites on primers, NEB double enzyme digestion, T4 ligation, and bacterial transformation. After this time, the class was separated into 3 groups, and each came up with a topic for the project and then presented their idea to the others. 
+
+                        </p>
+                        
+					</div>
+
+					<div id="second">	
+						<p class="bigger-text">
+							The voting of the final decision was done in early January 2023 and our topic of designing a more flexible SCOBY as a leather substitute was decided on. Our aim is to create a yeast that will produce amino acids that will fuse with the SCOBY membrane and give it greater properties of flexibility so that it is a better substitute for leather.
+
+                        </p>
+						
+					</div>
+					<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+						<strong class="font-weight-extra-bold">Design and importance of each part </strong>
+					</h2>
+					<p class="bigger-text">
+						From the beginning of February to the end of July of 2023, our team worked on our biobrick parts. The major portion of our inspiration comes from a previous iGEM team named LINKS China, which used three types of cellulose-binding matrixes, CBM1, CBM2, and CBM3, to bind different types of spider silk proteins to their bacterial cellulose membrane [1]. We wanted to see if we could use simpler forms of the CBM and alternative spider silk proteins to arrive at a successful product through a simpler protocol that we as a high school team with level P1 lab could complete.
+
+					</p>
+					<p class="bigger-text">
+						Our first part is BBa_K4650000 which contains an inducible promoter (gal1,10 promoter) to allow our team to manipulate our composite parts more efficiently and precisely in the presence of galactose. The pGal1,10 promoter plasmid contains 2u origin of replication (ORI) for yeast to start DNA replication, and ORI for bacteria DNA replication. This plasmid can be transformed into bacteria and yeast, which was beneficial as it enabled our team to finish making biobricks in bacteria and perform the functional assay in yeast. The purpose of using the galactose promoter is to regulate gene expression. In the presence of galactose, it induces the gene’s mRNA induction downstream of the promoter and in the absence of galactose, the gene's mRNA induction downstream of the promoter is off [2].
+
+
+					</p>
+					<p class="bigger-text">
+						The second part is BBa_K4650001 which contains the cellulose binding domain (CBD) protein that will enable the spider silk proteins produced to adhere to the SCOBY layer. Our team used a fission yeast called Schizosaccharomyces pombe (S. pombe) to amplify CBM1, which we have referred to as cellulose binding domain (CBD), and encoded for its cellulose binding domain, from its genomic DNA. Many organisms like fungi, bacteria, and plants have different CBD genes to direct the enzymes or complexes to bind to cellulose for catalytic activities critical for their in vivo cellular processes [3,4]. Many papers demonstrated that CBD binds to cellulose not only in vivo but also in vitro. A review paper from 2002 showed that scientists developed a procedure for in vitro protein purification called the bio-specific purification affinity technique. They demonstrated that genes cloned at the N-terminus or C-terminus domain of the CBD form fusion proteins, allowing them to attach to immobilized cellulose when running through a column, therefore achieving purification [5]. The purpose of using BBa_K4650001 in our team’s project was to enable the spider silk proteins to adhere to the scoby membranes instead of remaining in the yeast cell.
+					</p>
+
+					<p class="bigger-text">
+						The third part, BBa_K4650002, contains spider silk protein, MaSp1, and the fourth part, BBa_K4650003 contains spider silk protein, MaSp2. Spiders generate several types of silks with strong elasticities and long lifetimes. Several studies also showed that spider silk has highly repetitive sequences (6,7,8). In Tian et al., figure 1 listed those sequences. Our two amino acid sequences, MaSp1 and MaSp2, were chosen as they were the shortest and therefore the easiest to convert from amino acid sequence to DNA.  In our project, we cloned spider silk protein genes upstream of the CBD to form a fusion protein [6,8]. 
+
+					</p>
+
+					<p class="bigger-text">
+						Our team also added the start codon, ATG, at the 5'end of the MaSp1 (BBa_K4650002), and MaSp2 (BBa_K4650003) DNA sequences so the RNA transcription would start from ATG on MaSp1, and MaSp2 to make fusion proteins with CBD in the presence of galactose. 
+					</p>
+
+
+					<div id="third">
+						<p class="bigger-text">
+							Our first composite part is BBa_K4650005 and consists of pGal1,10promoter, MaSp1, CBD; and our second composite part is BBa_K4650006 which consists of pGal1,10promoter, MaSp2, CBD. We have also create a third composite part, BBa_K465004, which consists of pGal1,10 promoter, CBD and acts as a control to see if the spider silk proteins are the reason for any changes in flexibility in our final tests.
+                        </p>
+					</div>
+					<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+						<u><strong class="font-weight-extra-bold">Obtaining materials and challenges creating the parts </strong></u>
+					   </h2>
+					   <p class="bigger-text">
+							 <br>Our team was grateful to receive the pGal1, 10-SPT5-Streptavidin Binding Protein (SBP) plasmid from Dr. Tien-Hsien Chang, at Genomics Research Center, Academia Sinica, in Taipei Taiwan. We wanted to clone our team’s CBD, and respective MaSp1, and MaSp2 downstream of the pGal1,10 promoter. In order to achieve this our team used double enzyme digestions, using XmaI, KpnI on the pGal1, 10-SPT5-Streptavidin Binding Protein(SBP) plasmid to get rid of the SPT5, the original gene on the plasmid. Our team also designed the two enzyme cut sites on the CBD primer set to perform double enzyme digestion after the CBD PCR product was generated. </br>
+					   </p>
+					<p class="bigger-text">
+				<u>	Creation of part  <a href="http://parts.igem.org/Part:BBa_K4650000" target="_blank" rel="noopener noreferrer">BBa_K4650000</a>(pGal1,10): </u>	
+
+						<br>Our team was grateful to receive the pGal1, 10-SPT5-Streptavidin Binding Protein (SBP) plasmid from Dr. Tien-Hsien Chang, at Genomics Research Center, Academia Sinica, in Taipei Taiwan. We wanted to clone our team’s CBD, and respective MaSp1, and MaSp2 downstream of the pGal1,10 promoter. In order to achieve this our team used double enzyme digestions, using XmaI, KpnI on the  pGal1, 10-SPT5-Streptavidin Binding Protein(SBP) plasmid to get rid of the SPT5, the original gene on the plasmid. Our team also designed the two enzyme cut sites on the CBD primer set to perform double enzyme digestion after the CBD PCR product was generated. </br>
+					</p>
+					<p class="bigger-text">
+				<u>Creation of  <a href="http://parts.igem.org/Part:BBa_K4650001" target="_blank" rel="noopener noreferrer">BBa_K4650001</a>(CBD): </u>	
+						<br>Our team used a fission yeast called Schizosaccharomyces pombe (S. pombe) to amplify CBM1, encoded for its cellulose binding domain, from its genomic DNA. Our team then used the PCR technique to amplify this gene. The fission yeast was also contributed by Dr. Tien-Hsien Chang, at Genomics Research Center, Academia Sinica, in Taipei Taiwan.  At the beginning of searching for a CBD gene source, our team discovered that the CBD genes in specific bacterial strains couldn’t be found in Taiwan, even though we had reached out to several professional labs at local universities. Finally, we dug deeper to find on the Pombase website that Schizosaccharomyces pombe (S. pombe)  has the CBD gene called CBM1 [9]. We decided to clone the CBD found in S. Pombe since, first, our team had done several experiments with a yeast, Saccharomyces cerevisiae, before, and in addition, after research, we found that fungi’s CBD genes are shorter than bacteria’s, which would be easier to manipulate. </br>
+
+					</p>
+					<p class="bigger-text">
+					<u>Creation of  <a href="http://parts.igem.org/Part:BBa_K4650002" target="_blank" rel="noopener noreferrer">BBa_K4650002</a> (MaSp1) and  <a href="http://parts.igem.org/Part:BBa_K4650003" target="_blank" rel="noopener noreferrer">BBa_K4650003</a> (MaSp2):</u>
+						<br>Our team chose to use MaSp1 and MaSp2 for translating into our DNA sequence and ordered these from Mission Biotech company, a local molecular bio company. The MaSp1 and MaSp2 amino acid sequences had several repeat amino acid sequences. After converting them into DNA sequences, our team designed the primer sets to amplify each of MaSp1 and MaSP2 via the PCR technique. </br>
+					</p>
+
+					<p class="bigger-text">
+						<u>	Creation of composite parts, Biobrick  <a href="http://parts.igem.org/Part:BBa_K4650004" target="_blank" rel="noopener noreferrer">BBa_K4650004</a>(pGal1,10-CBD),
+					<br>	<a href="http://parts.igem.org/Part:BBa_K4650005" target="_blank" rel="noopener noreferrer">BBa_K4650005</a>(pGal1,10-MaSp1-Cbd), and  <a href="http://parts.igem.org/Part:BBa_K4650006" target="_blank" rel="noopener noreferrer">BBa_K4650006</a> (pGal1,10-MaSp2-CBD): </br></u>
+					When our team tried to clone MaSp1, and MaSp2 between the pGal1,10 promoter and CBD gene, SmaI enzyme had difficulty fully digesting on our team’s BBa_K4650004 Biobrick containing the BBa_K4650000+BBa_K4650001 (pGal1,10-CBD) plasmid. Also, after SmaI enzyme digestion, it generated the blunt end on the plasmid, which could easily religate back together and the MaSp1 and MaSp2 parts would not be able to complete cloning into the plasmid as it would form back to the original plasmid. To overcome this our team then tried to use the dephosphorylation enzyme step to get rid of the phosphate group at the 3’ end, but we also lost a lot of product due to the phenol/chloroform extraction steps. Despite these problems, after many trials, our team managed to use SmaI to generate our composite part  BBa_K4650005, which contains BBa_K4650000+BBa_K4650002+ BBa_K4650001(pGal1,10-MaSp1-CBD). 
+						After discussion with Dr. Hsiao-Fen Han, she suggested our team switch to using the enzyme XmaI while cloning the MaSp2 to generate our second composite part, BBa_K4650006, which will contain BBa_K4650000+BBa _K4650003+BBa_K4650001 (pGal1,10- MaSp2-CBD). XmaI enzyme was easy to manipulate and could fully cut our team’s composition part, BBa_K4650004 plasmid in order for our team to continue the next step, T4 ligation. Additionally, our team didn’t need to do the dephosphorylation enzyme step which resulted in less loss of product. This technique can be used to clone the MaSp1 in the future.			
+
+					</p>
+
+					<p class="bigger-text">
+						Our team also added the start codon, ATG, at the 5'end of the MaSp1 (BBa_K4650002), and MaSp2 (BBa_K4650003) DNA sequences so the RNA transcription would start from ATG on MaSp1, and MaSp2 to make fusion proteins with CBD in the presence of galactose. 
+					</p>
+
+					<p class="bigger-text">
+						Our first composite part is BBa_K4650005 and consists of pGal1,10promoter, MaSp1, CBD; and our second composite part is BBa_K4650006 which consists of pGal1,10promoter, MaSp2, CBD. We have also create a third composite part, BBa_K465004, which consists of pGal1,10 promoter, CBD and acts as a control to see if the spider silk proteins are the reason for any changes in flexibility in our final tests.
+					</p>
+
+
+					<div id="fourth">
+						<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+                            <strong class="font-weight-extra-bold">Part Tests 
+							</strong>
+                        </h2>
+						<p class="bigger-text">
+							To manipulate our team’s spider silk proteins, MaSp1, and MaSp2, with CBD as a carrier for each protein, 3 different composite parts were generated:
+                        </p>
+					
+						<p class="bigger-text">
+							BBa_K64650004 contained BBa_K4650000+BBa_K 4650001(pGal1,10-CBD) as our team’s project control; 
+                        </p>
+					
+						<p class="bigger-text">
+							BBa_K4650005 contained BBa_K4650 000+BBa _K4650002+BBa_K4650001 (pGal1,10-MaSp1-CBD); 
+                        </p>
+				
+						<p class="bigger-text">
+							and BBa_K4650006 contained BBa_K4650000+BBa_K4650003+BBa_K4650001(pGal1,10-MaSp2-CBD). 
+                        </p>
+
+						<p class="bigger-text">
+							BBa_K4650004, BBa_K4650005, and BBa_ K4650006 were then transformed into wild-type Saccharomyces Yeast Strain, BY4741, respectively.
+
+                        </p>
+						
+						<p class="bigger-text">
+							<br> <u>PCR and electrophoresis</u> </br>
+
+							<br>Our team did PCR techniques and ran PCR products on gels. The PCR products on the gels showed evidence of proof of concept.
+						</br>
+                        </p>
+						<div class="mid-image">
+						<img src="https://static.igem.wiki/teams/4650/wiki/parts-image/bba-k4650004-pcr.jpg" alt="pcr1" width="1200">
+					</div>
+						<center>	<p class="bigger-text">
+						Bacterial colonies containing BBa_K4650004 show CBD full-length PCR products   </p> </center>
+						<div class="mid-image">
+						 <img src=" https://static.igem.wiki/teams/4650/wiki/parts-image/bba-k4650005-pcr.jpg" alt="pcr1" width="1200">
+						</div>
+						 <center>	<p class="bigger-text">
+							Bacterial colonies containing BBa_K4650005 show MaSp1-CBD full-length PCR products
+						 </p></center>
+						 <div class="mid-image">
+						 <img src=" https://static.igem.wiki/teams/4650/wiki/parts-image/bba-k4650006-pcr.jpg" alt="pcr1" width="1200">
+						</div>
+						 <center>	<p class="bigger-text">
+							Bacterial colonies containing BBa_K4650006 show MaSp2-CBD full-length PCR products 
+						 </p></center>
+
+						 <p class="bigger-text">
+							<br> <u>DNA sequencing from outside companies</u> </br>
+
+							<div class="body">
+								<p> After finishing these 3 composite parts, our team also sent them out to Mission Biotech do DNA sequences in order to confirm them as the 100% correct DNA sequence.</p>
+							</div>
+								<div class="scaled-image">
+								
+										<img src="https://static.igem.wiki/teams/4650/wiki/parts-image/bba-k4650004-1.jpg" alt="pcr1" width="1200">
+									</div>
+										<div class="scaled-image">
+							
+										<img src="https://static.igem.wiki/teams/4650/wiki/parts-image/bba-k4650005-1.jpg" alt="" width="1200">
+									</div>
+										<div class="scaled-image">
+									
+								
+										<img src="https://static.igem.wiki/teams/4650/wiki/parts-image/bba-k4650006-1.jpg" alt="" width="1200">
+				
+										</div>
+						
+							
+								
+	
+
+	
+
+							<p class="bigger-text">
+								<br> <u>RT-qPCR	</u> </br>
+	
+								<br>To further verify whether our team’s composite parts were functional, the RT-qPCR technique was operated to detect the mRNA induction of CBD in BY4741 containing BBa_K4650004, the mRNA induction of MaSp1-CBD in BY4741 containing BBa_K4650005, and the mRNA induction of MaSp2-CBD in BY4741 containing BBa_K4650006 via timecourse sample collection, at 0 min, 30min, 60min,90min, 120min, and 22 hours in the presence of the 2%YP-galactose medium. The BY4741 containing each of the 3 respective composite parts, was grown in YP-2%glucose, until OD600 0.2-0.4, and then 35 ml of yeast culture medium was taken out as 0 min as a control. Without galactose, the pGal promoter would not be switched on to perform the downstream of genes’ inductions. The yeast culture medium samples were then transferred from 2%YP-glucose to 2%YP-galactose medium, and 30ml of yeast culture medium samples were taken out at each different time course. As shown in the graphs below, all of the composite parts our team created showed the mRNA induction in the presence of galactose, which indicated the successful creation of functional composite parts. The RT-qPCR data enabled our team to continue working on the project with confidence that the parts were creating the desired amino acids.
+								<div class="scaled1-image">
+								<img src=" 	https://static.igem.wiki/teams/4650/wiki/parts-image/bba-k4650004-bargraph.jpg" alt="pcr1" width="1200">
+								</div>
+								The mRNA induction of CBD showed strong manipulation, above 5 fold induction, in the presence of galactose at 30 mins, 14 fold induction at 60mins, and the maxium of 19 fold CBD mRNA induction at 90 mins, and then backdown to 10 fold induction at 120mins, finally no detectable CBD mRNA induction at 22hours in the presence of galactose.
+								<div class="scaled1-image">
+								<br><img src="https://static.igem.wiki/teams/4650/wiki/parts-image/bba-k4650005-bargraph.jpg" alt="pcr1" width="1200">
+								</div>
+								The mRNA induction of MaSp1-CBD showed insignificant change in the presence of galactose at 30 mins, the maximum of 2 fold induction at 60mins, and and then backdown to 1.7-1.5 fold induction at 90 and 120 mins, finally no detectable MaSp1-CBD mRNA induction at 22 hours in the presence of galactose.
+								<div class="scaled1-image">
+								<br><img src="https://static.igem.wiki/teams/4650/wiki/parts-image/bba-k4650006-bargraph.jpg" alt="pcr1" width="1200">
+								</div>
+								The mRNA induction of MaSp2-CBD showed insignificant reduction in the presence of galactose at 30 mins compared to the 0min sample, the maximum above 2 fold induction at 90 mins, and then back down to 1.7 fold and 1.3 fold induction at 120 mins and 22 hours in the presence of galactose.
+					</div>	
+					<br>
+
+					<div id="fifth">
+					<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+						<strong class="font-weight-extra-bold">Biosafety
+						</strong>
+					</h2>
+					<p class="bigger-text">
+						<br>For creating the parts and transforming the 3 different composite parts into yeast, only bacteria was worked with for the entire cloning process, and S. pombe fission yeast and Saccharomyces yeast were used in the project, which only required a P1 level lab. The backbone of the pGal1,10 promoter contains the origin of the replication for bacteria, and 2um of the origin of the replication for yeast to make more copies during mitosis. Other organisms receiving our team’s composite parts would not be able to make more copies since other organisms have different origins of replication, so our genes would be unable to replicate outside of our experiment conditions. After cloning and functional experiments, our team also either bleached the bacteria and yeast plates through the weekend or autoclaved the plates to eradicate the bacteria and yeast containing the composite sites.</br>
+					</p>
+					</div>
+				
+							
+					<div id="sixth">
+									<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+										<strong class="font-weight-extra-bold">Works Cited
+										</strong>
+									</h2>
+									<p class="bigger-text">
+										<br> [1] LINKS_CHINA. Description. Available from: https://2021.igem.org/Team:LINKS_China/Description [Accessed September 28 2023]. </br>
+										<br> [2] O’Connor CM. 13.1: Regulation of the GAL1 promoter. California: Libretexts. https://bio.libretexts.org/Bookshelves/Cell_and_Molecular_Biology/Book%3A_Investigations_in_<br>Molecular_Cell_Biology_(O%27Connor)</br>/13%3A_Protein_overexpression/13.01%3A_Regulation_of_the_GAL1_promoter.</br>
+										<br> [3] Linder M, Teeri TT. The cellulose-binding domain of the major cellobiohydrolase of Trichoderma reesei exhibits true reversibility and a high exchange rate on crystalline cellulose. PNAS. 1996; 93(22): 12251-12255. Available from: doi:10.1073/pnas.93.22.12251.</br>
+										<br> [4] Levy I, Shoseyov O. Cellulose-binding domains: Biotechnological applications. Biotechnology Advances. 2002;20: 191–213. Available from: doi:10.1016/S0734-9750(02)00006-X.
+									</br>
+										<br> [5] Doi RH, Park JS, Shin HS. Fusion proteins containing cellulose-binding domains. Methods in Enzymology. 2000;326: 418-429. Available from: doi:10.1016/S0076-6879(00)26067-9.
+									</br>
+										<br> [6] Tian M. Expression and Purification of A Synthetic Spider Silk Protein In Arabidopsis thaliana. Master thesis. University of Wyoming; 2003.
+										</br>
+										<br> [7] Römer L, Scheibel T. The elaborate structure of spider silk: structure and function of a natural high performance fiber. Prion. 2008; 2(4): 154-61. Available from: doi:10.4161/pri.2.4.7490. </br>
+							
+							
+							
+								</br>
+								</p>
+					</div>
+						
+						
+						
+						
+							</br>
+                        </p>
+						
+                    </div>
+                </div>
+            </div>
+			<center>
+				<div>
+					<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore-removebg-preview.png" alt="Scroll Animated Image 2">
+				  </div>
+				<div>
+					<ul class="m-2 p-2" style="list-style: none; padding: 0;">
+					  <li>
+						<a class="hoverg" href="{{ url_for('pages', page='engineering') }}">
+					
+						  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/engineering-button.png" style="width: 200px; height: 256px" alt="eng-button">
+		  
+						</a>            
+						<a class="hoverg" href="{{ url_for('pages', page='experiments') }}">
+		  
+						  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/experiments-button.png" style="width: 200px; height: 257px" alt="imp-button">
+		  
+						</a>            
+						<a class="hoverg" href="{{ url_for('pages', page='results') }}">
+			
+						  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/results-button.png" style="width: 200px; height: 256px" alt="team-button">
+		  
+						</a>            
+						<a class="hoverg" href="{{ url_for('pages', page='human-practices') }}">
+			 
+						  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/hp-button.png" style="width: 200px; height: 256px" alt="safety-button">
+		  
+						</a>
+						<a class="hoverg" href="{{ url_for('pages', page='description') }}">
+						
+							<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/description-button.png" style="width: 200px; height: 256px" alt="des-button">
+					  
+						  </a>
+						  </li>
+						  
+					  </li>
+					</ul>
+					</div>
+					</center>
+</body>
+</html>
+{% endblock %}

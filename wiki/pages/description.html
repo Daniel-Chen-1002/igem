@@ -1,0 +1,633 @@
+{% extends "layout.html" %}
+
+
+
+{% block page_content %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+            /* Define your navigation bar styles */
+            .sidebar {
+                background-color: rgba(212, 184, 149);
+                padding-top: 70px;
+                border-radius: 15px;
+                position: sticky;
+                top: 0;
+                overflow-y: auto;
+                /* Add scroll functionality for small screens */
+            }
+
+            .font-weight-semi-bold {
+                text-align: left;
+                line-height: 2;
+            }
+
+            .sidebar.sidebar-bg {
+                width: 300px;
+                margin: 0 auto;
+            }
+
+            .bigger-text {
+                font-size: 20px;
+                /* Adjust this value to your preference */
+                font-family: 'Georgia', serif;
+            }
+
+            .col-lg-9 {
+                max-width: 1300px;
+                margin: 10 auto;
+            }
+
+            .scaled-image img {
+                transform: scale(0.6);
+                transform-origin: top left;
+
+            }
+
+            /* Add CSS styles to control the margin between div elements */
+            .scaled-image {
+                margin-bottom: -400px;
+                /* You can adjust this value to control the margin size */
+            }
+
+            .scaled1-image img {
+                transform: scale(0.6);
+                transform-origin: top left;
+
+            }
+
+            .scaled1-image {
+                margin-bottom: -100px;
+                /* You can adjust this value to control the margin size */
+            }
+			.scaled2-image img {
+                transform: scale(0.6);
+                transform-origin: top left;
+
+            }
+			.scaled2-image {
+                margin-bottom: -400px;
+                /* You can adjust this value to control the margin size */
+            }
+			.scaled3-image {
+                margin-bottom: -390px;
+                /* You can adjust this value to control the margin size */
+            }
+			.scaled3-image {
+                margin-bottom: -550px;
+                /* You can adjust this value to control the margin size */
+            }
+
+
+
+            :root {
+                --primary-font: "Georgia", serif;
+                /* Primary font for most content */
+                --secondary-font: "Georgia", serif;
+                /* Secondary font for headings and specific content */
+            }
+
+            body {
+                font-family: var(--primary-font);
+                font-size: 16px;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: var(--secondary-font);
+            }
+
+            .custom-heading {
+                font-size: 20px;
+                /* adjust as necessary */
+                color: rgb(86, 57, 42);
+            }
+
+            .special-content {
+                font-family: var(--secondary-font);
+            }
+
+            .mid-image img {
+                transform: scale(0.85);
+                transform-origin: top left;
+                margin-bottom: -100px;
+            }
+
+            .small-image img {
+                transform: scale(0.65);
+                transform-origin: top left;
+                margin-bottom: -200px;
+            }
+        </style>
+
+	
+		</style>
+	
+</head>
+	<body data-plugin-scroll-spy data-plugin-options="{'target': '#sidebar'}">
+
+		<div class="body">
+
+
+			<div role="main" class="main">
+				<section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg" 
+						style="background-image: url('https://static.igem.wiki/teams/4650/wiki/headings/project-introduction.png'); 
+							   background-size: cover; 
+							   background-position: center; 
+							   height: 700px; 
+							   display: flex; 
+							   align-items: center; 
+							   justify-content: center;
+							    width: 100%;">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 align-self-center p-static order-2 text-center">
+								<h1 class="font-weight-bold text-dark"></h1>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			
+				
+			<div class="container-fluid- pt-3 pb-2">
+
+				<div class="row pt-2">
+					<div class="col-lg-3 position-relative">
+						<aside class="sidebar sidebar-bg" id="sidebar" data-plugin-sticky data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
+
+							<h5 class="font-weight-semi-bold"><center>Description</center></h5>
+							<ul class="nav nav-list flex-column mb-5">
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#first">Summary</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#second">Problems Using Animal Skins To Make Leather Products</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#third">The search for an alternative</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#fourth">Scoby and Kombucha</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#fifth">Possibility of SCOBY Leather Achieving SDG Aims</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sixth">Problems of Creating SCOBY Leather and Our Survey Outcomes</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#seven">Gene and Protocols Introductio</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#eight">Final Product Aims</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#nine">References</a></li>
+
+
+
+
+							</ul>
+						
+						</aside>
+						
+
+
+				      </div>
+					  <div class="col-lg-7">
+						<div id="first">
+						<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+						<center> <strong class="font-weight-extra-bold">Summary</strong></center>
+					</h2>
+					
+							
+						
+							
+						
+						<div id="second">
+							<p class="bigger-text">
+								DANIEL DANIEL DANIEL DANIEL DANIEL TESTING TESTING TESTING TESTING TESTING
+								</p>
+
+						</div>	
+						
+						<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+							<strong class="font-weight-extra-bold">1. Problems Using Animal Skins To Make Leather Products</strong>
+							</h2>
+						</div>
+						
+						
+						<p class="bigger-text">
+						Leather finds frequent use in the fashion industry. The use of animal leather came to represent nobility, elegance, and style. These products are sought after by consumers who value the craftsmanship, exclusivity, and prestige associated with them [1]. Nonetheless, with the emergence of sustainable and ethical concepts, society has grown conscious of the production process of those products. The leather from exotic animal skins such as alligator, crocodile, python, and regular animals, including cattle and pigs, raises ethical concerns regarding animal welfare. The food, land, and water resources used for rearing animals disrupt delicate ecosystems. According to reports from the World Wildlife Fund, from 1998 to 2014, more than 2 billion farm animals were killed globally each year, and around 83% of all these animals’ hides and skin became leather.
+						</p>
+						
+						<p class="bigger-text">
+						Commercial leather is primarily a byproduct of raising cattle, with 83% of cattle hides becoming leather. Farmers sell the skin of slaughtered cattle to tanners for extra profit. Turning fresh animal hides into usable leather involves a beam house, tanning, post-tanning, and finishing processes. The chemicals that are used in the process can cause serious pollution during the synthesis process. The wastewater with toxic chemicals en route to the city waterway ultimately becomes the water people use and drink. Chemicals such as acids, salts, and enzymes all cause a series of impacts on the aquatic environment. According to an analysis by Hansen et al, an examination of forty-three leather tanning formulations shows that, on average, 360.2 kg of chemicals and 8.6 cubic meters of water are used to produce one ton of shaved leather. This leads the leather manufacturing industry to generate around 38% of the wastewater worldwide, which has a high concentration of salts and is poorly biodegradable [2][Figure 1].
+						</p>
+						<div>
+							<center><img src="https://static.igem.wiki/teams/4650/wiki/description/figure-1-description.png" alt="pcr1" width="1008" height="399">
+							<p class="postcard-index">
+									Figure 1: Process of the Leather Industry
+								</p></center><br><br>
+						
+
+							<p class="bigger-text">
+								More specifically, according to “government figures cited in an October 2012 report from Human Rights Watch”, Hazaribagh, a city in Bangladesh, houses tanneries that pump up to 21,000 cubic meters of waste materials into the Buriganga River per day [3][4]. Not to mention the hazards to humans as the leather workers are exposed to the chemicals during the process of chromium-tanning. 246 hazardous chemicals are used in 95% of animal tanning in the leather industry, which causes 27.1% of exposed workers to have respiratory issues like bronchitis, asthma, and lung cancer [5][Figure 2][Figure 3]. 	
+							</p>
+						
+						
+							<center><img src="https://static.igem.wiki/teams/4650/wiki/description/screenshot-2023-10-10-at-10-11-12-pm.png" alt="pcr1" width="775" height="476">
+								<p class="postcard-index">
+									Figure 2: Material of Processing Animal Tanning
+									</p></center><br><br>
+						
+									<center><img src="https://static.igem.wiki/teams/4650/wiki/description/figure-3-description-2.png" alt="pcr1" width="758" height="593">
+										<p class="postcard-index">
+											Figure 3: Health Issues of Workers' Exposure to the Animal Tanning Process
+											</p></center><br><br>
+						
+						
+						<p class="bigger-text">
+						Additionally, leather is predominantly a byproduct of cattle farming. The global cattle population contributes to methane emissions, accelerating the greenhouse effect. The global cattle population amounted to about 940 million head in 2022, up from approximately 937.7 million in 2021. A cow can produce about 220 pounds (ca. 100 kg) of methane a year [6]. This means that 2.06 trillion metric tons of methane are produced annually, accelerating the greenhouse effect. Researchers have found that 37 percent of global methane emissions from human activity and 14.5 percent of global greenhouse gas emissions are the direct result of our livestock and agricultural practices [7][8][Figure 4]. To sum up, the leather industry creates very harmful consequences for society; not only does it contribute to the raising of animal welfare and environmental concerns due to the use of exotic and regular animal skins, but cattle farming, of which leather production is a byproduct, is environmentally damaging. 
+						</p>
+						
+
+							<center><img src="https://static.igem.wiki/teams/4650/wiki/description/figure-4-description.jpg" alt="pcr1" width="1167" height="298">
+								<p class="postcard-index">
+									Figure 4 Contribution of Methane Produced by Cattle and the Effects
+									</p></center><br><br>
+
+						<p class="bigger-text">
+						However, as humans are developing higher environmental impact awareness, some trends show we are consuming alternative protein sources instead of raising more cattle for meat. To illustrate this, a study from New York Times Magazine indicates that people around the world have been eating less beef in recent years. In the magazine, the Natural Resources Defense Council pointed out that beef consumption among Americans declined by 19%, nearly one-fifth, from 2005 to 2014 [9]. Internationally, the Japanese eat only about 20 pounds (ca. 9 kg) of beef per capita each year, less than half of the amount consumed in the United States, while a more long scale study showed that Americans eat less beef than they used to, a reduction of more than a third from the 1976 peak of 94.1 pounds (about 43 kg) per person, due to both in health concerns and environmental issues [10]. <br>This trend is reinforced by a 2022 survey by the International Food Information Council, in which 65 percent of Americans reported eating plant-based meat alternatives in 2022, showing many are actually deciding to switch to alternative protein sources [11][Figure 5]. Beyond the food sector, this shift impacts the leather industry, where approximately 65% of all leather is sourced from cattle. Cattle hide is a byproduct of cattle, and a decline in the production of beef could lead to a decline in the availability of the rawhide needed for the production of leather and similar products. At this juncture, it has become imperative to seek a viable substitute for animal-derived leather.
+						</p>
+					
+						<center><img src="https://static.igem.wiki/teams/4650/wiki/description/figure-5-description.png" alt="pcr1" width="1120" height="593">
+							<p class="postcard-index">
+								Figure 5: Percentage of Americans Eating Plant-Based Meat Alternatives
+
+								</p></center><br><br>
+
+								<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+									<strong class="font-weight-extra-bold">2. The search for an alternative</strong>
+									</h2>
+
+					<br><p class="bigger-text">
+						Recognizing the multitude of challenges confronting the cattle industry and the detrimental impact of animal leather production on ecosystems, the environment, and human well-being, we embarked on a quest to identify viable alternatives to address these pressing issues. Through our research, we uncovered several promising replacements, including plastic, mycelium, SCOBY (symbiotic culture of bacteria and yeast), and fruit peel. Of particular note, SCOBY has garnered significant attention across various fields, notably in the realm of textile production [12]. 
+						</p>
+						
+						<p class="bigger-text">
+						We examined the replacement options: Plastic has had far-reaching pollution consequences, disrupting ecosystems, diminishing their ability to adapt to climate change, and directly impacting the livelihoods, food production, and well-being of millions. Each day, an astonishing amount of plastic waste, equivalent to 2,000 garbage trucks, finds its way into the world's oceans, rivers, and lakes. Annually, an alarming 19-23 million metric tons of plastic waste infiltrate aquatic ecosystems, polluting lakes, rivers, and seas [13]. The environmental toll is further exacerbated by the plastic industry's substantial carbon footprint, which accounts for a significant 4.5 percent of global greenhouse gas emissions. To put it in perspective, for every kilogram of fossil-based plastic produced, an additional 1.7 to 3.5 kilograms of carbon dioxide are released into the atmosphere [14][15][Figure 6]. 
+						</p>
+						
+							<center><img src="https://static.igem.wiki/teams/4650/wiki/description/figure-6-description.png" alt="pcr1" width="959" height="295">
+								<p class="postcard-index">
+									Figure 6: Toxic Impacts of Plastic
+	
+									</p></center><br><br>
+					
+					
+							<p class="bigger-text">
+						Mycelium was an interesting option, however since we are just a high school team, we don’t have the experience of working with fungus, so adapting mycelium with genetic engineering was excluded as an option. Fruit leather production has some drawbacks, according to the study of the fruit leather process. These include a lengthy drying process that exposes the products to environmental contamination, a reliance on the weather, and the need for manual work, which left SCOBY as our remaining option [16]. What sets SCOBY apart from other options is its ability to address pressing environmental concerns, including the harm that animal leather manufacture causes to ecosystems, the environment, and people's health. 
+						</p>
+						
+					<div id="fourth">	
+						<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+						<strong class="font-weight-extra-bold">3. Scoby and Kombucha </strong>
+						</h2>
+					</div>
+						
+						<p class="bigger-text">
+						Have you previously encountered the acronym SCOBY? It is likely that you may not have come across this topic yet since 89.4% of our survey respondents lacked familiarity with SCOBY [Figure 7]. Thus, it seems appropriate to clarify what SCOBY is. 
+						</p>
+
+				
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/description/figure-7-description.jpg" alt="pcr1" width="1164" height="500">
+									<p class="postcard-index">
+										Figure 7: Survey on the Cognition of  SCOBY in General Population
+		
+										</p></center><br><br>
+
+							
+
+							<p class="bigger-text">
+						SCOBY, also known as symbiotic culture of bacteria and yeast, is a culinary fermentation culture composed of ingredients including lactic acid bacteria, acetic acid, bacteria, and yeast. It plays a crucial role in producing edible kombucha from sweet tea. The fermentation process for SCOBY involves alcoholic, lactic, and acetic fermentation. The process starts off by preparing sweetened black or green tea on a new SCOBY mat and letting it stay at room temperature. Next, the mixture is covered tightly with a cloth to minimize its exposure to other bacteria and dust. During the week, the bacteria and yeast inside the substance start breaking down the sugars in the tea and turning them into carbon dioxide, alcohol, and acids. This is what gives SCOBY its tangy yet sweet taste in the end. Aside from the tea, bacterial cellulose membranes form by intertwining cellulose fibrils. This material, often referred to as bacterial leather, has shown potential in use as a substitute for animal leather. As SCOBY grows thicker, it can be used to make a whole new batch of SCOBY membranes again [17][Video 1].
+						</p>
+						
+						<p class="bigger-text">
+						While SCOBY has been around for more than 2000 years, it developed and increased mainstream popularity in the late 1980s and early 1990s and was initially used to support weakened immune systems and raise T-cell counts [18][19]. However, SCOBY's popularity started to decline in 1995 as stated in a report from the Centers for Disease Control and Prevention (CDC) [20]. Yet this changed in the early 21st century, when people began to gain awareness of probiotics and their possible health benefits, and SCOBY again began to flourish. Throughout its history, SCOBY has been transformed into a variety of products, including raw SCOBY cookie dough and SCOBY dog treats [21][Figure 8]. A number of issues, such as the moldy and lumpy nature of SCOBY, may arise while producing SCOBY membranes when the incorrect procedure is used [22].
+						</p>
+					
+
+					
+
+									<center><img src="https://static.igem.wiki/teams/4650/wiki/description/figure-9-description.png" alt="pcr1" width="1008" height="399">
+										<p class="postcard-index">
+											Figure 8: Timeline of SCOBY’s History
+		
+											</p></center><br><br>
+
+
+
+					
+					<div id="fifth">	
+						<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+						<strong class="font-weight-extra-bold">4. Possibility of SCOBY Leather Achieving SDG Aims </strong>
+						</h2>
+					<div/>
+						
+						
+						<p class="bigger-text">
+						By replacing leather with the cellulose byproduct of the fermented beverage Kombucha, known as SCOBY, our team intends to benefit the global society while focusing on the Social Development Goals (SDGs) number 12: Responsibly consuming and producing; and 15. Life on land, which was established by the United Nations, aims to transform our world into more sustainable practices [23].
+						</p>
+						
+						<h6 class="font-weight-bold custom-heading">
+							<i>12—Responsible Consumption and Production</i>
+						</h6>						
+						
+						<p class="bigger-text">
+						More than 600 million tons of garbage are produced annually as a result of the toxic chemicals that are employed in the production of modern leather, such as chromium, which are then dumped into the environment [24]. Achieving goal 12.4: “Achieve the environmentally sound management of chemicals and all wastes throughout their life cycle” would be possible if the leather industry switched from using animal leather to SCOBY leather. “Minimize [chemicals] adverse effects on human health and the environment by reducing their release to air, water, and soil” [25]. Additionally, as SCOBY is a byproduct of the well-known beverage kombucha, it is conceivable to reuse the kombucha production process’s waste to create our product and create a beneficial circular economy model. Maintaining responsible production could also help to improve the conditions and health of the workers who are producing it, as the leather industry exposes workers to harmful working environments and will cause certain health risks, whereas producing SCOBY would not require the use of hazardous chemicals, thus improving workers’ health.  
+						</p>
+						
+					
+
+						<h6 class="font-weight-bold custom-heading">
+							<i>15—Life on Land</i>
+						</h6>	
+						
+						<p class="bigger-text">
+						A hundred million animals are demanded annually by the fashion industry for leather apparel and accessories [26]. Many wildlife and specialist species are slaughtered for their novelty fur and hide, despite the fact that the meat sector accounts for the majority of this. Because many species demanding leather, including sea mink, are overfarmed and on the verge of extinction, the huge demand for leather poses serious dangers to the environment and biodiversity [27]. Furthermore, the current leather tanning techniques cause serious pollution and will thus cause environmental destruction. With one simple choice, we may reduce the number of deaths of our terrestrial lifeforms and save biodiversity by switching from animal leather to biodegradable SCOBY-made leather, which is more environmentally benign. We intend to use our SCOBY product to lessen the possible impact of supplying wildlife leather items because the fashion sector is responsible for up to 8% of greenhouse gas emissions and 20% of global wastewater [28]. Moreover, breeding fewer cows will produce fewer greenhouse gasses and will ease climate change, which will certainly make less risk of biodiversity loss. In light of this, SDG 15 is intended to prevent biodiversity loss and promote the conservation and sustainable use of terrestrial ecosystems, according to the UN [29]. Our proposal is in line with target 15.5: “Take urgent and significant action to reduce habitat degradation, stop biodiversity loss, and, by 2020, protect and prevent the extinction of threatened species”.   
+						</p>
+						
+					<div id="sixth">
+						<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+						<strong class="font-weight-extra-bold">5. Problems of Creating SCOBY Leather and Our Survey Outcomes</strong>
+						</h2>
+					</div>
+						
+						<p class="bigger-text">
+						To investigate our potential customers, the team conducted a survey with subjects around Taiwan. With the rising environmental awareness, the survey indicates that a significant 69% of people are willing to use a more eco-friendly alternative form of leather that does not have the same negative consequences [Figure 9]. 
+						</p>
+						
+						<center><img src="https://static.igem.wiki/teams/4650/wiki/figure-10-description.jpg" alt="pcr1" width="1000" height="350">
+							<p class="postcard-index">
+								Figure 9: Survey on Public’s Willingness of Using Eco-Friendly Products
+
+								</p></center><br><br>
+
+						<p class="bigger-text">
+						However, as we delved deeper into our investigation of SCOBY, a significant issue came to the forefront: SCOBY tends to become brittle and lose its flexibility when subjected to the drying process due to the property of bacterial cellulose (BC) film [30][31]. This issue gained prominence when we conducted a second survey, revealing that a substantial 56.8% of the respondents have a preference for leather products and see "flexibility" as a key attribute for leather products [Figure 10]. 
+						</p>
+						
+
+							<center><img src="https://static.igem.wiki/teams/4650/wiki/figure-11-description.jpg" alt="pcr1" width="1000" height="350">
+								<p class="postcard-index">
+									Figure 10: Survey on Leather Properties General Population Prefer
+
+
+									</p></center><br><br>
+					
+								
+
+
+							<div id="seven">
+						<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+				<strong class="font-weight-extra-bold"> 6. Gene and Protocols Introduction</strong></br>
+						</h2>
+					</div>
+						
+						<p class="bigger-text">
+						To address the issues we found with using dehydrated SCOBY as an alternative to being too rigid and inflexible, we aimed to incorporate proteins that would increase the flexibility of the SCOBY through the use of bioengineered yeast, to which we chose to add the amino acids MaSp1 and MaSp2, and the Cellulose Binding Domain (CBD) would be used to ensure the proteins would attach to the SCOBY.
+						</p>
+						
+					
+						<h6 class="font-weight-bold custom-heading">
+							<i>Masp1 and Masp2</i>
+						</h6>	
+						<p class="bigger-text">
+						From our survey, we found that flexibility is one of consumers' favorite traits of leather. Research showed that SCOBY leather is inflexible and brittle. We found articles that indicated that the genes that make spider silk could help to increase the flexibility of our SCOBY. Spider silk mostly consists of highly repetitive amino acids, which makes it strong and flexible at the same time [32]. 
+						</p>
+						
+						<p class="bigger-text">
+						A study by Tian in 2003 showed the repetitive amino acid sequences [Figure 11][33]. Our team chose MaSp1 and MaSp2 because they are the two shortest amino acids among all. This makes it easier for cloning and genetic modification when translating into DNA sequences, and it is also easier to design primers for the PCR technique to amplify these two DNA sequences. 
+						</p>
+					
+						
+
+
+							<center><img src="https://static.igem.wiki/teams/4650/wiki/figure-12-description.jpg" alt="pcr1" width="1000" height="350">
+								<p class="postcard-index">
+									Figure 11: Consensus Amino Acid Repeats for Known Spider Silks
+
+
+									</p></center><br><br>
+
+
+						<h6 class="font-weight-bold custom-heading">
+							<i>CBD</i>
+						</h6>	
+						
+						<p class="bigger-text">
+						To make our SCOBY softer and more flexible, we used MaSp1 and MaSp2 which provide proteins to improve their structural properties. However, to make sure these proteins stick to the SCOBY's cellulose membrane, there has to be a “glue” between them so that the synthesized MaSp1 and MaSp2 leave the yeast cell and do not just float around in the kombucha and fail to enhance our SCOBY’s properties. Hence, we used a concept inspired by the LINKS_CHINA team's project. They aimed to make durable leather substitutes from bacterial cellulose and designed “cellulose binding matrixes” to attach proteins to cellulose, and we found a similar, but simpler, solution called “Cellulose Binding Domains” (CBD) [34]. CBD acts as a glue between the cellulose in SCOBY and the spider silk proteins. 
+						</p>
+						
+						<p class="bigger-text">
+						CBDs are found in many organisms, including fungi, bacteria, and plants, and their primary function in those organisms is to aid enzymes or complexes in binding to cellulose for additional catalytic activities beneficial to in vivo cellular processes. Many enzymes contain CBDs on their own for cellulose digestion. These CBDs are conserved, indicating that they play an important role in delivering proteins or complexes to cellulose membranes [34]. CBD is found in several polysaccharide-degrading enzymes, including endo-mannanase, and removing the CBD from those enzymes reduces their enzymatic activity [35]. The research showed that with in vitro protein purification, scientists added the desired gene at the 5’- or 3’- end of CBD to form a fusion protein that could still bind to cellulose. Overall, our team was convinced that using one CBD was enough to do the work that was needed [36]. 
+						</p>
+						
+						<p class="bigger-text">
+						CBD's properties enable our team to use this complex as a link between the cellulose that creates SCOBY and the silk in the modified SCOBY [36]. As a result, it is determined that the CBD gene should be cloned into the plasmid. 
+						</p>
+						
+						<p class="bigger-text">
+						One last question remained: since many organisms produce CBD, how do we choose which CBD gene to use? Our solution is the CBM1 gene from the fission yeast, Schizosaccharomyces pombe. We selected this CBD gene for two reasons. First, numerous studies have shown that CBDs in fungi are typically smaller than CBDs in bacteria, making them a better fit for SCOBY [37]. Second, our team has already conducted various experiments with Saccharomyces yeast, which has prepared us to work with yeast more effectively. Therefore, our team has decided to use CBM1 in S. pombe.
+						</p>
+						
+						<h6 class="font-weight-bold custom-heading">
+							<i>Experiments</i>
+						</h6>	
+						
+						
+						<p class="bigger-text">
+						Our aim was to create three plasmids: pGal-CBD, pGal-MaSp1-CBD, and pGal-MaSp2-CBD.
+						</p>
+						
+						<p class="bigger-text">
+						To acquire our parts, we contacted Dr. Tien-Hsien Chang from Academia Sinica, who provided us with S. pombe yeast cells and the pGal1,10 promoter plasmid, and Mission Biotech, which provided us with MaSp1 and MaSp2 genes.
+						</p>
+						
+						<p class="bigger-text">
+						We extracted S. pombe’s genomic DNA, performed PCR using primers designed with enzyme cut sites to amplify the CBD gene sequence, and then did double enzyme digestion. For the pGal1,10 promoter plasmid, we used double enzyme digestion to get rid of the original gene cloned downstream of the pGal promoter, as our team wanted to replace it with our CBD gene. Then, we conducted T4 ligation with the pGal1,10 promoter linearized vector and CBD to form the pGal1,10-CBD plasmid.
+						</p>
+						
+						<p class="bigger-text">
+						For MaSp1 and MaSp2, we requested Mission Biotech to synthesize the two DNA sequences for us. We conducted PCR with primers to amplify the two spider silk DNA sequences. The primers were engineered to produce one enzyme cut side with either SmaI or XmaI, for MaSp1 and MaSp2 respectively. We then cut the pGal1,10-CBD plasmids with SmaI or XmaI. Finally, we used T4 ligation to create our pGal1,10-MaSp1-CBD and pGal1,10-MaSp2-CBD plasmids. To ensure MaSp1 and MaSp2 were attached with the correct orientation, our team conducted PCR with the forward primer designed at the 5’ end of MaSp1 (and MaSp2) and the reverse primer designed at the 3' end of CBD. For further confirmation of DNA sequences, our team sent the plasmids to Mission Biotech.
+						</p>
+						
+						<p class="bigger-text">
+						With three complete plasmids,pGal-CBD, pGal-MaSp1-CBD, and pGal-MaSp2-CBD. Our team conducted bacterial transformation on LB-Amp plates and inoculated them to acquire more copies of the plasmids, then extracted the plasmids. We then conducted Saccharomyces yeast transformation via wild-type, BY4741, and conducted RT-qPCR to ensure our team’s plasmids did have biological function.
+						</p>
+						
+						<p class="bigger-text">
+						The team simultaneously grew more batches of SCOBY in preparation for the co-culture and flexibility tests. The SCOBYs were grown for 7 days. We rinsed the SCOBY with deionized water and co-cultured each SCOBY with 2%YP-galactose medium containing 100ug/ml kanamycin and our engineered yeast for 3 days, respectively. 
+						</p>
+						
+						<p class="bigger-text">
+						Finally, we dried the SCOBY membranes and conducted flexibility tests with them. The team tested four types of SCOBY: the regular SCOBY co-cultured with BY4741 only, and SCOBY co-cultured with engineered yeasts containing our three constructs, pGal-CBD, pGal-MaSp1-CBD, and pGal-MaSp2-CBD, respectively.
+						</p>
+						<p class="bigger-text">
+							<br>Each of these parts are documented on the registry: pGal1,10 <a href="http://parts.igem.org/Part:BBa_K4650000" target="_blank" rel="noopener noreferrer">BBa_K4650000</a>; CBD <a href="http://parts.igem.org/Part:BBa_K4650001" target="_blank" rel="noopener noreferrer">BBa_K4650001</a>; MaSp1 <a href="http://parts.igem.org/Part:BBa_K4650002" target="_blank" rel="noopener noreferrer">BBa_K4650002</a>; MaSp2<a href="http://parts.igem.org/Part:BBa_K4650003" target="_blank" rel="noopener noreferrer">BBa_K4650003</a>; pGal1,10-CBD<a href="http://parts.igem.org/Part:BBa_K4650004" target="_blank" rel="noopener noreferrer">BBa_K4650004</a>; pGal1,10-MaSp1-CBD <a href="http://parts.igem.org/Part:BBa_K4650005" target="_blank" rel="noopener noreferrer">BBa_K4650005</a>; pGal1,10-MaSp2-CBD<a href="http://parts.igem.org/Part:BBa_K4650006" target="_blank" rel="noopener noreferrer">BBa_K4650006</a>
+						</br>	
+					
+					
+					
+						<div id="eight">
+						<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+						<strong class="font-weight-extra-bold">7. Final Product Aims</strong>
+						</h2>
+					</div>
+
+						<p class="bigger-text">
+						After making our modified scoby leather, mass-producing SCOBY leather is our future goal. It was suggested by materials specialist, Dr Jurgita, that we see if we could source SCOBY from commercial kombucha makers since it's a byproduct from commercial Kombucha producers, which allows us to achieve a circular economy [38]. However, after the interview with the CEO of Grape King, Chen Yen Lie, we found out that this was not an option, since industrial production using a fermentor would not allow SCOBY to form during the fermentation process [39][40]. Therefore, the team decided to look for alternatives, and we then decided to target small-scale Kombucha producers, such as Andrew Nicholls, who when interviewed was very enthusiastic about our concept and proposal [41]. In addition, we got inspiration from Taiwanese plant-based leather producers, Voome Team [42]. Similar to their production method, the team can create a fixed SCOBY growing formula, achieving a commercial SCOBY leather farm. Moreover, we aim to sell these modified SCOBY to leather producers, suggesting to them that instead of using leather, we should use SCOBY instead, using the positive impact it would have on the SDGs as a selling point.
+						</p>
+						
+						
+
+					
+						<div id="nine">
+							<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+								<u><strong class="font-weight-extra-bold">References</strong></u>
+							</h2>
+								<p class="bigger-text">
+								<br>[1] The Editors of Encyclopaedia Britannica. (2023, September 15). Leather | History & facts. Encyclopedia Britannica. https://www.britannica.com/topic/leather </br>
+								<br>[2] Hansen , É., Monteiro , P. de A., & Gutterres , M. (2021, April 20). Environmental assessment of water, chemicals and effluents in leather post-tanning process: A Review. Science direct. https://www.sciencedirect.com/science/article/abs/pii/S0195925521000470. </br>
+								<br>[3] Motlagh, J. (2013, September 3). Hell for leather: Bangladesh’s toxic tanneries ravage
+								lives and environment. Time. https://world.time.com/2013/09/03/hell-for-leather-bangladeshs-toxic-tanneries-ravage-lives-and-environment/. </br>
+								
+								<br>[4] Human rights watch | defending human rights worldwide. HUMAN RIGHTS WATCH. (2012, October). https://www.hrw.org/reports/bangladesh1012_brochure_web_0.pdf.</br>
+								
+								<br>[5] Dalju, I., Dessie, A., Bogale, L., & Mekonnen, T. H. (2019, August 5). Occupational risk factors associated with respiratory symptoms among tannery workers in Mojo Town, Southeast Ethiopia, 2018: A comparative cross-sectional study - multidisciplinary respiratory medicine. BioMed Central. https://mrmjournal.biomedcentral.com/articles/10.1186/s40248-019-0188-1.</br>
+								
+								<br>[6] Quinton, A. (2019, June 27). Cows and climate change; Making cattle more sustainable.UC Davis. https://www.ucdavis.edu/food/news/making-cattle-more-sustainable. </br>
+							
+								<br>[7] Agriculture and Aquaculture: Food for Thought | US EPA. (2023, February 27). US EPA. https://www.epa.gov/snep/agriculture-and-aquaculture-food-thought</br>
+								
+								<br>[8] Cows and climate change. (2023, May 22). UC Davis. https://www.ucdavis.edu/food/news/making-cattle-more-sustainable</br>
+								
+								<br>[9] Strom, S. (2017, March 29). Americans ate 19% less beef from ’05 to ’14, report says. The New York Times. https://www.nytimes.com/2017/03/21/dining/beef-consumption-emissions.html</br>
+								
+								<br>[10] Mishan, L., Hamada, K., & Bourne, M. (2022, March 3). What does the end of beef mean for our sense of self? The New York Times. https://www.nytimes.com/2022/03/03/t-magazine/meat-beef-vegetarianism-veganism.html</br>
+								
+								<br>[11] Insight, F. (2021). IFIC Survey: Consumption Trends, Preferred Names and Perceptions of Plant-Based Meat Alternatives. Food Insight.  https://foodinsight.org/consumption-trends-plant-based-meat-alts/</br>
+							
+								<br>[12] Kunde, R. (2022, December 26). What to know about vegan leather. WebMD.https://www.webmd.com/a-to-z-guides/what-to-know-about-vegan-leather#:~:text=Vegan%20leather%20is%20artificial%2C%20synthetic,without%20using%20any%20animal%20products</br>
+								
+								<br>[13] Plastic pollution. (n.d.). UNEP - UN Environment Programme. https://www.unep.org/plastic-pollution</br>
+								
+								<br>[14] Kilgore, G. (2023). 2023 plastic carbon Footprint: Official Emissions Numbers + calculator. 8 Billion Trees: Carbon Offset Projects & Ecological Footprint Calculators. https://8billiontrees.com/carbon-offsets-credits/carbon-ecological-footprint-calculators/plastic-carbon-footprint</br>
+								
+								<br>[15] Woodly. (2021, May 26). What is the carbon footprint of plastic? - Woodly. Woodly. https://woodly.com/carbon_neutrality/what-is-the-carbon-footprint-of-plastic/</br>
+								
+								<br>[16] Diamante, L. M., Bai, X., & Busch, J. (2014). Fruit leathers: Method of preparation and effect of different conditions on qualities. International Journal of Food Science, 2014, 1–12. https://doi.org/10.1155/2014/139890</br>
+								
+								<br>[17] Ajmera, R. (2023, July 12). Kombucha Scoby: What it is and how to make one. Healthline. https://www.healthline.com/nutrition/kombucha-scoby. </br>
+								<br>[18] Boast, G., & Boast, G. (2022, March 27). Kombucha SCOBY: What is it and How do I Make it? Equinox Kombucha UK. https://equinoxkombucha.com/blog/what-is-scoby/#:~:text=Kombucha%20is%20an%20ancient%2C%20fermented,is%20not%20made%20of%20mushrooms!</br>
+								
+								<br>[19] Petruzzello, M. (2016, June 17). Kombucha | Description, History, SCOBY, & Nutrition. Encyclopedia Britannica. https://www.britannica.com/topic/kombucha</br>
+								
+								<br>[20] Unexplained Severe Illness Possibly Associated with Consumption of  Kombucha Tea -- Iowa, 1995. (1995, December 8). https://www.cdc.gov/mmwr/preview/mmwrhtml/00039742.htm</br>
+								
+								<br>[21] Schwenk, D. (2023). Help! My SCOBY is UGLY and other common issues. Cultured Food Life. https://www.culturedfoodlife.com/help-my-scoby-is-ugly-and-other-common-issues/</br>
+								
+								<br>[22] Schwenk, D. (2023a). 20 Smart Ways To Use Your Kombucha SCOBYs! Cultured Food Life. https://www.culturedfoodlife.com/20-smart-ways-to-use-your-kombucha-scobys/</br>
+								
+								<br>[23] THE 17 GOALS | Sustainable Development. (n.d.). https://sdgs.un.org/goals</br>
+								
+								<br>[24] Damini. (2023). Leather chemicals and their impact on the environment. Deskera Blog. https://www.deskera.com/blog/leather-chemicals-and-their-impact-on-the-environment/</br>
+								
+								<br>[25] Goals, targets and indicators | The Human Rights Guide to the Sustainable Development Goals. (n.d.). https://sdg.humanrights.dk/en/goals-and-targets?page=3</br>
+								
+								<br>[26] Damini. (2023b). Leather chemicals and their impact on the environment. Deskera Blog. https://www.deskera.com/blog/leather-chemicals-and-their-impact-on-the-environment/</br>
+								
+								<br>[27] Impact on biodiversity - Fur Free Alliance. (2021, June 22). Fur Free Alliance. https://www.furfreealliance.com/impact-on-biodiversity/</br>
+								
+								<br>[28] Sustainable fashion. (n.d.). https://www.uidaho.edu/cals/news/features/2023/asiah-brazil-geyshick-fcs</br>
+								
+								<br>[29] Goal 15 | Department of Economic and Social Affairs. (n.d.). https://sdgs.un.org/goals/goal15</br>
+								
+								<br>[30] Research Journal of Life Sciences, Bioinformatics, Pharmaceutical and Chemical Sciences. (2019). STUDY OF BIODEGRADABLE PACKAGING MATERIAL PRODUCED FROM SCOBY, 5(3), Page No.389. https://doi.org/10.26479/2019.0503.32</br>
+								
+								<br>[31] Domskienė, J., Sederavičiūtė, F., & Simonaityte, J. (2019). Kombucha bacterial cellulose for sustainable fashion. International Journal of Clothing Science and Technology, 31(5), 644–652. https://doi.org/10.1108/ijcst-02-2019-0010</br>
+								
+								<br>[32] Römer, L., & Scheibel, T. (2008). The elaborate structure of spider silk. Prion, 2(4), 154–161. https://doi.org/10.4161/pri.2.4.7490</br>
+								
+								<br>[33] Tian M. (2003). Expression and Purification of A Synthetic Spider Silk Protein In Arabidopsis thaliana. Master thesis. University of Wyoming. https://www.proquest.com/openview/802ac3e21d0928d021c3af95b7726408/1?pq-origsite=gscholar&cbl=18750&diss=y</br>
+								
+								<br>[34] Malay, A. D., Arakawa, K., & Numata, K. (2017). Analysis of repetitive amino acid motifs reveals the essential features of spider dragline silk proteins. PLOS ONE, 12(8), e0183397. https://doi.org/10.1371/journal.pone.0183397</br>
+								
+								<br>[35] Park, J., Shin, H., & Doi, R. H. (2000). [25] Fusion proteins containing cellulose-binding domains. In Methods in Enzymology. https://doi.org/10.1016/s0076-6879(00)26067-9</br>
+								
+								<br>[36] Levy, I., & Shoseyov, O. (2002). Cellulose-binding domains. Biotechnology Advances, 20(3–4), 191–213. https://doi.org/10.1016/s0734-9750(02)00006-x</br>
+								
+								<br>[37] BM1 in Schizosaccharomyces pombe (S. pombe) information, Pombase, https://www.pombase.org/gene/SPAC2E1P3.05c</br>
+								
+								<br>[38] Jurgita Domskienė. materials engineer. Online Interview. 19th May 2023.</br>
+								
+								<br>[39] Grape King Bio. (2022, January 26). Star Product Kombucha! Grape King Bio’s Kombucha wins “Innovation Product Award” from TALAB. Grape King Bio LTD. https://www.grapeking.com.tw/en/about/news/625fa0437a82f/detail </br>
+							
+								<br>[40] Chen Yen Lie. CEO of Grape King Bio LTD. Online Interview. 8th June 2023.</br>
+								
+								<br>[41] Andrew Nicholls. Kombucha expert. In-person workshop. 14th August 2023.</br>
+								
+								<br>[42] VOOME | Vegan bag from Taiwan. (n.d.). https://www.voome.tw/ </br>
+								</p>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+							
+							
+							
+						</p>
+						</div>
+						</div>
+						</div>
+						</div>
+						</div>
+						</div>
+						<center>
+							<div>
+								<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore-removebg-preview.png" alt="Scroll Animated Image 2">
+							  </div>
+							<div>
+								<ul class="m-2 p-2" style="list-style: none; padding: 0;">
+								  <li>
+									<a class="hoverg" href="{{ url_for('pages', page='human-practices') }}">
+								
+									  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/hp-button.png" style="width: 200px; height: 256px" alt="eng-button">
+					  
+									</a>            
+									<a class="hoverg" href="{{ url_for('pages', page='engineering') }}">
+					  
+									  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/engineering-button.png" style="width: 200px; height: 257px" alt="imp-button">
+					  
+									</a>            
+									<a class="hoverg" href="{{ url_for('pages', page='experiments') }}">
+						
+									  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/experiments-button.png" style="width: 200px; height: 256px" alt="team-button">
+					  
+									</a>            
+									<a class="hoverg" href="{{ url_for('pages', page='team') }}">
+						 
+									  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/team-button.png" style="width: 200px; height: 256px" alt="safety-button">
+					  
+									</a>
+									<a class="hoverg" href="{{ url_for('pages', page='sustainable') }}">
+									
+										<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/sus-button.png" style="width: 200px; height: 256px" alt="des-button">
+								  
+									  </a>
+								  </li>
+								</ul>
+							  </div>
+							</center>
+						</body>
+
+							
+						
+						
+{% endblock %}

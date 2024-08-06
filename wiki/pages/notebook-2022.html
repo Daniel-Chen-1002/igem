@@ -1,0 +1,311 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+		/* Define your navigation bar styles */
+	.sidebar {
+	background-color: rgba( 212, 184, 149);
+	padding-top: 20px;
+	border-radius: 15px;
+	position: sticky;
+	top: 0;
+	overflow-y: auto; /* Add scroll functionality for small screens */
+}
+
+.font-weight-semi-bold {
+	text-align: center;
+	line-height: 2;
+}
+.mid-image img {
+        transform: scale(0.85);
+        transform-origin: top left;
+		margin-left: 00px;
+    }
+
+.sidebar.sidebar-bg {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.bigger-text {
+	font-size: 20px;  /* Adjust this value to your preference */
+	font-family: 'Georgia', serif;
+}
+
+.col-lg-9 {
+	max-width: 1300px;
+	margin: 10 auto;
+}
+
+	.scaled-image img {
+transform: scale(0.6);
+transform-origin: top left;
+}
+
+:root {
+--primary-font: "Georgia", serif;  /* Primary font for most content */
+
+}
+
+.mid-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+font-family: var(--primary-font);
+font-size: 16px;
+}
+
+.custom-heading {
+    font-size: 48px; /* adjust as necessary */
+    color: rgb(86, 57, 42);
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: var(--secondary-font);
+}
+
+
+.special-content {
+font-family: var(--secondary-font);
+}
+</style>
+	</head>
+
+	<body data-plugin-scroll-spy data-plugin-options="{'target': '#sidebar'}">
+		<div class="body">
+			<div role="main" class="main">
+				<section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg" 
+						style="background-image: url('https://static.igem.wiki/teams/4650/wiki/headings/notebook.png'); 
+							   background-size: cover; 
+							   background-position: center; 
+							   height: 700px; 
+							   display: flex; 
+							   align-items: center; 
+							   justify-content: center;
+							   max-width: 100%;">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 align-self-center p-static order-2 text-center">
+								<h1 class="font-weight-bold text-dark"></h1>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<div class="container-fluid- pt-3 pb-2">
+				<div class="row pt-2">
+					<div class="col-lg-3 position-relative">
+						<aside class="sidebar sidebar-bg" id="sidebar" data-plugin-sticky data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
+							<h5 class="font-weight-semi-bold">Month</h5>
+							<ul class="nav nav-list flex-column mb-5">
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="70" href="#first">August</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="70" href="#second">September</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="70" href="#third">October</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="70" href="#fourth">November</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="70" href="#fifth">December</a></li>
+							</ul>
+						</aside>
+					</div>
+
+					<div class="col-lg-7">
+						<div id="first">
+							<h1 class="font-weight-extra-normal custom-heading">
+								<center><i><strong class="font-weight-extra-bold">2022</strong></i></center>
+							</h1>
+							<h2 class="font-weight-extra-normal text-7 mb-2"> 
+								<strong class="font-weight-extra-bold">August</strong>
+							</h2>
+							<p class="bigger-text">
+								<u>Week 1(8.1-5):</u>
+								<br>This is our first week in iGEM. Everyone is excited to learn new knowledge about synthetic biology. Our instructor, Ms.Ching, introduced some lab materials and the definition of synthetic biology to us. We did gene extraction, gel electrophoresis, and PCR. This is the first time where everyone gets in contact with the topic, the machine, and the vocabulary appears to be unfamiliar to us. However, we are enthusiastic to engage in the learning of the following days. </br>
+								<br>
+								<div class="mid-image-container">
+									<div class="mid-image">
+										<img src="https://static.igem.wiki/teams/4650/wiki/notebook/summer-pic-1.jpg" alt="pcr1"width="500">
+									</div>
+									<div class="mid-image">
+										<img src="https://static.igem.wiki/teams/4650/wiki/notebook/summer-pic2.jpg" alt="pcr1"width="500">
+									</div>
+									</div>
+									<br>
+									<div class="mid-image-container">
+									<div class="mid-image">
+										<img src="https://static.igem.wiki/teams/4650/wiki/notebook/summer-pic-3.jpg" alt="pcr1"width="500">
+									</div>
+									<div class="mid-image">
+										<img src="https://static.igem.wiki/teams/4650/wiki/notebook/summer-pic-4.jpg" alt="pcr1"width="500">
+									</div>
+								</div>
+							</p>
+							
+							<p class="bigger-text">
+								<u>Week 2(8.8-12):</u>
+								<br>In the next week, the mysterious surroundings of synthetic biology unclouded a little bit. Despite that, the mechanism behind each experiment and the usage of the lab materials are confusing. Then we did bacteria transformation for the first time, which was a novel experience for us. We observed how bacteria grow on the LBM plates. Those tiny dots growing on the agar and the incubator fix our eyes. We also do other experiments involving enzyme digestion. Everyone found difficulties in the calculation of dilution, but that is fine because we are still learning. </br>
+								<br>
+							</p>
+							
+						</div>
+					
+						<div class="mid-image-container">
+							<div class="mid-image">
+								<img src="https://static.igem.wiki/teams/4650/wiki/notebook/summer-pic-5.jpg" alt="pcr1"width="500">
+							</div>									<div class="mid-image">
+								<img src="https://static.igem.wiki/teams/4650/wiki/notebook/summer-pic-6.jpg" alt="pcr1"width="500">
+							</div>	
+						</div>		
+							<br>
+						
+							<div class="mid-image-container">
+													<div class="mid-image">
+														<br><img src="https://static.igem.wiki/teams/4650/wiki/notebook/summer-pic7.jpg" alt="pcr1"width="500">
+							</div>									<div class="mid-image">
+								<img src="https://static.igem.wiki/teams/4650/wiki/notebook/summer-pic8.jpg" alt="pcr1"width="500">
+							</div>
+						</div>
+						
+							
+						
+
+						<div id="second">
+							<h2 class="font-weight-extra-normal text-7 mb-2"> 
+								<strong class="font-weight-extra-bold">September</strong>
+							</h2>
+							<p class="bigger-text">
+								<u>Week 1(9.15):</u>
+								<br>This is our first class from the summer course. After having a short lecture on PCR and plasmid, we did plasmid extraction. Since last week inserted the plasmids we want to replicate them into competent cells and then grow them on plates. Now we need to extract bacteria from colonies for further experiments the following day. Even though we still make many mistakes, we will get more familiar with the knowledge and experiment in the following days!!!!!</br>
+								<br>
+
+								<u>Week 2(9.22):</u>
+								<br>After we extracted plasmids last week, we cleaned up the plasmids and analyzed the plasmids’ purity with a NABI machine this week. We also did gel electrophoresis to confirm if the plasmid has the gene we want. While running the gel, we plotted the machine wrongly for its negative and positive sites, which made the gel show no results. However, it is a great opportunity to learn from it.</br>
+								<br>
+
+								<u>Week 3(9.29):</u>
+								<br>After we extracted plasmids last week, we cleaned up the plasmids and analyzed the plasmids’ purity with a NABI machine this week. We also did gel electrophoresis to confirm if the plasmid has the gene we want. While running the gel, we plotted the machine wrongly for its negative and positive sites, which made the gel show no results. However, it is a great opportunity to learn from it.</br>
+								<br>
+							</p>
+							<br>
+						</div>
+
+
+						<div id="third">
+							<h2 class="font-weight-extra-normal text-7 mb-2"> 
+								<strong class="font-weight-extra-bold">October</strong>
+							</h2>
+							<p class="bigger-text">
+								<u>Week 1(10.6):</u>
+								<br>This week, Ms. Ching gave us a brief lecture on plasmid for PCR and the result of gel electrophoresis. Then we started the experiment on gel electrophoresis with agarose gel to check whether we got the DNA we wanted after running PCR. As usual, we faced some problems. For example, while using the master mixes, we made some mistakes on it. That resulted in the sample on the gel being ambiguous. Due to the experience, we need to be careful while recording what we added and the amount of it.</br>
+								<br>
+
+								<u>Week 2(10.13):</u>
+								<br>In the second week of October, our instructor taught us about enzyme digestion. There are many phrases introduced to us, such as restriction enzymes, recognition sites, blunk end, and sticky end. Many confusions are caused by these complicated words. Nonetheless, our instructor Ms. Ching explained our questions in detail which helped us comprehend the topic better. For our experiment, we do enzyme digestion and cut specific genes out of plasmids without cutting out the gene we want to insert. We learned how to use tools on the internet to check which enzymes will be the best choice to do the job.</br>
+								<br>
+
+								<u>Week 3(10.20):</u>
+								<br>This week we did phenol-chloroform extraction, which helped to clean up our samples. Many of our team members don’t like the smell of phenol-chloroform, as it is weird and irritating. At the same time, we felt this experiment was more complicated than the experiment we had before. There are more steps and cautions we need to be aware of. We are confused about what we already added and what we need to add to the tube. For the topic we wanted to do in iGEM, each group slowly discussed and prepared the slides. For the lecture, we currently are in the introduction of forward and reverse primers. The concepts mess all of us up.</br>
+								<br>
+
+								<u>Week 4(10.27):</u>
+								<br>In the last week of October, Ms. Ching explained how to design forward and reverse primers. This concept even gave us more questions than last week. Then we worked on T4 ligation. Looking at each of our teammates holding a pipette and doing an experiment, it feels like everybody makes some refinements.</br>
+								<br>
+							</p>
+							<br>
+            			</div>
+
+
+						<div id="fourth">
+							<h2 class="font-weight-extra-normal text-7 mb-2"> 
+								<strong class="font-weight-extra-bold">November</strong>
+							</h2>
+							<p class="bigger-text">
+								<u>Week 1(11.2):</u>
+								<br>This week, Ms. Ching gave us a brief lecture on plasmid for PCR and the result of gel electrophoresis. Then we started the experiment on gel electrophoresis with agarose gel to check whether we got the DNA we wanted after running PCR. As usual, we faced some problems. For example, while using the master mixes, we made some mistakes on it. That resulted in the sample on the gel being ambiguous. Due to the experience, we need to be careful while recording what we added and the amount of it.</br>
+								<br>
+
+								<u>Week 2(11.9):</u>
+								<br>After doing the bacteria transformation, we inoculated the bacteria colony to another agar plate. Besides that, the senior team shared some of their experiences with us. For example, what is each team in iGEM doing and what are some requirements for iGEM competition? They also gave us some advice to meet the requirements of the competition. Their advice gave us many thoughts on the topic; hope everything gets well!!!!</br>
+								<br>
+
+								<u>Week 3(11.17):</u>
+								<br>This week we did PCR to amplify the gene. Then we learned promoter roles in plasmids and got a review on translation and transcription. However, this week we discovered a new method to mark their tubes, and we drew some faces on them. That became the cutest and most unique tube in our lab.</br>
+								<br>
+
+								<u>Week 4(11.24):</u>
+								<br>Every time after PCR, it is the time for gel electrophoresis!!! We found out this time many of our samples didn’t show in the result. We hypothesized some dirty materials had entered the gel since many of our teammates pushed the tips too hard on the selection plate when doing bacteria transformation or our plasmid had ligase back. Besides that, each group continued their research on projects. Most of us have found our interest in the topic!!!</br>
+								<br>
+							</p>
+							<br>
+            			</div>
+
+
+						<div id="fifth">
+							<h2 class="font-weight-extra-normal text-7 mb-2"> 
+								<strong class="font-weight-extra-bold">December</strong>
+							</h2>
+							<p class="bigger-text">
+								<u>Week 1(12.8):</u>
+								<br>This week we did yeast transformation, the protocol didn’t show much difference with bacteria transformation. Then Ms. Ching gave us more time to research our project. She mentioned that we need to be aware of the target gene we want to study and also some background information and explain to our teammates what we want to do. After that, we need to prepare for the presentation next week!</br>
+								<br>
+
+								<u>Week 2(12.15):</u>
+								<br>Today, we are presenting our topic of interest to other teammates. Overall we have three groups; the topic of Group 1 is about bees and honey; the topic of Group 2 is about a type of cancer; the topic of Group 3 is about SCOBY. Then finally after voting we chose the SCOBY project.</br>
+								<br>
+
+								<u>Week 3(12.22):</u>
+								<br>Now we are doing yeast RNA extraction. We learn how to knock out genes in yeast as well.</br>
+								<br>
+
+								<u>Week 4(12.29):</u>
+								<br>This week we finished up the extraction we didn’t complete last week. We discussed some ideas for our project with Ms. Ching, and together we watched some videos and read the websites of the previous team. </br>
+								<br>
+							</p>
+            			</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<center>
+			<div>
+				<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore-removebg-preview.png" alt="Scroll Animated Image 2">
+			  </div>
+			<div>
+				<ul class="m-2 p-2" style="list-style: none; padding: 0;">
+				  <li>
+					<a class="hoverg" href="{{ url_for('pages', page='engineering') }}">
+				
+					  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/engineering-button.png" style="width: 200px; height: 256px" alt="eng-button">
+	  
+					</a>            
+					<a class="hoverg" href="{{ url_for('pages', page='experiments') }}">
+	  
+					  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/experiments-button.png" style="width: 200px; height: 257px" alt="imp-button">
+	  
+					</a>            
+					<a class="hoverg" href="{{ url_for('pages', page='results') }}">
+		
+					  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/results-button.png" style="width: 200px; height: 256px" alt="team-button">
+	  
+					</a>            
+					<a class="hoverg" href="{{ url_for('pages', page='human-practices') }}">
+		 
+					  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/hp-button.png" style="width: 200px; height: 256px" alt="safety-button">
+	  
+					</a>
+					<a class="hoverg" href="{{ url_for('pages', page='description') }}">
+					
+						<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/description-button.png" style="width: 200px; height: 256px" alt="des-button">
+				  
+					  </a>
+				  </li>
+				</ul>
+			  </div>
+			</center>	
+	</body>
+	</html>
+{% endblock %}

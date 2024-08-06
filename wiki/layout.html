@@ -1,0 +1,124 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'animate.compat.css') }}" rel="stylesheet">
+		<link href="{{ url_for('static', filename = 'all.min.css') }}" rel="stylesheet">    <!-- done -->
+    <link href="{{ url_for('static', filename = 'simple-line-icons.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'owl.theme.default.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'magnific-popup.min.css') }}" rel="stylesheet">
+
+    <link href="{{ url_for('static', filename = 'theme.css') }}" rel="stylesheet">
+
+    <link href="{{ url_for('static', filename = 'theme-elements.css') }}" rel="stylesheet">
+
+
+
+    <link href="{{ url_for('static', filename = 'theme-blog.css') }}" rel="stylesheet"><!-- problem are these -->
+    <link href="{{ url_for('static', filename = 'theme-shop.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'custom.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'default.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'magnific-popup.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'magnific-popup.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'animate.compat.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'animate.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'animate.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'loadingpage.css') }}" rel="stylesheet">
+
+    
+
+    <link href="{{ url_for('static', filename = 'navigation.css') }}" rel="stylesheet">
+    <style>
+        *{
+          font-family: 'Georgia', serif;
+        }
+    </style>
+<script>
+    var overlayOpacity;
+    var textOpacity;
+</script>
+
+<script>
+  // Simulate loading completion after a delay (e.g., 3 seconds)
+  setTimeout(function() {
+    // Hide the loading screen
+    document.querySelector('.loading').style.display = 'none';
+    
+    // Show the main content
+    document.querySelector('.content').style.display = 'block';
+  }, 3000); // 3000 milliseconds (3 seconds)
+</script>
+
+
+    <title>{% block title %}{% endblock %} | KCIS-Xiugang-Taipei - iGEM 2023</title>
+
+</head>
+<body>
+  <div class="loading">
+    <div class="load-container">
+      <img src="https://static.igem.wiki/teams/4650/wiki/teapot-1.gif" alt="loading" width="600" length="500">
+    </div>
+    <div class="loader-texts">
+      <div>B</div>
+      <div>R</div>
+      <div>E</div>
+      <div>W</div>
+      <div>I</div>
+      <div>N</div>
+      <div>G</div>
+      <div>.</div>
+      <div>.</div>
+      <div>.</div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+    <!-- Reference from NJMU-China Team 2022 -->
+  <!-- Navigation -->
+  {% include 'menu.html' %}
+
+  <!-- Header 
+  <header class="bg-primary py-5 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">{{ self.title() }}</h1>
+	        <p class="lead mb-5 text-white-50">{% block lead %}{% endblock %}</p>
+        </div>
+      </div>
+    </div>
+  </header>-->
+
+
+  <!-- Page Content -->
+  <div class="container-fluid" style="padding: 0;">
+    {% block page_content %}{% endblock %}
+  </div>
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+
+  {% include 'footer.html' %}
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'theme.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'theme.init.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'plugins.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'plugins.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'modernizr.min.js') }}"></script>
+
+  
+
+
+</body>
+</html>

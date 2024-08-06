@@ -1,0 +1,189 @@
+
+
+	{% extends "layout.html" %}
+
+{% block page_content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add your meta tags, title, and other head elements here -->
+    <style>
+        .sidebar {
+            background-color: rgba(50, 141, 186, 0.5);
+            padding-top: 70px;
+            border-radius: 15px;
+            position: sticky;
+            top: 0;
+            overflow-y: auto;
+        }
+        .font-weight-semi-bold {
+            text-align: center;
+            line-height: 2;
+        }
+        .sidebar.sidebar-bg {
+            width: 300px;
+            margin: 0 auto;
+        }
+		.table {
+			font-size: 1.5em; /* Adjust size as per your requirement */
+        font-family: "Georgia", serif;
+}
+
+    </style>
+</head>
+<body data-plugin-scroll-spy data-plugin-options="{'target': '#sidebar'}">
+    <div class="body">
+        <div role="main" class="main">
+            <section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg" 
+                style="background-image: url('https://static.igem.wiki/teams/4650/wiki/headings/parts.png'); 
+                background-size: cover; background-position: center; height: 700px; display: flex; 
+                align-items: center; justify-content: center; width: 100%;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 align-self-center p-static order-2 text-center">
+                            <h1 class="font-weight-bold text-dark"></h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+                <div class="col-lg-9">
+                    <div id="first">
+                       
+                        <table class="table table-striped">
+							<div class="col-lg-7">
+
+								<div id="first">
+					
+		
+							<table class="table table-striped" style="margin-left: 250;">
+								<thead>
+									<tr>
+										<th>
+											Name
+										</th>
+										<th>
+											Description
+										</th>
+										<th>
+											Type
+										</th>
+										<th>
+											Length
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<a href="http://parts.igem.org/Part:BBa_K4650000" target="_blank" rel="noopener noreferrer">BBa_K4650000</a>
+										</td>
+										<td>
+											Inducible promoter
+										</td>
+										<td>
+											pGal1, 10 promoter
+										</td>
+										<td>
+											665bp
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a href="http://parts.igem.org/Part:BBa_K4650001" target="_blank" rel="noopener noreferrer">BBa_K4650001</a>
+										</td>
+										<td>
+											Cellulose binding domain 
+
+										</td>
+										<td>
+											Coding
+										</td>
+										<td>
+											593bp
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a href="http://parts.igem.org/Part:BBa_K4650002" target="_blank" rel="noopener noreferrer">BBa_K4650002</a>
+										</td>
+										<td>
+											MaSp1
+										</td>
+										<td>
+											Coding
+										</td>
+										<td>
+											102bp
+										</td>
+
+									
+									</tr>
+
+									<tr>
+										<td>
+											<a href="http://parts.igem.org/Part:BBa_K4650003" target="_blank" rel="noopener noreferrer">BBa_K4650003</a>
+										</td>
+										<td>
+											MaSp2
+										</td>
+										<td>
+											Coding
+										</td>
+										<td>
+											102bp
+										</td>
+
+									
+									</tr>
+								</tbody>
+							</table>
+							
+						</div>
+                        </table>
+                    </div>
+                </div>
+            </div>
+			<center>
+				<div>
+					<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore-removebg-preview.png" alt="Scroll Animated Image 2">
+				  </div>
+				<div>
+					<ul class="m-2 p-2" style="list-style: none; padding: 0;">
+					  <li>
+						<a class="hoverg" href="{{ url_for('pages', page='engineering') }}">
+					
+						  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/engineering-button.png" style="width: 200px; height: 256px" alt="eng-button">
+		  
+						</a>            
+						<a class="hoverg" href="{{ url_for('pages', page='experiments') }}">
+		  
+						  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/experiments-button.png" style="width: 200px; height: 257px" alt="imp-button">
+		  
+						</a>            
+						<a class="hoverg" href="{{ url_for('pages', page='results') }}">
+			
+						  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/results-button.png" style="width: 200px; height: 256px" alt="team-button">
+		  
+						</a>            
+						<a class="hoverg" href="{{ url_for('pages', page='human-practices') }}">
+			 
+						  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/hp-button.png" style="width: 200px; height: 256px" alt="safety-button">
+		  
+						</a>
+						<a class="hoverg" href="{{ url_for('pages', page='description') }}">
+						
+							<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/description-button.png" style="width: 200px; height: 256px" alt="des-button">
+					  
+						  </a>
+						  </li>
+						  
+					  </li>
+					</ul>
+					</div>
+					</center>
+
+</body>
+</html>
+{% endblock %}

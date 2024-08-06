@@ -1,0 +1,1045 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>2 Columns | Porto - Multipurpose Website Template</title>	
+
+		<meta name="keywords" content="WebSite Template" />
+		<meta name="description" content="Porto - Multipurpose Website Template">
+		<meta name="author" content="okler.net">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+		<!-- Web Fonts  -->
+		<link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CShadows+Into+Light&display=swap" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
+		<link rel="stylesheet" href="vendor/animate/animate.compat.css">
+		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
+		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="css/theme.css">
+		<link rel="stylesheet" href="css/theme-elements.css">
+		<link rel="stylesheet" href="css/theme-blog.css">
+		<link rel="stylesheet" href="css/theme-shop.css">
+
+		<!-- Skin CSS -->
+		<link id="skinCSS" rel="stylesheet" href="css/skins/default.css">
+
+		<!-- Theme Custom CSS -->
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Head Libs -->
+		<script src="vendor/modernizr/modernizr.min.js"></script>
+		<style>
+        /* Define your navigation bar styles */
+        .sidebar {
+            background-color: rgba( 212, 184, 149);
+            padding-top: 70px;
+            border-radius: 15px;
+            /* Define sticky behavior */
+            position: sticky;
+            top: 0;
+            overflow-y: auto; /* Add scroll functionality for small screens */
+        }
+		    .font-weight-semi-bold {
+            text-align: center; /* Center horizontally */
+            line-height: 2; /* Adjust the line-height for vertical centering */
+        }
+		.sidebar.sidebar-bg {
+  width: 300px; /* Set your desired width here */
+  margin: 0 auto;
+}
+		.bigger-text {
+                font-size: 20px;
+                /* Adjust this value to your preference */
+                font-family: 'Georgia', serif;
+            }
+
+        .col-lg-9 {
+                max-width: 1300px;
+                margin: 10 auto;
+            }
+
+        .scaled-image img {
+                transform: scale(0.6);
+                transform-origin: top left;
+
+            }
+
+		
+		.flip-container {
+  			margin: 0 auto;
+			padding-bottom: 400px;
+		}
+
+		.flipper {
+  			position: relative;
+  			transform-style: preserve-3d;
+  			transition: transform 1s;
+		}
+
+		:root {
+		--primary-font: "Georgia", serif;  
+		--secondary-font: 'Georgia', serif;
+	}
+
+		.front,
+		.back {
+  			width: 100%;
+  			height: 100%;
+  			position: absolute;
+  			backface-visibility: hidden;
+		}
+
+		.back {
+  			transform: rotateY(180deg);
+		}
+
+		.flipped {
+  			transform: rotateY(180deg);
+		}
+
+
+
+		</style>
+	</head>
+
+	<body data-plugin-scroll-spy data-plugin-options="{'target': '#sidebar'}">
+		<div class="body">
+			<div role="main" class="main">
+				<section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg" 
+						style="background-image: url('https://static.igem.wiki/teams/4650/wiki/headings/sdg.png'); 
+							   background-size: cover; 
+							   background-position: center; 
+							   height: 700px; 
+							   display: flex; 
+							   align-items: center; 
+							   justify-content: center;
+							   width: 100%;">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 align-self-center p-static order-2 text-center">
+								<h1 class="font-weight-bold text-dark"></h1>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<div class="container-fluid- pt-3 pb-2">
+				<div class="row pt-2">
+					<div class="col-lg-3 position-relative">
+						<aside class="sidebar sidebar-bg" id="sidebar" data-plugin-sticky data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
+							<h5 class="font-weight-semi-bold">SDGs</h5>
+							<ul class="nav nav-list flex-column mb-5">
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#first">Introduction of SDG</a></li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#second">Stakeholders</a></li>
+								<li class="nav-item">
+									<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#third">Meeting</a>
+									<ul>
+										<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-third-1">International iGEM Postcard Exchange by KCIS Xiugang</a></li>
+										<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-third-2">Instagram SDG post event</a></li>
+										<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-third-3">Picture Book</a></li>
+
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#fourth">Workshops</a>
+									<ul>
+										<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-fourth-1">2023 KCIS Xiugang Taipei iGEM X Library Collaboration Workshop</a></li>
+										<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-fourth-2">2023 KCIS Xiugang Taipei iGEM X Library Display</a></li>
+									</ul>
+								</li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#fifth">Citation</a></li>
+
+
+							</ul>
+						</aside>
+					</div>
+
+					<div class="col-lg-7">
+						<div id="first">
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;"><center><strong class="font-weight-extra-bold">Introduction of SDG</strong></center></h2>
+							<p class="bigger-text"><u>Our SDG Introduction and Stakeholders</u>
+							<br>	In our journey towards promoting sustainability, we began by introducing ourselves to the Sustainable Development Goals (SDGs) framework. We evaluated our project ideas against two key SDGs #12: Responsible consumption and production and #15: Life on land. To ensure our efforts were aligned with global sustainability initiatives, we engaged with iGEM teams from around the world. Notable collaborations included iGEM Bulgaria, iGEM CCU Taiwan, and others, where we met virtually to synchronize our goals.</br>			
+							During this phase, we also had the privilege of interacting with prominent SDG stakeholders like Mr. Andrew Nicholls and Mr. Joe Chen through online meetings. These individuals shared invaluable insights, guiding our project and enhancing our knowledge related to the SDGs. Their expertise significantly influenced the direction and impact of our initiatives.
+
+							<p class="bigger-text"><u>Collaborations with Other Teams on the SDGs and Integration of Ideas</u>
+								<br>Building upon our initial engagement with iGEM teams, we fostered partnerships with iGEM Ais-Marseille and iGEM Universitas Indonesia. Together, and with translation help from a range of teams and outside collaborators, we initiated the "Picture Book" translation project, aimed at making the SDGs, as well as their connections to iGEM and synthetic biology, accessible on a global scale and across language barriers. </br>			
+								Through our postcard initiative, we showcased SDG-related projects of iGEM, emphasizing the power of global collaboration in achieving sustainability. 
+								<br>In a bid to educate and inspire the younger generation of our school, we organized an SDG workshop for students in grades 7 to 9. This workshop served as a platform to introduce all 17 SDGs, connect them to our project, and encourage active engagement. Moreover, we promoted awareness of the SDGs through a dedicated library display at Kang Chiao International School, providing a tangible and interactive way for the community to learn and connect with these global goals. </br>			
+								Throughout our journey, we remainexd staunch advocates for the SDGs, emphasizing our unwavering commitment to working collaboratively with iGEM teams to advance these vital global objectives.
+								<br>The Sustainable Development Goals (SDGs) were established by the United Nations, aiming to transform our world into more sustainable practices[1]. With the increasing awareness of human impact on the environment, the SDGs have been more widely valued, both nationally and internationally. Through our research, we examined the issue of animal leather and its negative impacts. Therefore, our team hopes to contribute to the global community through our project to use the fermented-beverage-product Kombucha’s cellulose byproduct known as SCOBY as a leather replacement, focusing on goal 12. Responsible consumption and production, and 15. Life on land[1]. </br>
+
+							</p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg-page/overall-sdgs-stats.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Overall SDGs Statistics</p></center><br><br>
+
+
+							<h4 class="font-weight-extra-normal text-7 mb-2 bigger-text" style="font-family: 'Georgia', serif;">
+								12. Responsible consumption and production
+							</h4>
+							<div class="mid-image">
+								<img src="https://static.igem.wiki/teams/4650/wiki/sdg-page/sdg-12-icon.png" alt="pcr1" width="500">
+							</div>
+							<p class="bigger-text">
+								SDGs aim for responsible consumption and production focusing on reducing the carbon footprint of customer products by modifying approaches to the production and consumption of goods and resources[1]. According to research, the carbon footprint of cow skin leather is found to be 110.0kg of CO2e per square meter and the carbon footprint of leather is approximately 15.8kg of CO2e emissions per square meter. It has been shown that a single fermentation of SCOBY requires a 97 percent lower carbon footprint than synthetic polyurethane leather [2,3,4]. By replacing animal or polyurethane leather with SCOBY leather, carbon emissions will be reduced significantly.
+								<br>In the contemporary leather industry, many harmful chemicals are used in its manufacturing, such as acids, salts, and enzymes all cause a series of impacts on the aquatic environment. This leads the leather manufacturing industry to generate around 38% of the wastewater worldwide, which has a high concentration of salts and is poorly biodegradable. Moreover, according to an analysis by Hansen et al, an examination of forty-three leather tanning formulations shows that, on average, 360.2 kg of chemicals and 8.6 cubic meters of water are used to produce one ton of shaved leather.[5]. If leather industries transitioned to SCOBY leather instead of animal leather, far fewer chemicals would be needed to achieve the production of quality leather, reaching target goal 12.4: “reduce [chemicals] release to air, water, and soil in order to minimize their adverse impacts on human health and the environment[6].” Since leather workers are exposed to the chemicals during the process of chromium-tanning. 246 hazardous chemicals are used in 95% of animal tanning in the leather industry, which causes 27.1% of exposed workers to have respiratory issues like bronchitis, asthma, and lung cancer.</br>
+								The SCOBY leather combats SDG subgoal 12. 5: “[reducing] waste generation through prevention, reduction, recycling and reuse[6].” Once a leather product has been discarded, the issue of biodegradability arises. Since the production of SCOBY is natural and degradable, SCOBY, the byproduct of the popular drink kombucha, makes it possible to reuse the kombucha manufacturing process to reduce waste as a positive circular economy model and decrease waste[16].
+							</p>
+							<h4 class="font-weight-extra-normal text-7 mb-2 bigger-text" style="font-family: 'Georgia', serif;">
+								15. Life on land
+							</h4>
+							<div class="mid-image">
+								<img src="https://static.igem.wiki/teams/4650/wiki/sdg-page/sdg-15-icon.png" alt="pcr1" width="500">
+							</div>
+							<p class="bigger-text">
+								According to the UN, SDG 15 aims to protect, restore, and promote the conservation and sustainable use of terrestrial ecosystems, specifically on biodiversity loss[8]. Our project corresponds to the 15.5 goal, “Take urgent and significant action to reduce the degradation of natural habitats, halt the loss of biodiversity, and, by 2020, protect and prevent the extinction of threatened species”. Leather finds frequent use in the fashion industry accessories: according to reports from the World Wildlife Fund, from 1998 to 2014, more than 2 billion farm animals were killed globally each year, and around 83% of all these animals’ hides and skin became leather. 
+								<br>By replacing animal leather with biodegradable SCOBY-made leather that is more eco-friendly and flexible, we can lessen the deaths of animals and protect biodiversity. As much as 8% of greenhouse gasses and 20% of global wastewater are attributed to the fashion industry, we hope to use our SCOBY product to mitigate the potential impact that the supply of wildlife leather products creates[11].</br>
+								Some trends also show the public's consumption of alternative protein sources instead of raising more cattle for meat. To illustrate this, a study from New York Times Magazine indicates that people around the world have been eating less beef in recent years. In the magazine, the Natural Resources Defense Council pointed out that beef consumption among Americans declined by 19%, nearly one-fifth, from 2005 to 2014. This trend is reinforced by a 2022 survey by the International Food Information Council, in which 65 percent of Americans reported eating plant-based meat alternatives in 2022, showing many are actually deciding to switch to alternative protein sources. Researchers predict that by 2035 more than 35% of all animal protein will be produced through an industrial cell-based fermentation process, and total animal-farmed protein dropping to less than 40% of total protein consumed [15]. Therefore, fewer animals will be farmed and available. So, in our project, using SCOBY to transition from these destructive practices is in line with the trend away from farmed meat consumption and toward a more sustainable, responsible, and cruelty-free human society. SCOBY-leather can help supply the need for leather while reducing the demand for food and land spaces from the cattle industry, which will also contribute to alleviating the pollution released in the environment.
+							</p>
+							
+						</div>
+
+						<div id="second">
+
+							<br><br><br>
+
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;"><center><strong class="font-weight-extra-bold">Stakeholders</strong></center></h2>
+								<div class="mid-image">
+									<img src="https://static.igem.wiki/teams/4650/wiki/sdg-page/feedback-from-stakeholder-icon.png" alt="pcr1" width="700">
+								</div>
+							<p class="bigger-text">
+								<br>Through connecting with stakeholders from the professional field and receiving their opinions regarding our project with the SDGs goals is important. Therefore, our team reached out to two professions: Mr. Andrew Nicholls who works in a non-governmental organization associated with SDGs and Mr. Joe Chen who has a professional license on SDGs. After meeting with them, we gained more accurate information regarding SDGs goals and edited our project information that can later be used to spread to the public.</br>
+						  	</p>
+						  
+						  	<h4 class="font-weight-extra-normal text-7 mb-2 bigger-text" style="font-family: 'Georgia', serif;">
+								Andrew Nicholls
+							</h4>
+						  
+							  
+						  	<p class="bigger-text">
+						  		We invited Mr. Andrew Nicholls to our school and shared his 20 years of SCOBY experience with our team during summer vacation. 
+						 		Since Mr. Nicholls has experience discussing SDGs with a non-governmental organization related to SDGs, we invited him to evaluate our project’s correlation with SDG goals. Firstly, he informed us that it is unfeasible and impossible to completely eliminate animal-leather production as the public is still using it. But SCOBY is an alternative solution to mitigate the impact. Yet, we need  to acknowledge sugar, the main ingredient in SCOBY production, can also originate from unsustainable sugarcane farming practices. Our team aims to “reduce” animal-leather instead of “eliminating”. Therefore, our team will emphasize the comparison of carbon footprint on sugarcane farming and cow growing: SCOBY only produces 0.42kg per m2 of CO2 (the use of sugar) but animal leather produces 17 kg per m2 CO2. 
+						  		Furthermore, Mr. Nicholls verified our connection of SDGs with goal 12 and 15 as we considered these two as the most crucial ones. Since animal-leather has a direct relationship to animals on land because the use of SCOBY-leather creates an environmental-friendly solution towards the environment. This also facilitates goal 15 because with a more sustainable alternative while raising awareness to the public, people will shift their buying habits, potentially saving more animal lives and reducing environmental waste. 
+						  	</p>
+
+						  	<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/mr-nicholls-came-to-our-school-to-lecture.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Mr. Nicholls came to our school to lecture</p></center><br><br>
+
+
+							<h4 class="font-weight-extra-normal text-7 mb-2 bigger-text" style="font-family: 'Georgia', serif;">
+								Joe Chen
+							</h4>
+
+							<p class="bigger-text">
+								After completing our project concept, we contacted Mr. Joe Chen who is the Deloitte & Touche Sustainability Service Leader, ISO 14064-1 Lead Verifier, ISO 14064-2 Lead Verifier, so we presented our project to him to receive professional feedback. Originally, we connected our project with the two SDGs goals. However Mr. Chen informed us that we needed to specify the sub goals for each that corresponds with our project. Therefore, after thorough research, 12.4, 12.5, and 15.5 are all the subgoals we found that we believe our project is best able to connect with, and we also further elaborated in each section. Moreover, Mr. Chen informed us our project is somewhat connected to goal 16: Peace, justice, and strong institutions. Because some companies kill animals for leather illegally, and by using SCOBY, institutions can also step in to terminate and prevent these incidents. Mr. Chen also provided us with several websites regarding the circular economy, including Ellen MacArthor organization[16]. Through further investigation, the team believed our product falls under the category of remanufacture, to minimize wastes and fulfill subgoals of SDGs 12.Highlighting the connection between raw materials used to create SCOBY and agriculture, Mr. Chen suggested our group examine how the SCOBY industry can decrease greenhouse gas emissions and foster employment, cultural products, and tourism. This sustains our future plan. If we plan to start an entrepreneur, then we will further investigate according to these changes, but right now we will research the carbon footprint to compare. Lastly, Mr. Chen suggested we promote our SDGs to a broader community and diverse audiences; thus, be creative and innovative. Our team therefore launched a series of activities such as workshops, SDGs competitions, picture books, educational videos, and collaboration with other teams. Through these efforts, and connecting our project to our society, we hope to intrigue the public's awareness on animal-leather. 
+							</p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/meeting-with-mr-chen.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Meeting with Mr. Chen</p></center>
+
+						  
+						</div>
+
+						<div id="third">
+
+							<br><br><br><br>
+
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;"><center><strong class="font-weight-extra-bold">Meeting</strong></h2></center>
+							<h4 class="font-weight-extra-normal text-7 mb-2 bigger-text" style="font-family: 'Georgia', serif;">
+								Introduction of SDGs
+							</h4>
+							<div class="mid-image">
+								<img src="https://static.igem.wiki/teams/4650/wiki/sdg-page/meetings-icon.png" alt="pcr1" width="500">
+							</div>
+							<p class="bigger-text">
+								The impact on how we use and communicate the Sustainable Development Goals (SDGs) was made clear through a series of meetings with invited teams, including iGEM Bulgaria, iGEM CCU Taiwan, iGEM VIT, iGEM Ais-Marseille, iGEM Korea HS, iGEM ASIJ, East Coast Biocrew, QGEM, iGEMS Taiwan, iGEM Kyoto, and iGEM Bochum. 
+								Teams presented their initiatives and discussed how they linked to certain SDGs during these sessions, providing a better understanding of the various ways that projects contribute to global sustainability. Innovative solutions to tackling  global concerns were produced as a result of the cross-pollination of ideas. As teams thought about shared or complementary SDG-related goals, collaborative goal formulation arose, increasing the potential for collective influence. In conclusion, these gatherings acted as a catalyst for initiatives to be aligned with the SDGs, for cooperation, and for developing a common commitment to making a significant difference on a global scale in the quest for sustainable development. 
+								Following the conference calls, iGEM Aix-Marseille, iGEM Korea HS, iGEM Bochum, iGEM Ionis, NIS-Kazakhstan, and Edinburgh iGEM all consented to assist us in translating our Picture Book into their respective native tongues allowing it to reach a broader audience (the following pages will have further discussion regarding the Picture Book).
+								Participating in our "International iGEM Postcard Exchange by KCIS Xiugang" were iGEM Leiden, iGEM Universitas Indonesia, iGEM Pu Tai Senior High School, NYCU-Taipei, WIST 2023, iGEM NCHU Taichung, iGEM Bulgaria, iGEM CCU Taiwan, iGEM Aix-Marseille, and iGEM Korea HS (the following pages will have further information for “International iGEM Postcard Exchange by KCIS Xiugang”). 
+								Additionally working with us on our Instagram SDG post event are WIST 2023 iGEM, iGEM NCHU Taichung, iGEM CCU Taiwan, iGEM VIT, iGEM Aix-Marseille, iGEM ASIJ Tokyo, QGEM, iGEM CSMU Taiwan, iGEM Rec Chennai, and iGEM UPNAvarra-Spain (the following pages will have further discussion for what is Instagram SDG post).
+							</p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/bulgaria.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Meeting with Bulgaria on June 8, 2023</p></center><br><br>
+							<p class="bigger-text">
+								We held fruitful discussions with iGEM Bulgaria on June 8. During the meeting, we discussed
+								(SDG number). iGEM Bulgaria also agreed to join our “International iGEM Postcard Exchange by Kcis Xiugang”. 
+							</p>
+
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/ccu.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Meeting with CCU Taiwan on June 13, 2023</p></center><br><br>
+							<p class="bigger-text">
+								We held fruitful discussions with iGEM CCU Taiwan on June 13. During the meeting, we discussed SDGs 3: Good health and well-being and 10:Reduce inequality. iGEM CCU Taiwan also joined our “International iGEM Postcard Exchange by Kcis Xiugang” and collaborated with our Instagram SDG post-event.
+							</p>
+
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/vit.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Meeting with iGEM VIT on June 22, 2023</p></center><br><br>
+							<p class="bigger-text">
+								We held fun discussions with iGEM VIT on June 22. During the meeting, we discussed SDGs 3: Good health and well-being, 4: Quality education, 6: Clean water and sanitation, 11: Sustainable cities and communities, and 12: Sustainable consumption and production. iGEM VIT also joined our Instagram SDG post-event.
+							</p>
+
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/aix.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Meeting with iGEM Ais-Marseille on June 22, 2023</p></center><br><br>
+							<p class="bigger-text">
+								We held interesting discussions with iGEM Ais-Marseille on June 22. During the meeting, we discussed SDGs 12: Sustainable consumption and production & 15: Life on land.  iGEM Ais-Marseille also joined our “International iGEM Postcard Exchange by Kcis Xiugang” and Instagram SDG post-event. Moreover, our team collaborated in their “Favorite Plant” event, and they helped us translate our picture book into French. In the event, “Favorite Plant,” they invite us to send photos of our favorite flowers and explain why we like this flower in the document and share them with them. The event's main purpose is to showcase the ecology that makes flowers and our planet so remarkable, SDG 15 (Life on land). They stated that we can do so by reducing the amount of water required during heat waves, implementing the circular economy model, and using bacteria instead of seaweeds, but also by limiting CO2 emissions and the negative effects of drought, such as unusable soils and wildfires, which lead to crop/biodiversity loss, famine, and diseases. As a result, our sharing may help children comprehend how vital and lovely biodiversity is.  
+							</p>
+
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/kyoto-hs.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Meeting with iGEM Korea HS on July 22, 2023</p></center><br><br>
+							<p class="bigger-text">
+								We held engaging discussions with iGEM Korea HS on July 22. During the meeting, we discussed SDGs 2: Zero hunger and 13: Climate action. iGEM Korea also joined our “International iGEM Postcard Exchange by Kcis Xiugang”. Moreover, our team collaborated in their “Worldwide Meat Culture” event and they helped us to translate our picture book into Korean. We were honored to participate in Korea High School's "Worldwide Meat Culture!" celebration, reflecting the broader aspect of SDG education. Their initiative aimed to unite diverse cultures globally by collecting meat-based recipes, a staple of each culture's cuisine. This project transcended borders, showcasing how education fosters cultural exchange. Their goal was to create a map highlighting the diverse cultures within the iGEM community through these recipes. In this partnership, we contributed by introducing them to Taiwan's renowned meat dish, Lu Rou Fan, providing historical context and a detailed description. This connected their concept of cultured meat SDGs 2: Zero hunger and 13: Climate action with our cultural heritage, demonstrating how education can bridge cultural gaps. 
+							</p>
+
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/asij.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Meeting with iGEM ASIJ on August 5, 2023</p></center><br><br>
+							<p class="bigger-text">
+								We held deep discussions with iGEM ASIJ on August 5. During the meeting, we discussed SDG 12: Sustainable consumption and production. iGEM ASIJ Tokyo also joined our Instagram SDG-post event. 
+							</p>
+
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/eastcoast-biocrew.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Meeting with East Coast Biocrew on August 12nd, 2023</p></center><br><br>
+							<p class="bigger-text">
+								We held fruitful discussions with East Coast Biocrew on August 12. During the meeting, we discussed SDGs 12-15. 
+							</p>
+
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/queens-university.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Meeting with QGEM on August 21st, 2023</p></center><br><br>
+							<p class="bigger-text">
+								We held interesting discussions with QGEM on August 21. During the meeting, we discussed SDGs 11: Sustainable cities and communities, 12: Sustainable consumption and production, and 14: Life below water. Queens iGEM also joined our Instagram SDG post event.
+							</p>
+
+							<p class="bigger-text">
+								We held fun discussions with GEMS Taiwan on August 27. During the meeting, we discussed SDGs 3: Good wealth and well-being and 14: Life below water.
+							</p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/gems-taiwan.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Meeting with GEMS Taiwan on August 27th, 2023</p></center><br><br>
+
+							<p class="bigger-text">
+								We held fruitful discussions with iGEM Kyoto on September 4. During the meeting, we discussed SDG 2: Zero hunger. 
+							</p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/kyoto.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Meeting with iGEM Kyoto on September 4, 2023</p></center><br><br>
+
+							<p class="bigger-text">
+								We held engaging discussions with iGEM Bochum on September 7. During the meeting, we discussed SDG 14: Life below water. iGEM Bochum helped us translate our picture book into German. 
+							</p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/bochum.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Meeting with iGEM Bochum on September 7, 2023</p></center>
+
+
+								
+
+
+						<div id="sub-third-1">
+
+							<br><br><br>
+
+							<h2 class="mb-2" style="font-family: 'Georgia', serif;"><strong class="font-weight-extra-bold">International iGEM Postcard Exchange by KCIS Xiugang</strong></h2>
+							<div class="mid-image">
+								<img src="https://static.igem.wiki/teams/4650/wiki/sdg-page/sdgs-exchanging-postcards-icon.png" alt="pcr1" width="500">
+							</div>
+							<p class="bigger-text">Our collaborative initiative involves partnering with a diverse group of iGEM (International Genetically Engineered Machine) teams from around the world, including iGEM Ais-Marseille, iGEM Bulgaria, iGEM PTSH Buteurace, iGEM Universitas Indonesia, iGEM Korea HS, iGEM Leiden, NCHU Taichung, NYCU-Taipei iGEM, iGEM Stockholm, WIST iGEM, and iGEM CCU Taiwan. The objective is to promote their unique projects related to the Sustainable Development Goals (SDGs).
+								Each participating iGEM team is tasked with providing 3 to 5 sentences that encapsulate the essence of their project, highlighting its alignment with one or more SDGs and its potential to contribute to global sustainability. These succinct descriptions will be creatively presented on postcards, forming a captivating collection.
+								These postcards serve as a visually compelling representation of our commitment to collaborating with iGEM teams worldwide to advance the SDGs and raise awareness about innovative solutions addressing critical global challenges. They will be shared, displayed, and distributed to various audiences, both locally and internationally, serving as powerful tools to spread the word about the remarkable work being done by iGEM teams and the collective effort toward sustainable development through synthetic biology.
+							</strong></p>
+
+							<p class="bigger-text"><u><b>
+								Click to see the backside of the postcards!</b></u>
+							</p>
+
+							<div class="flip-container" id="flip-container-1">
+								<div class="flipper">
+									<div class="front">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-1.png">
+									</center>
+									</div>
+									<div class="back">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-2.png">
+									</center>
+								 	 </div>
+								</div>
+							</div>
+
+							<center><p class="postcard-index">KCIS-Xiugang-Taipei</p></center><br><br>
+
+							<p class="bigger-text">
+								iGEM Aix-Marseille has participated in our postcard event, showcasing their work addressing SDG 12 and 15 in their project. Terralgi seeks to eco-responsibly produce alginate, a water-absorbing substance found in seaweeds, using bacteria and recycled materials, leading to a calcium alginate-based hydrogel that enhances soil water retention, aligning with SDG 12: Responsible Consumption and Production by reducing water usage and following a circular economy model and SDG 15: Life on Land by mitigating CO2 emissions and addressing drought-related challenges. 
+							<div class="flip-container" id="flip-container-2">
+									<div class="flipper">
+										<div class="front">
+										<center>
+											<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/marseille-1.png">
+										</center>
+										</div>
+										<div class="back">
+										<center>
+											<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/marseille-2-horizontal.png">
+										</center>
+										  </div>
+									</div>
+							</div>
+							<center><p class="postcard-index">Aix-Marseille</p></center><br><br>
+
+
+							<p class="bigger-text">
+								iGEM Leiden has participated in our postcard event, showcasing their work addressing SDG 12: Responsible consumption and production in their project, which is about PHA, a biocompatible and non-toxic material, that can be customized for diverse applications, as it naturally degrades in environments like soil, water, and compost, thanks to microbial activity.
+							</strong></p>
+							<div class="flip-container" id="flip-container-3">
+								<div class="flipper">
+									<div class="front">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/leiden-1.jpg">
+									</center>
+									</div>
+									<div class="back">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/leiden-2.jpg">
+									</center>
+									  </div>
+								</div>
+							</div>
+							<center><p class="postcard-index">iGEM Leiden</p></center><br><br>
+
+							<p class="bigger-text">
+								iGEM Korea HS has participated in our postcard event, showcasing their work addressing SDG 2: Zero hunger and 13: Climate Action in their project. The team's objective is to enhance the cost-effectiveness of lab-cultured meat production by utilizing a blend of Afamin and WNT-3A proteins, ultimately aiming for more affordable commercialization.
+							</strong></p>
+							<div class="flip-container" id="flip-container-4">
+								<div class="flipper">
+									<div class="front">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/korea-hs-1.jpg">
+									</center>
+									</div>
+									<div class="back">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/korea-hs-2.jpg">
+									</center>
+									  </div>
+								</div>
+							</div>
+							<center><p class="postcard-index">iGEM Korea HS</p></center><br><br>
+
+							<p class="bigger-text">
+								iGEM Universitas Indonesia has participated in our postcard event, showcasing their work addressing SDG 5: Gender equality in their project. They employ Salmonella typhimurium AR-1, which possesses the ability to selectively target cancer cells without effectively eliminating them. To address this challenge, they plan to combine it with toxic peptide carrier plasmids, specifically buphorin ib.
+							</strong></p>
+							<div class="flip-container" id="flip-container-7">
+								<div class="flipper">
+									<div class="front">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/ui-indonesia-1.png">
+									</center>
+									</div>
+									<div class="back">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/ui-indonesia-2.png">
+									</center>
+									  </div>
+								</div>
+							</div>
+							<center>
+								<img style="width:600px; height: 400px; padding-top: 10px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/ui-indonesia-3.png">
+							</center>
+							<center><p class="postcard-index">iGEM Universitas Indonesia</p></center><br><br>
+
+							<p class="bigger-text">
+								iGEM PTSH Buteurace has participated in our postcard event, showcasing their work addressing SDG 3: Good wealth and well-being in their project. Their aim is to solve sarcopenia but they never reveal what their real project is. 
+								<center>
+									<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/ptsh-buteurace.jpg">
+								</center>
+								<center><p class="postcard-index">iGEM PTSH Buteurace</p></center><br><br>
+
+							<p class="bigger-text">
+								NYCU-Taipei iGEM has participated in our postcard event, showcasing their work addressing SDG 3: Good wealth and well-being, in their project. Their project aims to acquire biomarkers associated with hesperetin-related illnesses from saliva, analyze the test outcomes upon biomarker identification, and subsequently transfer the electron transport system found in the bacteria into E. coli. This approach enables the release of electrons upon disease detection, allowing for the capture of electrical signals and enabling non-invasive and swift detection.
+							</strong></p>
+							<center>
+								<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/nycu-taipei.jpg">
+							</center>
+							<center><p class="postcard-index">NYCU-Taipei iGEM</p></center><br><br>
+
+							<p class="bigger-text">
+								WIST iGEM has participated in our postcard event, showcasing their work addressing SDG 8: Decent work and economic growth, 15: Life on land, and 17: Partnerships for the goals in their project. Orchids, renowned for their adaptability and economic significance, face a threat from the destructive "Soft Rot" disease triggered by Dickeya Fangzhongdai. Their objective is to safeguard orchids by genetically altering the bacteria's communication mechanisms, which are vital for their survival.
+							</strong></p>
+							<div class="flip-container" id="flip-container-5">
+								<div class="flipper">
+									<div class="front">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/wist-1.png">
+									</center>
+									</div>
+									<div class="back">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/wist-2.png">
+									</center>
+									  </div>
+								</div>
+							</div>
+							<center><p class="postcard-index">WIST iGEM</p></center><br><br>
+
+							<p class="bigger-text">
+								iGEM Bulgaria has participated in our postcard event, showcasing their work addressing SDG (SDG Number) in their project. Their Carpabra project is centered around eliminating antibiotics from hospital wastewater. Their goal is to boost the effectiveness of metallo-beta-lactamases, a combination of enzymes, to efficiently degrade a range of beta-lactam compounds, including carbapenems such as meropenem.
+							</strong></p>
+							<center>
+								<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/bulgaria.jpg">
+							</center>
+							<center><p class="postcard-index">iGEM Bulgaria</p></center><br><br>
+
+							<p class="bigger-text">
+								NCHU Taichung has participated in our postcard event, showcasing their work addressing SDG 13: Climate action and 15: Life on land in their project. They propose a promising supplement to enhance the flight endurance and cognitive ability of bees, aiming to alleviate the pollination crisis and create a sustainable future.
+							</strong></p>
+							<center>
+								<img style="width: 400px; height: 600px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/nchu-taichung.jpg">
+							</center>
+							<center><p class="postcard-index">NCHU Taichung</p></center><br><br>
+
+							<p class="bigger-text">
+								iGEM CCU Taiwan has participated in our postcard event, showcasing their work addressing SDG 3: Good wealth and well-being and 10: Reduced inequalities in their project, their focus lies in the detection of Circulating Tumor Cells (CTC) in the bloodstream to assess the risk of metastasis in patients post-treatment. When the number of CTCs in the blood exceeds a certain threshold, it signifies a high risk of metastasis, prompting the recommendation for immediate further examinations.
+							</strong></p>
+							<div class="flip-container" id="flip-container-6">
+								<div class="flipper">
+									<div class="front">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/ccu-taiwan-1.jpg">
+									</center>
+									</div>
+									<div class="back">
+									<center>
+										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/postcards/ccu-taiwan-2.jpg">
+									</center>
+									  </div>
+								</div>
+							</div>
+							<center><p class="postcard-index">iGEM CCU Taiwan</p></center>
+
+
+
+
+								
+						</div>
+
+						<div id="sub-third-2">
+
+							<br><br><br>
+
+							<h4 class="mb-2" style="font-family: 'Georgia', serif;"><strong class="font-weight-extra-bold">Instagram SDG post event</strong></h4>
+							<div class="mid-image">
+								<img src="https://static.igem.wiki/teams/4650/wiki/sdg-page/sdgs-ig-post-icon.png" alt="pcr1" width="700">
+							</div>
+							<strong class="bigger-text"><u>Introduction</u></strong>
+
+							<p class="bigger-text">
+								We invited iGEM teams around the world to take part in our "Instagram SDG post-event," which was organized by the KCIS Xiugang iGEM team. On this occasion, iGEM Ais-Marseille, QGEM, iGEM ASIJ, iGEM REC CHENNAI, WIST iGEM, iGEM CSMU Taiwan, NCHU Taichung, iGEM CCU Taiwan, iGEM VIT, and iGEM UPNAvarra-Spain introduced their initiatives and discussed how they relate to the SDGs. In this collaborative event, we aimed to exchange ideas and knowledge about SDGs, fostering meaningful collaborations as we work towards common sustainability goals with fellow iGEM teams. Our Instagram page, @igem.kcis2023, boasts 332 dedicated followers. Over the course of our campaign, we published a total of 12 collaborative SDG posts, each meticulously crafted to inform and engage our audience. In the last 30 days alone, our Instagram page reached an impressive 1.8K Instagram accounts, demonstrating the substantial reach of our educational initiative. The post that received the highest engagement garnered an impressive 63 likes, underlining the positive response we received from our followers and the wider community. Utilizing Instagram for educational purposes provided us with a flexible and extensive platform to share knowledge. Instagram's powerful multimedia capabilities allowed us to convey complex ideas in an accessible and engaging manner. This approach facilitated the dissemination of educational content about the SDGs and how iGEM projects were incorporating them to a broad and diverse audience, including iGEM teams worldwide, followers of our iGEM Instagram account, and potentially even school children. By leveraging this influential social media platform, we successfully raised public awareness, especially in relation to SDGs and the field of synthetic biology, making educational content more accessible and impactful beyond just iGEM teams.
+							</p>
+
+							<p class="bigger-text">
+								iGEM Aix-Marseille briefly introduced that their project reaches SDGs #12: Responsible consumption and production and #15: Life on land by reducing the amount needed for water during heat waves, applying a circular economy model, and using bacteria instead of seaweeds. Also by limiting CO2 emissions and the adverse effects of drought-like unusable solids and wildfires, leading to loss of crops, biodiversity, famine, and disease. 
+							</strong></p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/aix-1.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/aix-2.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">iGEM Aix-Marseille Collaboration Instagram SDG post</p></center><br><br>
+
+
+							<p class="bigger-text">
+								QGEM briefly introduced that their project is they want to create a system that can repurpose PET into a more environmentally friendly alternative. The aim for them is to reduce the number of harmful plastics in the environment as well as increase awareness of plastic impact. Their project reaches SDGs #11: Sustainable cities and communities, #12: Responsible consumption and production, and #14: Life below water by creating a more sustainable byproduct of plastic as well as maintaining a sustainable environmental footprint on the earth, reducing the waste consumption of plastic.
+							</strong></p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/queens-1.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/queens-2.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/queens-3.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/queens-4.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">iGEM QGEM Collaboration Instagram SDG post</p></center><br><br>
+
+
+							<p class="bigger-text">
+								iGEM ASIJ briefly introduced that their project aims to utilize various secretion mechanisms to decrease secretion costs all while using food waste as a carbon source for bioplastic production. Through their innovative efforts, they aspire for a global shift towards the adoption of bioplastic. Their project reaches SDG #12: Responsible consumption and production by finding alternative sustainable methods to conventional plastic.
+							</strong></p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/1-asij.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/2-asij.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/3-asij.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">iGEM ASIJ Collaboration Instagram SDG post</p></center><br><br>
+
+
+							<p class="bigger-text">
+								iGEM REC CHENNAI briefly introduced that their project is to protect the environment. Their project reaches SDGs #9: Industry innovation, and infrastructure., #13:Climate action, and #14:Life below water by tackling the current climate crisis by addressing the dire situation of excessive carbon dioxide released into the atmosphere from exhaust gas emissions. Moreover, their future prospects aim at scaling up our system to treat industrial exhaust gas emissions containing large amounts of carbon dioxide. 
+							</strong></p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/1-rec-chennai.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/2-rec-chennai.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/3-rec-chennai.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/4-rec-chennai.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">iGEM REC CHENNAI Collaboration Instagram SDG post</p></center><br><br>
+
+
+							<p class="bigger-text">
+								WIST iGEM briefly introduced that their project is to protect orchids by disrupting the way these bacteria communicate with each other, which is essential for their survival, through genetic engineering. Their project reaches SDGs 8: Decent work and economic growth, 15: Life on land, and 17: Partnerships for the goals by using microorganisms rather than chemicals that will help conserve our ecosystem and also partnering with multiple schools to raise eco-awareness and promote their impactful project. 
+							</strong></p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/1-wist.jpg" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/2-wist.jpg" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/3-wist.jpg" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">iGEM WIST Collaboration Instagram SDG post</p></center><br><br>
+
+
+							<p class="bigger-text">
+								iGEM CSMU Taiwan briefly introduced that their project is DECOLOGY which is composed of decolor and ecology. Decolor is what they strive to achieve using bioremediation and biosynthesis methods. Moreover, they are going to offer a more effective and eco-friendly decoloring method. Their project reaches SDGs #12: Responsible consumption and consumption and #14 Life below water by purifying the wastewater from textile production, so water could be reused. Then, they also will ensure that no polluted water is dumped into the ocean, posing a potential threat to marine life. 
+							</strong></p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/1-csmu.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/2-csmu.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/3-csmu.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">iGEM CSMU Collaboration Instagram SDG post</p></center><br><br>
+
+
+							<p class="bigger-text">
+								NCHU Taichung briefly introduced that their project is to try to help bees combat environmental pressures. Their project reaches SDGs #13: Climate action and #15: Life on land by taking prompt action the severe climate change and decreasing biodiversity loss with rigorous scientific research and analysis. 
+							</strong></p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/1-nchu.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/2-nchu.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/3-nchu.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/4-nchu.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/5-nchu.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">iGEM NCHU Collaboration Instagram SDG post</p></center><br><br>
+
+
+							<p class="bigger-text">
+								iGEM CCU Taiwan briefly introduced that their project is to try to detect CTC in the blood to identify the risk of metastasis in patients who have undergone treatment. Their project reaches SDGs #9: Industry, innovation, and infrastructure and #10: Reduced inequalities by using cancer as the starting point to ensure the stability and accuracy of the technology, then applying the technology to other cancers, and then promoting it to other countries, so that the world can enjoy Affordable and Reliable testing. Moreover, they are also spending more time each time returning for treatment than patients in urban areas, and the extended mental and economic costs are much higher. CTC-FAST ensures every patient has equal access to treatment. 
+							</strong></p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/1-ccu.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/2-ccu.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/3-ccu.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">iGEM CCU Collaboration Instagram SDG post</p></center><br><br>
+
+
+							<p class="bigger-text">
+								iGEM VIT briefly introduced their project, which focuses on combating plastic and microplastic pollution. Their project aims to address SDGs 3, 6, 11, and 12. Specifically, their project contributes to SDG 3: Good health and well-being by reducing the health risks associated with plastic pollution. It contributes to SDG 6: Clean water and sanitation by mitigating water contamination caused by plastic waste. The project also aligns with SDG 11: Sustainable communities and cities by promoting cleaner and healthier urban environments. Lastly, it supports SDG 12: Responsible consumption and production by fostering a circular economy through the utilization of by-products from PET degradation in industrial processes.
+							</strong></p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/1-vit.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/2-vit.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">iGEM VIT Collaboration Instagram SDG post</p></center><br><br>
+
+
+							<p class="bigger-text">
+								iGEM UPNAvarra-Spain briefly introduced that their project is focused on resveratrol production. Their project reaches SDD #3, #12, #13, #15, and #17 by harnessing the health benefits of resveratrol with SDG 3: Good health and well-being; utilizing viticulture by-products for sustainability with SDG 12: Responsible consumption and production; employing sustainable production methods with SDG 13: Climate action; reducing the need for additional resource-intensive plant growth with SDG 15: Life on land); and fostering collaboration across various sectors SDG 17: Partnerships for the Goals.
+							</strong></p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/1-upna.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/2-upna.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/3-upna.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/4-upna.png" alt="pcr1" width="500"></center>
+							</div>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/5-upna.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">iGEM UPNAvarra-Spain Collaboration Instagram SDG post</p></center>
+
+
+
+						</div>
+
+						<div id="sub-third-3">
+
+							<br><br><br>
+
+							<h4 class="mb-2" style="font-family: 'Georgia', serif;"><strong class="font-weight-extra-bold">Picture Book</strong></h4>
+							<div class="mid-image">
+								<img src="https://static.igem.wiki/teams/4650/wiki/sdg-page/sdgs-picture-book-icon.png" alt="pcr1" width="500">
+							</div>
+							<p class="bigger-text">
+								<br>We invited different teams to work with us in translating our "Picture Book" into their native languages. This book explains the objectives of our project, the value of environmental preservation, our commitment to the SDGs, and how our project reaches the SDGs goals. By demonstrating how we address various challenges through the accomplishment of these goals in various scenarios with the help of them, we hope to make the SDGs more understandable to a wider global audience without language barriers. We also hope to promote this Picture Book around their educational institutions or nearby hospitals. Our attempts to collaborate closely with other iGEM teams in furthering the SDGs will start with this partnership.
+						  		</br>
+						  	</p>
+
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;">
+								<center>English</center>
+							</h2>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/english-picture-book.pdf" download>
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/education/green-front-cover.png" alt="Cover Page" width="400" height="600"></center>
+    						</a>
+							<br><br><br><br>
+
+							 <p class="bigger-text">
+								iGEM Ionis helps us to translate the book into French and actively promote our picture book in their communities.
+							</p>
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;">
+								<center>French</center>
+							</h2>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/education/french-picture-book-compressed.pdf" download>
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/education/french-green-cover.png" alt="Cover Page" width="400" height="600"></center>
+    						</a>
+							<br><br><br><br>
+
+							<p class="bigger-text">
+								iGEM Bochum helped us to translate the book into German actively promote our picture book in their communities. 
+							</p>
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;">
+								<center>German</center>
+							</h2>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/education/german-teacher-picture-book-compressed.pdf" download>
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/education/german-green-cover.png" alt="Cover Page" width="400" height="600"></center>
+    						</a>
+							<br><br><br><br>
+
+							<p class="bigger-text">
+								Julia Müller helped us to translate the book into German and Russian by promoting our picture book in Kang Chiao International School. 
+							</p>
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;">
+								<center>Russian</center>
+							</h2>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/education/russian-picture-book-compressed.pdf" download>
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/education/russian-green-cover.png" alt="Cover Page" width="400" height="600"></center>
+    						</a>
+							<br><br><br><br>
+
+							<p class="bigger-text">
+								Matthew Werth helped us to translate the book into Spanish by promoting our picture book in Kang Chiao International School. 
+							</p>
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;">
+								<center>Spanish</center>
+							</h2>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/education/spanish-picture-book-compressed.pdf" download>
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/education/spanish-green-cover.png" alt="Cover Page" width="400" height="600"></center>
+    						</a>
+							<br><br><br><br>
+
+							<p class="bigger-text">
+								陳崇文 Takashi Chen helped us to translate the book into Japanese by promoting our picture book in Kang Chiao International School. 
+							</p>
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;">
+								<center>Japanese</center>
+							</h2>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/education/japanese-picture-book-compressed.pdf" download>
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/education/japanese-green-cover.png" alt="Cover Page" width="400" height="600"></center>
+    						</a>
+							<br><br><br><br>
+
+							<p class="bigger-text">
+								賴以柔 Yi Jou Lai (Laura Lai) helped us to translate the book into Mandarin by promoting our picture book in Kang Chiao International School. 
+							</p>
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;">
+								<center>Mandarin</center>
+							</h2>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/education/chinese-picture-book-compressed.pdf" download>
+        						<center><img src="https://static.igem.wiki/teams/4650/wiki/education/chinese-green-cover.png" alt="Cover Page" width="400" height="600"></center>
+    						</a>
+							
+							<br><br><br>
+
+							<p class="bigger-text">
+								iGEM UPNAvarra-Spain helped us to promote the Spanish version picture book on their instagram page. 
+							</p>
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;">
+							 <center>Spainish</center>
+							</h2>
+   							<a href="https://static.igem.wiki/teams/4650/wiki/education/spanish-picture-book-compressed.pdf" download>
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/education/spanish-green-cover.png" alt="Cover Page" width="400" height="600"></center>
+    						</a>
+							<br><br><br><br>
+
+							<p class="bigger-text">
+								In promoting our picture book, the picture book will be printed and displayed in the KCIS Xiugang Library, allowing all students in our school to view our picture book. We also sent an email to students in 7th to 11th graders to promote our picture book. Furthermore, our translated picture books will be made accessible and free for every team to view and download in all available versions on our website. 
+							</p>
+								
+								
+								
+								
+								
+								
+								
+								
+						</div>
+
+						
+
+						<div id="fourth">
+
+							<br><br>
+
+           				 </div>
+
+						<div id="sub-fourth-1">
+
+							<br>
+
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;"><center><strong class="font-weight-extra-bold">Workshops</strong></center></h2>
+
+							<h4 class="mb-2" style="font-family: 'Georgia', serif;"><strong class="font-weight-extra-bold">2023 KCIS Xiugang Taipei iGEM X Library Collaboration Workshop</strong></h4>
+							<div class="mid-image">
+							<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg-page/sdgs-workshop-icon.png" alt="pcr1" width="500"></center>
+							</div>
+							<p class="bigger-text">
+								We scheduled to host an SDGs workshop for students to introduce them to the SDGs and how they relate to our project. During this session, we familiarized KCIS students with all 17 SDGs, teaching them to recognize each one and understand their real-world applications. Additionally, we presented our project, discussing the problem we aim to address, and our proposed solution, and offering a simplified overview of our experiment procedure. To reinforce the learning, we concluded the session with an interactive Kahoot game to review the material. Through this event, we not only enhanced students' comprehension of SDGs and our project but also encouraged them to identify SDGs in various contexts and contemplate ways they can actively contribute to the achievement of these global goals. This workshop signifies our commitment to collaborating with other iGEM teams in advancing the SDGs' cause. 
+								Ms. Vicky Hsueh, the main supporter of our event from the library, believes that our workshop is amazing as it connects really well with the library’s book display and educates the students in an engaging way. According to the feedback form that we asked the participants to fill out, most of them believe this event is helpful for their learning and all of them have ideas on how they can contribute to the achievement of SDGs. 
+								In the poll, we discovered that 100 percent of respondents believed that our iGEM project and synthetic biology both contributed to and accomplished the SDGs, and 87.5 percent of respondents thought our presentation helped them understand more about the SDGs. The two SDGs that participants want to contribute to the most are SDG 2: zero hunger and SDG 1: no poverty, and they explain how they plan to do this by advocating for socialism, which would reduce poverty rates, enhance the basic welfare of all citizens, and work with other organizations to donate or provide food to those in need. 
+							</p>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/1-library-sdg.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">2023 KCIS Xiugang Taipei iGEM X Library Collaboration Workshop Instagram Cover</p></center><br><br>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/2-library-sdg.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">2023 KCIS Xiugang Taipei iGEM X Library Collaboration Workshop Instagram post -1</p></center>
+
+								
+						</div>
+
+						
+						<div id="sub-fourth-2">
+
+							<br><br><br>
+
+							<h4 class="mb-2" style="font-family: 'Georgia', serif;"><strong class="font-weight-extra-bold">2023 KCIS Xiugang Taipei iGEM X Library Display</strong></h4>
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg-page/library-collaboration-display-icon.png" alt="pcr1" width="700"></center>
+							</div>
+							<p class="bigger-text">
+								In this 2023 KCIS Xiugang Taipei iGEM X Library collaboration, we actively promoted the Sustainable Development Goals. Our primary objective was to promote SDGs, which is what the library wants to do as well. However, while the library is trying to encourage students to read SDGs-related books, we will bring in more of the applications of SDGs on synthetic biology. This ensures that more people comprehend the importance of SDGs and how they align with our mission to address critical issues. This event also underscores our dedication to collaborating with fellow iGEM teams to collectively advance the cause of the SDGs. In addition, to promote this collaboration, we put flyers in many teachers’ classrooms, hoping more students will notice this learning opportunity. 
+							</p>
+								
+							<p class="bigger-text">
+								In the SDGs Poster Display held from 2023/9/18 to 2023/10/31, we actively promoted the United Nations' Sustainable Development Goals. Our primary objective was for the students to learn more about SDGs #12 and #15 and our project’s approach to helping achieve them. This ensures that more people comprehend the importance of SDGs and how they align with our mission to address critical issues. This event also underscores our dedication to collaborating with fellow iGEM teams to collectively advance the cause of the SDGs. Ms. Katlin Chiang, one of our attributes who is an expert in media design, gave us guides on how to improve our posters.
+							</p>
+
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/2023-kcis-xiugang-taipei-igem-x-library-display-posters.png" alt="pcr1" width="500"></center>
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/2023-kcis-xiugang-taipei-igem-x-library-display-posters-2.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">2023 KCIS Xiugang Taipei iGEM X Library Display - Posters</p></center><br><br>
+
+
+
+							<p class="bigger-text">
+								In the SDGs Postcard Display held from 2023/9/18 to 2023/10/31, we actively promoted the United Nations' Sustainable Development Goals. Our primary objective was to help students learn how other iGEM teams are trying to solve the local or international problems they noticed through synthetic biology and their projects’ connection with SDGs. This ensures that more people comprehend the importance of SDGs and how they align with our mission to address critical issues. This event also underscores our dedication to collaborating with fellow iGEM teams to collectively advance the cause of the SDGs. Ms. Katlin Chiang helped us print and crop the postcards. 
+							</p>
+								
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/sdgs-postcard-display-held-from-2023-9-18-to-2023-10-31.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">SDGs Postcard Display held from 2023/9/18 to 2023/10/31</p></center><br><br>
+
+
+							<p class="bigger-text">
+								In the SDGs Picture Book Display held from 2023/9/18 to 2023/10/31, we actively promoted the United Nations' Sustainable Development Goals. Our primary objective was to depict the horrible effects leather tanning industries have on the environment and animals, introduce the idea of how to accomplish SDGs through synthetic biology to children all over the world, and raise awareness of SDGs #12 and #15. This ensures that more people comprehend the importance of SDGs and how they align with our mission to address critical issues. This event also underscores our dedication to collaborating with fellow iGEM teams to collectively advance the cause of the SDGs. 
+							</p>
+
+								
+
+							<p class="bigger-text">
+								In the “I Can SDGs” Contest held from 2023/9/18 to 2023/9/26, we actively promoted the United Nations' Sustainable Development Goals by providing templates for students to write down why they believe SDGs is important and how they con contribute to it. Once they are done, they get to put their response in the cute box so that they can attend this contest. Top responders are rewarded with mystery gifts. Our primary objective was to help students learn about other SDGs and be responsible citizens by thinking about their own approaches to help achieve SDGs. This ensures that more people comprehend the importance of SDGs and how they align with our mission to address critical issues. This event also underscores our dedication to collaborating with fellow iGEM teams to collectively advance the cause of the SDGs. Ms. Vicky Hsueh, the manager of the library, believes that this is a great activity for students to do. 
+							</p>
+
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/i-can-sdgs-contest-held-from-2023-9-18-to-2023-9-2.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">“I Can SDGs” Contest held from 2023/9/18 to 2023/9/26</p></center><br><br>
+
+
+							<p class="bigger-text">
+								In the Quiz Activity held from 2023/9/18 to 2023/9/28, we actively promoted the United Nations' Sustainable Development Goals. Our primary objective was to encourage students to learn from our display and help them remember what they’ve learned for a long period of time, maximizing the effect of this display, by applying the testing effect, which is to create a small quiz for them to do. All the necessary information that is required to answer the questions can be found on the display. This ensures that more people comprehend the importance of SDGs and how they align with our mission to address critical issues. This event also underscores our dedication to collaborating with fellow iGEM teams to collectively advance the cause of the SDGs. 
+								Ms. Vicky Hsueh, one of our attributes, mentioned that it would be nice to have a quiz to test the student’s understanding, which inspired us to create this activity. However, there are not a lot of participants in this activity. To improve this in the future, we can promote this activity better and further encourage students to participate.
+							</p>
+
+							<div class="mid-image">
+								<center><img src="https://static.igem.wiki/teams/4650/wiki/sdg/sdg/sdg/quiz.png" alt="pcr1" width="500"></center>
+							</div>
+							<center><p class="postcard-index">Quiz Activity held from 2023/9/18 to 2023/9/28</p></center><br><br>
+
+								
+								
+								
+						</div>
+
+						<div id="fifth">
+							<br><br><br>
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;"><center><strong class="font-weight-extra-bold">Citation</strong></center></h2>
+								<p class="bigger-text">1. United Nations. The 17 goals | sustainable development. Available from: https://sdgs.un.org/goals [Accessed 24 September 2023].</p>
+								<p class="bigger-text">2. Circumfauna. Leather Carbon Footprint. Available from: https://circumfauna.org/leather-carbon-footprint [Accessed 24 September 2023a].</p>
+								<p class="bigger-text">3. ‌Noll, R. What is vegan leather and is it more sustainable than natural leather? Available from: https://ecocult.com/what-is-vegan-leather/ [Accessed 24 September 2023].</p>
+								<p class="bigger-text">4. The optimist daily. ‌These compostable shoes are made out of Kombucha Tea Waste: The optimist daily. Available from: https://www.optimistdaily.com/2021/03/these-compostable-shoes-were-made-out-of-kombucha-tea-waste/ [Accessed 24 September 2023].</p>								
+								<p class="bigger-text">5. Damini. Leather Chemicals and their impact on the environment. Available from: https://www.deskera.com/blog/leather-chemicals-and-their-impact-on-the-environment/ [Accessed 24 September 2023]. </p>
+								<p class="bigger-text">6. The Danish Institution For Human Rights. ‌Goals, targets and indicators. Available from: https://sdg.humanrights.dk/en/goals-and-targets?page=3 [Accessed 24 September 2023a].</p>								
+								<p class="bigger-text">7. Leather Naturally. Is leather environmentally friendly? Available from: https://www.leathernaturally.org/news-events/news/is-leather-environmentally-friendly/ [Accessed 24 September 2023].</p>								
+								<p class="bigger-text">8. United Nations. Goal 15 | Department of Economic and Social Affairs. Available from: https://sdgs.un.org/goals/goal15 [Accessed 24 September 2023a].</p>								
+								<p class="bigger-text">9. Humane Society International. The Fur Trade. Available from: https://www.hsi.org/news-resources/fur-trade/ [Accessed 24 September 2023].</p>								
+								<p class="bigger-text">10. Fur Free Alliance. ‌Impact on biodiversity. 22 June 2021. Available from: https://www.furfreealliance.com/impact-on-biodiversity/ [Accessed 24 September 2023]. </p>								
+								<p class="bigger-text">11. College of Agricultural and Life Sciences. ‌Sustainable Fashion. Available from: https://www.uidaho.edu/cals/news/features/2023/asiah-brazil-geyshick-fcs [Accessed 24 September 2023].</p>								
+								<p class="bigger-text">12. ‌Mahdi Al-Kaisi, Mark Hanna, Michael Tidman. Managing your pasture to reduce soil erosion. Available from: https://crops.extension.iastate.edu/encyclopedia/managing-your-pasture-reduce-soil-erosion [Accessed 24 September 2023].</p>								
+								<p class="bigger-text">13. Woldeab R. How industrialized meat production causes land degradation. Available from: https://populationeducation.org/industrialized-meat-production-and-land-degradation-3-reasons-to-shift-to-a-plant-based-diet/ [Accessed 24 September 2023].</p>								
+								<p class="bigger-text">14. Nothing to Hide. Essay one: Hide and skin production around the world. Available from: http://www.nothing-to-hide.org/LeatherFacts/Hides_&_skins:_use_or_lose [Accessed 24 September 2023d].</p>								
+								<p class="bigger-text">15. Griffith A, Simmonds A. How well is Europe playing the cultured meat game? Available from: https://www.govgrant.co.uk/sector-research/how-well-is-europe-playing-the-cultured-meat-game/ [Accessed 24 September 2023].</p>
+								<p class="bigger-text">16. How to Build a Circular Economy | Ellen MacArthur Foundation. Ellenmacarthurfoundation.org. https://ellenmacarthurfoundation.org/ [Accessed 4th October 2023].</p>
+						</div>
+						</div>
+						</div>
+						</div>
+						</div>
+						</div>
+
+						<script>
+							/*for (let i = 1; i <= 20; i++) {
+								  const flipContainer = document.getElementById(`flip-container-${i}`);
+								  const flipper = flipContainer.querySelector('.flipper');
+								  const front = flipper.querySelector('.front');
+								  const middle = flipper.querySelector('.middle');
+								  const back = flipper.querySelector('.back');
+					
+								  flipContainer.addEventListener('click', () => {
+									if (middle) {
+									  // Indonesia
+										  front.classList.toggle('hidden');
+										  middle.classList.toggle('hidden');
+										  back.classList.toggle('hidden');
+									} else {
+									  // Every other team
+										  flipper.classList.toggle('flipped');
+									}
+								  });
+							}*/
+							// Loop through all the sets of flipping images
+							for (let i = 1; i <= 7; i++) {
+								  const flipContainer = document.getElementById(`flip-container-${i}`);
+								  const flipper = flipContainer.querySelector('.flipper');
+					
+								  flipContainer.addEventListener('click', () => {
+									flipper.classList.toggle('flipped');
+								  });
+							}
+						</script>
+					
+						<!-- BACKUP FOR CLICK FLIPPING (NO ANIMATION)
+							<center><img id="image" style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-1.png"></center>
+							<script>
+							document.getElementById('image').onclick = function() {
+							if (this.src == 'https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-1.png') {
+								this.src = 'https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-2.png';
+							} else if (this.src == 'https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-2.png') {
+								this.src = 'https://static.igem.wiki/teams/4650/wiki/education/kcis-xiugang-pc-1.png';
+							} else {
+								alert('error');
+							}
+							}
+							/script>
+						-->
+
+	<!-- Vendor -->
+	<script src="vendor/plugins/js/plugins.min.js"></script>
+					
+	<!-- Theme Base, Components and Settings -->
+	<script src="js/theme.js"></script>
+					
+	<!-- Theme Custom -->
+	<script src="js/custom.js"></script>
+					
+	<!-- Theme Initialization Files -->
+	<script src="js/theme.init.js"></script>
+					</body>
+						
+						
+			{% endblock %}

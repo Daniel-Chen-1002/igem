@@ -1,0 +1,730 @@
+{% extends "layout.html" %}
+
+
+
+{% block page_content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+</head>
+<body class="loading-overlay-showing" data-plugin-page-transition data-loading-overlay data-plugin-options="{'hideDelay': 0, 'effect': 'pulse'}">
+<div class="loading-overlay">
+  <div class="bounce-loader">
+    <div class="wrapper-pulse">
+      <div class="cssload-pulse-loader"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<div role="main" class="main">
+  <section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg"
+           style="background-image: url('https://static.igem.wiki/teams/4650/wiki/headings/attribution.png');
+							   background-size: cover; 
+							   background-position: center; 
+							   height: 700px; 
+							   display: flex; 
+							   align-items: center; 
+							   justify-content: center;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 align-self-center p-static order-2 text-center">
+          <h1 class="font-weight-bold text-dark"></h1>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+  
+
+<div id="examples" class="container py-2">
+
+  <div class="row">
+    <div class="col">
+
+      <div class="row">
+        <div class="col">
+
+          <h4>Default</h4>
+
+          <blockquote>
+            <p>Pellentesque pellentesque eget tempor tellus. Fusce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.</p>
+            <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          </blockquote>
+
+          <hr class="solid my-5">
+
+          <h4>Borders</h4>
+
+          <blockquote class="with-borders">
+            <p>Pellentesque pellentesque eget tempor tellus. Fusce lacllentesque eget tempor tellus ellentesque pelleinia tempor malesuada. Pellentesque pellentesque eget tempor tellus ellentesque pellentesque eget tempor tellus. Fusce lacinia tempor malesuada.</p>
+            <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          </blockquote>
+
+
+
+          <hr class="solid my-5">
+
+          <h4>Instructors</h4>
+
+
+          <div class="row">
+            <div class="col-lg-9">
+              <blockquote class="blockquote-primary">
+                <H4>Tarn Parker</H4>
+                <footer>Ms. Parker is the Principal Investigator (PI) and founder of the KCIS IGEM team. She oversees content review, editing, and manages the team's progress.</footer>
+              </blockquote>
+            </div>
+
+
+            <hr class="solid my-5">
+            <div class="row">
+              <div class="col-lg-9">
+                <blockquote class="blockquote-primary">
+                  <H4>Hui-Ching Kuo</H4>
+                  <footer>Ms.Ching, the founder and instructor of KCIS IGEM, handles laboratory training and supervision, as well as content review and editing.</footer>
+                </blockquote>
+              </div>
+
+              <hr class="solid my-5">
+
+              <h4>Team Members</h4>
+
+              <div class="row mb-4"> <!-- spacing for Melody Lo -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Melody Lo</H4>
+                    <footer>As the KCIS IGEM project head, Melody developed interview questions, set up virtual meetings with experts, supervised all teams, and conducted surveys. She also led educational workshops.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="row mb-4"> <!-- spacing for Annabel Yang -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Annabel Yang</H4>
+                    <footer>As the Wiki leader, Annabel designed and coded several wiki pages, directed the promotional video, and crafted the flexibility machine.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="row mb-4"> <!-- spacing for Amanda Wang -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Amanda Wang</H4>
+                    <footer>Amanda, the leader of the KCIS IGEM project, structured interview questions, coordinated virtual expert sessions, conducted surveys, supervised all teams, and led educational workshops.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="row mb-4"> <!-- spacing for Michael Huang -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Michael Huang</H4>
+                    <footer>A member of the wiki team, Michael manages directories and built the engineering part of the flexibility machine. He also works with Matlab for bio-simulations.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="row mb-4"> <!-- spacing for Blanc Liao -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Blanc Liao</H4>
+                    <footer>Blanc, part of the wiki team, coded multiple wiki pages, constructed the flexibility machine, and manages wiki directories</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="row mb-4"> <!-- spacing for Iris Qiu -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Iris Qiu</H4>
+                    <footer>A member in human practices, Iris reached out to other IGEM teams, organized virtual meeting, led educational workshops, directed and produced the education videos, and spearheaded the picture book and postcard exchange events.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="row mb-4"> <!-- spacing for Hope Chen -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Hope Chen</H4>
+                    <footer>AHope, from the wet lab team, designed experiments, conducted the PCR proof of concept, contributed to engineering methods, and analyzed the final outcomes.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="row mb-4"> <!-- spacing for Jenny Kuo -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Jenny Kuo</H4>
+                    <footer>As a member of the wet lab team, Jenny designed and performed the experiments, she helped to record the notebook and experiment protocols. At the same time contribute to wiki proof of concept, organized documents, and pictures.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Laura Lai -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Laura Lai</H4>
+                    <footer>Laura, as the leader of human practices, engaged with other IGEM teams, organized most of the virtual meetings, led the international postcard exchange, translated and made the picture book, hosted the SDG education workshop with KC library, managed instagram page, wrote the collaboration document with other teams, and several educational initiatives for middle school and high school.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Nicole Liao-->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Nicole Liao</H4>
+                    <footer>Nicole, another wet lab contributor, conducted experiments, documented protocols, and managed the wiki description page. Additionally, she organized an SDG education workshop with the KC library.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Maddison Ma -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Maddison Ma</H4>
+                    <footer>Part of the wet lab team, Maddison executed and analyzed experiments, documented the protocols for the engineering page, oversaw the wiki description page, and created animation for the promotional video</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Laura Lai -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Laura Lai</H4>
+                    <footer>Laura, as the leader of human practices, engaged with other IGEM teams, organized most of the virtual meetings, led the international postcard exchange, translated and made the picture book, hosted the SDG education workshop with KC library, managed instagram page, wrote the collaboration document with other teams, and several educational initiatives for middle school and high school.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Dora Chen -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Dora Chen</H4>
+                    <footer>A human practice member, Dora connected with other IGEM teams, conducted 1 virtual meeting, and led the picture book event.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Phoebe Yang -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Phoebe Yang</H4>
+                    <footer>Phoebe, from the wiki team, coded multiple wiki pages and produced the promotional video.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Yaya Hsu -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Yaya Hsu</H4>
+                    <footer>Yaya, an art team member, designed visuals for various mediums, including the promotional video's animation, animation for HP educational video, animation on KCIS Xiugang instagram page, diagrams for the experiment, Linkou conference poster, and created the matching for flexibility test for the Modified Scoby.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Jessie Chuang -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Jessie Chuang</H4>
+                      <footer>A member of the art team, Jessie produced visuals for posters, picture books, presentations, and social media. She crafted a comic on the leather industry's potential issues and designed the KCIS IGEM postcards, leading the postcard exchange event. Additionally, she co-hosted the SDG education workshop with KC library.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Terry Chang -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Terry Chang</H4>
+                    <footer>From the wet lab team, Terry proposed the theme of the project, conducted and documented experiments, appeared in the promotional video, hosted virtual meetings with other iGEM teams, and took part in the SDGs education workshop with the KC Library. On the wiki, Terry worked on the experiments page.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Vicky Chien -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Vicky Chien</H4>
+                    <footer>Vicky, part of the wet lab team, documented experiments, parts, and engineering. She is the leading host of the SDGs education workshop and displays in collaboration with the KC library. She also took part in the shear strength flexibility experiments.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Iris Lin -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Iris Lin</H4>
+                    <footer>A wiki team member, Iris Lin addressed directory issues and coded wiki pages.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Rubie Jen -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-tertiary">
+                    <H4>Rubie Jen</H4>
+                    <footer>Rubie, from human practices, networked with other IGEM teams and led the picture book event.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <hr class="solid my-5">
+
+              <h4>Collborations</h4>
+
+              <div class="row mb-4"> <!-- spacing for Kurt Chen -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>Kurt Chen</H4>
+                    <footer>Mr. Kurt assisted in the construction of the flexibility machine and provided invaluable expertise. He also shared his knowledge with the team, guiding us throughout the process.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="row mb-4"> <!-- spacing for Harry Lin -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>Harry Lin</H4>
+                    <footer>Mr.Lin greatly assisted our efforts with the flexibility machine by introducing the advanced technology of 3D printing, enriching our approach and enhancing the project's outcomes.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="row mb-4"> <!-- spacing for Lali Curry -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>Lali Curry</H4>
+                    <footer>Ms.Curry assisted our website planning and helped us solve directory problems.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Andrew Nicholls -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>Andrew Nicholls</H4>
+                    <footer>Mr. Nicholas came to our school and lectured us about the information of SCOBY. He also shares his own SCOBY and recommends us to emphasize animal leath's use on leather and its negative impact to the environment.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Dr. Domskiene Jurgita -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>Dr. Domskiene Jurgita</H4>
+                    <footer>Dr. Jurgita provides suggestions regarding SCOBY and our project’s direction. She also provides insight on replacing fabric with SCOBY.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for 陳炎鍊 Dr. Chen Yen Lien										 -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>陳炎鍊 Dr. Chen Yen Lien</H4>
+                    <footer>Dr. Chen provides us insight about the kombucha industry, explaining details of how industrial fermentation works and how their company disposes of bacterial cellulose waste.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Matthew Werth -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>Matthew Werth</H4>
+                    <footer>Matthew Werth helped us to translate the book into Spanish by promoting our picture book in Kang Chiao International School.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for 陳崇文Takashi Chen -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>陳崇文Takashi Chen</H4>
+                    <footer>陳崇文 Takashi Chen helped us to translate the book into Japanese by promoting our picture book in Kang Chiao International School. </footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Julia Müller -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>Julia Müller</H4>
+                    <footer>Julia Müller helped us to translate the book into German and Russian by promoting our picture book in Kang Chiao International School.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM Leiden -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM Leiden</H4>
+                    <footer>iGEM Leiden joined our “International iGEM Postcard Exchange by Kcis Xiugang”</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM Universitas Indonesia -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM Universitas Indonesia</H4>
+                    <footer>iGEM Universitas Indonesia joined our “International iGEM Postcard Exchange by Kcis Xiugang”. </footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM Pu Tai Senior High School  -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM Pu Tai Senior High School </H4>
+                    <footer>iGEM Pu Tai Senior High School  joined our “International iGEM Postcard Exchange by Kcis Xiugang”, with respectively, we also collaborate with their handbook for education.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for NYCU-Taipei iGEM -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>NYCU-Taipei iGEM</H4>
+                    <footer>NYCU-Taipei iGEM joined our “International iGEM Postcard Exchange by Kcis Xiugang”.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for WIST 2023 iGEM -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>WIST 2023 iGEM</H4>
+                    <footer>WIST 2023 iGEM joined our “International iGEM Postcard Exchange by Kcis Xiugang” and Instagram SDG post event. </footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM NCHU Taichung -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM NCHU Taichung </H4>
+                    <footer>iGEM NCHU Taichung joined our “International iGEM Postcard Exchange by Kcis Xiugang” and Instagram SDG post event. </footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM Bulgaria -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM Bulgaria</H4>
+                    <footer>iGEM Bulgaria joined our “International iGEM Postcard Exchange by Kcis Xiugang”. We also held a virtual meeting. They gave us great advice to guide our project direction.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM CCU Taiwan -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM CCU Taiwan</H4>
+                    <footer>iGEM CCU Taiwan joined our “International iGEM Postcard Exchange by Kcis Xiugang”. We also held a virtual meeting to promote and discuss our projects and iGEM CCU Taiwan collaborates with our Instagram SDG post event. </footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM VIT -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM VIT</H4>
+                    <footer>We held a virtual meeting to promote and discuss our projects and collaborate with our Instagram SDG post event.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Taipei Wego iGEM team  -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>Taipei Wego iGEM team </H4>
+                    <footer>We collaborated with the Taipei Wego iGEM team by providing them with our distribution kit.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM Aix-Marseille -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM Aix-Marseille</H4>
+                    <footer>iGEM Aix-Marseille joined our “International iGEM Postcard Exchange by Kcis Xiugang” and Instagram SDG post event. We also held a virtual meeting to promote and discuss our projects. Our team collaborated in their “Favorite plant” event and they helped us translate our picture book into French.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM Korea HS -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM Korea HS</H4>
+                    <footer>iGEM Korea HS joined our “International iGEM Postcard Exchange by Kcis Xiugang”. We also held a virtual meeting to promote and discuss our projects. Our team collaborated in their “Worldwide Meat Culture” event and they helped us to translate our picture book into Korean. </footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM ASIJ Tokyo -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM ASIJ Tokyo</H4>
+                    <footer>iGEM ASIJ Tokyo joined our Instagram SDG post event. We also held a virtual meeting to promote and discuss our projects.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for East Coast Biocrew  -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>East Coast Biocrew </H4>
+                    <footer>We held a virtual meeting to promote and discuss our projects.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for QGEM -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>QGEM</H4>
+                    <footer>We held a virtual meeting to promote and discuss our projects and we found out our projects are very similar, we all have the same goal. Hence, Queens iGEM joined our Instagram SDG post event.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for GEMS Taiwan -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>GEMS Taiwan</H4>
+                    <footer>We held a virtual meeting to promote and discuss our projects.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM Kyoto -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM Kyoto</H4>
+                    <footer>We held a virtual meeting to promote and discuss our projects.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM Bochum -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM Bochum</H4>
+                    <footer>We held a virtual meeting to promote and discuss our projects. GEM Bochum helped us to translate our picture book into German.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM IISERTVM -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM IISERTVM</H4>
+                    <footer>Our team collaborated in their “International Yoga Day” event.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM CSMU Taiwan -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM CSMU Taiwan</H4>
+                    <footer>iGEM CSMU Taiwan collaborates with our Instagram SDG post event.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM Barcelona UB -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM Barcelona UB</H4>
+                    <footer>We collaborated with iGEM Barcelona UB in their “Science Magazine”.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM Goethe University -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM Goethe University</H4>
+                    <footer>We collaborated with iGEM Goethe University in their collaboration program to record our one year iGEM journey. </footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM Rec Chennai  -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM Rec Chennai </H4>
+                    <footer>iGEM Rec Chennai collaborates with our Instagram SDG post event.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+
+              <div class="row mb-4"> <!-- spacing for KCIS Xiugang Library  -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>KCIS Xiugang Library </H4>
+                    <footer>We collaborated with KC Library to host several events such as SDGs poster, iGEM postcard, picture book display, “I can SDG contest”, quiz activity, flyers, and presentation activity. </footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Sabrina Yeo -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>Sabrina Yeo</H4>
+                    <footer>Sabria is Taiwan iGEM ambassador. She provided us valuable insights during the IGEM Taiwan seminar and direction in navigating our project.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Wan-Syuan Lin -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>Wan-Syuan Lin</H4>
+                    <footer>Sally is the secondary Principal Investigator. As an assistant to the members and project, she purchased lab materials, and dealt with the school affairs.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Arijit Patra -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>Arijit Patra</H4>
+                    <footer>Mr. Patra assisted us while we designed our wiki pages by providing valuable insights about page navigations. He also commented and evaluated the feasibility of our project.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM linkou meetup (Taiwan Synbio Alliance) -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM linkou meetup (Taiwan Synbio Alliance)</H4>
+                    <footer>The Linkou iGEM team initiates the conference by gathering several iGEM teams from Taiwan. In the conference, we exchanged ideas, collected suggestions, and did a mock competition session to practice for the competition.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM UPNAvarra-Spain  -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM UPNAvarra-Spain </H4>
+                    <footer>iGEM UPNAvarra-Spain invited our team to join their iGEM mascot event and they will bring it to Paris. They also collaborate with our Instagram SDG post event.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for iGEM Ionis -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>iGEM Ionis</H4>
+                    <footer>iGEM Ionis helped us translate our picture book into French.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for NIS-Kazakhstan  -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>NIS-Kazakhstan </H4>
+                    <footer>NIS-Kazakhstan helped us translate our picture book into Kazakh. </footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for Edinburgh iGEM -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>Edinburgh iGEM</H4>
+                    <footer>Edinburgh iGEM helped us translate our picture book into Lithuanian . </footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for 薛琬丰Vicky Hsueh -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>薛琬丰Vicky Hsueh</H4>
+                    <footer>We collaborated with the KCIS Xiugang to host our SDGs workshop and display, which included many postcards, two posters, a picture book, and two related activities. Ms. Vicky Hsueh, the manager of the library, helped us with the activity area and authorized leave application. She also gave us constructive feedback on how to improve our activities.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+              <div class="row mb-4"> <!-- spacing for 江玲芷Kaitlin Chiang -->
+                <div class="col-lg-9">
+                  <blockquote class="blockquote-secondary">
+                    <H4>江玲芷Kaitlin Chiang</H4>
+                    <footer>We collaborated with the KCIS Xiugang to host our SDGs workshop and display, which included many postcards, two posters, a picture book, and two related activities. Ms. Katlin Chiang, an expert in media design, helped us with the postcard printing and poster design. She also supported our activity by handing out prizes to students who were qualified for it.</footer>
+                  </blockquote>
+                </div>
+              </div>
+
+
+
+
+
+
+</body>
+</html>
+{% endblock %}

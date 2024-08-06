@@ -1,0 +1,379 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(54, 64, 127);
+            overflow:hidden;
+        }
+
+        .content {
+            width: 100%;
+            margin: 0;
+        }
+       
+        .img-with-gif-container img[src*="reh13.png"] {
+            width: 700px;
+            height: auto;
+        }
+
+        img[src*="h14.png"] {
+            width: 50%; /* Reducing the image width by half */
+            height: auto; /* Keep the aspect ratio */
+        }
+
+        .img-with-gif-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-gif, .right-gif {
+            max-width: 500px; /* Increase this for larger GIFs. */
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .h13-container {
+            flex-direction: column;
+        }
+
+        .huge-gap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh; /* Or whatever value you've set */
+            margin-bottom: 100px; /* Add this line. Adjust the value as needed */
+        }
+
+        .huge-gap-img {
+            flex: 1; /* This will allow the main image (h11, h12) to take the remaining space */
+            max-width: calc(100% - 360px); /* Decrease width a bit based on the GIF sizes */
+        }
+
+        .scroll-image {
+            opacity: 0;
+            transition: opacity 1s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            margin-bottom: 100px;
+        }
+
+        .first-image {
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            margin-bottom: 100px;
+        }
+
+        .scroll-image.enlarge img {
+            transform: scale(0.8);
+            transition: transform 1s;
+        }
+
+        .bigger-gap {
+            margin-bottom: 150px;  /* Adjust to your needs */
+		    } 
+
+		    img {
+            width: 100%;
+            height: auto;
+		    } 
+
+        #flipbook  .page {
+            background:white;
+            align-items: center;
+
+        }
+
+
+.content {
+  display: flex;
+  justify-content: center; /* Center the content horizontally within its parent */
+  align-items: center; /* Center the content vertically within its parent */
+  height: 100vh; /* This makes sure the content takes up the full viewport height */
+}
+#flipbook {
+  display: flex;
+  flex-direction: row; /* Arrange images horizontally */
+}
+
+#flipbook img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.hoverg {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+/* Define the hover state for .hover1 */
+.hoverg:hover {
+  opacity: 0.5;
+}
+
+        
+
+	</style>
+</head>
+
+<body>
+  
+    
+		<div class="first-image">
+            <img src="https://static.igem.wiki/teams/4650/wiki/img-1116.jpg" alt="Scroll Animated Image 1">
+		</div>
+        <div class="scroll-image">
+            <img src="https://static.igem.wiki/teams/5094/home-1.png" alt="Scroll Animated Image 2">
+        </div>
+        <div class="scroll-image">
+            <img src="https://static.igem.wiki/teams/5094/home-2.png" alt="Scroll Animated Image 2">
+        </div>
+        <div class="scroll-image enlarge">
+            <img src="https://static.igem.wiki/teams/4650/wiki/homeanimation/h4.png" alt="Scroll Animated Image 1">
+        </div>
+        <div class="scroll-image">
+            <img src="https://static.igem.wiki/teams/4650/wiki/homeanimation/h5.png" alt="Scroll Animated Image 2">
+        </div>
+        <div class="scroll-image">
+            <img src="https://static.igem.wiki/teams/4650/wiki/homeanimation/h6.png" alt="Scroll Animated Image 2">
+        </div>
+        <div class="scroll-image">
+            <img src="https://static.igem.wiki/teams/4650/wiki/homeanimation/h7.png" alt="Scroll Animated Image 2">
+        </div>
+        <div class="scroll-image">
+            <img src="https://static.igem.wiki/teams/4650/wiki/homeanimation/h8.png" alt="Scroll Animated Image 2">
+        </div>
+        <div class="scroll-image">
+            <img src="https://static.igem.wiki/teams/4650/wiki/intro-to-project-4.png" alt="Scroll Animated Image 2">
+        </div>
+        <!----picture book starts here-->
+        <center>
+        <div class="scroll-image bigger-gap">
+          <div class="content align-items">
+		        <div id="flipbook">
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/green-front-cover.png" alt="Image 1">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-1.png" alt="Image 1" width="100%" height="100%">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-2.png" alt="Image 2" width="100%" height="100%">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-3.png" alt="Image 2" width="100%" height="100%">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-4.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-5.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-6.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-7.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-8.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-9.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-10.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-11.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-12.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-13.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-14.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-15.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-16.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-17.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-18.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-19.png" alt="Image 2">
+              </div>
+              <div>
+                <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/page-20.png" alt="Image 2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </center>
+        <!-----pic book endss here-->
+        
+        <div class="scroll-image">
+            <img src="https://static.igem.wiki/teams/4650/wiki/homeanimation/h10.png" alt="Scroll Animated Image 2">
+        </div>
+        <div class="scroll-image bigger-gap">
+            <div class="img-with-gif-container">
+                <img src="https://static.igem.wiki/teams/4650/wiki/homepage-gif/protocol-wiki-scoby.gif" alt="GIF for h11" class="left-gif">
+                <img class="huge-gap-img" src="https://static.igem.wiki/teams/4650/wiki/homeanimation/reh11.png" alt="Scroll Animated Image 2">
+            </div>
+        </div>
+        
+        <div class="scroll-image">
+
+            <div class="img-with-gif-container">
+                <img class="huge-gap-img" src="https://static.igem.wiki/teams/4650/wiki/homeanimation/reh12.png" alt="Scroll Animated Image 2">
+                <img src="https://static.igem.wiki/teams/4650/wiki/homepage-gif/protocol-wiki-pipet.gif" alt="GIF for h12" class="right-gif">
+            </div>
+        </div>
+        
+        <div class="scroll-image">
+            <div class="img-with-gif-container h13-container">
+                <img src="https://static.igem.wiki/teams/4650/wiki/homepage-gif/flex-test.gif" alt="GIF for h12">
+                <img src="https://static.igem.wiki/teams/4650/wiki/homeanimation/reh13.png" alt="Scroll Animated Image 2">
+            </div>
+        </div>
+
+        <div class="scroll-image">
+            <img src="https://static.igem.wiki/teams/4650/wiki/homeanimation/h14.png" alt="Scroll Animated Image 2">
+        </div>
+
+        <div class="scroll-image">
+            <iframe title="KCIS-Xiugang-Taipei: Brew to First Aid: An environmental-friendly answer to leather (2023) - Project Promotion [English]" 
+                    width="560x" /* Enlarged from 560px to 800px */
+                    height="450px" /* Adjusted height proportionally */
+                    src="https://video.igem.org/videos/embed/72199f0c-1798-428c-b51b-d5f045547233" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    sandbox="allow-same-origin allow-scripts allow-popups">
+            </iframe>
+        </div>
+        
+        
+        
+        <center>
+        <div class="scroll-image">
+          <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore.png" alt="Scroll Animated Image 2">
+        </div>
+        <div class="hoverg">
+          <ul class="m-2 p-2" style="list-style: none; padding: 0;">
+            <li>
+              <a href="{{ url_for('pages', page='description') }}">
+              
+                <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/description-button.png" style="width: 200px; height: 256px" alt="des-button">
+          
+              </a>
+              <a href="{{ url_for('pages', page='engineering') }}">
+          
+                <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/engineering-button.png" style="width: 200px; height: 256px" alt="eng-button">
+
+              </a>            
+              <a href="{{ url_for('pages', page='experiments') }}">
+
+                <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/experiments-button.png" style="width: 200px; height: 257px" alt="imp-button">
+
+              </a>            
+              <a href="{{ url_for('pages', page='team') }}">
+  
+                <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/team-button.png" style="width: 200px; height: 256px" alt="team-button">
+
+              </a>            
+              <a href="{{ url_for('pages', page='safety') }}">
+   
+                <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/safety-button.png" style="width: 200px; height: 256px" alt="safety-button">
+
+              </a>
+            </li>
+          </ul>
+        </div>
+      </center>
+    
+        <script type="text/javascript" src="/kcis-xiugang-taipei/static/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename = 'turn.min.js') }}"></script>     
+
+    
+    
+    <script>
+      window.addEventListener('scroll', function() {
+    let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+    document.querySelectorAll('.scroll-image').forEach(function(imageDiv) {
+        let imagePosition = imageDiv.offsetTop;
+        let image = imageDiv.querySelector('img'); // Get the image within the div
+
+        if (scrollPosition > imagePosition - window.innerHeight + 100) {
+            imageDiv.style.opacity = '1';
+
+            // Only apply the transform if the div has the "enlarge" class
+            if (imageDiv.classList.contains('enlarge')) {
+               image.style.transform = 'scale(1)'; // Restore the image to its original size when visible
+            } 
+        } else {
+            imageDiv.style.opacity = '0';
+
+            // Only apply the transformm if the div has the "enlarge" class
+            if (imageDiv.classList.contains('enlarge')) {
+                image.style.transform = 'scale(0.8)'; // Scale it back down when not visible
+            }
+        }
+    });
+});
+
+</script>
+<script type="text/javascript">
+    $('#flipbook').turn({
+        width: 800,
+        height: 600,
+        page:1,
+        autoCenter:true,
+        duration :2000
+
+    });
+</script>
+
+ 
+</body>
+</html>
+
+{% endblock %}

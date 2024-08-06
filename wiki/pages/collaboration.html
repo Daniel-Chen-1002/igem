@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+        /* Define your navigation bar styles */
+        .sidebar {
+            background-color: rgba(50, 141, 186, 0.5);
+            padding-top: 70px;
+            border-radius: 15px;
+            /* Define sticky behavior */
+            position: sticky;
+            top: 0;
+            overflow-y: auto; /* Add scroll functionality for small screens */
+        }
+		    .font-weight-semi-bold {
+            text-align: center; /* Center horizontally */
+            line-height: 2; /* Adjust the line-height for vertical centering */
+        }
+		</style>
+	</head>
+
+	<body data-plugin-scroll-spy data-plugin-options="{'target': '#sidebar'}">
+		<div class="body">
+			<div role="main" class="main">
+				<section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg" 
+						style="background-image: url('https://static.igem.wiki/teams/4650/wiki/headings/collaboration.png'); 
+							   background-size: cover; 
+							   background-position: center; 
+							   height: 700px; 
+							   display: flex; 
+							   align-items: center; 
+							   justify-content: center;
+							   width: 100%;">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 align-self-center p-static order-2 text-center">
+								<h1 class="font-weight-bold text-dark"></h1>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<div class="container-fluid- pt-3 pb-2">
+				<div class="row pt-2">
+					<div class="col-lg-3 position-relative">
+						<aside class="sidebar sidebar-bg" id="sidebar" data-plugin-sticky data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
+							<h5 class="font-weight-semi-bold">Categories</h5>
+							<ul class="nav nav-list flex-column mb-5">
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#first">Background</a></li>
+								<li class="nav-item">
+									<a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#second">Second</a>
+									<ul>
+										<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-second-1">Sub Second 1</a></li>
+										<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-second-2">Sub Second 2</a></li>
+									</ul>
+								</li>
+								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#third">Third</a></li>
+							</ul>
+						</aside>
+					</div>
+
+					<div class="col-lg-9">
+						<div id="first">
+							<h2 class="font-weight-extra-normal text-7 mb-2" style="font-family: 'Georgia', serif;"><strong class="font-weight-extra-bold">The Tainted Veil: </strong> The Dark Side of Leather</h2>
+							<p style="font-family: 'Georgia', serif;">Leather finds frequent use in the fashion industry. The use of animal leather came to represent nobility, elegance, and style. These products are sought after by consumers who value the craftsmanship, exclusivity, and prestige associated with them [?]. Nonetheless, with the emergence of sustainable and ethical concepts, society has grown conscious of the production process of those products. The leather from exotic animal skins such as alligator, crocodile, python, and regular animals, including cattle and pigs, raises ethical concerns regarding animal welfare. The foods, land, and water resources for rearing disrupt delicate ecosystems. 
+							<br>     
+              Furthermore, the process of turning fresh animal hides into usable leather involved beamhouse, tanning, post-tanning, and finishing processes. The chemicals that are used in the process can cause serious pollution during the synthesis process. The wastewater with toxic chemicals en route to the city waterway ultimately becomes the water people use and drink today. Chemicals such as acids, salts, and enzymes all cause a series of impacts. According to an analysis by Hansen et. al, examining forty-three leather tanning formulations shows that, on average, 360.2 kg of chemicals and 8.6 cubic meters of water are used to produce one ton of shaved leather. This leads the leather manufacturing industry to generate around 38% of the wastewater, which has a high concentration of salts and is poorly biodegradable [?][Figure 1]. Not to mention the hazards to humans as the chemicals are exposed to the leather workers during the process of chromium-tanning. At most 246 hazardous chemicals are used in 95% of animal tanning in the leather industry, which caused 27.1% of exposed workers to have respiratory issues like bronchitis, asthma, and lung cancer [Figure 2] [Figure 3] [Figure 4] [?]. </br>
+							</p>
+							<img class="float-start img-fluid" width="300" height="211" src='https://static.igem.wiki/teams/4650/wiki/testpie.png' alt="Device">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+						</div>
+
+						<div id="second">
+							<h2 class="font-weight-extra-normal text-7 mb-2"><strong class="font-weight-extra-bold">Second</strong> Section</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+						</div>
+
+						<div id="sub-second-1">
+							<h4 class="mb-2" >Sub Second 1</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+						</div>
+
+						<div id="sub-second-2">
+							<h4 class="mb-2">Sub Second 2</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>								
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+						</div>
+
+						<div id="third">
+							<h2 class="font-weight-extra-normal text-7 mb-2"><strong class="font-weight-extra-bold">Third</strong> Section</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Nullam convallis, arcu vel pellentesque sodales, nisi est varius diam, ac ultrices sem ante quis sem. Proin ultricies volutpat sapien, nec scelerisque ligula mollis lobortis.</p>
+            </div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</body>
+	</html>
+{% endblock %}

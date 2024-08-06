@@ -1,0 +1,46 @@
+/* Center the loading page both horizontally and vertically */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  background-color: rgb(212, 184, 149); /* Set a solid background color here */
+  z-index: 999; /* Set a high z-index value to ensure it appears on top of other content */
+}
+
+/* Style the container for the loading animation and text */
+.load-container {
+  text-align: center;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  display: fixed;
+
+  /* Remove the backface-visibility and display properties */
+}
+
+/* Style the loading animation image */
+.load-container img {
+  width: 600px;
+  length:600px /* Adjust the width as needed */
+}
+
+/* Style the loader text */
+.loader-texts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Adjust the margin as needed */
+  color: rgb(112, 79, 22);
+}
+
+/* Style the individual letters */
+.loader-texts div {
+  font-size: 48px; /* Adjust the font size as needed */
+  margin: 0 4px; /* Adjust the spacing between letters as needed */
+}

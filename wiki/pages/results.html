@@ -1,0 +1,577 @@
+{% extends "layout.html" %}
+
+
+
+{% block page_content %}
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <style>
+            /* Define your navigation bar styles */
+            .sidebar {
+                background-color: rgba(212, 184, 149);
+                padding-top: 20px;
+                border-radius: 15px;
+                position: sticky;
+                top: 0;
+                overflow-y: auto;
+                /* Add scroll functionality for small screens */
+            }
+
+            .font-weight-semi-bold {
+                text-align: left;
+                line-height: 2;
+            }
+
+            .sidebar.sidebar-bg {
+                width: 300px;
+                margin: 0 auto;
+            }
+
+            .bigger-text {
+                font-size: 20px;
+                /* Adjust this value to your preference */
+                font-family: 'Georgia', serif;
+            }
+
+            .col-lg-9 {
+                max-width: 1300px;
+                margin: 10 auto;
+            }
+
+            .scaled-image img {
+                transform: scale(0.6);
+                transform-origin: top left;
+
+            }
+
+            /* Add CSS styles to control the margin between div elements */
+            .scaled-image {
+                margin-bottom: -400px;
+                /* You can adjust this value to control the margin size */
+            }
+
+            .scaled1-image img {
+                transform: scale(0.6);
+                transform-origin: top left;
+
+            }
+
+            .scaled1-image {
+                margin-bottom: -100px;
+                /* You can adjust this value to control the margin size */
+            }
+            .scaled2-image img {
+                transform: scale(0.6);
+                transform-origin: top left;
+
+            }
+
+            .scaled2-image {
+                margin-bottom: -500px;
+                /* You can adjust this value to control the margin size */
+            }
+
+
+
+
+            :root {
+                --primary-font: "Georgia", serif;
+                /* Primary font for most content */
+                --secondary-font: "Georgia", serif;
+                /* Secondary font for headings and specific content */
+            }
+
+            body {
+                font-family: var(--primary-font);
+                font-size: 16px;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: var(--secondary-font);
+            }
+
+            .custom-heading {
+                font-size: 20px;
+                /* adjust as necessary */
+                color: rgb(86, 57, 42);
+            }
+
+            .special-content {
+                font-family: var(--secondary-font);
+            }
+
+            .mid-image img {
+                transform: scale(0.85);
+                transform-origin: top left;
+                margin-bottom: -100px;
+            }
+
+            .small-image img {
+                transform: scale(0.65);
+                transform-origin: top left;
+                margin-bottom: -200px;
+            }
+        </style>
+
+
+
+    </head>
+
+    <body data-plugin-scroll-spy data-plugin-options="{'target': '#sidebar'}">
+
+        <div class="body">
+
+
+            <div role="main" class="main">
+                <section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg" style="background-image: url('https://static.igem.wiki/teams/4650/wiki/headings/proof-of-concept.png'); 
+							   background-size: cover; 
+							   background-position: center; 
+							   height: 700px; 
+							   display: flex; 
+							   align-items: center; 
+							   justify-content: center;
+							    width: 100%;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 align-self-center p-static order-2 text-center">
+                                <h1 class="font-weight-bold text-dark"></h1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+
+            <div class="container-fluid- pt-3 pb-2">
+
+                <div class="row pt-2">
+                    <div class="col-lg-3 position-relative">
+                        <aside class="sidebar sidebar-bg" id="sidebar" data-plugin-sticky
+                            data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
+
+                            <h5 class="font-weight-semi-bold"><center>Proof of Concept</center></h5>
+                            <ul class="nav nav-list flex-column mb-5">
+                       
+
+                                <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#first">Confirmation of each cloning step</a></li>
+
+                                <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#second">Confirmation of part collection function</a></li>
+
+                                <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#third">Product Testing</a></li>
+
+                                <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#fourth">Conclusion</a></li>
+                                <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#fifth">Futher Extension</a></li>
+
+
+                            </ul>
+
+                        </aside>
+
+
+
+                    </div>
+                    
+                    <div class="col-lg-7">
+                        
+                            
+
+                            <div id="first">
+                                <p class="bigger-text">
+                                    Our team’s aim is to create genetically engineered SCOBY that has increased properties
+                                    of flexibility and strength so that it is a more viable alternative to traditional
+                                    animal skin leather. This will allow a decrease in the production of animal leather.
+    
+                                </p>
+
+                            <div id="sub-first-1">
+
+                                <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+                                    <center>
+                                        <strong class="font-weight-extra-bold">Confirmation of each cloning step</strong>
+                                    </center>
+                                </h2>
+
+                                <h4 class="font-weight-bold custom-heading">
+                                <i>CBD</i>
+                                </h4>
+                            </div>
+
+
+                            <p class="bigger-text">
+                                Our team performed PCR technique to amplify CBD using the S.pombe genome as the DNA
+                                template and then confirmed the success of the step by observing the right size bands of
+                                the CBD PCR products on 1% agarose gel.
+                            </p>
+                            <div class="small-image">
+                                <img src="https://static.igem.wiki/teams/4650/wiki/data-and-poc/2023-10-09-4-33-03.png" alt="pcr1" width="1200">
+                            </div>
+                            <p class="bigger-text">
+                                Fig 1: After extracting genomic DNA from S. Pombe, the team amplified CBD with two
+                                enzyme cut sites, Xma1 and Kpn1, flanked on the two sides through PCR. After PCR, the
+                                team ran a sample through electrophoresis on 1% agarose gel, CBD PCR product showed a
+                                single distinct DNA band with a length of 594 base pairs+20 bp of enzyme cut site on
+                                primers, and showed success after amplification.
+                                . The DNA fragment corresponds with DNA ladders according to the gel electrophoresis.
+                            
+                                <h4 class="font-weight-bold custom-heading">
+                                    <div id="sub-first-2">
+                                    <i>PGal1,10-CBD</i>
+                                    </div>
+                                </h4>
+
+                            <p class="bigger-text">
+                                The team conducted bacterial transformation on the LB-Amp selection plates and
+                                inoculated several bacterial colonies to conduct PCR technique which showed that our
+                                team had successfully created a composite part, BBa_K4650004 (pGal1,10-CBD).
+                            </p>
+
+                            <div class="small-image">
+                                <img src="https://static.igem.wiki/teams/4650/wiki/data-and-poc/b089c8b2-71fe-4355-b510-ed2668d9e745.png" alt="pcr1" width="1200">
+                            </div>
+                            <p class="bigger-text">
+                                Fig 2: After cloning CBD to the downstream of the pGal1,10 plasmid, bacterial colonies
+                                were grown on the LB-Amp selection plates, and then were directly inoculated to perform
+                                the PCR technique via CBD primer set. The team conducted PCR with CBD forward and
+                                reverse primers and gel electrophoresis to prove that bacterial colonies # 1, 2, and 5
+                                showed a distinct CBD single PCR product band, which indicated that the bacterial
+                                colonies contained our team’s composite part, BBa_K4650004 (pGal1, 10-CBD).
+
+
+
+
+                                <h4 class="font-weight-bold custom-heading">
+                                    <div id="sub-first-3">
+                                    <i>MaSp1</i>
+                                    </div>
+                                </h4>
+
+                            <p class="bigger-text">
+                                Our team performed a PCR technique to amplify MaSp1 synthesized by the Mission Biotech
+                                company as described in Experiment, and then confirmed the success of the step by
+                                observing the right size bands of the MaSp1 PCR products on 3% agarose gel.
+                            </p>
+
+                            <div class="small-image">
+                                <img src="https://static.igem.wiki/teams/4650/wiki/data-and-poc/2023-10-09-4-13-59.png
+						" alt="pcr1" width="1200">
+                            </div>
+                            <p class="bigger-text">
+                                Fig 3: For cloning of MaSp1, the team first performed PCR and gel electrophoresis to the
+                                MaSp1 PCR products. As the size of MaSp1 is only 102 base pairs, electrophoresis is
+                                performed on 3% agarose gel. MaSp1 PCR products showed a single distinct DNA band with a
+                                length of 102bp of MaSp1+20 bp of enzyme cut site on primers, and showed success in
+                                amplification.
+
+                                
+                                <h4 class="font-weight-bold custom-heading">
+                                    <div id="sub-first-4">
+                                    <i>pGal1,10-MaSp1-CBD</i>
+                                    </div>
+                                </h4>
+
+                            <p class="bigger-text">
+                                The team conducted bacterial transformation on the LB-Amp selection plates and
+                                inoculated several bacterial colonies to conduct PCR technique via forward primer at the
+                                5’ end of MaSp1 and reverse primer at the 3’ end of CBD, the results determined that our
+                                team had successfully created a composite part, BBa_K4650005 (pGal1,10- MaSp1-CBD).
+                            </p>
+
+                            <div class="small-image">
+                                <img src="https://static.igem.wiki/teams/4650/wiki/data-and-poc/066efaa8-bf42-43ef-be00-619b67317ea5.png" alt="pcr1" width="1200">
+                            </div>
+                            <p class="bigger-text">
+                                Fig 4: During ligation of MaSp1, the team used one SmaI single enzyme cut site for the
+                                cloning that would give our team two orientations of MaSp1 cloned between pGal1,10
+                                promoter and CBD. Therefore, after bacterial transformation, our team wanted to detect
+                                which bacteria colonies would give us the correct orientation of MaSp1, our team used
+                                forward primer on the 5’- end of MaSp1, and reverse primer on the 3’- end of CBD to do
+                                PCR. Then our team ran our PCR product on 1%agarose gel, and our team detected bacterial
+                                colony # 8 had one distinct PCR band between 700-800 bp, which aligned with the
+                                theoretical size of MaSp1 plus CBD of 720bp, indicating MaSp1-CBD PCR product and
+                                cloning success.
+
+
+                                <h4 class="font-weight-bold custom-heading">
+                                    <div id="sub-first-5">
+                                    <i>MaSp2</i>
+                                    </div>
+                                </h4>
+                                
+                            <p class="bigger-text">
+                                Our team performed PCR technique to amplify MaSp2 synthesized by the Mission Biotech
+                                company, as described in Experiment, and then confirmed the success, as the right size
+                                bands of the MaSp2 PCR products on 3% agarose gel were shown.
+                            </p>
+
+                            <div class="scaled2-image">
+                                <img src="https://static.igem.wiki/teams/4650/wiki/data-and-poc/03fe236e-3f91-4d7b-a434-8e1ac37915fb.png" alt="pcr1" width="1200">
+                            </div>
+                            <p class="bigger-text">
+                                Fig 5: For cloning of MaSp2, the team first performed PCR and gel electrophoresis on the
+                                MaSp2 gene. As the size of MaSp2 was the size of 255bp, gel electrophoresis was
+                                performed with 3% agarose gel. MaSp2 PCR products showed a single distinct DNA band with
+                                a length of 255bp of MaSp2+20 bp of enzyme cut side designed on the primers in addition
+                                to showing success in amplification.
+							</p>
+                            </div>
+                            <h4 class="font-weight-bold custom-heading">
+                                <div id="sub-first-6">
+                                <i>pGal1,10-MaSp2-CBD</i>
+                                </div>
+                            </h4>
+
+
+<p class="bigger-text">
+The team conducted bacterial transformation on the LB-Amp selection plates and inoculated several bacterial colonies to conduct PCR technique via forward primer at the 5’- end of MaSp2 and reverse primer at the 3-’ end of CBD,  which determined that our team successfully created a composite part, BBa_K4650006 (pGal1,10- MaSp2-CBD). 
+</p>
+
+<div class="small-image">
+<img src="https://static.igem.wiki/teams/4650/wiki/data-and-poc/dcc1b243-f1fc-43c7-bf8c-e3b45038d600.png" alt="pcr1" width="1200">
+</div>
+<p class="bigger-text">
+Fig 6: During ligation of MaSp2, the team used one XmaI single enzyme cut site for the cloning that would give our team two orientations of MaSp2 cloned between the pGal1,10 promoter and CBD. After bacterial transformation, our team wanted to detect which bacterial colonies would give us the correct orientation of MaSp2. We used forward primer on the 5’- end of MaSp2, and reverse primer on the 3’- end of CBD to do PCR. Then our team ran our PCR products to detect that both #8 and #13 had a MaSp2-CBD full-length product of 870bp. 
+
+<p class="bigger-text">
+After finishing these 3 composite parts, our team also sent them out to Mission Biotech to do DNA sequences in order to confirm them as 100% correct DNA sequences. 
+</p>
+<p class="bigger-text">
+    <br>Our contributed parts can be found on the registry: pGal1,10 <a href="http://parts.igem.org/Part:BBa_K4650000" target="_blank" rel="noopener noreferrer">BBa_K4650000</a>; CBD <a href="http://parts.igem.org/Part:BBa_K4650001" target="_blank" rel="noopener noreferrer">BBa_K4650001</a>; MaSp1 <a href="http://parts.igem.org/Part:BBa_K4650002" target="_blank" rel="noopener noreferrer">BBa_K4650002</a>; MaSp2<a href="http://parts.igem.org/Part:BBa_K4650003" target="_blank" rel="noopener noreferrer">BBa_K4650003</a>; pGal1,10-CBD<a href="http://parts.igem.org/Part:BBa_K4650004" target="_blank" rel="noopener noreferrer">BBa_K4650004</a>; pGal1,10-MaSp1-CBD <a href="http://parts.igem.org/Part:BBa_K4650005" target="_blank" rel="noopener noreferrer">BBa_K4650005</a>; pGal1,10-MaSp2-CBD<a href="http://parts.igem.org/Part:BBa_K4650006" target="_blank" rel="noopener noreferrer">BBa_K4650006</a>
+</br>
+
+<div id="second">
+<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+	<strong class="font-weight-extra-bold">Confirmation of part collection function</strong>
+	</h2>
+
+	
+
+	<p class="bigger-text">
+	Overall,the purpose of making these composite parts is that the CBM1 in yeast (discussed as CBD) protein cloned to the downstream the pGal1,10 promoter, an inducible promoter to manipulate the transcription of CBD in the presence of galactose, and then MaSp1 and MaSp2 were cloned between the pGal1,10 promoter and CBD, respectively, to make MaSp1-CBD and MaSp2-CBD fusion proteins. The purpose of cloning this CBM1 (referred to as CBD) is to carry our spider silk proteins, MaSp1, and MaSp2 to bind to SCOBY membranes to make our team’s scoby membranes more flexible and softer. 
+	</p>
+	<p class="bigger-text">
+	To manipulate our team’s spider silk proteins, MaSp1, MaSp2, and CBD, 3 different composite parts were generated. BBa_K4650004 contained BBa_K4650000+BBa_K4650001 (pGal1,10-CBD); BBa_K4650005 contained BBa_K4650000+BBa_K4650002+BBa_K4650001 (pGal1,10-MaSp1 -CBD); BBa_K4650006 contained BBa_K4650000+BBa_K4650003+ BBa _K 4650001(pGal1,10- MaSp2-CBD). BBa_K4650004, BBa_K4650005, and BBa_ K4650006 were then transformed into wild-type Saccharomyces yeast strain, BY4741, respectively. After finishing these 3 composite parts, our team also sent them out to Mission Biotech to do DNA sequences in order to confirm them as 100% correct DNA sequences. 
+	</p>
+	<p class="bigger-text">
+	Before explaining the RT-qPCR data results, our team briefly describes each basic part’s function to generate these 3 composite parts below:
+	</p>
+	
+	<br><p class="bigger-text">
+		1.BBa_K4650004 contained BBa_K4650000+BBa_K4650001 (pGal1,10-CBD) and was transformed into BY4741 to make the BY4741 containing BBa_K4650004 used as a control in our project. The CBM1 in S. Pombe encodes for the cellulose binding domain (CBD) protein cloned downstream of the galactose promoter, an inducible promoter to manipulate the transcription of CBD in the presence of galactose. The purpose of manipulating CBD is to be a carrier for our team’s spider silk proteins to scoby membranes in the composite parts, BBa_K4650005, and BBa_K4650006. 
+		</p></br>
+		
+		<br><p class="bigger-text">
+		2.BBa_K4650005 contained BBa_K4650000+BBa_K4650002+BBa_K4650001 (pGal1,10-MaSp1-CBD) and was transformed into BY4741 to make the BY4741 containing BBa_K4650005 as one of the experimental strains in our project. MaSp1 encodes for spider silk, which is a highly repetitive amino acid sequence and has the properties of being strong, flexible, and elastic. Our team created MaSp1-CBD fusion protein so CBD can deliver MaSp1 to the SCOBY membrane. 
+		</p></br>
+		
+		
+		<br><p class="bigger-text">
+		3.BBa_K4650006 contained BBa_K4650000+BBa_K4650003+BBa_K4650001(pGal1,10- MaSp2-CBD) and was transformed into BY4741 to make the BY4741 containing BBa_K4650006 as one of the experimental strains in our project. MaSp2 encodes for spider silk, which is a highly repetitive amino acid sequence and has the properties of being strong, flexible, and elastic. Our team created MaSp2-CBD fusion protein so CBD can deliver MaSp2 to the SCOBY membrane. 
+		</p></br>
+		
+		<h4 class="font-weight-bold custom-heading">
+            <div id="sub-second-1">
+            <i>RT-qPCR time course data for Galactose Induction</i>
+            </div>
+        </h4>
+
+		<br><p class="bigger-text">
+		To further verify whether our team’s composite parts were biological function, RT-qPCR technique was operated to detect the mRNA induction of CBD in BY4741 containing BBa_K4650004, the mRNA induction of MaSp1-CBD in BY4741 containing BBa_K4650005, the mRNA induction of MaSp2-CBD in BY4741 containing BBa_K4650006 via timecourse sample collection, 0min, 30min, 60min,90min, 120min, and 22hours in the presence of the 2%YP-galactose medium. The internal control gene, ACT1, was used to detect the ACT1 mRNA level at different time courses as standard. The BY4741 contained different composite parts, respectively, were grown in 2%YP-glucose, until OD600 0.2-0.4, and then 35 ml of yeast culture medium was taken out as 0 min as a control. Without galactose, the pGal promoter would not be switched on to perform the downstream of genes’ inductions. Then transferring the 3 composite parts of the yeast culture samples from 2%YP-glucose to 2%YP-galactose medium, our team took out 30ml of yeast culture medium samples at different time courses in the presence of galactose. 
+		</p></br>
+		
+                <h4 class="font-weight-bold custom-heading">
+                    <div id="sub-second-2">
+                    <i>RT-qPCR technique showed the maximum mRNA induction of CBD close to 20  fold in the presence of the galactose at 90 mins</i>
+                    </div>
+                </h4>
+			
+			<p class="bigger-text">
+				In order to detect CBD mRNA induction, our team has designed a pair of CBD primers within the CBD gene and a common primer set of ACT1 to detect ACT1 mRNA induction as an internal control. In the fig7, at 0 min timecourse, BY4741 yeast contained BBa_K4650004(pGal1,10-CBD) showed no CBD mRNA induction, which indicated the pGal1,10 promoter didn’t switch on to trigger the downstream gene’s (CBD) transcription in the absence of galactose. At 30 mins in the presence of galactose, the induction of CBD mRNA was close to 5-fold induction, increased to 13-fold CBD mRNA induction at 60 mins, the maximum of CBD mRNA induction close to 19-20 fold induction was observed at 90 mins in the presence of galactose, at 120 mins in the presence of galactose, CBD mRNA induction was declined to 10-fold, and finally, the CBD mRNA induction was not detectable at 22 hours in the presence of galactose. Overall, the data indicated that the pGal1,10 promoter has done its job properly to manipulate the downstream gene, CBD, transcription in the presence of galactose. Now, our team can use BY4741 yeast containing BBa_K4650004(pGal1,10-CBD) as our control yeast strain. 
+				</p>
+				
+				<div class="scaled1-image">
+				<img src="https://static.igem.wiki/teams/4650/wiki/data-and-poc/2023-10-09-4-33-28.png" alt="pcr1" width="1200">
+				</div>
+				<p class="bigger-text">
+				Fig7: The mRNA induction of CBD showed strong manipulation, above 5-fold induction, in the presence of galactose at 30 mins, 14-fold induction at 60mins, and the maximum of 19-fold CBD mRNA induction at 90 mins, and then back down to 10-fold induction at 120 mins, finally no detectable CBD mRNA induction at 22 hours in the presence of galactose.  
+				</div>
+					
+                    <h4 class="font-weight-bold custom-heading">
+                        <div id="sub-second-3">
+                        <i>RT-qPCR technique showed the maximum of the mRNA induction of MaSp1-CBD above 2-fold induction in the presence of the galactose at 60 mins</i>
+                        </div>
+                    </h4>
+					<p class="bigger-text">
+						In order to detect MaSp1-CBD mRNA induction, our team has designed the forward primer at the 5’end of the MaSp1, and the reverse primer within the CBD gene, and also used a common primer set of ACT1 to detect ACT1 mRNA induction as an internal control. 
+						</p>
+						<p class="bigger-text">
+							On the fig8, at 0 min timecourse, BY4741 yeast contained BBa_K4650005 (pGal1,10-MaSp1-CBD) showed no MaSp1-CBD mRNA induction, which indicated the pGal1,10 promoter didn’t trigger the downstream gene’s (MaSp1-CBD) transcription in the absence of galactose. At 30 mins in the presence of galactose, the induction of MaSp1-CBD mRNA was not impressed, however, the maximum increased to above 2-fold MaSp1-CBD mRNA induction at 60 mins, but then it declined to 1.7 fold and 1.5 fold of MaSp1-CBD mRNA induction at 90 mins and 120 mins in the presence of galactose. Finally, the MaSp1-CBD mRNA induction was not detectable at 22 hours in the presence of galactose.
+							</p>	
+							<p class="bigger-text">
+								On the fig8, at 0 min timecourse, BY4741 yeast contained BBa_K4650005 (pGal1,10-MaSp1-CBD) showed no MaSp1-CBD mRNA induction, which indicated the pGal1,10 promoter didn’t trigger the downstream gene’s (MaSp1-CBD) transcription in the absence of galactose. At 30 mins in the presence of galactose, the induction of MaSp1-CBD mRNA was not impressed, however, the maximum increased to above 2-fold MaSp1-CBD mRNA induction at 60 mins, but then it declined to 1.7 fold and 1.5 fold of MaSp1-CBD mRNA induction at 90 mins and 120 mins in the presence of galactose. Finally, the MaSp1-CBD mRNA induction was not detectable at 22 hours in the presence of galactose.
+								</p>	
+								<p class="bigger-text">
+									Overall, the data indicated that the pGal1,10 promoter has done its job properly to manipulate the downstream gene, MaSp1-CBD, transcription in the presence of galactose, however, the MaSp1-CBD mRNA induction level was not as drastic as the CBD mRNA induction (Fig 7) even though they had the same inducible promoter, pGal1, 10. One of the reasons our team discussed this occurring was that MaSp1-CBD has become a fusion gene, which might have changed its mRNA transcription timing even though our team did see 2-fold MaSp1-CBD mRNA induction. Next time. Our team might be able to collect more intense time course samples, for example, every 15 minutes, to closely monitor the MaSp1-CBD mRNA induction pattern. Now, our team can use BY4741 yeast containing BBa_K4650005 (pGal1,10-MaSp1-CBD) as one of our team’s experimental yeast strains.
+									</p>	
+	
+									<div class="scaled1-image">
+										<img src="https://static.igem.wiki/teams/4650/wiki/data-and-poc/6a9b776d-6999-4ac9-a810-56cbb99bd2d0.png" alt="pcr1" width="1200">
+										</div>
+										<p class="bigger-text">
+										Fig8: The mRNA induction of MaSp1-CBD showed insignificant change in the presence of galactose at 30 mins, the maximum of 2-fold induction at 60 mins, and then back down to 1.7-1.5 fold induction at 90 and 120 mins, finally, no detectable MaSp1-CBD mRNA induction at 22 hours in the presence of galactose. 
+									
+                                          
+
+                                            <h4 class="font-weight-bold custom-heading">
+                                                <div id="sub-second-4">
+                                                <i>RT-qPCR technique showed the maximum mRNA induction of MaSp2-CBD above 2-fold induction in the presence of the galactose at 90 mins</i>
+                                                </div>
+                                            </h4>
+
+											<p class="bigger-text">
+												In order to detect MaSp2-CBD mRNA induction, our team has designed the forward primer at the 5’ end of the MaSp2, and the reverse primer was within the CBD gene, and a common primer set of ACT1 to detect ACT1 mRNA induction as an internal control. On the fig9, at 0 min timecourse, BY4741 yeast contained BBa_K4650006 (pGal1,10-MaSp2-CBD) showed no significant MaSp2-CBD mRNA induction, which indicated the pGal1,10 promoter didn’t trigger the downstream gene’s (MaSp2-CBD) transcription in the absence of galactose. At 30 mins in the presence of galactose, the reduction of MaSp2-CBD mRNA was negligible, and the Masp2-CBD induction at 60 mins in the presence of galactose was close to the one at 0 mins, however, the maximum increased to above 2-fold of MaSp2-CBD mRNA induction was at 90 mins, but then it declined to 1.7 fold and 1.5 fold of MaSp1-CBD mRNA induction at 120 mins and 22 hours in the presence of galactose.  
+												</p>
+												
+												<p class="bigger-text">
+												Overall, the data indicated that the pGal1,10 promoter has manipulated the downstream gene, MaSp2-CBD, transcription in the presence of galactose, however, the MaSp2-CBD mRNA induction pattern was not the same as the MaSp1-CBD mRNA induction (Fig 8) even they had the same inducible promoter, pGal1,10. One of the reasons our team discussed this occurring was that MaSp2-CBD has become a longer fusion gene compared to the one of MaSp1-CBD, which might have changed its mRNA transcription timing even our team did see 2-fold MaSp1-CBD mRNA and MaSp2-CBD mRNA inductions, but the MaSp2-CBD mRNA induction time lasted longer compare the one in MaSp1-CBD.  Now, our team can use BY4741 yeast containing BBa_K4650006 (pGal1,10-MaSp2-CBD) as one of our team’s experimental yeast strains.
+												</p>
+												<p class="bigger-text">
+												However, our team only did one set of data for the RT-qPCR results, which is not sufficient to show the correct mRNA induction. However, our team did show that in the presence of the galactose, pGal1.10 did trigger the downstream genes, CBD, MaSp1-CBD, and MaSp2-CBD, mRNA inductions, and no gene induction occurred without galactose. This important set of RT-qPCR data encouraged our team to continue this project to the next level, coculturing the respective yeasts with SCOBY and doing flexibility and strength tests on the resulting “leather”.
+												</p>
+												<div class="scaled1-image">
+													<img src="https://static.igem.wiki/teams/4650/wiki/data-and-poc/b3c5920a-7c18-4a92-8b47-9fc169d869ec.png" alt="pcr1" width="1200">
+													</div>
+													<p class="bigger-text">
+													Figure 9: The mRNA induction of MaSp2-CBD showed an insignificant reduction in the  presence of galactose at 30 mins compared to the 0 min sample, the maximum above 2 fold induction at 90 mins, and then back down to 1.7 fold and 1.3 fold induction at 120 mins and 22 hours in the presence of galactose.
+                                                        
+													
+                                                        <h4 class="font-weight-bold custom-heading">
+                                                            <div id="sub-second-5">
+                                                            <i>Conclusion</i>
+                                                            </div>
+                                                        </h4>	
+                                                        
+														<p class="bigger-text">
+															From the beginning of making basic parts in order to generate composite parts, our team has recorded all of the PCR data to prove that each step of the process was done correctly and also sent out three composite parts to the Mission Biotechnology company for the confirmation of the DNA sequences. 
+															</p>
+															<p class="bigger-text">
+															Overall, our team has shown convincing evidence that three composite parts, BBa_K4650004 contained BBa_K4650000+BBa_K4650001 (pGal1,10-CBD); BBa_K4650005 contained BBa_K4650000+BBa_K4650002+BBa_K4650001 (pGal1,10-MaSp1-CBD); BBa_K4650006 contained BBa_K4650000+BBa_K4650003+ BBa _ K 4650001(pGal1,10-MaSp2-CBD) have proper function via RT-qPCR. In the presence of galactose, which induced pGal1, 10 promoter’s switch, the downstream genes, CBD, MaSp1-CBD, MaSp2-CBD were transcribed at least 2-fold mRNA inductions of MaSp1-CBD and MaSp2-CBD as our experimental samples, and highly induced at least 20 fold mRNA of CBD as our control sample. However, our team only did one of the RT-qPCR experiments so repeating the RT-qPCR experiment is necessary. However, if only one BY4741 yeast containing one composite part showed mRNA induction, but not the other two, it would still make the data unreliable since only one composite part was induced.   
+															</p>
+                                                            
+                                                                <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+                                                                    <div id="third">
+                                                                <strong class="font-weight-extra-bold">Product Testing</strong>
+                                                                </h2>
+                                                            <h4 class="font-weight-bold custom-heading">
+                                                                <div id="sub-third-1">
+                                                                <i>Strength</i>
+                                                                </div>
+                                                            </h4>	
+<p class="bigger-text">
+    To enable our team to test the strength of the modified SCOBY, the team created a strength testing machine to hold the SCOBY and test how much force it can hold. The wooden frame would be a hollow square with two sides attached with a vice. The vice is operated by spinning the handle clockwise to clamp the scoby tight and firm. The force gauge will be used to contact the scoby with a 1.54 cm2 circular area. The machine would record the applied force’s first peak value in newtons as the SCOBY breaks, as described in Experiment. 
+    </p>
+    <p class="bigger-text">
+    As shown in figure 10, genetically modified SCOBY with MaSp2-CBD protein gave the highest weighting capacity (258N), and genetically modified SCOBY with MaSp1-CBD protein was the second highest (118.8N). Therefore we can conclude that genetically modified SCOBY that had been co-cultured with MaSp1-CBD, and MaSp2-CBD, respectively, increases its strength and durability.
+    </p>
+    <div class="small-image">
+    <img src="https://static.igem.wiki/teams/4650/wiki/data-and-poc/26fcec60-c28f-450d-a12f-2ed3472bc369.png" alt="pcr1" width="1200">
+    </div>
+
+<p class="bigger-text"><center> 
+Fig10: Genetically modified SCOBY with MaSp2-CBD protein showed a significantly higher weighting capacity among all, with a carrying capacity of 258 newtons. Followed by genetically modified SCOBY with MaSp1-CBD protein with 118.8 newtons and genetically modified SCOBY with CBD protein with 105.7 newtons. The SCOBY that was co-cultured with BY4741 only performed the lowest carrying capacity of 52.2 newton. 
+    </center></p>
+   
+        <h4 class="font-weight-bold custom-heading">
+            <div id="sub-third-2">
+                <i>Flexibility</i>
+             </div>
+         </h4>	
+        <p class="bigger-text">
+        Next, in order to assess the flexibility of our SCOBY, our team created a device that consists of a 3D-printed wheel attached to a piece of wood that will be paired with another wood block and a second pair of wood blocks. Once the device was set up, the lower set of wooden blocks allowed the SCOBY membrane to twist as the wheel turned on its path, while the upper set of wooden blocks remained stationary. By measuring the amount of force required for the SCOBY to twist a certain angle, the team can determine how flexible it is. If less force is applied, it means the SCOBY is more flexible, as elaborated on in Experiment. 3 trials were performed.
+        </p>
+        
+        <p class="bigger-text">
+        Fig 11 summarizes our findings. The negative control has an average force of 1.292 N applied for a 40° rotation. With the same degree rotated, pGal-CBD 0.401 N more force than the negative control, indicating that CBD protein is slightly more rigid. MaSp1-CBD protein needs an average force of 1.004 N, which is 0.288 N less than the negative control. Since it requires 22.29% less force, MaSp1-CBD protein is more flexible than the negative control. MaSp2-CBD protein needs an average force of 0.985 N, which is 0.305N less than for the negative control. In addition, the error bars did not overlap, indicating a significant difference. The 23.76% decrease indicates that the MaSp2-CBD SCOBY is more flexible than the unmodified SCOBY, or negative control.
+        </p>
+        <img src="https://static.igem.wiki/teams/4650/wiki/data-and-poc/20c86325-c36d-4fda-8ac7-1cef30b1ce10.png" alt="pcr1" width="1200">
+         <p class="bigger-text"><center>
+            Fig 11: The genetically modified SCOBY with MaSp1-CBD protein, and MaSp2-CBD protein, separately, required less strength for 40 degree turn. The SCOBY, co-cultured with BY4741 only, required the most strength of 1.292 newton to make a 40 degree turn, similar to the one with CBD protein only (1.378N), followed by genetically modified SCOBY with MaSp2-CBD protein of 0.985 newton and genetically modified SCOBY with MaSp1-CBD protein of 1 newton. 
+         </center></p>
+            <p class="bigger-text">
+            While preliminary results indicate the spider silk genes, MaSp1 and MaSp2 have achieved the result of a more flexible SCOBY, during the experiment, we noticed many factors that might affect the results. First, the thickness of the membrane directly affects the amount of force needed to twist the SCOBY: thicker SCOBY needs more force. Although we attempted to control this by growing SCOBY for the same amount of time, the thickness still has obvious variations, which may also be caused by how dry the SCOBY actually is. Second, the speed of twisting directly affects the amount of force measured: higher speed will result in higher force measured. We tried to control this by twisting the SCOBY for the same amount of time, which may help keep the speed constant. But still, it is difficult to control it completely, leading to errors in the data. So we also did many trials to minimize the effect the errors bring. Finally, we realized that twisting the SCOBY many times causes the inelastic membranes to deform, so there will be less restoring force pulling the force sensor, leading to a decreased measured force, which may be misinterpreted as higher flexibility. This factor is difficult to control unless we only do one trial on each SCOBY, which is not an ideal solution as it will require a lot of labor to grow so many of them. Therefore, further investigation and trials still need to be done on this experiment to make sure our data is reliable.
+            </p>
+
+            <h2>
+            <div id="fourth">
+            <strong class="font-weight-extra-bold">Conclusion</strong>
+</h2>
+<p class="bigger-text">
+To test the outcome of genetically modified SCOBY with different spider silks fused with CBD, the team designed two machines to test the strength and flexibility via different forces. The data in fig10 and 11 clearly show that the strength and flexibility of our genetically modified SCOBY with MaSp1-CBD,and MaSp2-CBD fusion proteins, respectively, were both stronger and more flexible compared to the control SCOBY only or SCOBY with CBD. Overall, our team has shown convincing preliminary evidence that genetically modified SCOBY with MaSp1-CBD and MaSp2-CBD protein can hold significantly stronger strength and are more flexible to generate useful products in the future.
+</p>
+
+<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+    <div id="fifth">
+     <strong class="font-weight-extra-bold">Further Extension</strong>
+    </h2>
+    <p class="bigger-text">
+    The team noticed some weaknesses in our data. First of all, our team only had time to finish one trial of the RT-qPCR experiment, and even though the data is convincing, showing the downstream genes of the pGal1,10 promoter did induce mRNA transcription in the presence of galactose, repeated  RT-qPCR trials will be necessary to validate our team’s biological functional assay’s data. Second, the SCOBY was dried directly inside the oven, resulting in a wrinkled surface which may cause inaccuracy in measuring data. Therefore the team decided to flatten SCOBY by placing a heavy object above it when drying, aiming to completely flatten SCOBY. Third, since we only include 1 batch of tested samples, to increase the validity of our project, the team aims to conduct more batches of testing regarding the modified SCOBY’s flexibility. 
+  
+    </p>
+    </p>
+    </p>
+</p>
+</div>
+    </div>
+
+    </div>
+
+    <center>
+        <div>
+            <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore-removebg-preview.png" alt="Scroll Animated Image 2">
+          </div>
+        <div>
+            <ul class="m-2 p-2" style="list-style: none; padding: 0;">
+              <li>
+                <a class="hoverg" href="{{ url_for('pages', page='engineering') }}">
+            
+                  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/engineering-button.png" style="width: 200px; height: 256px" alt="eng-button">
+  
+                </a>            
+                <a class="hoverg" href="{{ url_for('pages', page='parts-collection') }}">
+  
+                  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/parts-button.png" style="width: 200px; height: 257px" alt="imp-button">
+  
+                </a>            
+                <a class="hoverg" href="{{ url_for('pages', page='results') }}">
+    
+                  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/results-button.png" style="width: 200px; height: 256px" alt="team-button">
+  
+                </a>            
+                <a class="hoverg" href="{{ url_for('pages', page='notebook-2022') }}">
+     
+                  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/notebook-button.png" style="width: 200px; height: 256px" alt="safety-button">
+  
+                </a>
+                <a class="hoverg" href="{{ url_for('pages', page='contribution') }}">
+                
+                    <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/contribution-button.png" style="width: 200px; height: 256px" alt="des-button">
+              
+                  </a>
+              </li>
+            </ul>
+          </div>
+        </center>
+</body>
+
+																						
+{% endblock %}
+
+
+

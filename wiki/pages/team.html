@@ -1,0 +1,469 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+			.hoverg {
+  				transition: 0.4s;
+  				opacity: 1;
+			}
+			.bigger-text {
+				font-size: 20px;  /* Adjust this value to your preference */
+				font-family: 'Georgia', serif;
+			}
+		</style>
+
+
+	</head>
+
+<body class="loading-overlay-showing" data-plugin-page-transition data-loading-overlay data-plugin-options="{'hideDelay': 0, 'effect': 'pulse'}">
+	<div class="loading-overlay">
+	  <div class="bounce-loader">
+		<div class="wrapper-pulse">
+		  <div class="cssload-pulse-loader"></div>
+		</div>
+	  </div>
+	</div>
+	
+	
+	
+	<div role="main" class="main">
+	  <section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg"
+			   style="background-image: url('https://static.igem.wiki/teams/4650/wiki/headings/team.png');
+								   background-size: cover; 
+								   background-position: center; 
+								   height: 700px; 
+								   display: flex; 
+								   align-items: center; 
+								   justify-content: center;">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 align-self-center p-static order-2 text-center">
+			  <h1 class="font-weight-bold text-dark"></h1>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	</div>
+	<div>
+		<br><br><br>
+		<center><b><u><p class="bigger-text">
+			Click on the pictures to see each member's self introduction!
+		</p></u></b></center>
+	</div>
+
+
+
+	<body data-plugin-page-transition>
+
+		<div class="body">
+			
+			<div role="main" class="main">
+
+
+				<div class="container py-4">
+
+					<div class="sort-destination-loader-showing mt-4 pt-2">
+						<div class="row team-list sort-destination" data-sort-id="team">
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-msparker') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/parkerhead.png" class="img-fluid" alt="">
+										</a><b>Tarn Parker </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-msching') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/chinghead.png" class="img-fluid" alt="">
+										</a><b>Hui-Ching, Kuo </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-mssally') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/sallyhead.png" class="img-fluid" alt="">
+										</a><b> Sally Lin </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-melody') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/melodyhead.png" class="img-fluid" alt="">
+										</a>
+										</a><b>Melody Lo </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-terry') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/terryhead.png" class="img-fluid" alt="">
+										</a><b>Terry Chang </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-blanc') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/blanchead.png" class="img-fluid" alt="">
+										</a><b>Blanc Liao </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+
+
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-annabel') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/annabelhead.png" class="img-fluid" alt="">
+										</a><b>Annabel Yang </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+
+
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-michael') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/michaelhead.png" class="img-fluid" alt="">
+										</a><b>Michael Huang </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-irisl') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/irishead.png" class="img-fluid" alt="">
+										</a><b>Iris Lin </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-phoebe') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/phoebehead.png" class="img-fluid" alt="">
+										</a><b>Phoebe Yang </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-amanda') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/amandahead.png" class="img-fluid" alt="">
+										</a><b>Amanda Wang </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-irisq') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/iris-q.png" class="img-fluid" alt="">
+										</a><b>Iris Qiu</b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-hope') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/hopehead.png" class="img-fluid" alt="">
+										</a><b>Hope Chen </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-jenny') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/jennyhead.png" class="img-fluid" alt="">
+										</a><b>Jenny Kuo </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-nicole') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/nicolehead.png" class="img-fluid" alt="">
+										</a><b>Nicole Liao </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-maddison') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/madisonhead.png" class="img-fluid" alt="">
+										</a><b>Maddison Ma </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-laura') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/laurahhead.png" class="img-fluid" alt="">
+										</a><b>Laura Lai </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-dora') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/dorahead.png" class="img-fluid" alt="">
+										</a><b>Dora Chen </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-jessie') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/jessiehead.png" class="img-fluid" alt="">
+										</a><b>Jessie Chuang</b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-yaya') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/yayahead.png" class="img-fluid" alt="">
+										</a><b>Yaya Hsu </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-vicky') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/vickyhead.png" class="img-fluid" alt="">
+										</a><b>Vicky Chien </b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							<div class="col-12 col-sm-6 col-lg-3 isotope-item">
+								<span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+									<span class="thumb-info-wrapper" style="text-align: center;">
+										<a href="{{ url_for('pages', page='about-rubie') }}">
+											<img src="https://static.igem.wiki/teams/4650/wiki/team-personal-photo/rubiehead.png" class="img-fluid" alt="">
+										</a><b>Rubie Jen</b>
+									</span>
+									<span class="thumb-info-caption">
+										<span class="thumb-info-caption-text"></span>
+
+
+										</span>
+									</span>
+								</span>
+							</div>
+							
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- Vendor -->
+		<script src="{{ url_for('static', filename = 'plugins.min.js') }}"></script>
+
+		<!-- Theme Base, Components and Settings -->
+		<script src="{{ url_for('static', filename = 'theme.js') }}"></script>
+
+		<!-- Theme Initialization Files -->
+		<script src="{{ url_for('static', filename = 'theme.init.js') }}"></script>
+
+
+
+	</body>
+	<body>
+		<center>
+			<div>
+				<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore-removebg-preview.png" alt="Scroll Animated Image 2">
+			  </div>
+			<div>
+				<ul class="m-2 p-2" style="list-style: none; padding: 0;">
+				  <li>
+					<a class="hoverg" href="{{ url_for('pages', page='parts-collection') }}">
+				
+					  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/parts-button.png" style="width: 200px; height: 256px" alt="eng-button">
+	  
+					</a>            
+					<a class="hoverg" href="{{ url_for('pages', page='education') }}">
+	  
+					  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/education-button.png" style="width: 200px; height: 257px" alt="imp-button">
+	  
+					</a>            
+					<a class="hoverg" href="{{ url_for('pages', page='sustainable') }}">
+		
+					  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/sus-button.png" style="width: 200px; height: 256px" alt="team-button">
+	  
+					</a>            
+					<a class="hoverg" href="{{ url_for('pages', page='attributions') }}">
+		 
+					  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/attribution-button.png" style="width: 200px; height: 256px" alt="safety-button">
+	  
+					</a>
+					<a class="hoverg" href="{{ url_for('pages', page='description') }}">
+					
+						<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/description-button.png" style="width: 200px; height: 256px" alt="des-button">
+				  
+					  </a>
+				  </li>
+				</ul>
+			  </div>
+			</center>
+	</body>
+
+
+{% endblock %}
