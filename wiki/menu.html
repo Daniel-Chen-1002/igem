@@ -20,7 +20,7 @@
     --secondary-font: "Georgia", serif;   /* Secondary font for headings and specific content */
     }
     .navbar {
-  transition: top 1s; /* Smooth transition for hiding and showing */
+  transition: top 0.8s; /* Smooth transition for hiding and showing */
     }
     .navbar {
       background-color: #8a8eae !important
@@ -47,8 +47,8 @@
 </script>
   <div class="container">
 
-    <!---- TEAM NAME ---->
-    <a href="../IGEM/wiki/pages/home.html">
+    <!---- TEAM NAME/Logo ---->
+    <a href="{{ url_for('home') }}">
       <div class="navbar-brand">
       <img src="https://s.yimg.com/ny/api/res/1.2/JZ2NpaHmONITSrTwRUDdKg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0MA--/https://media.zenfs.com/ko/newtalk.tw/2bf8069a8e812ceb8d3ae20b7cd7f0f9" alt="TeamLogo" style="width: 50px; height: 50px;">
     </div>
@@ -72,7 +72,7 @@
           <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Team
           </a>
-          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" font-family: Georgia, serif>
+          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae">
             <li><a class="dropdown-item" href="{{ url_for('pages', page='team') }}">Members</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
           </ul>
@@ -83,7 +83,7 @@
           <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Project
           </a>
-          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif">
+          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae">
             <li><a class="dropdown-item" href="{{ url_for('pages', page='description') }}">Description</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='experiments') }}">Experiments</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
@@ -95,12 +95,12 @@
           </ul>
         </li>
 
-        <!---- PARTS ---->
+        <!---- WETLAB, Originally PARTS ---->
         <li class="nav-item dropdown">
           <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Parts
+            WETLAB
           </a>
-          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif">
+          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae">
             <li><a class="dropdown-item" href="{{ url_for('pages', page='basic-parts') }}">Basic Parts</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='composite-parts') }}">Composite Parts</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='parts-collection') }}">Part Collection</a></li>
@@ -114,17 +114,10 @@
           </a>
         </li>
 
-        <!---- Ecucation ---->
+        <!---- Drylab, Originally Ecucation ---->
         <li class="nav-item">
           <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="{{ url_for('pages', page='education') }}">
-            Education
-          </a>
-        </li>
-
-        <!---- SDGs ---->
-        <li class="nav-item">
-          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="{{ url_for('pages', page='sustainable') }}">
-            SDGs
+            DRYLAB
           </a>
         </li>
 
