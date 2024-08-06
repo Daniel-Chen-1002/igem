@@ -39,8 +39,6 @@
         navbar.style.top = "0"; // Show navbar
       } else if (scrollY === 0 || scrollY < 0){
         navbar.style.top = "0"
-      } else if(loadingScreenDisplay == 'block'){
-        navbar.style.top = "-80px"
       } else if (prevScrollpos < currentScrollPos){
         navbar.style.top = "-80px"; // Adjust this value to hide the navbar completely
       }
