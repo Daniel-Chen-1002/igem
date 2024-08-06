@@ -1,52 +1,22 @@
 {% extends "layout.html" %}
 
-
+{% block title %}Attributions{% endblock %}
+{% block lead %}In the iGEM Competition, we celebrate student effort and achievement. The Attributions form helps the judges differentiate between what students accomplished from how their external collaborators supported them. Therefore, teams must clearly explain on the standard Project Attributions form what work they have conducted by themselves and what has been done by others.{% endblock %}
 
 {% block page_content %}
 
-<html lang="en">
-<head>
-<style>
-     :root {
-    --primary-font: "Georgia", serif;  /* Primary font for most content */
-    --secondary-font: "Georgia", serif;   /* Secondary font for headings and specific content */
-}
-.hoverg {
-  				transition: 0.4s;
-  				opacity: 1;
-			}
-</style>
-
-
-</head>
-<body class="loading-overlay-showing" data-plugin-page-transition data-loading-overlay data-plugin-options="{'hideDelay': 0, 'effect': 'pulse'}">
-<div class="loading-overlay">
-  <div class="bounce-loader">
-    <div class="wrapper-pulse">
-      <div class="cssload-pulse-loader"></div>
+<div class="row mt-4">
+  <div class="col">
+    <div>
+      <p>Teams must use the standard Attributions form. To meet the attributions requirement, you must display the standard form on your Wiki by following the instructions here: <a href="https://competition.igem.org/deliverables/project-attribution">Project Attribution page</a>.    </p>
+    </div>
+    <div class="bd-callout bd-callout-info">
+      <h4>Bronze Medal Criterion #2</h4>
+      <p>Describe what work your team members did and what other people did for your project.</p>
+      <p>The form that has been embedded in an iframe in this page shows your team's Project Attribution form. This page must keep the form as it is.</p>
+      <p>If you use a different website framework, make sure to embed the right URL for your team's form.</p>
     </div>
   </div>
-</div>
-
-
-
-<div role="main" class="main">
-  <section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg"
-           style="background-image: url('https://static.igem.wiki/teams/4650/wiki/headings/attribution.png');
-							   background-size: cover; 
-							   background-position: center; 
-							   height: 700px; 
-							   display: flex; 
-							   align-items: center; 
-							   justify-content: center;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 align-self-center p-static order-2 text-center">
-          <h1 class="font-weight-bold text-dark"></h1>
-        </div>
-      </div>
-    </div>
-  </section>
 </div>
 
 <!--
@@ -58,61 +28,26 @@
   NOT MEETING BRONZE MEDAL CRITERION #2
  -->
 <div class="row mt-4">
-	<script type="text/javascript">
-	  // Listen to size change and update form height
-	  window.addEventListener('message', function (e) {
-		const {type, data} = JSON.parse(e.data);
-		if (type === 'igem-attribution-form') {
-		  const element = document.getElementById('igem-attribution-form')
-		  element.style.height = data + 50 +'px'
-		}
-	  });
-	</script>
-	<iframe
-	  style='width: 95%'
-	  id="igem-attribution-form"
-	  src="https://teams.igem.org/wiki/5094/attributions"
-	>
-	</iframe>
-<!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
-  </div>
-  <center>
-		<div>
-			<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore-removebg-preview.png" alt="Scroll Animated Image 2">
-		  </div>
-		<div>
-			<ul class="m-2 p-2" style="list-style: none; padding: 0;">
-			  <li>
-				<a class="hoverg" href="{{ url_for('pages', page='parts-collection') }}">
-			
-				  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/parts-button.png" style="width: 200px; height: 256px" alt="eng-button">
-  
-				</a>            
-				<a class="hoverg" href="{{ url_for('pages', page='education') }}">
-  
-				  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/education-button.png" style="width: 200px; height: 257px" alt="imp-button">
-  
-				</a>            
-				<a class="hoverg" href="{{ url_for('pages', page='sustainable') }}">
-	
-				  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/sus-button.png" style="width: 200px; height: 256px" alt="team-button">
-  
-				</a>            
-				<a class="hoverg" href="{{ url_for('pages', page='attributions') }}">
-	 
-				  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/attribution-button.png" style="width: 200px; height: 256px" alt="safety-button">
-  
-				</a>
-				<a class="hoverg" href="{{ url_for('pages', page='description') }}">
-				
-					<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/description-button.png" style="width: 200px; height: 256px" alt="des-button">
-			  
-				  </a>
-			  </li>
-			</ul>
-		  </div>
-		</center>
+  <script type="text/javascript">
+    // Listen to size change and update form height
+    window.addEventListener("message", function (e) {
+      if (e.origin === "https://teams.igem.org") {
+        const {type, data} = JSON.parse(e.data);
+        if (type === "igem-attribution-form") {
+          const element = document.getElementById("igem-attribution-form");
+          element.style.height = `${data + 100}px`;
+        }
+      }
+    });
+  </script>
+  <iframe
+    style='width: 100%'
+    id="igem-attribution-form"
+    src="https://teams.igem.org/wiki/TeamID/attributions">
+  >
+  </iframe>
+  <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
 
-</body>
-</html>
+</div>
+
 {% endblock %}
