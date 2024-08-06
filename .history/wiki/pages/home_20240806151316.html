@@ -9,45 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scroll Animation</title>
     <style>
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        .header{
-          text-align: center;
-          padding: 12%;
-          width:110%;
-          overflow: hidden;
-
-        }
-        #imageContainer {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-      }
-
-      #imageContainer img,
-      #imageContainer canvas {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-      }
-
-      #imageContainer canvas {
-          transition: transform 0.3s ease;
-      }
-
-      #imageContainer:hover canvas {
-          transform: scale(1.05);
-      }
-
 
         body {
             background-color: rgb(54, 64, 127);
@@ -126,12 +92,12 @@
 
         .bigger-gap {
             margin-bottom: 150px;  /* Adjust to your needs */
-        } 
+		    } 
 
-        img {
+		    img {
             width: 100%;
             height: auto;
-        } 
+		    } 
 
         #flipbook  .page {
             background:white;
@@ -177,17 +143,15 @@
 
         
 
-  </style>
+	</style>
 </head>
 
-
 <body>
-    <div class="header">
-        <div id="imageContainer">
-            <img id="myImage" src="https://static.igem.wiki/teams/5094/home/header.svg" alt="waveplast">
-        </div>
-    </div>
-    </div>
+  
+    
+		<div class="first-image">
+            <img src="https://static.igem.wiki/teams/4650/wiki/img-1116.jpg" alt="Scroll Animated Image 1">
+		</div>
         <div class="scroll-image">
             <img src="https://static.igem.wiki/teams/5094/home/home-2.png" alt="Scroll Animated Image 2">
         </div>
@@ -218,7 +182,7 @@
         <center>
         <div class="scroll-image bigger-gap">
           <div class="content align-items">
-            <div id="flipbook">
+		        <div id="flipbook">
               <div>
                 <img src="https://static.igem.wiki/teams/4650/wiki/newpicbooksplit/green-front-cover.png" alt="Image 1">
               </div>
@@ -330,7 +294,7 @@
         </div>
       -->
         
-        <!--
+        
         <center>
         <div class="scroll-image">
           <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore.png" alt="Scroll Animated Image 2">
@@ -367,7 +331,7 @@
           </ul>
         </div>
       </center>
-    -->
+    
         <script type="text/javascript" src="/kcis-xiugang-taipei/static/jquery.min.js"></script>
         <script type="text/javascript" src="{{ url_for('static', filename = 'turn.min.js') }}"></script>     
 
@@ -411,10 +375,8 @@
     });
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="path/to/your/script.js"></script>
+ 
 </body>
 </html>
 
 {% endblock %}
-
