@@ -53,10 +53,12 @@
   setTimeout(function() {
     // Hide the loading screen
     document.querySelector('.loading').style.display = 'none';
-    
+    document.getElementsByClassName("navbar").style.display = 'block';
     // Show the main content
     document.querySelector('.content').style.display = 'block';
+    document.getElementsByClassName("navbar").style.display = 'none';
   }, 3000); // 3000 milliseconds (3 seconds)
+   data-plugin-page-transition
 </script>
 
 

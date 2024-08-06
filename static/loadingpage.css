@@ -9,7 +9,7 @@
   justify-content: center;
   overflow: hidden;
   align-items: center;
-  background-color: rgb(212, 184, 149); /* Set a solid background color here */
+background-image: url('https://static.igem.wiki/teams/5094/team/ocean-for-team-page.jpg');/* Set a solid background color here */
   z-index: 999; /* Set a high z-index value to ensure it appears on top of other content */
 }
 
@@ -44,3 +44,7 @@
   font-size: 48px; /* Adjust the font size as needed */
   margin: 0 4px; /* Adjust the spacing between letters as needed */
 }
+/*.navbar{
+  display:none;
+}
+*/
