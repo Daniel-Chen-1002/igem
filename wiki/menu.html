@@ -7,20 +7,52 @@
       display: none;
     }
     .dropdown:hover {
-      color: #3070d8;
+      color: #3070d8 !important
     }
     .dropdown:hover .dropdown-content {
       display: block;
     }
+    .nav-link{
+      color: #ffffff !important
+    }
     :root {
     --primary-font: "Georgia", serif;  /* Primary font for most content */
     --secondary-font: "Georgia", serif;   /* Secondary font for headings and specific content */
-}
+    }
+    .navbar {
+  transition: top 1s; /* Smooth transition for hiding and showing */
+    }
+    .navbar {
+      background-color: #8a8eae !important
+    }
   </style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var prevScrollpos = window.pageYOffset;
+    var navbar = document.querySelector('.navbar');
+    var screenpos = window.ScreenY
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      
+      if (prevScrollpos > currentScrollPos) {
+        navbar.style.top = "0"; // Show navbar
+      } else if (scrollY === 0 || scrollY < 0){
+        navbar.style.top = "0"
+      } else if (prevScrollpos < currentScrollPos){
+        navbar.style.top = "-80px"; // Adjust this value to hide the navbar completely
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  }); 
+</script>
   <div class="container">
 
     <!---- TEAM NAME ---->
-    <a class="navbar-brand" href="{{ url_for('home') }}">KCIS-Xiugang-Taipei</a>
+    <a href="../IGEM/wiki/pages/home.html">
+      <div class="navbar-brand">
+      <img src="https://s.yimg.com/ny/api/res/1.2/JZ2NpaHmONITSrTwRUDdKg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0MA--/https://media.zenfs.com/ko/newtalk.tw/2bf8069a8e812ceb8d3ae20b7cd7f0f9" alt="TeamLogo" style="width: 50px; height: 50px;">
+    </div>
+    </a>
 
     <!---- SMALL SCREEN MENU ICON ---->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,12 +64,12 @@
 
         <!---- HOME ---->
         <li class="nav-item">
-          <a class="nav-link btn btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="{{ url_for('home') }}">Home</a>
+          <a class="nav-link btn btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px;  color: white; font-family: Georgia, serif" href="{{ url_for('home') }}">Home</a>
         </li>
 
         <!---- TEAM ---->
         <li class="nav-item dropdown">
-          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Team
           </a>
           <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" font-family: Georgia, serif>
@@ -48,7 +80,7 @@
 
         <!---- PROJECT ---->
         <li class="nav-item dropdown">
-          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Project
           </a>
           <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif">
@@ -65,7 +97,7 @@
 
         <!---- PARTS ---->
         <li class="nav-item dropdown">
-          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Parts
           </a>
           <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif">
@@ -77,21 +109,21 @@
 
         <!---- HUMAN PRACTICES ---->
         <li class="nav-item">
-          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="{{ url_for('pages', page='human-practices') }}">
+          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="{{ url_for('pages', page='human-practices') }}">
             Human Practices
           </a>
         </li>
 
         <!---- Ecucation ---->
         <li class="nav-item">
-          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="{{ url_for('pages', page='education') }}">
+          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="{{ url_for('pages', page='education') }}">
             Education
           </a>
         </li>
 
         <!---- SDGs ---->
         <li class="nav-item">
-          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: rgb(131, 105, 83); border-color: rgb(131, 105, 83); color: white; font-family: Georgia, serif" href="{{ url_for('pages', page='sustainable') }}">
+          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="{{ url_for('pages', page='sustainable') }}">
             SDGs
           </a>
         </li>
