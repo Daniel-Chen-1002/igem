@@ -9,7 +9,7 @@
   justify-content: center;
   overflow: hidden;
   align-items: center;
-  background-color: rgb(212, 184, 149); /* Set a solid background color here */
+background-image: url('https://static.igem.wiki/teams/5094/team/ocean-for-team-page.jpg');/* Set a solid background color here */
   z-index: 999; /* Set a high z-index value to ensure it appears on top of other content */
 }
 
@@ -27,7 +27,7 @@
 /* Style the loading animation image */
 .load-container img {
   width: 600px;
-  length:600px /* Adjust the width as needed */
+  height:600px /* Adjust the width as needed */
 }
 
 /* Style the loader text */
