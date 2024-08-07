@@ -25,6 +25,11 @@
     .navbar {
       background-color: #8a8eae !important
     }
+    .navbar .navbar-brand {
+      position: absolute;
+      top: -0;
+      left: 50;
+    }
   </style>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -40,7 +45,7 @@
       } else if (scrollY === 0 || scrollY < 0){
         navbar.style.top = "0"
       } else if (prevScrollpos < currentScrollPos){
-        navbar.style.top = "-80px"; // Adjust this value to hide the navbar completely
+        navbar.style.top = "-200px"; // Adjust this value to hide the navbar completely
       }
       prevScrollpos = currentScrollPos;
     };
@@ -51,10 +56,9 @@
     <!---- TEAM NAME/Logo ---->
     <a href="{{ url_for('home') }}">
       <div class="navbar-brand">
-      <img src="https://static.igem.wiki/teams/5094/xiu-gang-2.png" alt="TeamLogo" style="width: 50px; height: 50px;">
+      <img src="https://static.igem.wiki/teams/5094/logo2.png" alt="TeamLogo" style="width: 200px; height: 150px;">
     </div>
     </a>
-
     <!---- SMALL SCREEN MENU ICON ---->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
