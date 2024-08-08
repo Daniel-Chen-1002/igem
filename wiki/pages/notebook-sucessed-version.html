@@ -8,23 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./another.css" />
     <style>
         * {
             font-family: Arial, Helvetica, sans-serif;
             box-sizing: border-box;
-            font-size: x-large;
+            font-size: large; 
             font-weight: bold;
-        }
-
-        body {
-            margin: 0;
-            padding-top: 60px; /* Adjust this value based on the height of your navbar */
         }
 
         #nig {
             position: absolute;
             top: 10px;
             left: 550px;
+        }
+        body {
+            margin: 0;
+            padding-top: 60px; /* Adjust this value based on the height of your navbar */
+        }
+
+        article {
+            overflow: hidden;
+        }
+
+        a {
+            color: unset;
+            transition: 400ms transform ease;
+        }
+
+        input[type="checkbox"] {
+            display: none;
         }
 
         .portlet-content {
@@ -117,15 +130,10 @@
             z-index: 1000;
             padding: 20px;
             box-sizing: border-box;
-            opacity: 0;
-            transition: opacity 300ms ease, transform 300ms ease;
-            transform: translate(-50%, -60%);
         }
 
         .popup.open {
             display: block;
-            opacity: 1;
-            transform: translate(-50%, -50%);
         }
 
         .popup-close {
@@ -172,7 +180,8 @@
         <!-- Portlets for each month from September 2023 to September 2024 -->
         {% for month in ["Sep 2023", "Oct 2023", "Nov 2023", "Dec 2023", "Jan 2024", "Feb 2024", "Mar 2024", "Apr 2024", "May 2024", "Jun 2024", "Jul 2024", "Aug 2024", "Sep 2024"] %}
         <div class="portlet">
-            <div class="portlet-header" onclick="togglePortlet('{{ loop.index }}')">
+            <input type="checkbox" id="portlet{{ loop.index }}" />
+            <div class="portlet-header" onclick="togglePortlet('portlet{{ loop.index }}')">
                 <span id="nig">{{ month }}</span>
                 <a href="javascript:;"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
             </div>
@@ -180,7 +189,7 @@
                 <article>
                     <div class="button-container">
                         {% if month == "Sep 2023" %}
-                            <button onclick="showPopup('{{ month }}', 'Week 1', 'fu')">Week 1</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'fujujjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj')">Week 1</button>
                             <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
                             <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
                             <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
@@ -189,14 +198,67 @@
                             <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
                             <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
                             <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
-                        {% elif month in ["Nov 2023", "Feb 2024", "May 2024", "Aug 2024"] %}
-                            <button onclick="showPopup('{{ month }}', 'Week 1', 'Content for {{ month }} Week 1')">Week 1</button>
+                        {% elif month == "Nov 2023" %}
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'ck')">Week 1</button>
                             <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
                             <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
                             <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
                             <button onclick="showPopup('{{ month }}', 'Week 5', 'Content for {{ month }} Week 5')">Week 5</button>
-                        {% else %}
-                            <button onclick="showPopup('{{ month }}', 'Week 1', 'Content for {{ month }} Week 1')">Week 1</button>
+                        {% elif month == "Dec 2023" %}
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'ck')">Week 1</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
+                        {% elif month == "Jan 2024" %}
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'ck')">Week 1</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
+                        {% elif month == "Feb 2024" %}
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'ck')">Week 1</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 5', 'Content for {{ month }} Week 5')">Week 5</button>
+                        {% elif month == "Mar 2024" %}
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'ck')">Week 1</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
+                        {% elif month == "Apr 2024" %}
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'ck')">Week 1</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
+                        {% elif month == "May 2024" %}
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'ck')">Week 1</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 5', 'Content for {{ month }} Week 5')">Week 5</button>
+                        {% elif month == "Jun 2024" %}
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'ck')">Week 1</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
+                        {% elif month == "Jul 2024" %}
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'ck')">Week 1</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
+                        {% elif month == "Aug 2024" %}
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'ck')">Week 1</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 5', 'Content for {{ month }} Week 5')">Week 5</button>
+                        {% elif month == "Sep 2024" %}
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'ck')">Week 1</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
+                        {% elif month == "Sep 2023" %}
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'ck')">Week 1</button>
                             <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
                             <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
                             <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
@@ -214,61 +276,37 @@
         <div id="popup-title" class="popup-title"></div>
         <div id="popup-content" class="popup-content"></div>
     </div>
-
+    
     <script>
-        // Toggle portlet content
         function togglePortlet(id) {
-            var portletContent = document.getElementById('content-portlet' + id);
             var allPortlets = document.querySelectorAll('.portlet-content');
-            
-            // Close all portlets except the clicked one
             allPortlets.forEach(function(content) {
-                if (content !== portletContent) {
+                if (content.id !== 'content-' + id) {
                     content.classList.remove('expanded');
                 }
             });
 
-            // Toggle the clicked portlet
-            portletContent.classList.toggle('expanded');
+            var targetContent = document.getElementById('content-' + id);
+            targetContent.classList.toggle('expanded');
 
-            // Rotate the arrow for the clicked portlet
             var headers = document.querySelectorAll('.portlet-header a');
             headers.forEach(function(header) {
                 header.classList.remove('rotate');
             });
 
-            var targetHeader = document.querySelector(`#portlet${id} .portlet-header a`);
-            targetHeader.classList.toggle('rotate');
+            var header = document.querySelector(`#${id} ~ .portlet-header a`);
+            header.classList.toggle('rotate');
         }
 
-        // Show popup
         function showPopup(title, subtitle, content) {
             document.getElementById('popup-title').innerHTML = `${title} - ${subtitle}`;
             document.getElementById('popup-content').innerHTML = content;
-            var popup = document.getElementById('popup');
-            popup.style.display = 'block'; // Ensure popup is displayed before adding animation
-            setTimeout(function() {
-                popup.classList.add('open');
-            }, 10); // Short delay to ensure display is applied before adding animation class
+            document.getElementById('popup').classList.add('open');
         }
 
-        // Close popup
         function closePopup() {
-            var popup = document.getElementById('popup');
-            popup.classList.remove('open');
-            // Hide popup after animation
-            setTimeout(function() {
-                popup.style.display = 'none';
-            }, 300); // Match the duration of the CSS transition
+            document.getElementById('popup').classList.remove('open');
         }
-
-        // Close popup if clicking outside it
-        document.addEventListener('click', function(event) {
-            var popup = document.getElementById('popup');
-            if (event.target == popup) {
-                closePopup();
-            }
-        });
     </script>
 </body>
 </html>
