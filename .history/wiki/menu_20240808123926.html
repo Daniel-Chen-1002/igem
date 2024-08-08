@@ -1,0 +1,145 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-footer fixed-top">
+  <style>
+    .btn-padding{
+      margin-left: 10px
+    }
+    .dropdown-content {
+      display: none;
+    }
+    .dropdown:hover {
+      color: #3070d8 !important
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .nav-link{
+      color: #ffffff !important
+    }
+    :root {
+    --primary-font: "Georgia", serif;  /* Primary font for most content */
+    --secondary-font: "Georgia", serif;   /* Secondary font for headings and specific content */
+    --test-font: "Poppins", serif;
+    }
+    .navbar {
+  transition: top 0.6s; /* Smooth transition for hiding and showing */
+    }
+    .navbar {
+      background-color: #8a8eae !important
+    }
+    .navbar .navbar-brand {
+      position: absolute;
+      top: -0;
+      left: 100;
+    }
+    @font-face {
+      font-family: "Clash";
+      src: url('https://static.igem.wiki/teams/5094/font/clashdisplay-variable.ttf') format('truetype');
+    }
+  </style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var prevScrollpos = window.pageYOffset;
+    var navbar = document.querySelector('.navbar');
+    var screenpos = window.ScreenY
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    var loadingScreenDisplay = document.querySelector('.loading').style.display
+
+      if (prevScrollpos > currentScrollPos) {
+        navbar.style.top = "0"; // Show navbar
+      } else if (scrollY === 0 || scrollY < 0){
+        navbar.style.top = "0"
+      } else if (prevScrollpos < (currentScrollPos - 10)){
+        navbar.style.top = "-200px"; // Adjust this value to hide the navbar completely
+      } //else if (window.pageYOffset > 350){
+        //navbar.style.top = "-200px"; // Adjust this value to hide the navbar completely
+     // }
+      prevScrollpos = currentScrollPos;
+    };
+  }); 
+</script>
+  <div class="container">
+
+    <!---- TEAM NAME/Logo ---->
+    <a href="{{ url_for('home') }}">
+      <div class="navbar-brand">
+      <img src="https://static.igem.wiki/teams/5094/logo2.png" alt="TeamLogo" style="width: 166px; height: 125px;">
+    </div>
+    </a>
+    <!---- SMALL SCREEN MENU ICON ---->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto left-aligned">
+
+        <!---- HOME ---->
+        <li class="nav-item">
+          <a class="nav-link btn btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px !important;  color: white; font-family: Clash, serif" href="{{ url_for('home') }}">Home</a>
+        </li>
+
+        <!---- TEAM ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Clash, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Team
+          </a>
+          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='team') }}"style="color: #ffffff">Members</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='attributions') }}"style="color: #ffffff">Attributions</a></li>
+          </ul>
+        </li>
+
+        <!---- PROJECT ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Clash, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Project
+          </a>
+          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae;">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='description') }}" style="color: #ffffff">Description</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='experiments') }}" style="color: #ffffff">Experiments</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='engineering') }}"style="color: #ffffff">Engineering</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='results') }}"style="color: #ffffff">Results</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='contribution') }}"style="color: #ffffff">Contribution</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook-2023') }}"style="color: #ffffff">2023 Notebook</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook-2024') }}"style="color: #ffffff">2024 Notebook</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='safety') }}"style="color: #ffffff">Safety</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook-new') }}"style="color: #ffffff">New Notebook</a></li>
+          </ul>
+        </li>
+
+        <!---- WETLAB, Originally PARTS ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Clash, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            WETLAB
+          </a>
+          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='basic-parts') }}"style="color: #ffffff">Basic Parts</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='composite-parts') }}"style="color: #ffffff">Composite Parts</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='parts-collection') }}"style="color: #ffffff">Part Collection</a></li>
+          </ul>
+        </li>
+
+        <!---- HUMAN PRACTICES ---->
+        <li class="nav-item dropdown">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Clash, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            HUMAN PRACTICES
+          </a>
+          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='human-practices') }}"style="color: #ffffff">Integrated HP</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='composite-parts') }}"style="color: #ffffff">Education</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='parts-collection') }}"style="color: #ffffff">SDGs</a></li>
+          </ul>
+        </li>
+
+        <!---- Drylab, Originally Ecucation ---->
+        <li class="nav-item">
+          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Clash, serif" href="{{ url_for('pages', page='education') }}">
+            DRYLAB
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
