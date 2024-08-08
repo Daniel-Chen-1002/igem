@@ -45,15 +45,15 @@
     var currentScrollPos = window.pageYOffset;
     var loadingScreenDisplay = document.querySelector('.loading').style.display
 
-      if (prevScrollpos > currentScrollPos) {
+      if (prevScrollpos > (currentScrollPos+15)) {
         navbar.style.top = "0"; // Show navbar
-      } else if (scrollY === 0 || scrollY < 0){
+      } else if (scrollY === 0 || scrollY < 100){
         navbar.style.top = "0"
       } else if (prevScrollpos < (currentScrollPos - 10)){
         navbar.style.top = "-200px"; // Adjust this value to hide the navbar completely
-      } //else if (window.pageYOffset > 350){
-        //navbar.style.top = "-200px"; // Adjust this value to hide the navbar completely
-     // }
+      } else if (prevScrollpos == currentScrollPos && window.pageYOffset > 350){
+        navbar.style.top = "-200px"; // Adjust this value to hide the navbar completely
+     }
       prevScrollpos = currentScrollPos;
     };
   }); 
