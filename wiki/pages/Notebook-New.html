@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 60px; /* Adjust this value based on the height of your navbar */
+        }
+
+        .portlet-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .portlet {
+            position: relative;
+            border: 1px solid #0abab5;
+            border-radius: 8px;
+            width: 200px; /* Adjust the width as needed */
+            margin: 10px;
+            overflow: hidden;
+            transition: height 0.4s ease;
+        }
+
+        .portlet-header {
+            background-color: #0abab5;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .portlet-header a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            transition: transform 0.4s ease;
+        }
+
+        .portlet-content {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portlet-content .week-box {
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        .portlet-content .week-box:first-of-type {
+            border-top: none;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked + .portlet-header + .portlet-content {
+            height: 200px; /* Adjust the height as needed to fit the content */
+        }
+
+        input[type="checkbox"]:checked + .portlet-header a {
+            transform: rotate(180deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div role="main" class="main">
+        <section class="page-header page-header-modern section section-with-divider mb-0 mt-0 page-header-lg" 
+                style="background-image: url('https://static.igem.wiki/teams/4650/wiki/headings/notebook.png'); 
+                       background-size: cover; 
+                       background-position: center; 
+                       height: 700px; 
+                       display: flex; 
+                       align-items: center; 
+                       justify-content: center;
+                       max-width: 100%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 align-self-center p-static order-2 text-center">
+                        <h1 class="font-weight-bold text-dark"></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="portlet-container">
+        {% for month in ["Sep 2023", "Oct 2023", "Nov 2023", "Dec 2023", "Jan 2024", "Feb 2024", "Mar 2024", "Apr 2024", "May 2024", "Jun 2024", "Jul 2024", "Aug 2024", "Sep 2024"] %}
+        <div class="portlet">
+            <input type="checkbox" id="toggle-{{ loop.index }}" />
+            <label class="portlet-header" for="toggle-{{ loop.index }}">
+                <span>{{ month }}</span>
+                <a href="javascript:;"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            </label>
+            <div class="portlet-content">
+                <div class="week-box">Week 1</div>
+                <div class="week-box">Week 2</div>
+                <div class="week-box">Week 3</div>
+                <div class="week-box">Week 4</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+{% endblock %}
