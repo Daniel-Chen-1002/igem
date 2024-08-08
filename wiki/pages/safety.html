@@ -10,11 +10,12 @@
 
 			/* Define your navigation bar styles */
 			.sidebar {
-			background-color: rgba( 212, 184, 149);
-			padding-top: 20px;
+			background-color: #8a8eae;
+			padding-top: 15px;
 			border-radius: 15px;
+			height: 200;
 			position: sticky;
-			top: 0;
+			top: 195;
 			overflow-y: auto; /* Add scroll functionality for small screens */
 		}
 		.font-weight-semi-bold {
@@ -151,140 +152,115 @@
 						<div class="row pt-2">
 							<div class="col-lg-3 position-relative">
 								<aside class="sidebar sidebar-bg" id="sidebar" data-plugin-sticky data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
-		
 									<h5 class="font-weight-semi-bold">Categories</h5>
 									<ul class="nav nav-list flex-column mb-5">
-										<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#first">Part Safety</a></li>
-										<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#second">Lab Safety</a></li>
-										<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#third">Safety Training</a></li>
-										<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#fourth">Works Cited</a></li>
-		
-		
-		
+										<li class="nav-item"><a class="nav-link" href="#first">Part Safety</a></li>
+										<li class="nav-item"><a class="nav-link" href="#second">Lab Safety</a></li>
+										<li class="nav-item"><a class="nav-link" href="#third">Safety Training</a></li>
 									</ul>
-								
 								</aside>
-								
-		
-		
-							  </div>
+							</div>
+							
+
+
+							  
 						<div class="col-lg-7">
+							<!-- Part Safety -->								
 							<div id="first">
-								<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+									<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
 									<center> <strong class="font-weight-extra-bold">Part Safety</strong></center>
 								</h2>
-								
 							</div>
-
-							<div id="second">
-
-								<p class="bigger-text">
-									For our project this year, we utilized DH5 alpha bacterial competent cells, and BY4741 yeast strain for the experiments. We autoclaved or bleached E.coli and yeast plates through the weekend, and thoroughly autoclave those tips and tubes before disposal. The backbone of the pGal1,10 promoter contains the origin of the replication for bacteria, and 2um of the origin of the replication for yeast to make more copies during mitosis. Other organisms receiving our team’s composite parts would not be able to make more copies since other organisms have different origins of replication, so our genes would be unable to replicate outside of our experiment conditions.
-	
-								</p>
-
-								<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
-									<center> <strong class="font-weight-extra-bold">Lab Safety</strong></center>
-								</h2>
-
-								<p class="bigger-text">
-									
-									In the Xiugang Campus of Kang Chiao International School, our team conducts experiments in a standard P1 laboratory with an open bench. We only permitted bacteria and yeast to be used as organisms. We did not use any other organisms or did any activities that are prohibited in the competition or uncovered by iGEM’s White List. 
-
 		
-								</p>
+									<div id="second">
 
-								
-							</div>
-						
-								<div class="scaled1-image">
-								<img src="https://static.igem.wiki/teams/4650/wiki/safety-page/safety-page/bio-safety-waste.png" alt="pcr1" width="1200">
+										<p class="bigger-text">
+											We use DH5-alpha competent cells, BL21DE3 competent cells, and BY4741 yeast strain for our experiments this year. Before disposal, we thoroughly autoclave or bleach E.coli plates, yeast plates, tips, and tubes. The cloned pGal1,10-IsPETase plasmids can only be transformed into yeast and bacteria since the plasmids only have 2μ ORI for yeast DNA replication and ORI for bacterial DNA replication. Bacteria and yeast will not pick up plasmids without specific selection on the plates. The cloned T7-IsPETase plasmids can only be transformed into bacteria since the plasmids only have ORI for bacterial DNA replication. Bacteria will not pick up plasmids without specific selection on the plates.
+										</p>
+										<!-- figure 1 -->	
+										<div class="scaled1-image">
+											<img src="https://static.igem.wiki/teams/5094/" alt="pcr1" width="1200">
+												</div>
+												
+												<center><p class="postcard-index">Figure 1: Autoclave </p></center><br><br>
+										
+										<p class="bigger-text">
+											Our team is using traditional enzyme digestion cloning strategies to clone IsPETase downstream of pGal1,10 promoter and T7 promoter. Once our team makes pGal1,10-IsPETase plasmids and T7-IsPETase plasmids, the team will use a site-directed mutagenesis kit to create pGal1,10-IsPETaseS121E /D186H/R280A plasmids and T7-IsPETaseS121E/D186H/R280A plasmids. Those two promoters are inducible. pGal1,10 promoter is induced in the presence of galactose, and the T7 promoter is induced in the presence of IPTG(Isopropyl β-D-1-thiogalactopyranoside). The parts our team created will not be able to express without the inducible compounds. Also, the function of IsPETase is to degrade PET plastic, not a toxic protein, even if it’s expressed after being induced.
+										</p>
+
+
+										<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+											<center> <strong class="font-weight-extra-bold">Lab Safety</strong></center>
+										</h2>
+
+										<p class="bigger-text">
+											
+											We do not plan to do any activity prohibited in the iGEM competition, and all our work is covered by the White list.  In our experiment, we only use permitted yeast and bacteria, no other organisms or hazardous chemicals are used in the project. We also do not plan to use any artificial intelligence in the project.
+										</p>
+										
+										<p class="bigger-text">
+											In Kang Chiao International School Xiugang Campus, we use a level 1 standard microbiological lab consisting of an open bench, waste containers, and a chemical fume hood. There is a chemical waste container that separates organic and inorganic waste. Moreover, there are separate biohazard waste containers, one for bacteria and yeast plates, and another for tips and Eppendorf tubes, to avoid risks of bio-waste contamination. In addition, the Esco Airstream Laminar hood in the laboratory helps us avoid contamination during bacteria and yeast inoculation.
+										</p>
 									</div>
-									
-									<center><p class="postcard-index">Figure 1: Waste and disposal container for biosafety waste </p></center><br><br>
-
-								<div class="scaled1-image">
-									<center>
-										<img style="width:600px; height: 400px" src="https://static.igem.wiki/teams/4650/wiki/safety-page/safety-page/chemical-cabinet-chemical-wastes.png"><br><br>
-									</center>
-
-								</div>
-									
-							<p class="bigger-text">
-								The Xiugang Campus of Kang Chiao International School is equipped with chemical fume hoods and designated chemical waste containers for both organic and inorganic chemical waste for our iGEM team to use while handling the chemical reagents. Moreover, we have an Esco Airstream Laminar hood in the laboratory to ensure a contamination-free environment while working with bacteria and yeast inoculation. To manage hazardous materials properly, we have separate waste containers—one for bacteria and yeast plates, and another for tips and Eppendorf tubes. This segregation helps us avoid any potential bio-waste contamination. 
-
-							</p>
-							
 						
-								<div class="scaled1-image">
-									<img src="https://static.igem.wiki/teams/4650/wiki/safety-page/safety-page/fume-hood.png" alt="pcr1" width="1200">
-								</div>
-									
-									<div id="third">
-										<center><p class="postcard-index">Figure 3: Fume hood </p></center><br><br>
-
-									<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+										<!-- figure 2 -->		
+											<div class="col" style="background-image: url('https://static.igem.wiki/teams/5094/header/safety.gif');">
+												<!--<img src="https://static.igem.wiki/teams/5094/" alt="pcr1" width="1200">-->
+													</div>
+													
+											<center><p class="postcard-index">Figure 2: Chemical waste container </p></center><br><br>
+										<!-- figure 3 -->	
+											<div class="col" style="background-image: url('https://static.igem.wiki/teams/5094/');">
+												<!--<img src="https://static.igem.wiki/teams/5094/" alt="pcr1" width="1200">-->
+													</div>
+													
+											<center><p class="postcard-index">Figure 3: Biohazard waste container </p></center><br><br>		
+										<!-- figure 4 -->		
+											<div class="scaled1-image">
+												<img src="https://static.igem.wiki/teams/5094/" alt="pcr1" width="1200">
+													</div>
+													
+													<center><p class="postcard-index">Figure 4: Biohazard waste container </p></center><br><br>	
+										<!-- figure 5 -->			
+											<div class="scaled1-image">
+												<img src="https://static.igem.wiki/teams/5094/" alt="pcr1" width="1200">
+													</div>
+													
+													<center><p class="postcard-index">Figure 5: Laminar hood </p></center><br><br>	
+											
+								
+								<!-- Safety Training -->							
+								<div id="first">
+										<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
 										<center> <strong class="font-weight-extra-bold">Safety Training</strong></center>
 									</h2>
-									</div>
-
-									<p class="bigger-text">
-									 <br>All team members have undergone safety and security training, including familiarization with lab access procedures, microbial techniques, personal biosecurity, biosafety equipment usage, and emergency protocols, and undertake experiments in a safe and responsible manner. For example, we have received basic training on wearing lab coats, gloves, using pipette sets, and following biosafety guidelines. To mitigate risks effectively, we have implemented several biosafety and biosecurity measures, such as medical surveillance, data access controls, and the use of Personal Protective Equipment (PPE). During experiments, our team is supervised by Ms. Kuo, an experienced researcher who ensures the proper handling of all the team members. Additionally, we refer to three specific links that serve as guides for safety and security rules to enhance our adherence to best practices while working in the laboratory.
-									</br>
-							   </p>
-							<p class="bigger-text">
-		
-								<br>In addition to the measures mentioned above, our iGEM team sought assistance from Sabrina Yao, the iGEM ambassador, as well as three other university labs, to collaborate and ensure that we met all the necessary safety standards. Their expertise and guidance further strengthened our commitment to maintaining a safe and secure laboratory environment when conducting the experiments.
-							</br>
-							
-							
-							<div class="scaled2-image">
-							<img src="https://static.igem.wiki/teams/4650/wiki/safety-page/safety-page/laminar-hood.png" alt="pcr1" width="1200">
 								</div>
-								<center><p class="postcard-index">Figure 4: Laminar hood</p></center><br><br>
-							
-
-							<div class="scaled1-image">
-							<br><img src="https://static.igem.wiki/teams/4650/wiki/safety-page/safety-page/open-benches.png" alt="pcr1" width="1200"></br>
-							</div>
-							<div>
-								<center><p class="postcard-index">Figure 5,6: Open benches</p></center><br><br>
-							</div>
-							
-						
-
-							<div class="scaled3-image">
-							<br><img src="https://static.igem.wiki/teams/4650/wiki/safety-page/safety-page/safe-practices-while-working.png" alt="pcr1" width="1200"></br>
-							</div>
-									
-							<div id="fourth">
-								<center><p class="postcard-index">Figure 7, 8, 9: Safe practices while working</p></center><br><br>
-
-											<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
-												<strong class="font-weight-extra-bold">Works Cited
-												</strong>
-											</h2>
-											<p class="bigger-text">
+									<p class="bigger-text">
+										<br>All of our team members received safety training, including familiarization with lab access procedures, microbial techniques, personal biosecurity, biosafety equipment usage, and emergency protocols. We ensure that all the team members undertake experiments safely and responsibly. We also implemented biosafety and biosecurity measures, including medical surveillance, data access controls, and the use of Personal Protective Equipment (PPE) to mitigate risks. The team is also supervised by Ms. Kuo, an experienced researcher and teacher in the field of microbiology, when handling organisms and other chemicals. In addition, iGEM ambassador Sabrina Yao and three university labs checked that the KCIS laboratory meets all the safety requirements.</br>
+										<br>https://www.cdc.gov.tw/</br>
+										<br>https://bioaudit.cdc.gov.tw/cdc_doh/login.aspx</br>
+										<br>https://elearn.hrd.gov.tw/mooc/index.php</br>
+										<br>Our team members often refer to the three links above as safety and security guides.</br>
+										
+										<!-- figure 6 -->			
+										<div class="scaled1-image">
+											<img src="https://static.igem.wiki/teams/5094/" alt="pcr1" width="1200">
+												</div>
 												
-
-
-												<br> [1] Taiwan Center for Disease Control. Cdc.gov.tw. https://www.cdc.gov.tw/ [Accessed 7th October 2023]. </br>
-												<br> [2] Biological Materials Censorship System. Cdc.gov.tw. https://bioaudit.cdc.gov.tw/cdc_doh/login.aspx [Accessed 7th October 2023].</br>
-												<br> [3]e-learning. https://elearn.hrd.gov.tw/mooc/index.php [Accessed 7th October 2023].</br>
+												<center><p class="postcard-index">Figure 6:  </p></center><br><br>	
+										<!-- figure 7 -->			
+										<div class="scaled1-image">
+											<img src="https://static.igem.wiki/teams/5094/" alt="pcr1" width="1200">
+												</div>
 												
-										</p>
-							</div>
-								
-								
-								
-								
-									</br>
-								</p>
-								
-							</div>
+												<center><p class="postcard-index">Figure 5: </p></center><br><br>	
+
+							</div>	
+								<!-- End of Safety Training -->
 						</div>
 					</div>
 				</div>
+				
 				<center>
 					<div>
 						<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore-removebg-preview.png" alt="Scroll Animated Image 2">
