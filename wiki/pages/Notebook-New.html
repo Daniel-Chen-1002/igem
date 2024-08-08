@@ -27,12 +27,6 @@
             padding-top: 60px; /* Adjust this value based on the height of your navbar */
         }
 
-        #nig {
-            position: absolute;
-            top: 10px;
-            left: 550px;
-        }
-
         .portlet-content {
             height: 0;
             overflow: hidden;
@@ -53,7 +47,7 @@
             transition: transform 400ms ease;
         }
 
-        .portlet-header a.rotate {
+        input[type="checkbox"]:checked ~ .portlet-header  a{
             transform: rotate(180deg);
         }
 
@@ -96,7 +90,8 @@
             border: none;
             border-radius: 8px; /* Bigger radius for larger buttons */
             padding: 15px 30px; /* Larger padding for bigger buttons */
-            font-size: 16px; /* Larger text size */
+            font-size: large; /* Larger text size */
+            font-weight: bold;
             cursor: pointer;
             transition: background-color 300ms ease;
             flex: 1; /* Ensure buttons take up equal space */
@@ -126,6 +121,8 @@
             opacity: 0;
             transition: opacity 300ms ease, transform 300ms ease;
             transform: translate(-50%, -60%);
+            max-height: 80vh; /* Set a fixed maximum height */
+            overflow-y: auto; /* Enable vertical scrolling */
         }
 
         .popup.open {
@@ -150,6 +147,32 @@
 
         .popup-content {
             margin-top: 20px;
+        }
+
+        .popup-images {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .popup-image-container {
+            position: relative;
+            max-width: 100%;
+            flex: 1;
+            min-width: 200px; /* Adjust as needed */
+        }
+
+        .popup-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .popup-image-text {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
         }
     </style>
 </head>
@@ -180,27 +203,29 @@
         <div class="portlet">
             <div class="portlet-header" onclick="togglePortlet('{{ loop.index }}')">
                 <span id="nig">{{ month }}</span>
-                <a href="javascript:;"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <a href="javascript:;"><i class="fa fa-chevron-down" style="color: #ffffff !important" aria-hidden="true"></i></a>
             </div>
             <div class="portlet-content" id="content-portlet{{ loop.index }}">
                 <article>
                     <div class="button-container">
                         {% if month == "Sep 2023" %}
-                            <button onclick="showPopup('{{ month }}', 'Week 1', 'fu')">Week 1</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'Content for {{ month }} Week 1', [
+                                { url: 'https://example.com/image1.jpg', text: 'Text for Image 1' },
+                                { url: 'https://example.com/image2.jpg', text: 'Text for Image 2' }
+                            ])">Week 1</button>
                             <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
                             <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
                             <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
                         {% elif month == "Oct 2023" %}
-                            <button onclick="showPopup('{{ month }}', 'Week 1', 'ck')">Week 1</button>
-                            <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
-                            <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
-                            <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
-                        {% elif month in ["Nov 2023", "Feb 2024", "May 2024", "Aug 2024"] %}
                             <button onclick="showPopup('{{ month }}', 'Week 1', 'Content for {{ month }} Week 1')">Week 1</button>
                             <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
                             <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
                             <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
-                            <button onclick="showPopup('{{ month }}', 'Week 5', 'Content for {{ month }} Week 5')">Week 5</button>
+                        {% elif month == "Nov 2023" %}
+                            <button onclick="showPopup('{{ month }}', 'Week 1', 'Content for {{ month }} Week 1')">Week 1</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 3', 'Content for {{ month }} Week 3')">Week 3</button>
+                            <button onclick="showPopup('{{ month }}', 'Week 4', 'Content for {{ month }} Week 4')">Week 4</button>
                         {% else %}
                             <button onclick="showPopup('{{ month }}', 'Week 1', 'Content for {{ month }} Week 1')">Week 1</button>
                             <button onclick="showPopup('{{ month }}', 'Week 2', 'Content for {{ month }} Week 2')">Week 2</button>
@@ -213,68 +238,52 @@
         </div>
         {% endfor %}
     </div>
-    
-    <!-- Popup Structure -->
+
+    <!-- Popup Element -->
     <div id="popup" class="popup">
         <span class="popup-close" onclick="closePopup()">&times;</span>
-        <div id="popup-title" class="popup-title"></div>
-        <div id="popup-content" class="popup-content"></div>
+        <div class="popup-title" id="popup-title"></div>
+        <div class="popup-content" id="popup-content"></div>
+        <div id="popup-images" class="popup-images"></div>
     </div>
 
     <script>
-        // Toggle portlet content
-        function togglePortlet(id) {
-            var portletContent = document.getElementById('content-portlet' + id);
-            var allPortlets = document.querySelectorAll('.portlet-content');
-            
-            // Close all portlets except the clicked one
-            allPortlets.forEach(function(content) {
-                if (content !== portletContent) {
-                    content.classList.remove('expanded');
-                }
+        function showPopup(month, week, content, images = []) {
+            document.getElementById('popup-title').textContent = month + ' - ' + week;
+            document.getElementById('popup-content').textContent = content;
+
+            const imagesContainer = document.getElementById('popup-images');
+            imagesContainer.innerHTML = ''; // Clear existing images
+
+            images.forEach(image => {
+                const container = document.createElement('div');
+                container.className = 'popup-image-container';
+
+                const img = document.createElement('img');
+                img.className = 'popup-image';
+                img.src = image.url;
+                img.alt = image.text || '';
+
+                const text = document.createElement('div');
+                text.className = 'popup-image-text';
+                text.textContent = image.text || '';
+
+                container.appendChild(img);
+                container.appendChild(text);
+                imagesContainer.appendChild(container);
             });
 
-            // Toggle the clicked portlet
-            portletContent.classList.toggle('expanded');
-
-            // Rotate the arrow for the clicked portlet
-            var headers = document.querySelectorAll('.portlet-header a');
-            headers.forEach(function(header) {
-                header.classList.remove('rotate');
-            });
-
-            var targetHeader = document.querySelector(`#portlet${id} .portlet-header a`);
-            targetHeader.classList.toggle('rotate');
+            document.getElementById('popup').classList.add('open');
         }
 
-        // Show popup
-        function showPopup(title, subtitle, content) {
-            document.getElementById('popup-title').innerHTML = `${title} - ${subtitle}`;
-            document.getElementById('popup-content').innerHTML = content;
-            var popup = document.getElementById('popup');
-            popup.style.display = 'block'; // Ensure popup is displayed before adding animation
-            setTimeout(function() {
-                popup.classList.add('open');
-            }, 10); // Short delay to ensure display is applied before adding animation class
-        }
-
-        // Close popup
         function closePopup() {
-            var popup = document.getElementById('popup');
-            popup.classList.remove('open');
-            // Hide popup after animation
-            setTimeout(function() {
-                popup.style.display = 'none';
-            }, 300); // Match the duration of the CSS transition
+            document.getElementById('popup').classList.remove('open');
         }
 
-        // Close popup if clicking outside it
-        document.addEventListener('click', function(event) {
-            var popup = document.getElementById('popup');
-            if (event.target == popup) {
-                closePopup();
-            }
-        });
+        function togglePortlet(index) {
+            const content = document.getElementById('content-portlet' + index);
+            content.classList.toggle('expanded');
+        }
     </script>
 </body>
 </html>
