@@ -1,429 +1,546 @@
-{% extends "layout.html" %}
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"/>
+		<link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+		
+		<!-- Bootstrap CSS -->
+		<link href="/static/bootstrap.min.css" rel="stylesheet">
 
+		<!-- Custom CSS -->
+		<link href="/static/style.css" rel="stylesheet">
+		<link href="/static/animate.compat.css" rel="stylesheet">
+		<link href="/static/all.min.css" rel="stylesheet">    <!-- done -->
+		<link href="/static/simple-line-icons.min.css" rel="stylesheet">
+		<link href="/static/owl.carousel.min.css" rel="stylesheet">
+		<link href="/static/owl.theme.default.min.css" rel="stylesheet">
+		<link href="/static/magnific-popup.min.css" rel="stylesheet">
+		<link href="/static/theme.css" rel="stylesheet">
+		<link href="/static/theme-elements.css" rel="stylesheet">
+		<link href="/static/theme-blog.css" rel="stylesheet"><!-- problem are these -->
+		<link href="/static/theme-shop.css" rel="stylesheet">
+		<link href="/static/custom.css" rel="stylesheet">
+		<link href="/static/default.css" rel="stylesheet">
+		<link href="/static/magnific-popup.css" rel="stylesheet">
+		<link href="/static/magnific-popup.min.css" rel="stylesheet">
+		<link href="/static/animate.compat.css" rel="stylesheet">
+		<link href="/static/animate.css" rel="stylesheet">
+		<link href="/static/animate.min.css" rel="stylesheet">
+		<link href="/static/loadingpage.css" rel="stylesheet">
+		<link href="/static/navigation.css" rel="stylesheet">
+		<style>*{
+			font-family: 'Georgia', serif;
+		}
+		</style>
+		<script>
+			var overlayOpacity;
+			var textOpacity;
+		</script>
+		<script>
+			// Simulate loading completion after a delay (e.g., 3 seconds)
+			setTimeout(function() {
+			  // Hide the loading screen
+			  document.querySelector('.loading').style.display = 'none';
+			  // Show the main content
+			  document.querySelector('.content').style.display = 'block';
+			}, 3000); // 3000 milliseconds (3 seconds)
+			 data-plugin-page-transition
+		</script>
+		<title> | KCIS-Xiugang-Taipei - iGEM 2024</title>
+	</head>
+	<body>
+		<div class="loading">
+			<div class="load-container">
+				<img src="https://static.igem.wiki/teams/4650/wiki/teapot-1.gif" alt="loading" width="600" length="500">
+			</div>
+			<div class="loader-texts">
+				<div>B</div>
+				<div>R</div>
+				<div>E</div>
+				<div>W</div>
+				<div>I</div>
+				<div>N</div>
+				<div>G</div>
+				<div>.</div>
+				<div>.</div>
+				<div>.</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-footer fixed-top">
+		<style>
+			.btn-padding{
+			  margin-left: 10px
+			}
+			.dropdown-content {
+			  display: none;
+			}
+			.dropdown:hover {
+			  color: #3070d8 !important
+			}
+			.dropdown:hover .dropdown-content {
+			  display: block;
+			}
+			.nav-link{
+			  color: #ffffff !important
+			}
+			:root {
+			--primary-font: "Georgia", serif;  /* Primary font for most content */
+			--secondary-font: "Georgia", serif;   /* Secondary font for headings and specific content */
+			}
+			.navbar {
+		  transition: top 0.8s; /* Smooth transition for hiding and showing */
+			}
+			.navbar {
+			  background-color: #8a8eae !important
+			}
+			.navbar .navbar-brand {
+			  position: absolute;
+			  top: -0;
+			  left: 75;
+			}
 
+			@font-face {
+     			font-family: "Clash";
+      			src: url('https://static.igem.wiki/teams/5094/font/clashdisplay-variable.ttf') format('truetype');
+    		}
 
-{% block page_content %}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+			var prevScrollpos = window.pageYOffset;
+			var navbar = document.querySelector('.navbar');
+			var screenpos = window.ScreenY
+			window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset;
+			var loadingScreenDisplay = document.querySelector('.loading').style.display
+
+			if (prevScrollpos > currentScrollPos) {
+				navbar.style.top = "0"; // Show navbar
+				} else if (scrollY === 0 || scrollY < 0){
+				  navbar.style.top = "0"
+				} else if (prevScrollpos < currentScrollPos){
+				  navbar.style.top = "-200px"; // Adjust this value to hide the navbar completely
+				}
+				prevScrollpos = currentScrollPos;
+			  };
+			}); 
+		</script>
+		<div class="container">
+		<!---- TEAM NAME/Logo ---->
+		<a href="/">
+			<div class="navbar-brand">
+				<img src="https://static.igem.wiki/teams/5094/logo2.png" alt="TeamLogo" style="width: 200px; height: 150px;">
+			</div>
+		</a>
+		<!---- SMALL SCREEN MENU ICON ---->
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto left-aligned">
+				<!---- HOME ---->
+				<li class="nav-item">
+					<a class="nav-link btn btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px;  color: white; font-family: Georgia, serif" href="/">Home</a>
+				</li>	
+				<!---- TEAM ---->
+				<li class="nav-item dropdown">
+					<a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Team
+					</a>
+					<ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae">
+						<li><a class="dropdown-item" href="/team"style="color: #ffffff">Members</a></li>
+						<li><a class="dropdown-item" href="/attributions"style="color: #ffffff">Attributions</a></li>
+					</ul>
+				</li>
+		
+				<!---- PROJECT ---->
+				<li class="nav-item dropdown">
+					<a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Project
+				  	</a>
+				  	<ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae;">
+						<li><a class="dropdown-item" href="/description" style="color: #ffffff">Description</a></li>
+						<li><a class="dropdown-item" href="/experiments" style="color: #ffffff">Experiments</a></li>
+						<li><a class="dropdown-item" href="/engineering"style="color: #ffffff">Engineering</a></li>
+						<li><a class="dropdown-item" href="/results"style="color: #ffffff">Results</a></li>
+						<li><a class="dropdown-item" href="/contribution"style="color: #ffffff">Contribution</a></li>
+						<li><a class="dropdown-item" href="/notebook-2022"style="color: #ffffff">2022 Notebook</a></li>
+						<li><a class="dropdown-item" href="/notebook-2023"style="color: #ffffff">2023 Notebook</a></li>
+						<li><a class="dropdown-item" href="/safety"style="color: #ffffff">Safety</a></li>
+				  	</ul>
+				</li>
+		
+				<!---- WETLAB, Originally PARTS ---->
+				<li class="nav-item dropdown">
+					<a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						WETLAB
+				  	</a>
+					<ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae">
+						<li><a class="dropdown-item" href="/basic-parts"style="color: #ffffff">Basic Parts</a></li>
+						<li><a class="dropdown-item" href="/composite-parts"style="color: #ffffff">Composite Parts</a></li>
+						<li><a class="dropdown-item" href="/parts-collection"style="color: #ffffff">Part Collection</a></li>
+				 	</ul>
+				</li>
+		
+				<!---- HUMAN PRACTICES ---->
+				<li class="nav-item">
+					<a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="/human-practices">
+						Human Practices
+				  	</a>
+				</li>
+		
+				<!---- Drylab, Originally Ecucation ---->
+				<li class="nav-item">
+					<a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="/education">
+						DRYLAB
+					</a>
+				</li>
+		
+			</ul>
+		</div>
+		</div>
+		</nav>
+
+<!-- Page Content -->
+<div class="container-fluid" style="padding: 0;">
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<style>
-
-        /* Define your navigation bar styles */
-		.sidebar {
-        background-color: rgba( 212, 184, 149);
-        padding-top: 20px;
-        border-radius: 15px;
-        position: sticky;
-        top: 0;
-        overflow-y: auto; /* Add scroll functionality for small screens */
-    }
-	.font-weight-semi-bold {
-        text-align: center;
-        line-height: 2;
-    }
-    .sidebar.sidebar-bg {
-        width: 300px;
-        margin: 0 auto;
-    }
-
-	.bigger-text {
-        font-size: 20px;  /* Adjust this value to your preference */
-        font-family: 'Georgia', serif;
-    }
-
-	.custom-heading {
-    font-size: 20px; /* adjust as necessary */
-    color: rgb(86, 57, 42);
-}
-
-    .col-lg-9 {
-        max-width: 1300px;
-        margin: 10 auto;
-    }
-
-	.mid-image img {
-        transform: scale(0.85);
-        transform-origin: top left;
-    }
-	:root {
-    --primary-font: "Georgia", serif;  /* Primary font for most content */
-    --secondary-font: "Georgia", serif;   /* Secondary font for headings and specific content */
-}
-
-body {
-    font-family: var(--primary-font);
-    font-size: 16px;
-}
-
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--secondary-font);
-}
-
-
-	.special-content {
-    font-family: var(--secondary-font);
-}
-
-.reduce-space {
-    margin: 0;
-    padding: 0;
-}
-.reduce-space {
-    margin: 0;
-    padding: 0;
-    font-size: 0;  /* To counteract whitespace inherent with inline-block */
-}
-
-.reduce-space img {
-    vertical-align: top;
-}
-
-.scaled-image img {
-    transform: scale(0.6);
-    transform-origin: top left;
-}
-
+			/* Define your navigation bar styles */
+			.sidebar{
+				background-color: #8a8eae;
+				padding-top: 20px;
+				border-radius: 15px;
+				position: sticky;
+				top: 170;
+				overflow-y: auto; /* Add scroll functionality for small screens */
+			}
+			.font-weight-semi-bold {
+				text-align: center;
+				line-height: 2;
+			}
+			.sidebar.sidebar-bg {
+				width: 300px;
+				margin: 0 auto;
+			}
+			.font-weight-bold{
+				font-weight: 700;
+			}
+			.custom-heading{
+				font-size:20px;
+				color: rgb(86,57,42)
+			}
+			.bigger-text {
+				font-size: 20px;  /* Adjust this value to your preference */
+				font-family: 'Georgia', serif;
+			}
+			
 	
+			.front, .back{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				backface-visibility: hidden;
+			}
+			.col-lg-9 {
+				max-width: 1300px;
+				margin: 10 auto;
+			}
+			.postcard-index {
+				font-size: 16px;
+				font-family: 'Georgia', serif;
+			}
+			.mid-image img {
+				transform: scale(0.85);
+				transform-origin: top left;
+				margin-bottom: -100px;
+			}
+			:root {
+				--primary-font: "Georgia", serif;  
+				--secondary-font: 'Georgia', serif;
+			}
+			body {
+				font-family: var(--primary-font);
+				font-size: 16px;
+			}
+		h1, h2, h3, h4, h5, h6 {
+			font-family: var(--secondary-font);
+		}
+		.special-content {
+			font-family: var(--secondary-font);
+		}
+		.reduce-space {
+			margin-bottom:0;
+			padding:0;
+			font-size: 0;  /* To counteract whitespace inherent with inline-block */
+		}
+		.reduce-space img {
+			vertical-align: top;
+		}
+		.scaled-image img {
+			transform: scale(0.6);
+			transform-origin: top left;
+		}
+		/* Add CSS styles to control the margin between div elements */
+		.scaled-image {
+			margin-bottom: -400px; /* You can adjust this value to control the margin size */
+		}
+		.scaled1-image img {
+			transform: scale(0.6);
+			transform-origin: top left;
+		}
+		.scaled1-image {
+			 margin-bottom: -220px; /* You can adjust this value to control the margin size */
+		}
+		.scaled2-image img {
+			transform: scale(0.6);
+			transform-origin: top left;
+		}
+		.scaled2-image {
+			margin-bottom: -700px; /* You can adjust this value to control the margin size */
+		}
+	
+		.scaled3-image img {
+			transform: scale(0.6);
+			transform-origin: top left;
+		}
+		.scaled3-image {
+			margin-bottom: -100px; /* You can adjust this value to control the margin size */
+		}		
+
+		h2 strong {
+			font-family: "Clash", serif !important;
+		}
 		</style>
-	
-</head>
+	</head>
+
 	<body data-plugin-scroll-spy data-plugin-options="{'target': '#sidebar'}">
-
 		<div class="body">
-
-
 			<div role="main" class="main">
 				<section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg" 
-						style="background-image: url('https://static.igem.wiki/teams/5094/header/contribution.gif'); 
+						style="background-image: url('https://static.igem.wiki/teams/5094/header/description.gif'); 
 							   background-size: cover; 
 							   background-position: center; 
 							   height: 700px; 
 							   display: flex; 
 							   align-items: center; 
 							   justify-content: center;
-							    width: 100%;">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12 align-self-center p-static order-2 text-center">
-								<h1 class="font-weight-bold text-dark"></h1>
+							   width: 100%;">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12 align-self-center p-static order-2 text-center">
+										<h1 class="font-weight-bold text-dark"></h1>
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
 				</section>
 			</div>
-			
-			
-				
-			<div class="container-fluid- pt-3 pb-2">
 
-				<div class="row pt-2">
+		<div class="container-fluid- pt-3 pb-2">
+			<div class="row pt-2">
 					<div class="col-lg-3 position-relative">
 						<aside class="sidebar sidebar-bg" id="sidebar" data-plugin-sticky data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
-
-							<h5 class="font-weight-semi-bold">Contribution</h5>
-							<ul class="nav nav-list flex-column mb-5">
-								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#first">Troubleshooting</a></li>
-									<ul>
-									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-second-1">Identified potential amino acids to enhance flexibility</a></li>
-									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-second-2">Identified more efficient enzymes</a></li>
-									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-second-3">Identified a simpler protocol to bind proteins to cellulose</a></li>
-									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-second-4">Identified various sources of CBD</a></li>
-									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-second-5">Designed simple machines to test flexibility and strength of material substances</a></li>
-									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-second-6">Summary</a></li>
-									</ul>	
-								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#second">Parts</a></li>
-									<ul>
-										<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-second-7">RT-qPCR Data</a></li>
-									</ul>
-								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#third">EDUCATION MATERIALS</a></li>
-									<ul>
-										<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-second-1">Identified potential amino acids to enhance flexibility</a></li>
-									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-third-1">G7-8</a></li>
-									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-third-2">G11</a></li>
-									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sub-third-3">Story book</a></li>
-									</ul>
-							</ul>
-						
+							<h5 class="font-weight-semi-bold">Categories</h5>
+								<ul class="nav nav-list flex-column mb-5">
+									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#first">Project Contributions</a></li>
+									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#second">Defining the Problem: What</a></li>
+									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#third">Project Inspiration: Why</a></li>
+									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#fourth">Our Approach & Product: How</a></li>
+									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#fifth">Future Perspectives</a></li>
+									<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sixth">References</a></li>
+								</ul>	
 						</aside>
-						
-
-
-				      </div>
-					  <div class="col-lg-7">
-						<div id="first">
-							<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
-							  <center> <strong class="font-weight-extra-bold">Troubleshooting</strong></center> 
-						
-							</h2>
-							
-						</div>
-						<br>
-
-					
-
-						
-								
-								<div id="sub-second-1">
-									<p class="bigger-text">
-										These are a list of the major problems our team encountered when conducting the experiment. Throughout the process, we used troubleshooting to find solutions for each problem. Below is a brief summary of each problem, the way we resolved it, and how it can be applied to future IGEM teams. Since these problems may be encountered by other teams, they can use it as a reference. For more detailed information, please refer to the “parts” and “experiment” page.</p> 
-
-									<h4 class="font-weight-bold custom-heading">
-										<i>Identified potential amino acids to enhance flexibility</i>
-										</h4>							
-										
-								</div>
-								
-							<div id="sub-second-2">
+					</div>
+				<!--content-->
+				<div class="col-lg-7">
+					<div id="first">
+						<h2 class="font-weight-extra-normal text-7 mb-2 ">
+							<strong class="font-weight-extra-bold">Project Contributions</strong>
+						</h2>
+							<p class = "bigger-text">
+								Our team aims to enhance PETase enzyme activity by creating three specific amino acid mutations on the PETase enzyme (IsPETase<sup>S121E /D186H/R280A</sup>) under inducible promoters, T7, and pGal1,10 to express as many as the team desires. However, we ended up creating T7-IsPETase, T7-IsPETase<sup>Thr116A</sup>, T7-IsPETase<sup>Thr116A/k259Glu</sup>, T7-IsPETase<sup>Thr116A/M154Thr</sup>, and pGal1,10-IsPETase. Below are some contributions we believe our project can provide to the community.
+							</p>
+							<h4 class = "font-weight-bold custom-heading">
+								<i>New Mutated genes T7-IsPETase<sup>Thr116A</sup> T7-IsPETase<sup>Thr116A/k259Glu</sup>, T7-IsPETase<sup>Thr116A/M154Thr</sup>and their effects on degrading plastics discovered</i>
+							</h4>
 								<p class="bigger-text">
-									Our team uses spider silk proteins as a material for making SCOBY to be more flexible, specifically MaSp1 and MaSp2, with its strong elasticities. And our team chose the two amino acid sequences, MaSp1 and MaSp2, because they were the shortest and therefore the easiest to convert from amino acid sequence to DNA. For experiments that also work with spider silk proteins, the future iGEM teams can note down these characteristics of MaSp1/2.  
-										
+									We tested the effectiveness of T7-IsPETaseThr116A, T7-IsPETaseThr116A/k259Glu, and T7-IsPETaseThr116A/M154Thr in PET plastic degradation. The results…
 								</p>
-								<h4 class="font-weight-bold custom-heading">
-									<i>Identified more efficient enzymes</i>
-									</h4>							
-									<p class="bigger-text">
-										XmaI enzyme was easy to manipulate compared to SmaI and could fully cut our team’s composition part to continue the next step, T4 ligation step. When using SmaI our team needed to do a dephosphorylation enzyme step which resulted in the loss of product, this was not necessary when using XmaI. This technique can be used to clone the MaSp1 in the future by other iGEM teams. 									
-									
-					
-						<div id="sub-second-3">
-							<p class="bigger-text">
-								MaSp1 and MaSp2 don’t automatically bind to the SCOBY membrane. Through research, we found that the cellulose binding domain (CBD) can solve this problem. CBD exists in organisms to help complexes bind to cellulose for catalytic activities; it is also used in labs for protein purification. If we clone CBD gene with MaSp1/2, the gene that codes for spider silk proteins, the spider silks would be able to attach to SCOBY, which is made out of cellulose. It is important for future teams to pay attention to what MaSp1/2 needs before cloning onto the plasmid. More importantly, future teams should take note of the function of CBD and can use CBD to bind desired proteins to a cellulose membrane. 					
-							</p>
-								<h4 class="font-weight-bold custom-heading">
-									<i>Identified a simpler protocol to bind proteins to cellulose</i>
-									</h4>							
-									
-						</div>
-						<div id="sub-second-4">
-							<p class="bigger-text">
-							We were inspired by the previous iGEM team named LINKS China which used three types of cellulose-binding matrixes: CBM1, CBM2, CBM3 to bind different spider silk-like proteins. Yet, with current ability and time, we weren't able to complete the cloning. Therefore, our team sought an alternative to use simpler forms of CBM which is CBD. Through simpler protocol, we as a high school team with P1 lab can complete. Future teams should take note on how CBD is easier cloned and less complex compared to CBM, while both achieve the same function. 				
-						</p>
-								<h4 class="font-weight-bold custom-heading">
-									<i>Identified various sources of CBD</i>
-									</h4>							
-									
-						</div>
-						<div id="sub-second-5">
-							<p class="bigger-text">
-								At the beginning of searching, our team discovered that the CBD genes in specific bacterial strains couldn’t be found in Taiwan, even after reaching out to several professional labs at universities. We dug deeper to find on the NCBI website that one yeast strain, Schizosaccharomyces pombe (S. pombe) has the CBD gene called CBM1. We decided to clone the CBD found in S. Pombe since, first, our team had done several experiments with yeast before, the Saccharomyces cerevisiae, and in addition, we found that fungi’s CBD genes are shorter than bacteria’s after research, which is easier to manipulate. If future teams encounter complex procedures and genes, they can find similar gene traits and replace them in order to simplify the process: such as using CBD for a more basic way of getting the same outcome, a more feasible and time-efficient solution. Furthermore, the future team can adjust to their availability in their labs: either using bacteria or S. Pombe if they need CBD. 					
-							</p>
-								<h4 class="font-weight-bold custom-heading">
-									<i>Designed simple machines to test flexibility and strength of material substances</i>
-									</h4>							
-									
-						</div>
-						<div id="sub-second-6">
-							<p class="bigger-text">
-								Our team designed a flexibility test and strength test machine for our engineered SCOBY to see if our product had the desired enhanced characteristics. We designed our machines with adjustable clamps to hold the SCOBY width that prevents the membrane from being damaged in the process. The machines are easily comprehensible and widely applicable, so the machines we designed can be used for other teams. Since we look at shear and tensile strength, the designs could be used for testing fabric of any kind. For further details of our machine design and usage, please refer to the experiment page.  
-			
-							</p>
-								<h4 class="font-weight-bold custom-heading">
-									<i>Summary</i>
-									</h4>							
-									<p class="bigger-text">
-										In sum, our team makes breakthrough discoveries throughout the project to successfully achieve the results. We first extracted CBD gene from S.pombe via PCR because our team has prior experience with yeast. With the CBD, it allows us to clone the two most important spider silk proteins MaSp1 and MaSp2 onto the plasmid, which contributes to the flexibility of SCOBY. Thus, we discovered the enzyme cut site of Xma1 and Kpn1 to locate on the plasmid. This is very useful for future teams when conducting similar experiments to locate CBD gene. On the other hand, we use single enzyme digestion to clone MaSp1 and MaSp2 between CBD and pGal promoter and use PCR test to ensure the correct orientation. The future team should be aware of using single enzyme digestion and the orientation of the gene. 
-							</p>
+							<h4 class = "font-weight-bold custom-heading">
+								<i>Create pGal1,10-IsPETase and its effects on degrading plastics discovered</i>
+							</h4>
+								<p class = "bigger-text">
+									Other than using T7 promoter, our team also cloned the wild-type IsPETase gene downstream of the pGal1,10 promoter plasmid. The results…
+								</p>
+					</div>
 
-							
-						
-						
-						
-							<div id="second">	
-								<p class="bigger-text">
-									In the project, the team engineered MaSp 1/MaSp2 and CBD genes downstream of a plasmid with a pGal promoter, allowing us to control the transcription through the presence of galactose. Therefore, our team needed to find out when our downstream gene is activated with the presence of galactose through PCR. </p>
-								<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
-									<center> <strong class="font-weight-extra-bold">Parts</strong></center> 
-							  
-								  </h2>
-								 
-							  <br>
-						
-						
-								<div id="sub-second-7">
-									<p class="bigger-text">
-										In the project, the team engineered MaSp 1/MaSp2 and CBD genes downstream of a plasmid with a pGal promoter, allowing us to control the transcription through the presence of galactose. Therefore, our team needed to find out when our downstream gene is activated with the presence of galactose through PCR.
-									</p>
-								<h4 class="font-weight-bold custom-heading">
-									<i>RT-qPCR Data</i>
-									</h4>	
-							
-									<p class="bigger-text">
-									<br>To achieve this goal, the team performed a Galactose Induction Time Course experiment to determine the time when the downstream gene is expressed most prominently. The team exposed the plasmid to a 2% YP-galactose solution for different time intervals: 0 mins, 30 mins, 60 mins, 90 mins, 120 mins, and 22 hours. Then, we used RT-qPCR to measure the fold change in gene expression at each time point, which helps us identify when these genes transcriptions are active. The resulting data are the following: </br>		
+					<div id = "second">
+						<h2 class="font-weight-extra-normal text-7 mb-2 ">
+							<strong class="font-weight-extra-bold">Troubleshooting</strong>
+						</h2>
+							<p class = "bigger-text">
+								Throughout the project, our team encountered several problems and used troubleshooting to resolve each issue. Below is a list of summaries for each problem, solutions to the problems, and possible applications to future iGEM projects. If other teams happen to encounter similar problems, feel free to use these as references. For more information, refer to the “parts” or “experiment” page.
 							</p>
-						
-								<div class="scaled1-image">
-									<br><img src="https://static.igem.wiki/teams/4650/wiki/parts-image/bba-k4650004-bargraph.jpg" alt="pcr1" width="977" height="282">
-								</div>
-								The mRNA induction of CBD showed strong manipulation, above 5 fold induction, in the presence of galactose at 30 mins, 14 fold induction at 60mins, and the maxium of 19 fold CBD mRNA induction at 90 mins, and then backdown to 10 fold induction at 120mins, finally no detectable CBD mRNA induction at 22hours in the presence of galactose.
-								<div class="scaled1-image">
-									<br>	<br><br><img src="https://static.igem.wiki/teams/4650/wiki/parts-image/bba-k4650005-bargraph.jpg" alt="pcr1" width="977" height="282">
-								</div>
-								The mRNA induction of MaSp1-CBD showed insignificant change in the presence of galactose at 30 mins, the maximum of 2 fold induction at 60mins, and and then backdown to 1.7-1.5 fold induction at 90 and 120 mins, finally no detectable MaSp1-CBD mRNA induction at 22 hours in the presence of galactose.
-								<div class="scaled1-image">
-									<br><br><img src="https://static.igem.wiki/teams/4650/wiki/parts-image/bba-k4650006-bargraph.jpg" alt="pcr1" width="977" height="282">
-								</div>
-								The mRNA induction of MaSp2-CBD showed insignificant reduction in the presence of galactose at 30 mins compared to the 0min sample, the maximum above 2 fold induction at 90 mins, and then back down to 1.7 fold and 1.3 fold induction at 120 mins and 22 hours in the presence of galactose.
+							<h4 class = "font-weight-bold custom-heading">
+								no mutations for pGal1, 10 promoter
+							</h4>
+								<p class = "bigger-text">
+									For the IsPETase gene cloned downstream of the pGal1,10 promoter, our team couldn’t make any mutations on the IsPETase gene since the plasmid is too long. Our team decided to use pGal1,10 promoter-eGFP plasmid as a control v.s pGal1,10 promoter-IsPETase plasmid for functional assays. The best way to fix the situation is to put the mutations to the IsPETase gene sequence and ask external companies to synthesize.
+								</p>
+							<h4 class = "font-weight-bold custom-heading">
+								incorrect amino acids mutated
+							</h4>
+								<p class = "bigger-text">
+									The IsPETase gene sequence contained multiple DNA fragments with repeat regions that our team didn’t expect while designing those mutations, leading to challenges for the site-directed mutagenesis technique. The primers containing mutant nucleotides that our team desired to switch specific amino acids targeted incorrect amino acids due to these repeats so our team created T7-IsPETase, T7-IsPETase<sup>Thr116A</sup>, T7-IsPETase<sup>Thr116A/k259Glu</sup>, T7-IsPETase<sup>Thr116A/M154Thr</sup>instead. One way to solve this problem is to add the mutations to the IsPETase gene sequence directly and order the synthesized mutant gene from the mission biotech company. After that, the team will do the traditional cloning as the team did with the wild-type IsPETase gene.
+								</p>
+					</div>
 					
-					<p class="bigger-text">
-						<br>At 0 mins, three data showed no induction level, without the presence of galactose, therefore concluding that the pGal promoter is functional. Furthermore, three RT-qPCR data all showed over two-fold induction, representing significant RNA production. Through the RT-qPCR data, we can conclude that the construction of our composite parts is functional. Therefore further iGem team can adopt our composite parts.
-					</br>		
-				</p>
-
-				
-				
-						
-							<br>
-							<br>	
-					<div id="third">
-						<p class="bigger-text">
-							<br>Our contributed parts and further data can be found on the registry: pGal1,10 <a href="http://parts.igem.org/Part:BBa_K4650000" target="_blank" rel="noopener noreferrer">BBa_K4650000</a>; CBD <a href="http://parts.igem.org/Part:BBa_K4650001" target="_blank" rel="noopener noreferrer">BBa_K4650001</a>; MaSp1 <a href="http://parts.igem.org/Part:BBa_K4650002" target="_blank" rel="noopener noreferrer">BBa_K4650002</a>; MaSp2<a href="http://parts.igem.org/Part:BBa_K4650003" target="_blank" rel="noopener noreferrer">BBa_K4650003</a>; pGal1,10-CBD<a href="http://parts.igem.org/Part:BBa_K4650004" target="_blank" rel="noopener noreferrer">BBa_K4650004</a>; pGal1,10-MaSp1-CBD <a href="http://parts.igem.org/Part:BBa_K4650005" target="_blank" rel="noopener noreferrer">BBa_K4650005</a>; pGal1,10-MaSp2-CBD<a href="http://parts.igem.org/Part:BBa_K4650006" target="_blank" rel="noopener noreferrer">BBa_K4650006</a>
-						</br>	
-						<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
-							<center> <strong class="font-weight-extra-bold">EDUCATION MATERIALS</strong></h2></center>	
-					</div>		
+					<div id = "third">
+						<h2 class="font-weight-extra-normal text-7 mb-2 ">
+							<strong class="font-weight-extra-bold">Parts</strong>
+						</h2>
+					</div>
+						<h4 class = "font-weight-bold custom-heading">
+							New parts created
+						</h4>
 					
-			<div id="sub-third-1">
-				<p class="bigger-text">
-					To promote synthetic biology, the team conducted two educational workshops for grade 11 and grade 7 respectively. Through the simple-to-use lesson plan and accessible content, the team aims to make more students interested and excited about molecular biology and synthetic biology. The educational workshops will give them insight and inspire them to pursue further studies in these subjects. The lecture slide for the educational workshop introduces synthetic biology and equipment. Therefore can be utilized for future iGEM teams to share knowledge about synthetic biology and molecular biology through our accessible lesson plan and slides.
-				</p>
-			<h2 class="font-weight-bold custom-heading">
-				<i>G7-8</i>
-				</h2>
-	<p class="bigger-text">
-		The team believes that all of our presentations can be used by other institutions according to the curriculum. The G7 slides allow the iGem team to promote synthetic biology in an engaging way. For G7, the team aims to spark the interest of young students in biology. The team focuses on the usage of lab equipment including micropipette and centrifuge. The students interested in synthetic biology will be able to perform gene extraction and see a visual of DNA in the lab. Through the lab, the students will be able to familiarize themselves with lab equipment and simple synthetic biology concepts and hope to encourage them to pursue synthetic biology and iGEM. After the workshop, it also gives an opportunity for these students to talk to the current iGEM team and supervisor, leading them to further discussion about synthetic biology and inspiring them to the field. 
-</p>	
+					<div id = "fourth">
+						<h2 class="font-weight-extra-normal text-7 mb-2 ">
+							<strong class="font-weight-extra-bold">Education Materials</strong>
+						</h2>
+							<p class = "bigger-text">
+								To promote synthetic biology and increase awareness of the problem of plastic pollution, our team organized educational lectures and laboratory workshops in our school. We hope to take action in environmental conservation by educating the public more about the severity of plastic pollution and related Sustainable Development Goals (SDGs). At the same time, we hope to spark interest in younger students to take part in research related to synthetic biology. The following lesson plans and lecture slides can be used as references for future iGEM teams to share knowledge regarding molecular biology. 
+							</p>
+							<h4 class = "font-weight-bold custom-heading">
+								SP side 7th grade education workshop
+							</h4>
+							<h4 class = "font-weight-bold custom-heading">
+								2023 KCIS Xiugang Taipei iGEM X Library Collaboration Workshop
+							</h4>
+							<h4 class = "font-weight-bold custom-heading">
+								Junior high students iGEM Synergy Workshop
+							</h4>
+							<h4 class = "font-weight-bold custom-heading">
+								New iGEM Team Workshop
+							</h4>
+					</div>
 
-<div id="sub-third-2">
-	<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSrPNA7xBKtwLxHlTRuoudeBZrvoRs-wn9jOFEC3JrMVshTavCh7_sqAK9S-R2BfdTTYTuJKusr0zWW/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+					
+					<!--end-->
+
+				</div>
 			</div>
-<h2 class="font-weight-bold custom-heading">
-	<i>G11</i>
-	</h2>
-<p class="bigger-text">
-	Whereas the G11 slides allow students to gain a real lab experience from the content in the textbook, further encouraging students the concepts in synthetic biology. For G11, the team constructed a workshop related to electrophoresis. Remembering from in-class lectures,  the students learned about electrophoresis prior to 11th grade. However, a limited number of them had experience in the lab or did actually hands-on experiments about electrophoresis. Therefore the team designed a unique educational workshop including concepts of PCR and distinct steps to an electrophoresis experiment. The team aims to allow students to see the content of the lecture in a real lab scenario.
-</p>
-</div>
-
-	<p class="bigger-text">
-		In conclusion, the presentations we provided can be taught to different levels of high school students, and the team hopes that the information from the educational workshop will benefit the students’ iGEM careers. These PPT presentations can be downloaded and edited to fit teams’ needs.
-	</p>
-	<div id="sub-third-3">
-		<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQrfZKWN_NfmQ6eV37zqzjRX-6RlUww_XlOe2RGgIWZNsAQQH3YGUP2VydGJx-fgj2uuOjcx6KSySNi/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-		<h4 class="font-weight-bold custom-heading">
-			<i>Story book</i>
-			</h4>	
-	<p class="bigger-text">
-		To further promote synthetic biology and the team’s project beyond the campus, the team created a picture book regarding the project's aim and product. Through simple pictures and diagrams, the team conveys difficult biological concepts in understandable terms. In addition, to promote it beyond the country, the team collaborated with different teachers and iGem teams to translate the picturebook into multiple languages, including Chinese, German, Russian, Spanish, and more. Our team hopes that through the picture book of multiple languages, children around the world can be inspired to the field of synthetic biology and gain a better understanding of the difficult concept through simple, engaging pictures. All of our picture books can be downloaded and used for educational purposes below.
-	</p>
+		</div>
+	</div>
 	<center>
-		<p class="bigger-text"><u><b>
-			Click To Download These Picture Books!</b></u>
-		</p>
-		  <br><br><br><br>
-		  <h2 class="font-weight-extra-normal text-7 mb-2">
-			French
-		</h2>
-		
-		   <a href="https://static.igem.wiki/teams/4650/wiki/education/french-picture-book-compressed.pdf" download>
-			<img src="https://static.igem.wiki/teams/4650/wiki/education/french-green-cover.png" alt="Cover Page" width="400" height="600">
-		</a>
-		<br><br><br><br>
-		
-		<h2 class="font-weight-extra-normal text-7 mb-2">
-			Russian
-		</h2>
-		   <a href="https://static.igem.wiki/teams/4650/wiki/education/russian-picture-book-compressed.pdf" download>
-			<img src="https://static.igem.wiki/teams/4650/wiki/education/russian-green-cover.png" alt="Cover Page" width="400" height="600">
-		</a>
-		<br><br><br><br>
-		
-		
-	
-		<h2 class="font-weight-extra-normal text-7 mb-2">
-			German
-		</h2>
-		   <a href="https://static.igem.wiki/teams/4650/wiki/education/german-teacher-picture-book-compressed.pdf" download>
-			<img src="https://static.igem.wiki/teams/4650/wiki/education/german-green-cover.png" alt="Cover Page" width="400" height="600">
-		</a>
-		<br><br><br><br>
-		<h2 class="font-weight-extra-normal text-7 mb-2">
-			Spanish
-		</h2>
-		
-		   <a href="https://static.igem.wiki/teams/4650/wiki/education/spanish-picture-book-compressed.pdf" download>
-			<img src="https://static.igem.wiki/teams/4650/wiki/education/spanish-green-cover.png" alt="Cover Page" width="400" height="600">
-		</a>
-		<br><br><br><br>
-		<h2 class="font-weight-extra-normal text-7 mb-2">
-			Japanese
-		</h2>
-		
-		   <a href="https://static.igem.wiki/teams/4650/wiki/education/japanese-picture-book-compressed.pdf" download>
-			<img src="https://static.igem.wiki/teams/4650/wiki/education/japanese-green-cover.png" alt="Cover Page" width="400" height="600">
-		</a>
-		<br><br><br><br>
-		<h2 class="font-weight-extra-normal text-7 mb-2">
-			Mandarin
-		</h2>
-		
-		   <a href="https://static.igem.wiki/teams/4650/wiki/education/chinese-picture-book-compressed.pdf" download>
-			<img src="https://static.igem.wiki/teams/4650/wiki/education/chinese-green-cover.png" alt="Cover Page" width="400" height="600">
-		</a>
-		</center>
-		<br><br><br>
-	</div>
-
-	</div>
-							</br>
-					
-								
-							  </li>
-							</ul>
-						  </div>
-						
-                    </div>
-                </div>
-            </div>
-        </div>
+		<div>
+			<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore-removebg-preview.png" alt="Scroll Animated Image 2">
 		</div>
-		</div>
-		
-		<center>
-			<div>
-				<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore-removebg-preview.png" alt="Scroll Animated Image 2">
-			  </div>
-			<div>
-				<ul class="m-2 p-2" style="list-style: none; padding: 0;">
-				  <li>
-					<a class="hoverg" href="{{ url_for('pages', page='engineering') }}">
-				
-					  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/engineering-button.png" style="width: 200px; height: 256px" alt="eng-button">
-	  
+		<div>
+			<ul class="m-2 p-2" style="list-style: none; padding: 0;">
+				<li>
+					<a class="hoverg" href="/parts-collection">
+				  		<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/parts-button.png" style="width: 200px; height: 256px" alt="eng-button">
 					</a>            
-					<a class="hoverg" href="{{ url_for('pages', page='parts-collection') }}">
-	  
-					  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/parts-button.png" style="width: 200px; height: 257px" alt="imp-button">
-	  
+					<a class="hoverg" href="/experiments">
+				  		<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/experiments-button.png" style="width: 200px; height: 257px" alt="imp-button">
 					</a>            
-					<a class="hoverg" href="{{ url_for('pages', page='education') }}">
-		
-					  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/education-button.png" style="width: 200px; height: 256px" alt="team-button">
-	  
+					<a class="hoverg" href="/results">
+				  		<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/results-button.png" style="width: 200px; height: 256px" alt="team-button">
 					</a>            
-					<a class="hoverg" href="{{ url_for('pages', page='notebook-2022') }}">
-		 
-					  <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/notebook-button.png" style="width: 200px; height: 256px" alt="safety-button">
-	  
+					<a class="hoverg" href="/human-practices">
+				  		<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/hp-button.png" style="width: 200px; height: 256px" alt="safety-button">
 					</a>
-					<a class="hoverg" href="{{ url_for('pages', page='contribution') }}">
-					
-						<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/contribution-button.png" style="width: 200px; height: 256px" alt="des-button">
-				  
-					  </a>
-				  </li>
-				</ul>
-			  </div>
-			</center>
-</body>
-{% endblock %}
+					<a class="hoverg" href="/description">
+						<img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/description-button.png" style="width: 200px; height: 256px" alt="des-button">
+			  		</a>
+			  	</li>
+			</ul>
+		</div>
+	</center>
+	</body>
+</html>
+</div>
+<!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+<style>
+	.hoverg {
+		transition: 0.4s;
+		opacity: 1;
+	}
+
+	/* Define the hover state for .hover1 */
+	.hoverg:hover {
+	  opacity: 0.5;
+	}
+	
+	.bg-footer {
+	  background-color: #8a8eae !important;
+	}
+</style>
+
+	<footer class="pt-5 pb-5 footer py-5 mt-5 bg-footer text-white">
+		<div class="container-fluid" style="padding: 0;">
+			<table class="footer_table" style="width: 100%; border-collapse: collapse; text-align: center;">
+		 	<tr>
+				<td class="col-lg-1 col-xs-12" style="padding: 0;">
+					<img src="https://static.igem.wiki/teams/4650/wiki/igemlogo.png" alt="" style="width: 200px; height: 100px;">
+				</td>
+				<td class="col-lg-3 col-xs-12" style="padding: 0;">
+					<h3 class="mt-lg-0 mt-sm-3" style="font-weight: bold;">Follow Us</h3>
+						<ul class="m-2 p-2" style="list-style: none; padding: 0;">
+							<li>
+								<a href="https://www.instagram.com/igem.kcis2023/">
+									<div class="hoverg">
+										<img src="https://static.igem.wiki/teams/4650/wiki/insta.png" alt="Instagram" style="width: 150px; height: 75px;">
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/@KC_XiugangiGEM/featured">
+									<div class="hoverg">
+										<img src="https://static.igem.wiki/teams/4650/wiki/yt.png" alt="Youtube" style="width: 150px; height: 75x;">
+									</div>
+								</a>
+							</li>
+						</ul>
+				</td>
+				<td class="col-lg-3 col-xs-12">
+					<h3 class="mt-lg-0 mt-sm-4 mb-3" style="font-weight: bold;">Contact Us</h3>
+						<ul class="m-2 p-2" style="list-style: none; padding: 0;">
+						<li>
+							<a href="https://www.kcis.ntpc.edu.tw/_XiugangCampus/zh/index.html">
+								<div class="hoverg">
+									<img src="https://static.igem.wiki/teams/4650/wiki/xg-logo-cir.png" alt="Instagram" style="width: 150px; height: 150px;">
+								</div>
+							</a>
+						</li>
+						</ul>
+				</td>
+				<td class="col-lg-3 col-xs-12">
+					<a href="/"><img src="https://static.igem.wiki/teams/5094/logo3.png" alt="Instagram" style="width: 220px; height: 125px;"></a>
+				</td>
+		  	</tr>
+			</table>
+
+	  </div>
+		<hr>
+		<!-- The following MUST be on every page: license information and link to the repository on gitlab.igem.org -->
+		<div class="row mt-4">
+			<div class="col">
+				<p class="mb-0" style="margin-left: 10px; font-size: 18px">© 2023 - Content on this site is licensed under a <a class="subfoot" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a></p>
+			  	<p style="margin-left: 10px; font-size: 18px">The repository used to create this website is available at <a href="https://gitlab.igem.org/2023/kcis-xiugang-taipei">gitlab.igem.org/2023/kcis-xiugang-taipei</a></p>
+		  	</div>
+		</div>
+		</footer>
+			<!-- Bootstrap Bundle with Popper -->
+			<script src="/static/bootstrap.bundle.min.js"></script>
+			<script src="/static/theme.js"></script>
+			<script src="/static/theme.init.js"></script>
+			<script src="/static/plugins.js"></script>
+			<script src="/static/plugins.min.js"></script>
+			<script src="/static/modernizr.min.js"></script>
+</body>	
+</html> <!--end-->
