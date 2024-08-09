@@ -1,3 +1,4 @@
+/* Center the loading page both horizontally and vertically */
 .loading {
   position: fixed;
   top: 0;
@@ -8,7 +9,7 @@
   justify-content: center;
   overflow: hidden;
   align-items: center;
-  background-color: #3d4680 ;/* Set a solid background color here */
+background-image: url('https://static.igem.wiki/teams/5094/team/ocean-for-team-page.jpg');/* Set a solid background color here */
   z-index: 999; /* Set a high z-index value to ensure it appears on top of other content */
 }
 
@@ -35,7 +36,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 10px; /* Adjust the margin as needed */
-  color: #f2f4e0;
+  color: rgb(112, 79, 22);
 }
 
 /* Style the individual letters */
