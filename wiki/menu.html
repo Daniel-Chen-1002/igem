@@ -18,9 +18,10 @@
     :root {
     --primary-font: "Georgia", serif;  /* Primary font for most content */
     --secondary-font: "Georgia", serif;   /* Secondary font for headings and specific content */
+    --test-font: "Poppins", serif;
     }
     .navbar {
-  transition: top 0.8s; /* Smooth transition for hiding and showing */
+  transition: top 0.6s; /* Smooth transition for hiding and showing */
     }
     .navbar {
       background-color: #8a8eae !important
@@ -29,6 +30,10 @@
       position: absolute;
       top: -0;
       left: 100;
+    }
+    @font-face {
+      font-family: "Clash";
+      src: url('https://static.igem.wiki/teams/5094/font/clashdisplay-variable.ttf') format('truetype');
     }
   </style>
 <script>
@@ -40,13 +45,15 @@
     var currentScrollPos = window.pageYOffset;
     var loadingScreenDisplay = document.querySelector('.loading').style.display
 
-      if (prevScrollpos > currentScrollPos) {
+      if (prevScrollpos > (currentScrollPos+15)) {
         navbar.style.top = "0"; // Show navbar
-      } else if (scrollY === 0 || scrollY < 0){
+      } else if (scrollY === 0 || scrollY < 100){
         navbar.style.top = "0"
-      } else if (prevScrollpos < currentScrollPos){
+      } else if (prevScrollpos < (currentScrollPos - 10)){
         navbar.style.top = "-200px"; // Adjust this value to hide the navbar completely
-      }
+      } else if (prevScrollpos == currentScrollPos && window.pageYOffset > 350){
+        navbar.style.top = "-200px"; // Adjust this value to hide the navbar completely
+     }
       prevScrollpos = currentScrollPos;
     };
   }); 
@@ -69,12 +76,12 @@
 
         <!---- HOME ---->
         <li class="nav-item">
-          <a class="nav-link btn btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px;  color: white; font-family: Georgia, serif" href="{{ url_for('home') }}">Home</a>
+          <a class="nav-link btn btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px !important;  color: white; font-family: Clash, serif" href="{{ url_for('home') }}">Home</a>
         </li>
 
         <!---- TEAM ---->
         <li class="nav-item dropdown">
-          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Clash, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Team
           </a>
           <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae">
@@ -85,7 +92,7 @@
 
         <!---- PROJECT ---->
         <li class="nav-item dropdown">
-          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Clash, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Project
           </a>
           <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae;">
@@ -97,12 +104,14 @@
             <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook-2023') }}"style="color: #ffffff">2023 Notebook</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook-2024') }}"style="color: #ffffff">2024 Notebook</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='safety') }}"style="color: #ffffff">Safety</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook-new') }}"style="color: #ffffff">New Notebook</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook-testing') }}"style="color: #ffffff">Testing Notebook</a></li>
           </ul>
         </li>
 
         <!---- WETLAB, Originally PARTS ---->
         <li class="nav-item dropdown">
-          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Clash, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             WETLAB
           </a>
           <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae">
@@ -113,15 +122,20 @@
         </li>
 
         <!---- HUMAN PRACTICES ---->
-        <li class="nav-item">
-          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="{{ url_for('pages', page='human-practices') }}">
-            Human Practices
+        <li class="nav-item dropdown">
+          <a class="nav-link data-hash dropdown-toggle btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Clash, serif" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            HUMAN PRACTICES
           </a>
+          <ul class="dropdown-content dropdown-menu" aria-labelledby="navbarDropdown" style="font-family: Georgia, serif; background-color:#8a8eae">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='human-practices') }}"style="color: #ffffff">Integrated HP</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='education') }}"style="color: #ffffff">Education</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='sustainable') }}"style="color: #ffffff">SDGs</a></li>
+          </ul>
         </li>
 
         <!---- Drylab, Originally Ecucation ---->
         <li class="nav-item">
-          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Georgia, serif" href="{{ url_for('pages', page='education') }}">
+          <a class="nav-link btn btn-padding btn-3d btn-effect-4 btn-modern rounded-0 mb-2 padding" style="background-color: #8a8eae; border-color: #8a8eae; font-size: 15px; color: white; font-family: Clash, serif" href="{{ url_for('pages', page='dry-lab') }}">
             DRYLAB
           </a>
         </li>

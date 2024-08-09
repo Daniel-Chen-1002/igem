@@ -1,0 +1,560 @@
+{% extends "layout.html" %}
+
+{% block page_content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .additional-buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+            margin-top: 20px; /* Add some space above the additional buttons */
+        }
+
+        .botton_note,
+        .botton_note:focus {
+            position: relative;
+            z-index: 0;
+            min-width: 200px;
+            border: 2px solid currentColor;
+            border-radius: 48px;
+            color: #FF0FF0;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            overflow: hidden;
+            transition: 0.2s transform ease-in-out;
+            will-change: transform;
+            padding: 10px 20px;
+        }
+
+        .botton_note:after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            background-color: #ff0ff0;
+            border-radius: 3rem;
+            transform: translate(-100%, 0) rotate(10deg);
+            transform-origin: top left;
+            transition: 0.2s transform ease-out;
+            will-change: transform;
+        }
+
+        .botton_note:hover:after {
+            transform: translate(0, 0);
+        }
+
+        .botton_note:hover {
+            border: 2px solid transparent;
+            color: #FFFFFF;
+            transform: scale(1.05);
+            will-change: transform;
+        }
+
+        .botton_note.active {
+            border-color: #FF0FF0;
+            color: #FFFFFF;
+            background-color: #FF0FF0;
+        }
+
+        /* Popup styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: -150;
+    width: 100%;
+    height: 200%;
+    overflow: center; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Limit width */
+    max-height: 80vh; /* Limit height to 80% of viewport height */
+    position: relative;
+    border-radius: 10px; /* Rounded corners */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Optional: Add a scrollbar style for better appearance */
+.popup-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.popup-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup-close:hover,
+.popup-close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Next week*/
+#next-week,
+#next-week:focus {
+    position: relative;
+    min-width: 150px;
+    background-color: black;
+    border-radius: 4em;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 0.4s;
+    padding: 10px 20px;
+}
+#next-week:hover {
+    background-color: #3A3A3A;
+    color: white;
+    transition-duration: 0.1s;
+}
+#next-week:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px white;
+    border-radius: 4em;
+}
+#next-week:active:after {
+    opacity: 1;
+    transition: 0s;
+    box-shadow: 0 0 0 0 white;
+}
+#next-week:active {
+    top: 1px;
+}
+#next-week{
+    right:-260;
+}
+
+/*Sep-next*/
+#Sep-next,
+#Sep-next:focus {
+    position: relative;
+    min-width: 150px;
+    background-color: black;
+    border-radius: 4em;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 0.4s;
+    padding: 10px 20px;
+}
+#Sep-next:hover {
+    background-color: #3A3A3A;
+    color: white;
+    transition-duration: 0.1s;
+}
+#Sep-next:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px white;
+    border-radius: 4em;
+}
+#Sep-next:active:after {
+    opacity: 1;
+    transition: 0s;
+    box-shadow: 0 0 0 0 white;
+}
+#Sep-next:active {
+    top: 1px;
+}
+#Sep-next{
+    left: 410;
+}
+
+/*previous week*/
+#previous-week,
+#previous-week:focus {
+    position: relative;
+    min-width: 100px;
+    background-color: black;
+    border-radius: 4em;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 0.4s;
+    padding: 10px 20px;
+}
+#previous-week:hover {
+    background-color: #3A3A3A;
+    color: white;
+    transition-duration: 0.1s;
+}
+#previous-week:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px white;
+    border-radius: 4em;
+}
+#previous-week:active:after {
+    opacity: 1;
+    transition: 0s;
+    box-shadow: 0 0 0 0 white;
+}
+#previous-week:active {
+    top: 1px;
+}
+#previous-week{
+    left: 0;
+}
+    </style>
+</head>
+<body>
+    <div role="main" class="main">
+        <section class="page-header page-header-modern section section-with-divider mb-0 mt-0 page-header-lg" 
+                style="background-image: url('https://static.igem.wiki/teams/5094/header/notebook.gif'); 
+                       background-size: cover; 
+                       background-position: center; 
+                       height: 700px; 
+                       display: flex; 
+                       align-items: center; 
+                       justify-content: center;
+                       max-width: 100%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 align-self-center p-static order-2 text-center">
+                        <h1 class="font-weight-bold text-dark"></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="button-container">
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('sep2023', this)">Sep 2023</a>
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('oct2023', this)">Oct 2023</a>
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('nov2023', this)">Nov 2023</a>
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('dec2023', this)">Dec 2023</a>
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('jan2024', this)">Jan 2024</a>
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('feb2024', this)">Feb 2024</a>
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('mar2024', this)">Mar 2024</a>
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('apr2024', this)">Apr 2024</a>
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('may2024', this)">May 2024</a>
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('jun2024', this)">Jun 2024</a>
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('jul2024', this)">Jul 2024</a>
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('aug2024', this)">Aug 2024</a>
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('sep2024', this)">Sep 2024</a>
+        <a href="javascript:void(0)" class="botton_note" onclick="showAdditionalButtons('oct2024', this)">Oct 2024</a>
+    </div>
+
+    <div id="additional-buttons-container" class="additional-buttons-container"></div>
+
+    <!-- Popup Container -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <h2 id="popup-title"></h2>
+            <div id="popup-body">
+                <!-- Placeholder for content -->
+                <p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <!-- Edit the content below -->
+                <!-- Content for <span id="popup-month-week"></span> goes here. You can add images and other HTML elements. -->
+            </div>
+            <div id="popup-navigation">
+                <a href="javascript: void(0)" id="previous-week" onclick="navigateWeek(-1)">Previous Week</a>
+                <a href="javascript: void(0)" id="next-week" onclick="navigateWeek(1)">Next Week</a>
+                <a href="javascript: void(0)" id="Sep-next" onclick="navigateWeek(1)">Next Week</a>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script>
+  const popupContents = {
+    'sep2023': {
+        '1': '<p>alpha</p><img src="https://s.yimg.com/ny/api/res/1.2/_ULYshiHr4enpQPyxHCdSw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0MA--/https://media.zenfs.com/ko/ftvn.com.tw/9684146929a65fd7b49fe765b7c7cd49" alt="Chairman Lee" style="width: 100%; height: auto;"><p>HEHE</p>',
+        '2': '<p>bravo</p><img src ="https://www.kcis.ntpc.edu.tw/_XiugangCampus/img/people/principal.jpg" alt="Principle"><p>heeheeheeHAW</p>',
+        '3': 'charlie',
+        '4': 'delta'
+    },
+    'oct2023': {
+        '1': 'echo',
+        '2': 'foxtra',
+        '3': 'golf',
+        '4': 'hotel'
+    },
+    'nov2023': {
+        '1': 'india',
+        '2': 'juliet',
+        '3': 'kilo',
+        '4': 'lima',
+        '5': 'mike'
+    },
+    'dec2023': {
+        '1': 'november',
+        '2': 'oscar',
+        '3': 'papa',
+        '4': 'quebec'
+    },
+    'jan2024': {
+        '1': 'romeo',
+        '2': 'sierra',
+        '3': 'tango',
+        '4': 'uniform'
+    },
+    'feb2024': {
+        '1': 'victor',
+        '2': 'whiskey',
+        '3': 'xray',
+        '4': 'yankee',
+        '5': 'zulu'
+    },
+    'mar2024': {
+        '1': 'apple',
+        '2': 'ball',
+        '3': 'cat',
+        '4': 'dog'
+    },
+    'apr2024': {
+        '1': 'fox',
+        '2': 'golf',
+        '3': 'hike',
+        '4': 'ink'
+    },
+    'may2024': {
+        '1': 'jade',
+        '2': 'king',
+        '3': 'lamp',
+        '4': 'member',
+        '5': 'name'
+    },
+    'jun2024': {
+        '1': 'octopus',
+        '2': 'papaya',
+        '3': 'queen',
+        '4': 'race'
+    },
+    'jul2024': {
+        '1': 'sing',
+        '2': 'tell',
+        '3': 'unique',
+        '4': 'victory'
+    },
+    'aug2024': {
+        '1': 'win',
+        '2': 'xafds',
+        '3': 'york',
+        '4': 'zebra',
+        '5': 'adfsghmnbgf'
+    },
+    'sep2024': {
+        '1': 'basegrdhf',
+        '2': 'csdfgf',
+        '3': 'dsfdsgb',
+        '4': 'edfsgds'
+    },
+    'oct2024': {
+        '1': 'fafgdhds',
+        '2': 'gfsgdds',
+        '3': 'haesfdgfd',
+        '4': 'isdfgdfs'
+    }
+};
+
+const monthOrder = [
+    'sep2023', 'oct2023', 'nov2023', 'dec2023',
+    'jan2024', 'feb2024', 'mar2024', 'apr2024',
+    'may2024', 'jun2024', 'jul2024', 'aug2024',
+    'sep2024', 'oct2024'
+];
+
+function showAdditionalButtons(month, buttonElement) {
+    // Remove active class from all buttons
+    document.querySelectorAll('.botton_note').forEach(button => button.classList.remove('active'));
+
+    // Add active class to the clicked button
+    buttonElement.classList.add('active');
+
+    const container = document.getElementById('additional-buttons-container');
+    container.innerHTML = ''; // Clear existing buttons
+
+    const weeks = popupContents[month];
+    for (const week in weeks) {
+        const weekButton = document.createElement('a');
+        weekButton.href = 'javascript:void(0)';
+        weekButton.className = 'botton_note';
+        weekButton.innerText = `Week ${week}`;
+        weekButton.onclick = function () {
+            openPopup(month, week, weeks[week]);
+        };
+        container.appendChild(weekButton);
+    }
+}
+
+let currentMonth, currentWeek;
+
+function openPopup(month, week, content) {
+    const monthNames = {
+        'sep2023': 'September 2023',
+        'oct2023': 'October 2023',
+        'nov2023': 'November 2023',
+        'dec2023': 'December 2023',
+        'jan2024': 'January 2024',
+        'feb2024': 'February 2024',
+        'mar2024': 'March 2024',
+        'apr2024': 'April 2024',
+        'may2024': 'May 2024',
+        'jun2024': 'June 2024',
+        'jul2024': 'July 2024',
+        'aug2024': 'August 2024',
+        'sep2024': 'September 2024',
+        'oct2024': 'October 2024'
+    };
+
+    currentMonth = month;
+    currentWeek = parseInt(week, 10);
+
+    const popup = document.getElementById('popup');
+    const popupTitle = document.getElementById('popup-title');
+    const popupBody = document.getElementById('popup-body');
+
+    // Set the title and content of the popup
+    popupTitle.innerText = `${monthNames[month]} Week ${week}`;
+    popupBody.innerHTML = `<p>${content}</p>`;
+
+    // Display the popup
+    popup.style.display = 'block';
+
+    // Enable or disable navigation buttons based on current week
+    updateNavigationButtons();
+}
+
+function updateNavigationButtons() {
+    const weeks = popupContents[currentMonth];
+    const currentMonthIndex = monthOrder.indexOf(currentMonth);
+    
+    const prevButton = document.getElementById('previous-week');
+    const nextButton = document.getElementById('next-week');
+    const sepnext = document.getElementById('Sep-next');
+
+    // Determine when to show the "Previous Week" button
+    prevButton.style.display = (currentWeek > 1 || currentMonthIndex > 0) ? 'inline-block' : 'none';
+
+    // Hide all buttons by default
+    nextButton.style.display = 'none';
+    sepnext.style.display = 'none';
+
+    // Determine when to show the "Next Week" or "Sep-next" button
+    if (currentMonth === 'sep2023' && currentWeek === 1) {
+        sepnext.style.display = 'inline-block'; // Show "Sep-next" button for September 2023, Week 1
+    } else {
+        nextButton.style.display = (currentWeek < Object.keys(weeks).length || currentMonthIndex < monthOrder.length - 1) ? 'inline-block' : 'none';
+    }
+}
+
+
+
+function navigateWeek(direction) {
+    const weeks = popupContents[currentMonth];
+    let newWeek = currentWeek + direction;
+
+    if (newWeek < 1) {
+        // Move to previous month
+        const currentMonthIndex = monthOrder.indexOf(currentMonth);
+        if (currentMonthIndex > 0) {
+            const prevMonth = monthOrder[currentMonthIndex - 1];
+            newWeek = Object.keys(popupContents[prevMonth]).length;
+            openPopup(prevMonth, newWeek, popupContents[prevMonth][newWeek]);
+        }
+    } else if (newWeek > Object.keys(weeks).length) {
+        // Move to next month
+        const currentMonthIndex = monthOrder.indexOf(currentMonth);
+        if (currentMonthIndex < monthOrder.length - 1) {
+            const nextMonth = monthOrder[currentMonthIndex + 1];
+            newWeek = 1;
+            openPopup(nextMonth, newWeek, popupContents[nextMonth][newWeek]);
+        }
+    } else {
+        // Stay within the same month
+        openPopup(currentMonth, newWeek, weeks[newWeek]);
+    }
+}
+
+function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
+
+// Close the popup when clicking outside of the popup content
+window.onclick = function (event) {
+    const popup = document.getElementById('popup');
+    if (event.target === popup) {
+        closePopup();
+    }
+}
+    </script>
+</body>
+</html>
+{% endblock %}
