@@ -1,994 +1,539 @@
 {% extends "layout.html" %}
 
-
-
 {% block page_content %}
 
-    <html lang="en">
+<html lang="en">
 
-    <head>
-        <style>
-            /* Define your navigation bar styles */
-            @font-face {
-				font-family: "regular Clash";
-				src: url('https://static.igem.wiki/teams/5094/font/clashdisplay-regular.otf') format('truetype');
-            }
-            .sidebar {
-                background-color: #8a8eae;
-                padding-top: 15px;
-                border-radius: 15px;
-                position: sticky;
-                top: 195;
-                overflow-y: auto;
-            }
-            .nav-link{
-                font-family: 'regular Clash';
-            }
+<head>
 
-            .font-weight-semi-bold {
-                text-align: left;
-                line-height: 2;
-            }
-
-            .sidebar.sidebar-bg {
-                width: 300px;
-                margin: 0 auto;
-            }
-
-            .bigger-text {
-                font-size: 20px;
-                /* Adjust this value to your preference */
-                font-family: 'Georgia', serif;
-            }
-
-            .col-lg-9 {
-                max-width: 1300px;
-                margin: 10 auto;
-            }
-
-            .scaled-image img {
-                transform: scale(0.6);
-                transform-origin: top left;
-
-            }
-
-            /* Add CSS styles to control the margin between div elements */
-            .scaled-image {
-                margin-bottom: -200px;
-                /* You can adjust this value to control the margin size */
-            }
-
-            .scaled1-image img {
-                transform: scale(0.6);
-                transform-origin: top left;
-
-            }
-
-            .scaled1-image {
-                margin-bottom: -100px;
-                /* You can adjust this value to control the margin size */
-            }
-
-            .scaled2-image img {
-                transform: scale(0.6);
-                transform-origin: top left;
-
-            }
-
-            .scaled2-image {
-                margin-bottom: -700px;
-                /* You can adjust this value to control the margin size */
-            }
-            .scaled3-image img {
-                transform: scale(0.6);
-                transform-origin: top left;
-
-            }
-
-            .scaled3-image {
-                margin-bottom: -550px;
-                /* You can adjust this value to control the margin size */
-            }
-
-
-            :root {
-                --primary-font: "Georgia", serif;
-                /* Primary font for most content */
-                --secondary-font: "Georgia", serif;
-                /* Secondary font for headings and specific content */
-            }
-
-            body {
-                font-family: var(--primary-font);
-                font-size: 16px;
-            }
-
-            h1,
-            h2,
-            h3,
-            h4,
-            h6 {
-                font-family: var(--secondary-font);
-            }
-            .font-weight-extra-bold{
-				line-height: 2;
-				font-family: "Clash"!important;
-				color:#373434;
-				letter-spacing: 1px;
-            }
-
-            .custom-heading {
-                font-size: 20px;
-                /* adjust as necessary */
-                color: rgb(86, 57, 42);
-            }
-
-            .special-content {
-                font-family: var(--secondary-font);
-            }
-
-            .postcard-index {
-			font-size: 16px;
-			font-family: 'Georgia', serif;
-		    }
-        .font-weight-semi-bold{
-            font-family:'regular Clash' !important;
+    <style>
+        /* Define your navigation bar styles */
+        @font-face {
+            font-family: "regular Clash";
+            src: url('https://static.igem.wiki/teams/5094/font/clashdisplay-regular.otf') format('truetype');
         }
-        </style>
 
+        .sidebar {
+            background-color: #8a8eae;
+            padding-top: 15px;
+            border-radius: 15px;
+            position: sticky;
+            top: 195px; /* **Added 'px' to top value** */
+            overflow-y: auto;
+        }
 
+        .nav-link {
+            font-family: 'regular Clash';
+        }
 
+        .font-weight-semi-bold {
+            text-align: left;
+            line-height: 2;
+        }
 
+        .sidebar.sidebar-bg {
+            width: 300px;
+            margin: 0 auto;
+        }
 
-        </style>
+        .bigger-text {
+            font-size: 20px;
+            /* Adjust this value to your preference */
+            font-family: 'Georgia', serif;
+        }
 
-    </head>
+        .col-lg-9 {
+            max-width: 1300px;
+            margin: 10 auto;
+        }
 
-    <body data-plugin-scroll-spy data-plugin-options="{'target': '#sidebar'}">
+        .scaled-image img {
+            transform: scale(0.6);
+            transform-origin: top left;
+        }
 
-        <div class="body">
+        /* Add CSS styles to control the margin between div elements */
+        .scaled-image {
+            margin-bottom: -200px;
+            /* You can adjust this value to control the margin size */
+        }
 
+        .scaled1-image img {
+            transform: scale(0.6);
+            transform-origin: top left;
+        }
 
-            <div role="main" class="main">
-                <section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg" style="background-image: url('https://static.igem.wiki/teams/5094/header/experiments.gif'); 
-							   background-size: cover; 
-							   background-position: center; 
-							   height: 700px; 
-							   display: flex; 
-							   align-items: center; 
-							   justify-content: center;">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 align-self-center p-static order-2 text-center">
-                                <h1 class="font-weight-bold text-dark"></h1>
-                            </div>
+        .scaled1-image {
+            margin-bottom: -100px;
+            /* You can adjust this value to control the margin size */
+        }
+
+        .scaled2-image img {
+            transform: scale(0.6);
+            transform-origin: top left;
+        }
+
+        .scaled2-image {
+            margin-bottom: -700px;
+            /* You can adjust this value to control the margin size */
+        }
+
+        .scaled3-image img {
+            transform: scale(0.6);
+            transform-origin: top left;
+        }
+
+        .scaled3-image {
+            margin-bottom: -550px;
+            /* You can adjust this value to control the margin size */
+        }
+
+        :root {
+            --primary-font: "Georgia", serif;
+            /* Primary font for most content */
+            --secondary-font: "Georgia", serif;
+            /* Secondary font for headings and specific content */
+        }
+
+        body {
+            font-family: var(--primary-font);
+            font-size: 16px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        **h5,** /* **Added h5 to the font family definition** */
+        h6 {
+            font-family: var(--secondary-font);
+        }
+
+        .font-weight-extra-bold {
+            line-height: 2;
+            font-family: "Clash" !important;
+            color: #373434;
+            letter-spacing: 1px;
+        }
+
+        .custom-heading {
+            font-size: 20px;
+            /* adjust as necessary */
+            color: rgb(86, 57, 42);
+        }
+
+        .special-content {
+            font-family: var(--secondary-font);
+        }
+
+        .postcard-index {
+            font-size: 16px;
+            font-family: 'Georgia', serif;
+        }
+
+        .font-weight-semi-bold {
+            font-family: 'regular Clash' !important;
+        }
+    </style>
+
+</head>
+
+<body data-plugin-scroll-spy data-plugin-options="{'target': '#sidebar'}">
+
+    <div class="body">
+        <div role="main" class="main">
+            <section class="page-header page-header-modern section section-with-divider mb-0 page-header-lg"
+                style="background-image: url('https://static.igem.wiki/teams/5094/header/experiments.gif');
+                               background-size: cover;
+                               background-position: center;
+                               height: 700px;
+                               display: flex;
+                               align-items: center;
+                               justify-content: center;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 align-self-center p-static order-2 text-center">
+                            <h1 class="font-weight-bold text-dark"></h1>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
+        </div>
+
+        <div class="container-fluid- pt-3 pb-2">
+
+            <div class="row pt-2">
+                <div class="col-lg-3 position-relative">
+                    <aside class="sidebar sidebar-bg" id="sidebar" data-plugin-sticky
+                        data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
+
+                        <h5 class="font-weight-semi-bold">
+                            <center>Experiments</center>
+                        </h5>
+                        <ul class="nav nav-list flex-column mb-5">
+                            <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95"
+                                    href="#first">Experiment Aims</a></li>
+                            <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95"
+                                    href="#second">Choosing Target Genes</a></li>
+                            <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95"
+                                    href="#third">Creating our Genetically Engineered Composition Parts</a></li>
+                            <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95"
+                                    href="#fourth">Checking Our Products/Functional Assays</a></li>
+                            <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95"
+                                    href="#fifth">Protocols</a></li>
+                            <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95"
+                                    href="#sixth">Works Cited</a></li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+                <div class="col-lg-7">
+                    <!--Experiment Aims-->
+                    <div id="first">
+                        <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+
+                            <strong class="font-weight-extra-bold">Experiment Aims</strong>
+                        </h2>
+                        <p class="bigger-text">
+                            Plastic, being the cheapest and thus most commonly used packaging materials, pose a grave
+                            environmental threat when its disposal is not properly managed. Our team’s aim is to create a
+                            genetically engineered mutant IsPETase that is capable of degrading PET plastic more efficiently,
+                            consequently reducing the amount of plastics and microplastics that are in the ocean.
+                        </p>
+                    </div>
+
+                    <!--Choosing target genes-->
+                    <div id="second">
+                        <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+
+                            <strong class="font-weight-extra-bold">Choosing Target genes</strong>
+                        </h2>
+                        <h4 class="font-weight-bold custom-heading">
+                            <i>PETase</i>
+                        </h4>
+                        <p class="bigger-text">
+                            PETase is an enzyme that belongs to the esterase class of enzymes. It catalyzes the breakdown of
+                            polyethylene terephthalate (PET) plastic through hydrolysis, resulting in the formation of monomeric
+                            mono-2-hydroxyethyl terephthalate (MHET), BHET (bis(2-hydroxyethyl) terephthalate), and
+                            terephthalic acid (TPA), opening up possibilities for biological PET recycling and degradation. The
+                            most popular PETase enzyme was identified in 2016 from a strain of bacteria called Ideonella
+                            sakaiensis 201-F6, found in sludge samples collected near a PET bottle recycling site in Japan
+                            (Yoshida). IsPETase studied by Japanese groups for several years showed that it has more tolerance
+                            for catalytic activities to degrade PET plastic in variable environments (citations from intro).
+                            IsPETase has been confirmed to have the highest PET degradation activity under mild conditions of all
+                            PET-degrading enzymes from different microorganisms, as evidenced by its structure and chemical
+                            bonding (Anuar). One of the key factors to this is the enzyme's structure, in which IsPETase has a
+                            broader and more open active-site cleft compared to other enzymes like cutinases, which allows it to
+                            accommodate PET molecules more effectively. The 3 amino acid mutations our team created will widen
+                            the cleft, allowing the catalytic activities to perform easier and faster, enhancing the overall
+                            efficiency of PET product recycling (GAO). The wider substrate-binding pocket of PETase is critical
+                            for PET hydrolysis, which is the major process of breaking down plastics into monomeric blocks.
+                            Furthermore, IsPETase possesses two disulfide bonds in its active site, contributing to its efficiency
+                            in PET substrate binding.
+                        </p>
+                        <p class="bigger-text">
+                            After many studies and experiments, several characteristics make IsPETase a promising candidate for
+                            the degradation and recycling of PET at ideal temperatures, and also can easily perform IsPETase at
+                            room temperature. As such, it holds significant promise for applications in bioremediation and
+                            sustainable plastic waste management. By degrading PET into its monomers, IsPETase can contribute to
+                            the reduction of plastic pollution and facilitate the recycling of PET materials, offering an
+                            environmentally friendly solution to one of the major challenges of our time (Blake).
+                        </p>
+                    
+                         <h4 class="font-weight-bold custom-heading">
+                            <i>T7 Promoter and Antibiotic Resistant Gene
+                            </i>
+                        </h4>
+                        <p class="bigger-text">
+                        </p>
+                        
+                        <h4 class="font-weight-bold custom-heading">
+                            <i>pGal 1, 10 Plasmid and Antibiotic Resistant Genes
+                            </i>
+                        </h4>
+                        <p class="bigger-text">
+                        </p>
+                    </div>
+                
+                    ​​<!--Creating our Genetically Engineered Composition Parts -->
+                       <div id="third">
+                           <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+                               <strong class="font-weight-extra-bold">Creating our Genetically Engineered Composition Parts
+                           </strong></h2>
+                               <h4 class="font-weight-bold custom-heading">
+                                   <i>Making T7-IsPETase plasmid</i>
+                               </h4>
+                                   <img src="Figure 1" alt="" width="800">
+
+
+                               <h4 class="font-weight-normal custom-heading">
+                                   <i>PCR via PET synthesized from a biotech company </i>
+                              
+                               </h4>
+                                   <p class="bigger-text">
+                                       We synthesized the IsPET gene via PCR protocol. We designed the forward primer flanked with the BamHI enzyme recognition site and the reverse primer flanked with the HindIII enzyme recognition site. Our team purchased the synthesized IsPETase gene from the Mission Biotech Company used as the DNA template, and a PCR experiment was performed to amplify the IsPETase gene flanked with BamHI and HindIII enzyme cut sites at both ends of the gene.
+                                   </p>
+                                   <h5 class="font-weight-lighter">
+                                       <i>Proof of concept: PCR products</i>
+                                   </h5>
+                                   <img src="Figure 2" alt="" width="800">
+
+
+                              
+                               <h4 class="font-weight-normal custom-heading">
+                                   <i>Double enzyme digestions on PCR products                                    </i>
+                               </h4>
+                                   <p class="bigger-text">
+                                       [ ]
+                                   </p>
+                              
+                               <h4 class="font-weight-normal custom-heading">
+                                   <i>T4 ligation</i>
+                               </h4>
+                                   <p class="bigger-text">
+                                       []
+                                   </p>
+
+
+                               <h4 class="font-weight-normal custom-heading">
+                                   <i>Bacterial transformation</i>
+                               </h4>
+                                   <p class="bigger-text">
+                                       []
+                                   </p>
+
+
+                               <h4 class="font-weight-normal custom-heading">
+                                   <i>Inoculate single bacterial colony</i>
+                               </h4>
+                                   <p class="bigger-text">
+                                       []
+                                   </p>
+
+
+                               <h4 class="font-weight-normal custom-heading">
+                                   <i>Bacterial Plasmid Extraction</i>
+                               </h4>
+                                   <p class="bigger-text">
+                                       []
+                                   </p>
+
+
+                               <h4 class="font-weight-normal custom-heading">
+                                   <i>PCR Verification</i>
+                               </h4>
+                                   <p class="bigger-text">
+                                       []
+                                   </p>
+                                   <h5 class="font-weight-lighter">
+                                       <i>Proof of concept:</i>
+                                   </h5>
+                                   <img src="Figure 3" alt="" width="800">
+
+
+
+
+                       <!--Making the pGal 1,10-IsPETase Plasmid-->
+
+
+                           <h4 class="font-weight-bold custom-heading">
+                                   <i>Making the pGal 1,10-IsPETase Plasmid</i>
+                            </h4>
+                           <img src="Figure 4" alt="" width="800">
+                           <p class="bigger-text">
+                               []
+                           </p>
+
+
+
+
+                       <!--Mutating the Plasmids - Site-Directed Mutagenesis -->
+
+
+                           <h4 class="font-weight-bold custom-heading">
+                                   <i>Mutating the Plasmids - Site-Directed Mutagenesis</i>
+                            </h4>
+                    
+                               <img src="Figure 1" alt="" width="800">
+                              
+                               <h4 class="font-weight-normal custom-heading">
+                                   <i>Amplification of mutant DNA</i>
+                               </h4>
+                                   <p class="bigger-text">
+                                       [ ]
+                                   </p>
+
+
+                               <h4 class="font-weight-normal custom-heading">
+                                   <i>Degradation of parental DNA </i>
+                               </h4>
+                                   <p class="bigger-text">
+                                       [ ]
+                                   </p>
+                                   <h5 class="font-weight-lighter">
+                                       <i>Proof of concept:</i>
+                                   </h5>
+                                   <img src="Figure " alt="" width="800">
+                          
+                               <h4 class="font-weight-normal custom-heading">
+                                   <i>Bacterial transformation into E. Coli</i>
+                               </h4>
+                                   <p class="bigger-text">
+                                       [ ]
+                                   </p>
+
+
+                               <h4 class="font-weight-normal custom-heading">
+                                   <i>Inoculate bacterial colonies</i>
+                               </h4>
+                                   <p class="bigger-text">
+                                       [ ]
+                                   </p>
+
+
+                               <h4 class="font-weight-normal custom-heading">
+                                   <i>Bacterial plasmid extraction</i>
+                               </h4>
+                                   <p class="bigger-text">
+                                       [ ]
+                                   </p>
+
+
+                               <h4 class="font-weight-normal custom-heading">
+                                   <i>Checking the sequence</i>
+                               </h4>
+                                   <p class="bigger-text">
+                                       [ ]
+                                   </p>
+                       </div>
+
+
+                       <!--Checking Our Products/Functional Assays-->
+                       <div id="fourth">
+                           <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+                               <strong class="font-weight-extra-bold">Checking Our Products/Functional Assays</strong>
+                           </h2>
+                          
+                           <h4 class="font-weight-bold custom-heading">
+                               <i>RT-qPCR</i>
+                           </h4>
+                               <p class="bigger-text">
+                                   [ ]
+                               </p>
+                                   <p>
+                                       [1]
+                                   </p>
+                                   <p>
+                                       [2]
+                                   </p>
+                               <p class="bigger-text">
+                                   [ ]
+                               </p>
+                               <img src="Figure 1" alt="" width="800">
+
+
+                           <h4 class="font-weight-bold custom-heading">
+                               <i>Western Blot</i>
+                           </h4>
+                               <p class="bigger-text">
+                                   [ ]
+                               </p>
+                          
+                           <h4 class="font-weight-bold custom-heading">
+                               <i>Co-Culture Experiments</i>
+                           </h4>
+                               <p class="bigger-text">
+                                   [ ]
+                               </p>
+
+
+                       <!--Protocols-->
+                       <div id="fifth">
+                           <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+                              
+                               <strong class="font-weight-extra-bold">Protocols</strong>
+                           </h2>
+                           <ul>
+                               <li>
+                                   <a class="button_note" href="link_to_protocol1">Bacterial Transformation Heat Shock Protocol</a>
+                               </li>
+                               <li>
+                                   <a class="button_note" href="link_to_protocol2">Co-Culture Experiments Protocol</a>
+                               </li>
+                               <li>
+                                   <a class="button_note" href="link_to_protocol3">Gel Electrolysis</a>
+                               </li>
+                               <li>
+                                   <a class="button_note" href="link_to_protocol4">Making E. Coli Competent Cells</a>
+                               </li>
+                               <li>
+                                   <a class="button_note" href="link_to_protocol5">NEB Enzyme Digestion Protocol</a>
+                               </li>
+                               <li>
+                                   <a class="button_note" href="link_to_protocol6">rt-qPCR</a>
+                               </li>
+                               <li>
+                                   <a class="button_note" href="link_to_protocol7">Site-Directed Mutagenesis</a>
+                               </li>
+                               <li>
+                                   <a class="button_note" href="link_to_protocol8">T4 Ligation</a>
+                               </li>
+                               <li>
+                                   <a class="button_note" href="link_to_protocol9">Western Blot</a>
+                               </li>
+                               <li>
+                                   <a class="button_note" href="link_to_protocol10">Yeast Plasmid Transformation Protocol</a>
+                               </li>
+                               <li>
+                                   <a class="button_note" href="link_to_protocol11">Yeast Genomic DNA Extraction Protocol</a>
+                               </li>
+                               <li>
+                                   <a class="button_note" href="link_to_protocol12">2X PCR</a>
+                               </li>
+                           </ul>
+                      
+
+
+                       </div>
+
+
+                       <!--Ｗorks Cited-->
+                       <div id="sixth">
+                           <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+                              
+                               <strong class="font-weight-extra-bold">Works Cited</strong>
+                           </h2>
+                           <ul>
+                               <li>[link]</li>
+                               <li>[link]</li>
+                               <li>[link]</li>
+                               <li>[link]</li>
+                           </ul>
+
+
+                       </div>
+
+
+
+                    <!--Works Cited-->
+                    <div id="sixth">
+                        <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
+
+                            <strong class="font-weight-extra-bold">Works Cited</strong>
+                        </h2>
+                        <p class="bigger-text">
+                            References will be listed here according to the proper citation style.
+                        </p>
+                    </div>
+
+                </div>
             </div>
 
+        </div>
+    </div>
+</body>
 
+</html>
 
-    <div class="container-fluid- pt-3 pb-2">
-
-				<div class="row pt-2">
-					<div class="col-lg-3 position-relative">
-						<aside class="sidebar sidebar-bg" id="sidebar" data-plugin-sticky data-plugin-options="{'minWidth': 991, 'containerSelector': '.container', 'padding': {'top': 110}}">
-
-							<h5 class="font-weight-semi-bold"><center>Experiments</center></h5>
-							<ul class="nav nav-list flex-column mb-5">
-								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#first">Experiment Aims</a></li>
-                                <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#second">Making SCOBY more flexible</a></li>
-\								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#fourth">Creation of our Genetically Engineered Composition Parts</a></li>
-								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#fifth">Final Proof of Concept Testing: Functioning of Composite Parts</a></li>
-								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#sixth">Co-culture and creation of engineered SCOBY</a></li>
-                                <li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#seven">Protocols (in alphabetical order)</a></li>
-								<li class="nav-item"><a class="nav-link" data-hash data-hash-offset="0" data-hash-offset-lg="95" href="#eight">Works Cited</a></li>
-
-                        
-
-
-
-							</ul>
-						
-						</aside>
-
-
-
-                    </div>
-                    <div class="col-lg-7">
-                        <div id="first">
-                            <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
-                                
-                                <strong class="font-weight-extra-bold">Experiment Aims</strong>
-                            </h2>
-                            
-
-                            <div id="second">
-                                <p class="bigger-text">
-                                    Our team’s aim is to create genetically engineered SCOBY that has increased properties
-                                    of flexibility and strength so that it is a more viable alternative to traditional
-                                    animal skin leather. This will allow a decrease in the production of animal leather.
-    
-                                </p>
-
-                            </div>
-                            <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
-                                <strong class="font-weight-extra-bold">Making SCOBY more flexible</strong>
-                            </h2>
-                            <h4 class="font-weight-bold custom-heading">
-                                <i>Choosing the target genes</i>
-                            </h4>
-                            <p class="bigger-text">
-                                Since the SCOBY needs to be able to be used as a leather substitute, it needs to more
-                                closely mimic the properties of animal leather that consumers value most. From our Human
-                                Practice team’s surveys, the team learned that 70.3% of the general public values animal
-                                leather’s “flexibility” as its most important property. Therefore, the team set out to
-                                find genes with the right features to implement into the yeast that cocultures with
-                                SCOBY so that SCOBY which has the desired flexibility could be produced.
-
-                             <h4 class="font-weight-bold custom-heading">
-                                <i>MASP1 and MASP2</i>
-                            </h4>
-
-                            </p>
-                            <p class="bigger-text">
-                                We discovered articles that showed the silk produced by spiders has the features we
-                                need. Spider silk mostly consists of large proteins and has highly repetitive spidroins,
-                                which makes it strong and flexible at the same time.[1],[2]
-
-
-                            </p>
-                            <p class="bigger-text">
-                                A study by Tian in 2003 showed the repetitive amino acid sequences shown in Figure 1
-                                below.[2] Our team chose MaSp1 and MaSp2, because they are the two shortest amino acids
-                                among all, making it easier for cloning and genetic modification when translating into
-                                DNA sequences, and also easier to design primers for the PCR technique to amplify these
-                                two DNA sequences.
-
-                            </p>
-                            
-
-                            <div id="third">
-                                <div class="scaled-image">
-
-
-                                    <img src="https://static.igem.wiki/teams/4650/wiki/figure-12-description.jpg" alt="" width="1500">
-                                    
-       
-    
-    
-    
-                                </div>
-    
-                              <br><br>  
-                            <center><p class="postcard-index">Figure 1. Consensus amino acid repeats for known spider silks [2]</p></center><br><br>
-
-                            
-
-                                <h4 class="font-weight-bold custom-heading">
-                                    <i>CBD</i>
-                                </h4>
-                    
-                       	
-							<p class="bigger-text">
-
-                                <br>However, to attach any structure to SCOBY’s cellulose membrane, there has to be a “glue” between the structure and the membrane so that the synthesized MaSp1 and MaSp2 do not just float around in the kombucha and fail to enhance our SCOBY’s properties.
-                                </br>
-                            </p>
-							
-							<p class="bigger-text">
-
-                                <br>To solve this issue, we were inspired by the 2021 LINKS_CHINA team’s project of producing durable leather substitutes from bacterial cellulose. To attach proteins and natural pigment dyes to the cellulose membrane, LINKS_CHINA used a structure called the “Cellulose Binding Matrixes.”[4] This inspired us to also look for similar structures that we can use to bind silk-like proteins to the cellulose, which led us to find “Cellulose Binding Domains” (CBD).
-                                </br>
-                            </p>
-                            <p class="bigger-text">
-                                <br>As explained in its name, CBD is a structure that binds to cellulose. CBDs are contained in many organisms, such as fungi, bacteria, and plants, and the major function of CBDs in those organisms is to help enzymes or complexes bind to cellulose for further catalytic activities beneficial for in vivo cellular processes.[5] Many enzymes contain CBDs on their own for cellulose digestion. Those CBDs are conserved, which indicates those CBDs are pivotal for delivering proteins or complexes to bind to cellulose membranes.[5] With in vitro protein purification, scientists could add the desired genes at the 5’- or 3’- end of CBD to form fusion proteins, which could still bind to cellulose.[6] Overall, our team was convinced that using one CBD was enough to do the work that our team needed.</br>
-                            </p>
-                            <p class="bigger-text">
-                                <br>CBD’s property allows our team to use this complex as a connecting line between the cellulose that forms SCOBY and the silk in the modified SCOBY.[7] Without it, the silk cannot connect to the SCOBY and is therefore non-functional. As a result, it is decided the CBD gene needs to be cloned into the plasmid.
-                                </br>
-                            </p>
-
-                            
-
-                            
-
-                                <p class="bigger-text">
-                                    One last question remains: many organisms produce CBD, which CBD gene do we choose? Our
-                                    answer is the CMB1 from fission yeast, Schizosaccharomyces pombe (S. pombe). We decided
-                                    on this particular CBD gene for several reasons. First, we could not source several
-                                    specific bacterial strains containing the CBD family locally, however, S. pombe yeast
-                                    containing CBD was available through contact at Academia Sinica. Second, several
-                                    research papers show the CBDs in fungi are normally smaller than CBDs in bacteria, which
-                                    might be a better fit for SCOBY. Finally, our team has already conducted several
-                                    experiments using Saccharomyces yeast, which trained our team to be able to work with
-                                    yeast better. Therefore, our team has decided to use CBM1 in S. pombe.[5]
-    
-    
-                                </p>
-
-
-                                <h4 class="font-weight-bold custom-heading">
-                                    <i>Galactose Promoter (pGal1, 10)</i>
-                                </h4>
-
-                                
-                                <div id="fourth">
-                                    <p class="bigger-text">
-                                        The last piece of DNA sequence that we included in the plasmid uses the pGal1, 10
-                                        promoter. The pGal1, 10 promoter is located upstream of any of the DNA sequences we
-                                        insert, the promoter can control the expression of the genes downstream through the
-                                        presence of galactose: when galactose is not present in the environment, the MaSp1
-                                        or MaSp2 downstream of the pGal1, 10 promoter will not be expressed, and no spider
-                                        silk protein or CBD will be produced.[8] The galactose can also initiate the
-                                        induction faster than other promoters in yeast.
-                                    </p>
-
-                                    <h4 class="font-weight-bold custom-heading">
-                                        <i>Backbone Plasmid and antibiotic-resistant genes</i>
-                                    </h4>
-
-                                    <p class="bigger-text">
-                                        The plasmid we acquired, pGal1, 10-SPT5-Streptavidin Binding Protein(SBP)
-                                        plasmid, containing 2u origin of replication (ORI) for both yeast and bacteria
-                                        DNA replication, was sponsored by Dr. Tien-Hsien Chang at the Genomics Research
-                                        Center of Academia Sinica, in Taipei, Taiwan. This plasmid can be transformed
-                                        into bacteria and yeast, which was beneficial for our team to finish making
-                                        biobricks in bacteria and perform the functional assay in yeast.
-                                    </p>
-                                    <p class="bigger-text">
-                                        The plasmid we acquired also contains ampicillin and kanamycin-resistant genes.
-                                        We chose to also acquire these two genes on our plasmids so we could conduct
-                                        future bacterial and yeast transformation on LB-amp plates and YPD-Kan plates,
-                                        respectively. The kanamycin-resistant gene and YPD-Kan selection plates are
-                                        necessary because ampicillin has no effect on yeast, which means we need another
-                                        method for incubating only the yeast cells with our plasmid. Having it present
-                                        will allow us to use kanamycin in order to incubate our yeast. We will be able
-                                        to use Saccharomyces yeast that the team is familiar with from training for the
-                                        design.
-
-                                    </p>
-                                    <div id="fourth">
-                                    <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
-                                        <strong class="font-weight-extra-bold">Creation of our Genetically Engineered Composition Parts
-									</strong>
-                                    </h2>
-                                    </div>
-
-                                    <img src="https://static.igem.wiki/teams/4650/wiki/experiments/fig-2-process-of-cbd-pcr-product.png" alt="" width="800">
-                            
-                                    <center><p class="postcard-index">Fig 2. Process of CBD PCR Product</p></center><br><br>
-
-                                    
-
-
-                                    <h4 class="font-weight-bold custom-heading">
-                                        <i>CBD Extraction: PCR & first enzyme digestion</i>
-                                    </h4>
-
-                                    <p class="bigger-text">
-                                        We obtained S. pombe fission yeast from Academia Sinica, extracted the
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/yeast-genomic-dna-extraction-protocol.pdf">yeast’s
-                                            genomic DNA </a>, and used
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/2x-pcr-mix-protocol.pdf">2X
-                                            PCR</a>,
-                                        to amplify CMB1. We engineered two enzyme cut sites (XmaI and KpnI) on primers
-                                        for this PCR and obtained the primers from the synthetic bio company Mission
-                                        Biotech.
-                                    </p>
-
-                                    <h4 class="font-weight-bold custom-heading">
-                                        <i>Proof of concept:</i>
-                                    </h4>
-                                    <p class="bigger-text">
-                                        We conducted
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/gel-electrophoresis-protocol.pdf">gel
-                                            electrophoresis</a>
-                                        to ensure the PCR was successful.
-                                    </p>
-                                    <img src="https://static.igem.wiki/teams/4650/wiki/screenshot-2023-10-09-at-5-34-45-pm.png" alt="" width="500"height="600">
-                                    
-
-                                    <center><p class="postcard-index">Fig 3. The Process of Double Digestion, T4 Ligation, and Bacterial
-                                        Transformation</p></center><br><br>
-
-
-                                    <img src="https://static.igem.wiki/teams/4650/wiki/experiments/inserting-cbd-into-pgal-plasmid-and-complete-proof-of-concept.png" alt="" width="800">
-                                    
-                                    <center><p class="postcard-index">Fig 4. The Process of Double Digestion, T4 Ligation, and Bacterial
-                                        Transformation</p></center><br><br>
-
-                                    <h4 class="font-weight-bold custom-heading">
-                                        <i>Double-Digestion of CBD</i>
-                                    </h4>
-                                    <p class="bigger-text">
-                                        We then used XmaI and KpnI
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/neb-enzyme-digestion-protocol.pdf">double
-                                            enzyme digestion</a>
-                                        to create a 3’ overhang of the CBM1(referred to as CBD) PCR product. The cut
-                                        sites, XmaI and KpnI, are designed on the primers so that double enzyme
-                                        digestion could be done. The two enzymes create overhangs on the CBD gene for
-                                        easier ligation.
-                                    </p>
-
-                                    <h4 class="font-weight-bold custom-heading">
-                                        <i>T4 ligation, glue CBD to plasmid</i>
-                                    </h4>
-                                    <p class="bigger-text">
-                                        We acquired the backbone plasmids with the pGal1,10 promoter from Academia
-                                        Sinica. We first used double
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/neb-enzyme-digestion-protocol.pdf">enzyme
-                                            digestion</a>
-                                        with XmaI and KpnI to knock out the original gene downstream of the pGal1,10
-                                        promoter, straighten the plasmid called vector, and then used
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/t4-dna-ligation-protocol.pdf">
-                                            DNA ligation </a>
-                                        with the T4 ligase enzyme to clone the CBD gene downstream of the pGal1,10
-                                        promoter.
-
-                                    </p>
-                                    <p class="bigger-text">
-                                        We chose the enzymes XmaI and KpnI because, first, these two enzymes produce cut
-                                        sites with incompatible 3’-overhangs, so the linearized vector would not
-                                        re-ligate back together, which makes it easier for ligation; and second, these
-                                        enzymes only cut on the vectors once, which ensures our vectors do not break
-                                        into pieces.
-
-
-                                    </p>
-
-
-                                    <img src="https://static.igem.wiki/teams/4650/wiki/experiments/screenshot-2023-10-09-at-5-37-50-pm.png" alt="" width="800">
-                                   
-
-                                    <center><p class="postcard-index">Fig 5. A visualization of kicking out the original gene downstream of the pGal
-                                        promoter and replacing it with CBD’s gene sequence.</p></center><br><br>
-
-                                    <h4 class="font-weight-bold custom-heading">
-                                        <i>Proof of concept:</i>
-                                    </h4>
-                                    <p class="bigger-text">
-                                        After running these procedures, we needed to test whether the cloning worked on
-                                        a molecular biology level, and that the CBD genes have been cloned to the
-                                        downstream of the pGal1, 10 promoter correctly. To confirm this, our team
-                                        conducted two tests.
-
-
-                                    </p>
-                                    <p class="bigger-text">
-                                        1. After conducting bacterial transformation, we cultured E. Coli transformed
-                                        with our plasmids in ampicillin selection plates to generate more of our
-                                        pGal-CBD plasmid on LB-amp selection plates. The surviving colonies are
-                                        confirmed to carry the pGal-CBD plasmid. We also inoculated more of our pGal-CBD
-                                        plasmids through this
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/bacterial-transformation-heat-shock-protocol.pdf">
-                                            step.</a>
-
-
-
-
-                                    </p>
-                                    </p>
-                                    <p class="bigger-text">
-                                        2. We conducted
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/2x-pcr-mix-protocol.pdf">2X
-                                            PCR </a>
-                                        , with CBD forward and reverse primers, and
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/gel-electrophoresis-protocol.pdf">gel
-                                            electrophoresis</a>
-                                        to see if the bacterial colonies have the pGal-CBD plasmid.
-
-
-
-
-                                    </p>
-                                    <img src="https://static.igem.wiki/teams/4650/wiki/experiments/screenshot-2023-10-09-at-5-43-26-pm.png" alt="" width="=500"height="400">
-                                    
-
-                                    <center><p class="postcard-index">Fig 6. Cloning CBD to form pGal1,10-CBD. Bacterial colonies # 1, 2, and 5 showed
-                                        a CBD distinct single PCR product band, BBa_K4650004 (pGal1, 10-CBD).</p></center><br><br>
-
-                                    <h4 class="font-weight-bold custom-heading">
-                                        <i>Amplifying MaSp1 & MaSp2</i>
-                                    </h4>
-
-                                        <img src="https://static.igem.wiki/teams/4650/wiki/experiments/amplify-plasmid-with-masp12-and-perform-electrophoresis.png" alt="" width="800">
-                                    </h2>
-                    
-
-                                    <center><p class="postcard-index">Fig 7. Amplify plasmid with MaSp1/2 and perform electrophoresis.</p></center><br><br>
-                                    
-                                    <p class="bigger-text">
-                                        Our team used Snapgene to convert the two spider silk amino acid sequences into
-                                        DNA sequences and then Mission Biotech, synthesized the DNA sequences. They
-                                        synthesized MaSp1 and MaSp2 on the T7 promoter and pMA-RQ plasmids,
-                                        respectively.
-                                    </p>
-                                    <p class="bigger-text">
-                                        We then conducted
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/2x-pcr-mix-protocol.pdf">2X
-                                            PCR </a> to produce more copies of our desired genes, MaSp1 and MaSp2.
-                                        During this process, we engineered the primers containing one recognition
-                                        sequence cut by either SmaI or XmaI, and added the primers to identify the genes
-                                        we needed to amplify (containing Masp1&2), and then got more copies through PCR.
-                                    </p>
-                                    <p class="bigger-text">
-                                        From the genes we got through 2X PCR, our team conducted a single enzyme cut
-                                        experiment on MaSp1 and MaSp2 PCR products, respectively, for cloning upstream
-                                        of the CBD, and downstream of the pGal1, 10 promoter of the pGal-CBD plasmid.
-                                    </p>
-                                    <p class="bigger-text">
-                                        Our team cut MaSp1 using
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/neb-enzyme-digestion-protocol.pdf">single
-                                            enzyme digestion </a>, with the enzyme SmaI. We designed SmaI to have a
-                                        similar recognition site (CCCGGG) to a previous enzyme we used, XmaI. The
-                                        difference between them is that SmaI creates a blunt end cut site, which we
-                                        believed would be easier to work with. However, we found SmaI inefficient as it
-                                        could religate and a lot of the product was lost during dephosphorylation. After
-                                        advice from Dr. Han, for MaSp2, the team switched to using XmaI to cut out the
-                                        gene, which is easier to manipulate in the experiment. So in the future, it
-                                        would be best to use XmaI for both MaSp1 and MaSp2.
-                                    </p>
-
-                                    <h4 class="font-weight-bold custom-heading">
-                                        <i>Proof of concept:</i>
-                                    </h4>
-                                    <p class="bigger-text">
-                                        We conducted
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/gel-electrophoresis-protocol.pdf">gel
-                                            electrophoresis</a> to ensure the PCR was successful.
-                                    </p>
-
-                                    <img src="https://static.igem.wiki/teams/4650/wiki/bba-k4650002-masp1-pcr.jpg" alt="" width="=500"height="400">
-                                  
-
-                                    <center><p class="postcard-index">Fig 8. MaSp1 PCR products.</p></center><br><br>
-
-
-                                    <img src="https://static.igem.wiki/teams/4650/wiki/bba-k4650003-masp2-pcr.jpg" alt="" width="=500"height="400">
-                                    
-
-                                    <center><p class="postcard-index">Fig 9. MaSp2 PCR products.</p></center><br><br>
-
-                                    <h4 class="font-weight-bold custom-heading">
-                                        <i>pGal-CBD plasmid second enzyme digestion</i>
-                                    </h4>
-
-                                    <img src="https://static.igem.wiki/teams/4650/wiki/experiments/inserting-cbd-into-pgal-plasmid-and-complete-proof-of-concept.png" alt="" width="800">
-                                    
-
-                                    <center><p class="postcard-index">Fig 10. Opened pGal CBD plasmid with single enzyme digestion, Inserted MaSp1/2
-                                        into pGal CBD, then performed gel electrophoresis for proof of concept.</p></center><br><br>
-
-                                    <p class="bigger-text">
-                                        We then extracted the pGal1,10-CBD plasmids from the E.Coli we transformed and
-                                        inoculated them to the LB-amp broth.
-                                    </p>
-                                    <p class="bigger-text">
-                                        Once the plasmids were extracted, the pGal1,10-CBD plasmids were cut using
-                                        single enzyme digestion with two different enzymes: SmaI to prepare for MaSp1
-                                        ligation and XmaI for MaSp2 ligation respectively since these were the enzymes
-                                        used for single enzyme digestion of MaSp1 and MaSp2.
-                                    </p>
-
-                                    <h4 class="font-weight-bold custom-heading">
-                                        <i>T4 ligation of the pGal1,10-CBD plasmid and Masp1/2 gene </i>
-                                    </h4>
-                                    <p class="bigger-text">
-                                        The team conducted
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/t4-dna-ligation-protocol.pdf">T4
-                                            DNA ligation</a> on the pGal1,10-CBD plasmids and MaSp1 or 2 genes to clone
-                                        MaSp1 and MaSp2 into pGal1,10-CBD, forming our desired plasmids,
-                                        pGal1,10-MaSp1-CBD and pGal1,10-MaSp2-CBD.The team then applied bacterial
-                                        transformation on selection plates to replicate our plasmids for further
-                                        experiments.
-
-                                    </p>
-                                    <p class="bigger-text">
-                                        Our team used the forward primer at the 5’ end of the MaSp1 or MaSp2 and reverse
-                                        primer at the 3’ end of the CBD to ensure the correct orientation of the
-                                        pGal-MaSp1-CBD and pGal-MaSp2-CBD plasmids.
-                                    </p>
-                                    <img src="https://static.igem.wiki/teams/4650/wiki/experiments/screenshot-2023-10-09-at-5-52-28-pm.png" alt="pcr1" width="800">
-                                </div>
-                                
-
-                                <center><p class="postcard-index">Fig 11. This figure is a visualization of the two possible orientations of Masp1.
-                                    Only one of them is correct and will produce amino acid sequecnes downstream of the
-                                    pGal promoter.</p></center><br><br>
-
-                                <h4 class="font-weight-bold custom-heading">
-                                    <i>Bacterial transformation  </i>
-                                </h4>
-                                <p class="bigger-text">
-                                    Three plasmids are now complete: pGal1,10-CBD, pGal1,10-Masp1-CBD and
-                                    pGa1,10l-Masp2-CBD. The team transformed E. coli with the three plasmids separately
-                                    and inoculated the modified bacteria to get more copies of the plasmid. The team
-                                    used
-                                    <a
-                                        href="https://static.igem.wiki/teams/4650/wiki/experiments/bacterial-transformation-heat-shock-protocol.pdf">heat
-                                        shock on the bacteria</a> to allow the plasmids to enter the membrane, then used
-                                    selection plates with ampicillin to select the surviving bacteria.
-                                </p>
-                                <h4 class="font-weight-bold custom-heading">
-                                    <i>Proof of concept testing: </i>
-                                </h4>
-                                <p class="bigger-text">
-                                    After bacterial colonies were inoculated to perform 2XPCR, the team ran
-                                    <a
-                                        href="https://static.igem.wiki/teams/4650/wiki/experiments/gel-electrophoresis-protocol.pdf">gel
-                                        electrophoresis</a> to check that the PCR product was correct (that MaSp1 in the
-                                    plasmids had the right orientation). Successful results proved that our team had
-                                    cloned successfully.
-                                    We also sent the plasmids to Mission Biotech for further analysis and confirmation.
-
-                                </p>
-                                <img src="https://static.igem.wiki/teams/4650/wiki/experiments/screenshot-2023-10-09-at-5-58-43-pm.png" alt="pcr1" width="=500"height="400">
-                                
-                                <center><p class="postcard-index">Fig 12. pGal1,10-MaSp2-CBD PCR products. During ligation of MaSp2, the team used one XmaI single enzyme cut site for the cloning that would give our team two 
-                                    orientations of MaSp2 cloned between the pGal1,10 promoter and CBD. After bacterial transformation, our <br>team wanted to detect which bacterial colonies would give us the correct orientation of MaSp2. We used forward primer on the 5’- end of MaSp2, and reverse primer on the 3’- end of CBD to do PCR. Then our team ran our PCR products to detect that both #8 and #13 had a MaSp2-CBD full-length product of 870bp.</p></center><br><br>
-
-                                <img src="https://static.igem.wiki/teams/4650/wiki/experiments/screenshot-2023-10-09-at-6-00-23-pm.png" alt="" width="=800">
-                                    <br>
-
-                                <center><p class="postcard-index">Fig 13. pGal1,10-MaSp2-CBD PCR products.</p></center><br><br>
-
-                                <h4 class="font-weight-bold custom-heading">
-                                    <i>Yeast transformation</i>
-                                </h4>
-                                
-                                <div id="fifth">
-
-                                    <p class="bigger-text">
-                                        Once PCR confirmed our team had the correct orientations of pGal1,10-MaSp1-CBD, and
-                                        pGal1,10-MaSp2-CBD bacterial colonies, the bacterial plasmid extraction was
-                                        performed to extract the plasmids containing the three composite parts. After the
-                                        three new plasmids, pGal1,10-CBD, pGal1,10-MaSp1-CBD, and pGal1,10-MaSp2-CBD, were
-                                        created, our team did
-                                        <a
-                                            href="https://static.igem.wiki/teams/4650/wiki/experiments/yeast-plasmid-transformation-protocol.pdf">plasmid
-                                            transformation </a>
-                                        to shuffle each of them into the wild-type yeast strain, Saccharomyces cerevisiae,
-                                        strain BY4741, respectively. Kanamycin selection plates were used for the
-                                        transformation. Kanamycin (also called G418) inhibits the process of the protein
-                                        translation so only BY4741 containing our team’s three biobrick plasmids, pGal-CBD,
-                                        pGal-MaSp1-CBD, or pGal-MaSp2-CBD, could survive on YPD-Kan plates, since those
-                                        plasmids contained Kanamycin resistant genes. After the yeast plasmid
-                                        transformation, our team now had pGal-CBD in BY4741, as a control yeast strain for
-                                        our team’s project since it doesn’t contain spider silk proteins; and pGal-MaSp1-CBD
-                                        in BY4741, and pGal-MaSp2-CBD in BY4741 which are our experimental strains since
-                                        they contain our spider-silk proteins, MaSp1-CBD, and MaSp2-CBD, respectively.
-                                        All of these parts can be found on the registry: pGal1,10 <a href="http://parts.igem.org/Part:BBa_K4650000" target="_blank" rel="noopener noreferrer">BBa_K4650000</a>; CBD <a href="http://parts.igem.org/Part:BBa_K4650001" target="_blank" rel="noopener noreferrer">BBa_K4650001</a>; MaSp1 <a href="http://parts.igem.org/Part:BBa_K4650002" target="_blank" rel="noopener noreferrer">BBa_K4650002</a>; MaSp2<a href="http://parts.igem.org/Part:BBa_K4650003" target="_blank" rel="noopener noreferrer">BBa_K4650003</a>; pGal1,10-CBD<a href="http://parts.igem.org/Part:BBa_K4650004" target="_blank" rel="noopener noreferrer">BBa_K4650004</a>; pGal1,10-MaSp1-CBD <a href="http://parts.igem.org/Part:BBa_K4650005" target="_blank" rel="noopener noreferrer">BBa_K4650005</a>; pGal1,10-MaSp2-CBD<a href="http://parts.igem.org/Part:BBa_K4650006" target="_blank" rel="noopener noreferrer">BBa_K4650006</a>
-                                        </br>	
-    
-                                    </p>
-
-
-                                <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
-                                    <strong class="font-weight-extra-bold">Final Proof of Concept Testing: Functioning of Composite Parts</strong>
-                                </h2>
-                                </div>
-
-
-                                <h4 class="font-weight-bold custom-heading">
-                                    <i>Time Course samples collection</i>
-                                </h4>
-
-                                <p class="bigger-text">
-                                    After creating the three composite parts, the team did galactose induction with a
-                                    time course to prove the desired composite parts could be induced in the presence of
-                                    2% YP-galactose to check the induction of the coding regions on the composite parts
-                                    via RNA extraction and RT-qPCR technique. The parts discussed in the “Yeast
-                                    Transformation” section above were used to perform the time course sample collection
-                                    shown in the figure: pGal-CBD in BY4741 as a control, and pGal-MaSp1-CBD in BY4741,
-                                    and pGal-MaSp2-CBD in BY4741 as our experimental strains. This process is shown in
-                                    the diagram below.
-                                </p>
-
-                                <img src="https://static.igem.wiki/teams/4650/wiki/screenshot-2023-10-09-at-12-41-42-pm.png" alt="" width="800">
-                               
-
-                                <center><p class="postcard-index">Fig 14. The team grew yeast in the 2% YP-glucose + G418 medium until it reached
-                                    OD~0.2 and collected 35ml as 0’ minute, and then resuspended and rinsed with dH2O to
-                                    transfer them into the 2% YP-galactosemedium to collect the time course samples(set
-                                    up 30 minutes, 60minutes, 90minutes, 120 minutes, 22 hours) for RT-qPCR to detect
-                                    mRNA level of the downstream genes of the pGal1, 10 promoter.</p></center><br><br>
-
-                                <h4 class="font-weight-bold custom-heading">
-                                    <i>RT-qPCR experiments</i>
-                                </h4>
-
-                                </h2>
-                                <p class="bigger-text">
-                                    To further verify whether our team’s composite parts had biological functions, our
-                                    team used
-                                    <a href="https://static.igem.wiki/teams/4650/wiki/experiments/rt-qpcr-protocol.pdf">RT-qPCR
-                                        protocol</a>
-                                    to ensure our composite parts functioned properly by detecting mRNA induction levels
-                                    of CBD, MaSp1-CBD, and MaSp2-CBD. Our team operated RT-qPCR technique to detect the
-                                    mRNA induction of CBD in BY4741 containing BBa_K4650004, mRNA induction of MaSp1-CBD
-                                    in BY4741 containing BBa_K4650005, and the mRNA induction of MaSp2-CBD in BY4741
-                                    containing BBa_K4650006 from the time course sample collection of 0min, 30min, 60
-                                    min,90 min, 120 min, and 22 hours in the presence of the 2%YP-galactose medium. The
-                                    BY4741, with each of the respective composite parts, was first grown in
-                                    YP-2%glucose, until OD600 0.2-0.4 to allow sufficient growth of the yeast before
-                                    transferring it to the 2%YP-galactose medium.
-
-                                </p>
-                                <div class="scaled1-image">
-                                    <img src=" 	https://static.igem.wiki/teams/4650/wiki/parts-image/bba-k4650004-bargraph.jpg" alt="pcr1" width="1200">
-                                </div>
-                               
-
-                                <center><p class="postcard-index">Fig15:Induction of CBD showed strong manipulation, above 5 fold induction, in the
-                                    presence of galactose at 30 mins, 14 fold induction at 60mins, and the maxium of 19
-                                    fold CBD mRNA induction at 90 mins, and then backdown to 10 fold induction at
-                                    120mins, finally no detectable CBD mRNA induction at 22hours in the presence of
-                                    galactose.</p></center><br><br>
-
-                                <div class="scaled1-image">
-                                    <img src="https://static.igem.wiki/teams/4650/wiki/experiments/screenshot-2023-10-09-at-11-03-42-pm.png" alt="pcr1" width="1200">
-                                </div>
-                               
-
-                                <center><p class="postcard-index">Fig 16. The mRNA induction of MaSp1-CBD showed insignificant change in the presence
-                                    of galactose at 30 mins, the maximum of 2 fold induction at 60mins, and and then
-                                    backdown to 1.7-1.5 fold induction at 90 and 120 mins, finally no detectable MaSp1-
-                                    CBD mRNA induction at 22 hours in the presence of galactose
-                                </p></center><br><br>
-
-                                <div class="scaled1-image">
-                                    <img src="https://static.igem.wiki/teams/4650/wiki/experiments/screenshot-2023-10-09-at-11-04-41-pm.png" alt="pcr1" width="1200">
-                                </div>
-                                
-
-                                <div id="sixth">
-
-                                  
-
-                                    <center><p class="postcard-index">Fig 17. The mRNA induction of MaSp2-CBD showed insignificant reduction in the
-                                        presence of galactose at 30 mins compared to the 0 min sample, the maximum above 2
-                                        fold induction at 90 mins, and then backdown to 1.7 fold and 1.3 fold induction at
-                                        120 mins and 22 hours in the presence of galactose.</p></center><br><br>
-
-                                <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
-                                
-                                        <strong class="font-weight-extra-bold">Co-culture and creation of engineered SCOBY</strong>
-                                   
-                                </h2>
-                                </div>
-                                <div class="scaled-image">
-                                    <img src=" 	https://static.igem.wiki/teams/4650/wiki/experiments/overall-diagram-3.png" alt="pcr1" width="1200">
-                                </div>
-
-                                <center><p class="postcard-index">Fig 18. The overall diagram of the growing the modified SCOBY and performing the flexibility test.</p></center><br><br>
-
-                                <h4 class="font-weight-bold custom-heading">
-                                    <i>Growing a new batch of SCOBY</i>
-                                </h4>
-                                <p class="bigger-text">
-                                    The team now needed to start working with real SCOBY samples. But before any
-                                    experiments could be conducted, the team first grew two
-                                    <a
-                                        href="https://static.igem.wiki/teams/4650/wiki/experiments/scoby-growth-protocol.pdf">new
-                                        batches of SCOBY</a> as trials to find the thickness of SCOBY grown in different
-                                    time periods. The team used black tea, the popular traditional recipe, as our base
-                                    for making SCOBY, due to its high content of caffeine, which would provide the
-                                    bacteria groups in the kombucha a nitrogen source. Nitrogen, a nutrient yeasts
-                                    assimilate when performing alcholic fermentation, promotes the metabolism of yeasts,
-                                    which would assist the growth of SCOBY.[9]
-                                </p>
-                                <p class="bigger-text">
-                                    After dissolving sugar in the black tea, we added starting fluid and mother SCOBY
-                                    into the sweet tea and then fermented it at 23 degrees Celsius for 7 days.
-                                    Originally, the SCOBY grown for 14 days became too thick and strong for the machines
-                                    we designed for flexibility tests (mentioned later in “Flexibility Test”) to break
-                                    them, therefore unable to yield any usable data. Therefore, the team shortened the
-                                    fermentation period to 7 days to make the SCOBY thinner and able to be torn apart by
-                                    our machines used in the flexibility tests, which produces data that can be compared
-                                    with our modified SCOBY.
-                                </p>
-                                <h4 class="font-weight-bold custom-heading">
-                                    <i>Co-culturing SCOBY with BY4741 yeast</i>
-                                </h4>
-                                
-                                <p class="bigger-text">
-                                    After being grown, the SCOBY was rinsed with DI water and the team co-cultured our
-                                    SCOBY with a mix of our genetically modified yeast (BY4741 containing each of the
-                                    respective plasmids, and a control yeast), 2% YP-galactose, and 100ug/ml Kanamycin
-                                    (G418).
-                                    The BY4741 yeast contains the plasmids we genetically modified in previous steps,
-                                    either our pGal-Masp1-CBD, pGal-Masp2-CBD, or pGal-CBD.
-                                    The 2% YP-galactose provides nutrients for our modified yeast and the most important
-                                    function is to turn on the pGal1,10 promoter’s switch to activate the transcription
-                                    of downstream of genes. Kanamycin kills the original yeasts in the SCOBY since it is
-                                    no longer needed in the experiment. Our plasmids contain kanamycin-resistant genes,
-                                    which protect them from this chemical. By doing this, we can make sure that only our
-                                    modified yeast is generating proteins.
-
-                                </p>
-                                <h4 class="font-weight-bold custom-heading">
-                                    <i>Cleaning and drying SCOBY</i>
-                                </h4>
-                                <p class="bigger-text">
-                                    After three days of co-culturing with our genetically engineered yeast, the team
-                                    first washed the SCOBY with DI water to get rid of any impurities on the surface.
-                                    Then, the team researched how to properly dry the SCOBY. Since working with SCOBY as
-                                    an alternative material is a rather new and unexplored method, there is no standard
-                                    protocol on how to dry it. Instead, the team only discovered protocols from blog
-                                    posts about making SCOBY at home, with no certain range of temperature sets and
-                                    times.[10] This pushed us to experiment with suitable times and temperatures by
-                                    ourselves and then give the result. Based on our results, we wrote our own SCOBY
-                                    drying protocol, which is to dry SCOBY
-                                    <a
-                                        href="https://static.igem.wiki/teams/4650/wiki/experiments/dehydrating-scoby-protocol.pdf">dry
-                                        scoby.</a>
-                                    at 40 degrees Celsius for 20 hours.
-                                </p>
-                                <h4 class="font-weight-bold custom-heading">
-                                    <i>Flexibility and Strength test</i>
-                                </h4>
-                                <p class="bigger-text">
-                                    Subsequently, the team conducted an experiment to <a href="https://static.igem.wiki/teams/4650/wiki/experiments/flexibility-test-protocol.pdf" target="_blank" rel="noopener noreferrer">test flexibility</a> to confirm if the
-                                    genetic modification improved the dried SCOBY membrane’s performance.
-                                </p>
-                                <p class="bigger-text">
-                                    For the tensile strength, we built a machine that holds the SCOBY on its sides and
-                                    pushes it on the center to test how much force it can hold before breaking, as shown
-                                    in the diagram below.
-                                </p>
-                                <div class="scaled2-image">
-                                    <img src=" https://static.igem.wiki/teams/4650/wiki/img-3530.jpg" alt="pcr1" width="1200">
-                                </div>
-
-                                <center><p class="postcard-index">Fig 19. The design of tensile strength flexibility machine.
-                                </p></center><br><br>
-
-                                <p class="bigger-text">
-                                    The wooden frame holds the basic structure of the machine. There are two mini vice
-                                    that would hold the SCOBY tightly without causing much damage while the force gauge
-                                    would be push down on the center of the SCOBY and record the highest peak value of
-                                    force when the SCOBY breaks. The more force it can support, the stronger and more
-                                    flexible the membrane is.
-                                </p>
-                                <p class="bigger-text">
-                                    For shear strength, we have a different set of equipment. We designed a 3D-printed
-                                    wheel that is connected with wood block, which will be paired with another wood
-                                    block and a second pair of wood blocks, as shown in the diagram below.
-                                </p>
-                                <div class="scaled3-image">
-                                    <img src=" https://static.igem.wiki/teams/4650/wiki/experiments/the-design-of-shear-strength-flexibility-machine.png" alt="pcr1" width="1200" height="1600">
-                                </div>
-
-                            <center><p class="postcard-index">Fig 20. The design of shear strength flexibility machine.</p></center><br><br>
-                                
-								<div id="seven">
-                                    <p class="bigger-text">
-                                        After setting up the machine, the bottom pair of wood blocks would allow the SCOBY
-                                        membrane to twist as the blocks turn on the track of the wheel while the top pair is
-                                        fixed. By looking at how much force it takes for the SCOBY to turn a certain amount,
-                                        we can learn about its flexibility. The less force needed, the higher its
-                                        flexibility. We twist all SCOBY for 40 degrees and did three trials for each of the
-                                        different membranes.
-    
-    
-                                    </p>
-
-								<h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
-									<strong class="font-weight-extra-bold">Protocols (in alphabetical order) </strong>
-								</h2>
-								<br>	<a href="https://static.igem.wiki/teams/4650/wiki/experiments/2x-pcr-mix-protocol.pdf" target="_blank" rel="noopener noreferrer">2X PCR Mix Protocol</a>
-								<br>	<a href="https://static.igem.wiki/teams/4650/wiki/experiments/bacterial-plasmid-extraction-protocol.pdf" target="_blank" rel="noopener noreferrer">Bacterial Plasmid Extraction Protocol</a>
-								<br>	<a href="https://static.igem.wiki/teams/4650/wiki/experiments/bacterial-transformation-heat-shock-protocol.pdf" target="_blank" rel="noopener noreferrer">Bacterial Transformation Heat Shock Protocol</a>
-								<br><a href="https://static.igem.wiki/teams/4650/wiki/experiments/dehydrating-scoby-protocol.pdf" target="_blank" rel="noopener noreferrer">Dehydrating Scoby Protocol</a>
-								<br><a href="https://static.igem.wiki/teams/4650/wiki/experiments/flexibility-test-protocol.pdf" target="_blank" rel="noopener noreferrer">Flexibility Test Protocol</a>
-								<br><a href="https://static.igem.wiki/teams/4650/wiki/experiments/gel-electrophoresis-protocol.pdf" target="_blank" rel="noopener noreferrer">Gel Electrophoresis Protocol</a>
-								<br><a href="https://static.igem.wiki/teams/4650/wiki/experiments/neb-enzyme-digestion-protocol.pdf" target="_blank" rel="noopener noreferrer">NEB Enzyme Digestion Protocol</a>
-								<br><a href="https://static.igem.wiki/teams/4650/wiki/experiments/rt-qpcr-protocol.pdf" target="_blank" rel="noopener noreferrer">RT-qPCR protocol</a>
-								<br><a href="https://static.igem.wiki/teams/4650/wiki/experiments/scoby-and-yeast-co-culture-protocol.pdf" target="_blank" rel="noopener noreferrer">SCOBY and Yeast Co-Culture Protocol</a>
-								<br><a href="https://static.igem.wiki/teams/4650/wiki/experiments/scoby-growth-protocol.pdf" target="_blank" rel="noopener noreferrer">SCOBY Growth Protocol</a>
-								<br><a href="https://static.igem.wiki/teams/4650/wiki/experiments/t4-dna-ligation-protocol.pdf" target="_blank" rel="noopener noreferrer">T4 DNA Ligation Protocol</a>
-								<br><a href="https://static.igem.wiki/teams/4650/wiki/experiments/yeast-genomic-dna-extraction-protocol.pdf" target="_blank" rel="noopener noreferrer">Yeast Genomic DNA Extraction Protocol</a>
-								<br><a href="https://static.igem.wiki/teams/4650/wiki/experiments/yeast-plasmid-transformation-protocol.pdf" target="_blank" rel="noopener noreferrer">Yeast Plasmid Transformation Protocol</a>
-                              </div>
-									
-                              
-                              <div id="eight">
-
-                                <br><br><br>
-
-                                    <h2 class="font-weight-extra-normal text-7 mb-2 bigger-text">
-
-
-                                        <u><strong class="font-weight-extra-bold">Works Cited</strong></u>
-                                    </h2>
-                                    <p class="bigger-text">
-                                        <br> [1] Römer L, Scheibel T. The elaborate structure of spider silk: structure and function of a natural high performance fiber. Prion. 2008; 2(4): 154-61. Available from: doi:10.4161/pri.2.4.7490.</br>
-                                        <br> [2] Tian M. Expression and Purification of A Synthetic Spider Silk Protein In Arabidopsis thaliana. Master thesis. University of Wyoming; 2003.</br>
-                                        <br> [3] LINKS_CHINA. Description. Available from: https://2021.igem.org/Team:LINKS_China/Description [Accessed September 28 2023].</br>
-                                        <br> [4] Malay AD, Arakawa K, Numata K. Analysis of repetitive amino acid motifs reveals the essential features of spider dragline silk proteins. PLoS One. 2017;12(8): e0183397. Available from: doi:10.1371/journal.pone.0183397.</br>
-                                        <br> [5] Doi RH, Park JS, Shin HS. Fusion proteins containing cellulose-binding domains. Methods in Enzymology. 2000;326: 418-429. Available from: doi:10.1016/S0076-6879(00)26067-9.</br>
-                                        <br> [6] Levy I, Shoseyov O. Cellulose-binding domains: Biotechnological applications. Biotechnology Advances. 2002;20: 191–213. Available from: doi:10.1016/S0734-9750(02)00006-X.</br>
-                                        <br> [7] Linder M, Teeri TT. The cellulose-binding domain of the major cellobiohydrolase of Trichoderma reesei exhibits true reversibility and a high exchange rate on crystalline cellulose. PNAS. 1996; 93(22): 12251-12255. Available from: doi:10.1073/pnas.93.22.12251.</br>
-                                        <br> [8] O’Connor CM. 13.1: Regulation of the GAL1 promoter. California: Libretexts. https://bio.libretexts.org/Bookshelves/Cell_and_Molecular_Biology/Book%3A_Investigations_in_Molecular_Cell_Biology_(O%27Connor)/13%3A_Protein_overexpression/13.01%3A_Regulation_of_the_GAL1_promoter.</br>
-                                        <br> [9] Roca-Mesa H, Sendra S, Mas A, Beltran G, Torija M-J. Nitrogen preferences during alcoholic fermentation of different non-saccharomyces yeasts of oenological interest. U.S. National Library of Medicine. U.S. National Library of Medicine; Available from: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7074775/ [Accessed September 28 2023].</br>
-                                        <br> [10] How to Make SCOBY Fruit Leather. [Online] KOMBUCHA TO THE PEOPLE. KOMBUCHA TO THE PEOPLE; Available from: https://www.kombuchatothepeople.com/blog/how-to-make-scoby-fruit-leather [Accessed September 28 2023].</br>
-                                 <br>
-									</p>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                </div>
-                </div>
-                <center>
-                    <div>
-                        <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/explore-removebg-preview.png" alt="Scroll Animated Image 2">
-                      </div>
-                    <div>
-                        <ul class="m-2 p-2" style="list-style: none; padding: 0;">
-                          <li>
-                            <a class="hoverg" href="{{ url_for('pages', page='human-practices') }}">
-                        
-                              <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/hp-button.png" style="width: 200px; height: 256px" alt="eng-button">
-              
-                            </a>            
-                            <a class="hoverg" href="{{ url_for('pages', page='parts-collection') }}">
-              
-                              <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/parts-button.png" style="width: 200px; height: 257px" alt="imp-button">
-              
-                            </a>            
-                            <a class="hoverg" href="{{ url_for('pages', page='results') }}">
-                
-                              <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/results-button.png" style="width: 200px; height: 256px" alt="team-button">
-              
-                            </a>            
-                            <a class="hoverg" href="{{ url_for('pages', page='safety') }}">
-                 
-                              <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/safety-button.png" style="width: 200px; height: 256px" alt="safety-button">
-              
-                            </a>
-                            <a class="hoverg" href="{{ url_for('pages', page='sustainable') }}">
-                            
-                                <img src="https://static.igem.wiki/teams/4650/wiki/nav-buttons/sus-button.png" style="width: 200px; height: 256px" alt="des-button">
-                          
-                              </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </center>
-            </body>
-
-                {% endblock %}
+{% endblock %}
